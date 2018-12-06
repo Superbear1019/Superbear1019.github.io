@@ -2,6 +2,10 @@
 items:
   - text: 'Blog'
     path: '/blog'
+  - text: 'Python'
+    path: '/python'    
+  - text: 'BizTalk'
+    path: '/biztalk'
   - text: 'Archive'
     path: '/archive'
   - text: 'About'
