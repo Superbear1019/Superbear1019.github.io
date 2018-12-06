@@ -5,8 +5,8 @@ paginate: 7 #articles per page
 paginate_path: /blog/page:num #makes pagination working
 
 # header text
-title: Haha not only a LOT :)
-header: Superbear tech blog...
+title: Haha not only a LOT.
+header: Superbear Tech Blog.
 
 # for welcome page
 # to replace image go to index.html
