@@ -1,11 +1,12 @@
 ---
-title: "blog"
-
+title: "biztalk"
+permalink: "module/biztalk/index.html"
 ---
 
 {% if site.data.theme.compact %}
   <div class="posts compact">
     {% for post in site.posts  %}
+    {% if post.biztalk  %}
     <div class="clearfix">
       <h3 class="pull-left">
         <a href="{{ post.url | prepend:site.baseurl }}">{{ post.title }}</a>
