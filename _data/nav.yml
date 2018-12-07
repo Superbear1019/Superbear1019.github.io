@@ -1,9 +1,9 @@
 # nav items in header
 items:
-  - text: 'Blog'
+  - text: '汇总'
     path: '/blog'
   - text: 'Python'
-    path: '/python'    
+    path: '/python'
   - text: 'BizTalk'
     path: '/biztalk'
   - text: 'Archive'
