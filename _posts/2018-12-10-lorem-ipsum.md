@@ -1,6 +1,9 @@
 ---
 title: "Lorem ipsum"
-tags: [lorem]
+
+categories: BizTalk
+tags: [BootStrap, HTML, CSS, Zhihu]
+
 ---
 
 Lorem markdownum potiunda maerenti vernum tantaeque arbore superstes vulnera,

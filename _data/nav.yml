@@ -1,17 +1,7 @@
 # nav items in header
 items:
-  - text: '汇总'
+  - text: 'Blog'
     path: '/blog'
-  - text: '随笔'
-    path: '/module/nonsense'
-  - text: 'Linux'
-    path: '/module/linux'
-  - text: 'Python'
-    path: '/module/python'
-  - text: 'BizTalk'
-    path: '/module/biztalk'
-  - text: 'SAP'
-    path: '/module/sap'
   - text: 'Archive'
     path: '/archive'
   - text: 'About'
