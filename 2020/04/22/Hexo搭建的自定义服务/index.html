@@ -13,7 +13,7 @@
 
 
 
-<title>test | Haha not only a lot</title>
+<title>Hexo搭建的自定义服务 | Haha not only a lot</title>
 
 
 
@@ -120,11 +120,73 @@
             <div class="container">
     
     
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">test</h1>
+            <h1 class="post-title">Hexo搭建的自定义服务</h1>
             
                 <div class="post-meta">
                     
@@ -133,16 +195,26 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">四月 17, 2020&nbsp;&nbsp;0:25:26</a>
+                        Date: <a href="#">四月 22, 2020&nbsp;&nbsp;19:06:01</a>
                         </span>
                     
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/Tech/">Tech</a>
+                            
+                        </span>
                     
                 </div>
             
         </header>
 
         <div class="post-content">
-            
+            <h2 id="说在前："><a href="#说在前：" class="headerlink" title="说在前："></a>说在前：</h2><p>Hexo主题我选的是Chic，设计师的理念是“less is more”，<br>所以很多功能他是没有放进去的。我后来呢想了想也是有道理的，所以好多服务都没有加进去。<br>目前用了页面统计。别的都没有了。</p>
+<h2 id="自定义服务设置："><a href="#自定义服务设置：" class="headerlink" title="自定义服务设置："></a>自定义服务设置：</h2><h3 id="busuanzi：页面计数"><a href="#busuanzi：页面计数" class="headerlink" title="busuanzi：页面计数"></a>busuanzi：页面计数</h3><p>参考官方说明，直接在footer.ejs文件里加了一段代码。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/busuanzi01.png" alt=""><br>分别是统计站点访问数，访问人次，页面访问数。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/busuanzi02.png" alt=""></p>
+<h3 id="封面新增iconfont"><a href="#封面新增iconfont" class="headerlink" title="封面新增iconfont"></a>封面新增iconfont</h3><p>增加了客制的iconfont代码。从阿里矢量图标站上下载的代码。<br>下载代码后，放置在fonts文件夹下，<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/iconfont01.png" alt=""><br>同时修改css下的style.styl，增加一行代码<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/iconfont03.jpg" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/iconfont02.png" alt=""></p>
+
         </div>
 
         
@@ -156,7 +228,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://tech.hahaalot.com/2020/04/17/test/">http://tech.hahaalot.com/2020/04/17/test/</a></span>
+                        <span><a href="http://tech.hahaalot.com/2020/04/22/Hexo搭建的自定义服务/">http://tech.hahaalot.com/2020/04/22/Hexo搭建的自定义服务/</a></span>
                     </p>
                 
                 
@@ -179,6 +251,12 @@
                 <span>Tag(s):</span>
                 <span class="tag">
                     
+                    
+                        <a href="/tags/hexo/"># hexo</a>
+                    
+                        <a href="/tags/blog/"># blog</a>
+                    
+                        
                 </span>
             </div>
             <div>
@@ -189,10 +267,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2020/04/18/test11/">test11</a>
             
-            
-            <a class="next" rel="next" href="/2018/12/29/hello-world/">Hello World</a>
+            <a class="next" rel="next" href="/2020/04/21/Blog搭建信息/">Blog搭建信息</a>
             
         </section>
 
