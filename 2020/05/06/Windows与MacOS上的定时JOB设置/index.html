@@ -212,7 +212,7 @@
 
         <div class="post-content">
             <h1 id="windows-amp-MacOS-的定时JOB设置"><a href="#windows-amp-MacOS-的定时JOB设置" class="headerlink" title="windows &amp; MacOS 的定时JOB设置"></a>windows &amp; MacOS 的定时JOB设置</h1><p>做了一些程序以后呢，爬取网站呀，获取监控呀，就需要设定定时作业。<br>定时作业部署在不关机的server上肯定谁最好的。但是正常人肯定不是随便就能搞到服务器的，服务器还是有成本的。</p>
-<p>那么就用自己的pc机器吧～</p>
+<p>那么就用自己的pc机器吧～<br>（更新：发现可以通过云平台的serverless服务执行定时脚本。<a href="http://tech.hahaalot.com/2020/05/10/腾讯云TencentCloud的Serverless云函数SCF/">腾讯云TencentCloud的Serverless云函数SCF</a>）</p>
 <h2 id="Windows-OS"><a href="#Windows-OS" class="headerlink" title="Windows OS"></a>Windows OS</h2><p>Windows，最普遍的操作系统。<br>本身自带一个程序【计划任务(Task Scheduler)】<br>我们使用它设定和执行定时任务。</p>
 <h3 id="Task-Scheduler（计划任务）"><a href="#Task-Scheduler（计划任务）" class="headerlink" title="Task Scheduler（计划任务）"></a>Task Scheduler（计划任务）</h3><p>搜索task scheduler就能找到，然后新建定时任务。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/task_schedule01.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/task_schedule02.png" alt=""></p>
 <h3 id="定时任务（方法一）"><a href="#定时任务（方法一）" class="headerlink" title="定时任务（方法一）"></a>定时任务（方法一）</h3><p>直接新建，然后设置【Trigger】，【Actions】选择要执行的程序。<br>注意，如果程序脚本中涉及到了读写文件的操作，文件地址一定要写全绝对路径。因为执行脚本的目录并不是程序所在的相对路径的。<br>（因为我的直接脚本都是python写的，所以我执行程序使用的python）<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/task_schedule03.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/task_schedule04.png" alt=""></p>
@@ -287,6 +287,8 @@
             </div>
         </section>
         <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2020/05/10/腾讯云TencentCloud的Serverless云函数SCF/">腾讯云TencentCloud的Serverless云函数SCF</a>
             
             
             <a class="next" rel="next" href="/2020/04/30/随笔-工作上的蛋疼一则/">随笔 工作上的蛋疼一则</a>
