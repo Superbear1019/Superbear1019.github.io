@@ -13,7 +13,7 @@
 
 
 
-<title>[DEMO]demo | Haha not only a lot</title>
+<title>数据分析可视化的简单探究（零） | Haha not only a lot</title>
 
 
 
@@ -190,7 +190,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">[DEMO]demo</h1>
+            <h1 class="post-title">数据分析可视化的简单探究（零）</h1>
             
                 <div class="post-meta">
                     
@@ -199,14 +199,14 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">八月 4, 2020&nbsp;&nbsp;17:35:13</a>
+                        Date: <a href="#">九月 6, 2020&nbsp;&nbsp;18:47:52</a>
                         </span>
                     
                     
                         <span class="post-category">
                     Category:
                             
-                                <a href="/categories/Demo/">Demo</a>
+                                <a href="/categories/Tech/">Tech</a>
                             
                         </span>
                     
@@ -215,29 +215,30 @@
         </header>
 
         <div class="post-content">
-            <h2 id="说在前："><a href="#说在前：" class="headerlink" title="说在前："></a>说在前：</h2><p>Demo</p>
-<p>P1:</p>
-<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_reason_area_sankey.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
-
-<p>P2:</p>
-<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_reason_province_sankey.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
-
-<p>P3:</p>
-<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_amount_province_map.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
-
-<p>P4:</p>
-<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_amount_province_bar.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
-
-<p>P5:</p>
-<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_reason_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
-
-<p>P6:</p>
-<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_reentry_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
-
-<p>P7:</p>
-<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_areareentry_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
-
-<p>OK～～～</p>
+            <h1 id="【Tech】数据分析可视化的探究"><a href="#【Tech】数据分析可视化的探究" class="headerlink" title="【Tech】数据分析可视化的探究"></a>【Tech】数据分析可视化的探究</h1><p>想搞个人力资源信息的分析。<br>构思了一下整体的实现场景，然后发现很多环节要做。而且还有一些技术操作，还不会……<br>只能一点点试着学起来。加上呀，最近工作真的是好多好多。所以断断续续的研究，一个环节一个环节实现、测试。好像真的花了好多时间呢。<br>也应该算是一个小小小小的小项目了吧。</p>
+<h2 id="小项目背景"><a href="#小项目背景" class="headerlink" title="小项目背景"></a>小项目背景</h2><p>工作的原因，对HR数据比较好奇，想从各个维度对员工离职的情形做下分析。</p>
+<h2 id="小项目实现思路"><a href="#小项目实现思路" class="headerlink" title="小项目实现思路"></a>小项目实现思路</h2><pre><code>* 最终的效果是web界面，但是其中数据分析尽量要可视化。
+研究了下，数据分析可视化工具最后使用pyecharts。生成的可视化charts通过iframe嵌入到web界面中。
+* 原始数据通过爬取获得。使用pandas，将数据做清理，以及各个维度的标签标记。
+* 爬取数据，在PC上使用周期job，以保证数据会更新。
+* pyecharts生成html，需随数据同步更新，并且需可访问。
+通过对象存储存储生成的html。同时需要在html更新后，及时同步至对象存储上。
+</code></pre><h2 id="小项目实现"><a href="#小项目实现" class="headerlink" title="小项目实现"></a>小项目实现</h2><ol>
+<li>lxml模块，进行html的xpath解析，抓取需要的数据。</li>
+<li>pyecharts模块， 应用了一些图表：<ul>
+<li>Sankey桑基图：离职原因及在职年份分析；</li>
+<li>Map地图：离职员工地域分布；</li>
+<li>Bar条形图：离职员工所在省份；</li>
+<li>Pie饼图：离职原因比例，及再次入职意愿比例</li>
+</ul>
+</li>
+<li>qcloud_cos模块，使用腾讯云的sdk，用于将生成的图表传入到COS中。同时web界面通过将图表嵌入iframe中展示。</li>
+<li>最后用windows自带的task scheduler设置定时job，进行上述几个步骤的脚本运行。</li>
+</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>总结呢，就是给自己又搞了个大坑。<br>真的是……哎……</p>
+<p>毕竟，在数据上，从数据获取到可视化模型建立；网页实现上，网页排版到视图插入且同步更新；架构上，图表文件实时更新到存储实时同步，每个环节上都需要设计和开发。<br>而且完完全全自己实现……</p>
+<p>真的是……花费了好多时间呀呀呀。</p>
+<p>希望自己在不断挖坑、填坑的过程中，能慢慢加油，学习掌握更多的知识吧。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario_PNG80.png" alt=""></p>
 
         </div>
 
@@ -259,7 +260,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://tech.hahaalot.com/2020/08/04/DEMO-demo/">http://tech.hahaalot.com/2020/08/04/DEMO-demo/</a></span>
+                        <span><a href="http://tech.hahaalot.com/2020/09/06/数据分析可视化的简单探究/">http://tech.hahaalot.com/2020/09/06/数据分析可视化的简单探究/</a></span>
                     </p>
                 
                 
@@ -283,7 +284,9 @@
                 <span class="tag">
                     
                     
-                        <a href="/tags/Demo/"># Demo</a>
+                        <a href="/tags/Pandas/"># Pandas</a>
+                    
+                        <a href="/tags/cloud/"># cloud</a>
                     
                         
                 </span>
@@ -296,10 +299,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2020/09/06/数据分析可视化的简单探究/">数据分析可视化的简单探究（零）</a>
             
-            
-            <a class="next" rel="next" href="/2020/07/11/小实验-自制个双色球程序，助力走上人生巅峰吧/">[小实验]自制个双色球程序，助力走上人生巅峰吧</a>
+            <a class="next" rel="next" href="/2020/08/04/DEMO-demo/">[DEMO]demo</a>
             
         </section>
 
