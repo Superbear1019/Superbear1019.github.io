@@ -13,7 +13,7 @@
 
 
 
-<title>数据分析可视化的简单探究（二）--数据清洗 | Haha not only a lot</title>
+<title>数据分析可视化的简单探究（三）--建立模型 | Haha not only a lot</title>
 
 
 
@@ -190,7 +190,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">数据分析可视化的简单探究（二）--数据清洗</h1>
+            <h1 class="post-title">数据分析可视化的简单探究（三）--建立模型</h1>
             
                 <div class="post-meta">
                     
@@ -199,7 +199,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">九月 8, 2020&nbsp;&nbsp;21:00:00</a>
+                        Date: <a href="#">九月 9, 2020&nbsp;&nbsp;20:26:40</a>
                         </span>
                     
                     
@@ -216,19 +216,7 @@
 
         <div class="post-content">
             <p><a href="https://tech.hahaalot.com/2020/09/06/数据分析可视化的简单探究/"><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario-gif.gif" width="10%" height="10%" alt="点击跳转" align="left"></a><br><br>(Click Mario)</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>第二步，数据清洗。<br>清洗的逻辑很简单，就是把一些无效的数据、空数据清理掉。</p>
-<p>同时做了如下的逻辑处理：</p>
-<blockquote>
-<pre><code>将一些无效数值置空并drop掉；  
-增加一列数量：如果原因有多条，则计算分号的数量并加1，即表示有几个原因。并按照原因的数量划分比例，创建Amount列。  
-考虑了一种情况，入职不足月的人员，工作时间是0.5月，没有年数，所以将此部分数据处理下增加年数。  
-截取在职年份的年数值，并创建year列。  
-将公司代码及省份merge进来。  
-将年份分段。  
-按照索引排列。  
-</code></pre></blockquote>
-<p>实现代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">def dataframe_cleaning():</span><br><span class="line">    # 数据的初始清理；</span><br><span class="line">    df = pd.read_csv(&quot;./resign/resign.csv&quot;)</span><br><span class="line">    &apos;&apos;&apos; </span><br><span class="line">    依次对df数据做清理和整合：</span><br><span class="line">    1-2. 将一些无效数值置空并drop掉；</span><br><span class="line">    3. 增加一列数量：如果原因有多条，则计算分号的数量并加1，即表示有几个原因。并按照原因的数量划分比例，创建Amount列。</span><br><span class="line">    4. 考虑了一种情况，入职不足月的人员，工作时间是0.5月，没有年数，所以将此部分数据处理下增加年数。</span><br><span class="line">    5. 截取在职年份的年数值，并创建year列。</span><br><span class="line">    7. 将公司代码及省份merge进来。</span><br><span class="line">    8. 将年份分段。</span><br><span class="line">    9. 按照索引排列。</span><br><span class="line">    &apos;&apos;&apos;</span><br><span class="line">    df = df.replace([&quot;4jjj&quot;, &quot;ddsdhtjsr&quot;, &quot;ootype&quot;], np.nan)</span><br><span class="line">    df = df[[&quot;BUKRS&quot;, &quot;REASON&quot;, &quot;DETAIL&quot;, &quot;WORKINGTIME&quot;, &quot;SUGGESTION&quot;, &quot;ZCRZ&quot;]].dropna()</span><br><span class="line">    df01 = (1 / (df[&quot;REASON&quot;].str.count(&quot;;&quot;)+1).rename(&quot;Amount&quot;)).round(2)</span><br><span class="line">    df[&quot;WORKINGTIME&quot;].replace(&apos;0.5个月&apos;, &apos;0年0.5个月&apos;, inplace=True)</span><br><span class="line">    df02 = df[&quot;WORKINGTIME&quot;].str.split(&apos;年&apos;, expand=True).iloc[:,0].rename(&apos;year&apos;)</span><br><span class="line">    df = pd.concat([df[[&quot;BUKRS&quot;, &quot;REASON&quot;, &quot;SUGGESTION&quot;, &quot;DETAIL&quot;, &quot;ZCRZ&quot;]], df01, df02], axis=1)</span><br><span class="line">    df = pd.merge(df, df_bukrs, on=&apos;BUKRS&apos;, right_index=True) </span><br><span class="line">    df[&apos;year&apos;] = pd.cut(df.year.astype(int), bins=[0, 1, 5, 10, 100], right=False,</span><br><span class="line">            labels=[&quot;不足1年&quot;, &quot;1-5年&quot;, &quot;5-10年&quot;, &quot;10年以上&quot;])</span><br><span class="line">    df.sort_index(inplace=True)</span><br><span class="line">    # df.reset_index()</span><br><span class="line">    return df</span><br></pre></td></tr></table></figure></p>
-<p>使用pandas模块对于dataframe进行数据清理，挺高效的。<br>但是代码的使用，还是要研究几轮的。反正我是学习了好久，摊手～～</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>第三步，建立显示的图表模型。</p>
 
         </div>
 
@@ -250,7 +238,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://tech.hahaalot.com/2020/09/08/数据分析可视化的简单探究2/">http://tech.hahaalot.com/2020/09/08/数据分析可视化的简单探究2/</a></span>
+                        <span><a href="http://tech.hahaalot.com/2020/09/09/数据分析可视化的简单探究3/">http://tech.hahaalot.com/2020/09/09/数据分析可视化的简单探究3/</a></span>
                     </p>
                 
                 
@@ -289,10 +277,10 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2020/09/09/数据分析可视化的简单探究3/">数据分析可视化的简单探究（三）--建立模型</a>
+                <a class="prev" rel="prev" href="/2020/09/10/数据分析可视化的简单探究4/">数据分析可视化的简单探究（四）--图表云存储</a>
             
             
-            <a class="next" rel="next" href="/2020/09/07/数据分析可视化的简单探究1/">数据分析可视化的简单探究（一）--数据抓取</a>
+            <a class="next" rel="next" href="/2020/09/08/数据分析可视化的简单探究2/">数据分析可视化的简单探究（二）--数据清洗</a>
             
         </section>
 
