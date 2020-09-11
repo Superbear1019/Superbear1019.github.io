@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo搭建的自定义服务</title>
-    <url>/2020/04/22/Hexo%E6%90%AD%E5%BB%BA%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A1/</url>
-    <content><![CDATA[<h2 id="说在前："><a href="#说在前：" class="headerlink" title="说在前："></a>说在前：</h2><p>Hexo主题我选的是Chic，设计师的理念是“less is more”，<br>所以很多功能他是没有放进去的。我后来呢想了想也是有道理的，所以好多服务都没有加进去。<br>目前用了页面统计。别的都没有了。</p>
-<h2 id="自定义服务设置："><a href="#自定义服务设置：" class="headerlink" title="自定义服务设置："></a>自定义服务设置：</h2><h3 id="busuanzi：页面计数"><a href="#busuanzi：页面计数" class="headerlink" title="busuanzi：页面计数"></a>busuanzi：页面计数</h3><p>参考官方说明，直接在footer.ejs文件里加了一段代码。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/busuanzi01.png" alt=""><br>分别是统计站点访问数，访问人次，页面访问数。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/busuanzi02.png" alt=""></p>
-<h3 id="封面新增iconfont"><a href="#封面新增iconfont" class="headerlink" title="封面新增iconfont"></a>封面新增iconfont</h3><p>增加了客制的iconfont代码。从阿里矢量图标站上下载的代码。<br>下载代码后，放置在fonts文件夹下，<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/iconfont01.png" alt=""><br>同时修改css下的style.styl，增加一行代码<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/iconfont03.jpg" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/iconfont02.png" alt=""></p>
-]]></content>
-      <categories>
-        <category>Tech</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Blog搭建信息</title>
     <url>/2020/04/21/Blog%E6%90%AD%E5%BB%BA%E4%BF%A1%E6%81%AF/</url>
     <content><![CDATA[<h1 id="Blog搭建信息"><a href="#Blog搭建信息" class="headerlink" title="Blog搭建信息"></a>Blog搭建信息</h1><h2 id="代码托管平台：Coding"><a href="#代码托管平台：Coding" class="headerlink" title="代码托管平台：Coding"></a>代码托管平台：Coding</h2><p>喜欢小猴子的logo。<br>参考：<a href="https://coding.net/" target="_blank" rel="noopener">CODING - 一站式软件研发管理平台</a></p>
@@ -75,53 +60,18 @@
       </tags>
   </entry>
   <entry>
-    <title>人力资源离职情况的初步数据分析</title>
-    <url>/2020/09/11/%E4%BA%BA%E5%8A%9B%E8%B5%84%E6%BA%90%E7%A6%BB%E8%81%8C%E6%83%85%E5%86%B5%E7%9A%84%E5%88%9D%E6%AD%A5%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</url>
-    <content><![CDATA[<h1 id="【行业】人力资源离职情况的初步数据分析"><a href="#【行业】人力资源离职情况的初步数据分析" class="headerlink" title="【行业】人力资源离职情况的初步数据分析"></a>【行业】人力资源离职情况的初步数据分析</h1><p>做了一笔数据场景的爬取分析。<br>我们现在看一下大致数据反映出的数据图表，分析一下。</p>
-<h2 id="离职人数及分布"><a href="#离职人数及分布" class="headerlink" title="离职人数及分布"></a>离职人数及分布</h2><p>先看一下各省的离职人数，及分布：</p>
-<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_amount_province_bar.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe></p>
-<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_amount_province_map.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>可以看到，各省基本都有人员离职，说明公司的业务铺的很开，各省均有员工。<br>且人口大省，相对应的离职人员，也比较多，成正比。</p>
-<h2 id="离职原因"><a href="#离职原因" class="headerlink" title="离职原因"></a>离职原因</h2><p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_reason_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>离职原因上，1/3的情况是家庭因素。工作压力、薪资、劳动强度等原因，占比相对不高，但是也在前几之列。<br>所以大多数的离职，基本上可能还是家庭与工作无法平衡，这也一定程度反映现代社会的一个比较普遍的情况。</p>
-<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_reason_province_sankey.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe></p>
-<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_reason_area_sankey.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>从这两个流向图，可以看出来，工作5年以下的人数占了绝大部份，说明公司员工对公司的忠诚度和依赖度比较低。<br>华东华北，等发达地区，员工更易离职。</p>
-<h2 id="再入职意愿"><a href="#再入职意愿" class="headerlink" title="再入职意愿"></a>再入职意愿</h2><p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_reentry_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>离职员工再入职的意愿，近4/5选择了愿意再次入职。说明一定程度上，大家对于公司还是满意的状态，如果有机会会继续选择。<br>但是也不排除员工“好聚好散”的心里。</p>
-<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_areareentry_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>其中，东北地区，愿意的比例最高，也说明东北的工作满意度状态最好。<br>华中地区，不愿意比例较高，如果有需要，其实可以重点看一下。看一下员工的反馈情况，可能会发现一些信息。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>只是做了一些简单的分析，<br>毕竟数据的收集有限。如果数据样本足够大，其实分析的规律会更加贴近实际。<br>这里只是简单练个手，以后有机会做一做更深入的分析调研。</p>
+    <title>Hexo搭建的自定义服务</title>
+    <url>/2020/04/22/Hexo%E6%90%AD%E5%BB%BA%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A1/</url>
+    <content><![CDATA[<h2 id="说在前："><a href="#说在前：" class="headerlink" title="说在前："></a>说在前：</h2><p>Hexo主题我选的是Chic，设计师的理念是“less is more”，<br>所以很多功能他是没有放进去的。我后来呢想了想也是有道理的，所以好多服务都没有加进去。<br>目前用了页面统计。别的都没有了。</p>
+<h2 id="自定义服务设置："><a href="#自定义服务设置：" class="headerlink" title="自定义服务设置："></a>自定义服务设置：</h2><h3 id="busuanzi：页面计数"><a href="#busuanzi：页面计数" class="headerlink" title="busuanzi：页面计数"></a>busuanzi：页面计数</h3><p>参考官方说明，直接在footer.ejs文件里加了一段代码。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/busuanzi01.png" alt=""><br>分别是统计站点访问数，访问人次，页面访问数。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/busuanzi02.png" alt=""></p>
+<h3 id="封面新增iconfont"><a href="#封面新增iconfont" class="headerlink" title="封面新增iconfont"></a>封面新增iconfont</h3><p>增加了客制的iconfont代码。从阿里矢量图标站上下载的代码。<br>下载代码后，放置在fonts文件夹下，<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/iconfont01.png" alt=""><br>同时修改css下的style.styl，增加一行代码<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/iconfont03.jpg" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/iconfont02.png" alt=""></p>
 ]]></content>
       <categories>
-        <category>行业</category>
+        <category>Tech</category>
       </categories>
       <tags>
-        <tag>行业</tag>
-        <tag>hr</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[小实验]自制个双色球程序，助力走上人生巅峰吧</title>
-    <url>/2020/07/11/%E5%B0%8F%E5%AE%9E%E9%AA%8C-%E8%87%AA%E5%88%B6%E4%B8%AA%E5%8F%8C%E8%89%B2%E7%90%83%E7%A8%8B%E5%BA%8F%EF%BC%8C%E5%8A%A9%E5%8A%9B%E8%B5%B0%E4%B8%8A%E4%BA%BA%E7%94%9F%E5%B7%85%E5%B3%B0%E5%90%A7/</url>
-    <content><![CDATA[<h1 id="【Lib】-小实验-自制个双色球程序，助力走上人生巅峰吧"><a href="#【Lib】-小实验-自制个双色球程序，助力走上人生巅峰吧" class="headerlink" title="【Lib】[小实验]自制个双色球程序，助力走上人生巅峰吧"></a>【Lib】[小实验]自制个双色球程序，助力走上人生巅峰吧</h1><p>最近我在买双色球。<br>期待是有的，更多的是给自己攒RP，而且不是还有一部分发展福利事业么。</p>
-<p>本来就是随便买的，所以每次都是机选4注。<br>买了几次我发现，机选还挺简单的，没啥逻辑，那为啥我不自己搞个程序，自己机选呢？</p>
-<p>好的，说干就干。</p>
-<h2 id="程序逻辑"><a href="#程序逻辑" class="headerlink" title="程序逻辑"></a>程序逻辑</h2><ul>
-<li>使用random模块，对33个白球16个蓝球进行随机取值；</li>
-<li>白球取值过程，重复6次；需注意判断random出来的值，是否与前几次重复。</li>
-<li>6白球1蓝球一组，生成一注。生成17注。</li>
-<li>在17注中，在random出来4注，作为最终的机选。<br>（为啥先出来17，再选4呢？是因为好玩吧，lucky17里再lucky4。）</li>
-<li>发送给企业微信的webhook，然后企业微信生成消息。</li>
-</ul>
-<h2 id="程序实现机选"><a href="#程序实现机选" class="headerlink" title="程序实现机选"></a>程序实现机选</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import random, json, certifi, urllib3</span><br><span class="line"></span><br><span class="line">def blueball():</span><br><span class="line">    bball = random.randint(1,16)</span><br><span class="line">    return bball</span><br><span class="line"></span><br><span class="line">def redballs():</span><br><span class="line">    rballs = []</span><br><span class="line">    for i in range(6):</span><br><span class="line">        rball = random.randint(1,33)</span><br><span class="line">        while rball in rballs:</span><br><span class="line">            rball = random.randint(1,33)</span><br><span class="line">        rballs.append(rball)</span><br><span class="line">    rballs.sort()</span><br><span class="line">    return rballs</span><br><span class="line"></span><br><span class="line">def main():</span><br><span class="line">    altballs = []</span><br><span class="line">    for i in range(17):</span><br><span class="line">        balls = [redballs(), blueball()]</span><br><span class="line">        altballs.append(balls)</span><br><span class="line">    luckyfour = random.sample(altballs, 4)</span><br><span class="line"></span><br><span class="line">    # 发送给企业微信的webhook显示。</span><br><span class="line">    http = urllib3.PoolManager(cert_reqs=&apos;CERT_REQUIRED&apos;, ca_certs=certifi.where())</span><br><span class="line">    # 李有财 hook_addr</span><br><span class="line">    hook_addr = &quot;https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=lalalalalalalalalala&quot;    # my robot</span><br><span class="line">    # 传输webhook图文消息    </span><br><span class="line">    data = &#123;</span><br><span class="line">    &quot;msgtype&quot;: &quot;markdown&quot;,</span><br><span class="line">    &quot;markdown&quot;: &#123;</span><br><span class="line">        &quot;content&quot;: &quot;**双色球**\n\</span><br><span class="line">        &gt;**第①注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第②注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第③注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第④注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n&quot;</span><br><span class="line">        %(luckyfour[0][0], luckyfour[0][1], luckyfour[1][0], luckyfour[1][1],</span><br><span class="line">            luckyfour[2][0], luckyfour[2][1], luckyfour[3][0], luckyfour[3][1])</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    data = json.dumps(data).encode()</span><br><span class="line">    response_hook = http.request(&apos;POST&apos;, hook_addr, body=data)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-<h2 id="优化改善"><a href="#优化改善" class="headerlink" title="优化改善"></a>优化改善</h2><p>为了方便我每次对奖方便，在程序里爬取下上期的开奖结果。<br>爬取500彩票网的结果界面。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def last_result():</span><br><span class="line">    addr = &apos;http://kaijiang.500.com/shtml/ssq/&apos;</span><br><span class="line">    http = urllib3.PoolManager(cert_reqs=&apos;CERT_REQUIRED&apos;, ca_certs=certifi.where())</span><br><span class="line">    response = http.request(&apos;GET&apos;, addr)</span><br><span class="line">    tree = html.fromstring(response.data)</span><br><span class="line">    r = tree.xpath(&apos;//div[@class=&quot;ball_box01&quot;]//li[@class=&quot;ball_red&quot;]//text()&apos;)</span><br><span class="line">    b = tree.xpath(&apos;//div[@class=&quot;ball_box01&quot;]//li[@class=&quot;ball_blue&quot;]//text()&apos;)</span><br><span class="line">    return r, b</span><br></pre></td></tr></table></figure></p>
-<p>同时在主函数里加上上期结果的发送：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def main():</span><br><span class="line">    ***</span><br><span class="line">    last_r, last_b = last_result()</span><br><span class="line">    ***</span><br><span class="line">    data = &#123;</span><br><span class="line">    &quot;msgtype&quot;: &quot;markdown&quot;,</span><br><span class="line">    &quot;markdown&quot;: &#123;</span><br><span class="line">        &quot;content&quot;: &quot;**双色球**\n\</span><br><span class="line">        %s, %s\n\</span><br><span class="line">        &gt;**第①注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第②注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第③注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第④注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n&quot;</span><br><span class="line">        %(last_r, last_b, luckyfour[0][0], luckyfour[0][1], luckyfour[1][0], luckyfour[1][1],</span><br><span class="line">            luckyfour[2][0], luckyfour[2][1], luckyfour[3][0], luckyfour[3][1])</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    ***</span><br></pre></td></tr></table></figure></p>
-<h2 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h2><p><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0708/dcball01.jpg" alt=""><br>上期结果就没做太多的修饰了，觉得麻烦也没必要。</p>
-<p>最后在电脑上设置个定时job，每周一/三/五，发给我自己。</p>
-<p>以后去彩票站就下注lucky4好啦。<br>感觉自己好像就要走上人生巅峰了呢。哈哈哈哈哈～～<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0708/psyduck_happy.gif" alt=""></p>
-]]></content>
-      <categories>
-        <category>Lib</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>web</tag>
+        <tag>hexo</tag>
+        <tag>blog</tag>
       </tags>
   </entry>
   <entry>
@@ -175,39 +125,53 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Windows与MacOS上的定时JOB设置</title>
-    <url>/2020/05/06/Windows%E4%B8%8EMacOS%E4%B8%8A%E7%9A%84%E5%AE%9A%E6%97%B6JOB%E8%AE%BE%E7%BD%AE/</url>
-    <content><![CDATA[<h1 id="windows-amp-MacOS-的定时JOB设置"><a href="#windows-amp-MacOS-的定时JOB设置" class="headerlink" title="windows &amp; MacOS 的定时JOB设置"></a>windows &amp; MacOS 的定时JOB设置</h1><p>做了一些程序以后呢，爬取网站呀，获取监控呀，就需要设定定时作业。<br>定时作业部署在不关机的server上肯定谁最好的。但是正常人肯定不是随便就能搞到服务器的，服务器还是有成本的。</p>
-<p>那么就用自己的pc机器吧～<br>（更新：发现可以通过云平台的serverless服务执行定时脚本。<a href="http://tech.hahaalot.com/2020/05/10/腾讯云TencentCloud的Serverless云函数SCF/">腾讯云TencentCloud的Serverless云函数SCF</a>）</p>
-<h2 id="Windows-OS"><a href="#Windows-OS" class="headerlink" title="Windows OS"></a>Windows OS</h2><p>Windows，最普遍的操作系统。<br>本身自带一个程序【计划任务(Task Scheduler)】<br>我们使用它设定和执行定时任务。</p>
-<h3 id="Task-Scheduler（计划任务）"><a href="#Task-Scheduler（计划任务）" class="headerlink" title="Task Scheduler（计划任务）"></a>Task Scheduler（计划任务）</h3><p>搜索task scheduler就能找到，然后新建定时任务。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/task_schedule01.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/task_schedule02.png" alt=""></p>
-<h3 id="定时任务（方法一）"><a href="#定时任务（方法一）" class="headerlink" title="定时任务（方法一）"></a>定时任务（方法一）</h3><p>直接新建，然后设置【Trigger】，【Actions】选择要执行的程序。<br>注意，如果程序脚本中涉及到了读写文件的操作，文件地址一定要写全绝对路径。因为执行脚本的目录并不是程序所在的相对路径的。<br>（因为我的直接脚本都是python写的，所以我执行程序使用的python）<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/task_schedule03.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/task_schedule04.png" alt=""></p>
-<h3 id="定时任务（方法二）"><a href="#定时任务（方法二）" class="headerlink" title="定时任务（方法二）"></a>定时任务（方法二）</h3><p>除了直接执行程序，也可以选择写一个powershell脚本，执行脚本。然后在powershell脚本中调用程序脚本。<br><del>是有种“脱裤子放屁”的感觉哈。</del><br><del>除了能避免忽略文件绝对路径的问题，好像也没啥用途。</del> （也不是什么主要优点）<br>可能我本人，比较喜欢powershell脚本吧。    o(<em>￣︶￣</em>)o<br>Windows上如果是一般的脚本，建议还是通过powershell写。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/task_schedule05.png" alt=""></p>
-<h2 id="MacOS"><a href="#MacOS" class="headerlink" title="MacOS"></a>MacOS</h2><p>Mac使用自带的launchctl服务。</p>
-<h3 id="编写plist文件"><a href="#编写plist文件" class="headerlink" title="编写plist文件"></a>编写plist文件</h3><p>首先要编写plist文件，代码参考如下。<br>Plist文件，是launchctl服务执行使用的。对于其他脚本的执行，需将脚本名称写在plist文件里。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">    &lt;!DOCTYPE plist PUBLIC &quot;-//Apple Computer//DTD PLIST 1.0//EN&quot;</span><br><span class="line">        &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span><br><span class="line">    &lt;plist version=&quot;1.0&quot;&gt;</span><br><span class="line">    &lt;dict&gt;</span><br><span class="line">        &lt;!-- Label唯一的标识 --&gt;</span><br><span class="line">        &lt;key&gt;Label&lt;/key&gt;</span><br><span class="line">        &lt;string&gt;lhd.backstage.program.plist&lt;/string&gt;</span><br><span class="line">        &lt;!-- 指定要运行的脚本 --&gt;</span><br><span class="line">        &lt;key&gt;ProgramArguments&lt;/key&gt;</span><br><span class="line">        &lt;array&gt;</span><br><span class="line">            &lt;string&gt;/Users/konta/Sky_App/backstage_program/back_run.sh&lt;/string&gt;</span><br><span class="line">        &lt;/array&gt;</span><br><span class="line">        &lt;!-- 指定要运行的时间 --&gt;</span><br><span class="line">        &lt;key&gt;StartCalendarInterval&lt;/key&gt;</span><br><span class="line">        &lt;dict&gt;</span><br><span class="line">            &lt;key&gt;Minute&lt;/key&gt;</span><br><span class="line">            &lt;integer&gt;07&lt;/integer&gt;</span><br><span class="line">            &lt;key&gt;Hour&lt;/key&gt;</span><br><span class="line">            &lt;integer&gt;17&lt;/integer&gt;</span><br><span class="line">        &lt;/dict&gt;</span><br><span class="line">        &lt;!-- 标准输出文件 --&gt;</span><br><span class="line">        &lt;key&gt;StandardOutPath&lt;/key&gt;</span><br><span class="line">        &lt;string&gt;/Users/konta/Sky_App/backstage_program/backstage_program.log&lt;/string&gt;</span><br><span class="line">        &lt;!-- 标准错误输出文件，错误日志 --&gt;</span><br><span class="line">        &lt;key&gt;StandardErrorPath&lt;/key&gt;</span><br><span class="line">        &lt;string&gt;/Users/konta/Sky_App/backstage_program/backstage_program.err&lt;/string&gt;</span><br><span class="line">    &lt;/dict&gt;</span><br><span class="line">    &lt;/plist&gt;</span><br></pre></td></tr></table></figure></p>
-<h3 id="编写sh脚本"><a href="#编写sh脚本" class="headerlink" title="编写sh脚本"></a>编写sh脚本</h3><p>plist文件中指定了脚本地址，我们需要创建这个sh脚本。<br>以如下代码为例，我直接是使用python执行py脚本。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line"># 进入py程序所在目录</span><br><span class="line">cd /Users/konta/Sky_App/backstage_program &amp;&amp;</span><br><span class="line"># 执行python脚本（注意前面要指定python运行环境/usr/bin/python，根据自己的情况改变。我python3使用的是anaconda环境，所以不一样）</span><br><span class="line">/Users/konta/anaconda3/bin/python web_info.py</span><br></pre></td></tr></table></figure></p>
-<h3 id="plist文件部署位置"><a href="#plist文件部署位置" class="headerlink" title="plist文件部署位置"></a>plist文件部署位置</h3><p>plist可以放在如下位置：</p>
-<ul>
-<li>~/Library/LaunchAgents  由用户自己定义的任务项</li>
-<li>/Library/LaunchAgents  由管理员为用户定义的任务项</li>
-<li>/Library/LaunchDaemons  由管理员定义的守护进程任务项</li>
-<li>/System/Library/LaunchAgents  由Mac OS X为用户定义的任务项</li>
-<li>/System/Library/LaunchDaemons  由Mac OS X定义的守护进程任务项<br>我自己是放在了 【~/Library/LaunchAgents 】里面。<br>【 /Library/LaunchAgents】目录，由于Mac本身的安全策略，无法直接把文件放进去，需要先解除安全策略，我嫌麻烦就没用。<h3 id="lauchctl命令加载"><a href="#lauchctl命令加载" class="headerlink" title="lauchctl命令加载"></a>lauchctl命令加载</h3>只有加载了文件的任务，才能定时执行。terminal中输入：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 加载任务, -w会将plist文件中无效的key覆盖掉，建议加上。</span><br><span class="line">launchctl load -w lhd.backstage.program.plist</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>以上，定时job就设置完成了。</p>
-<h3 id="常规launchctl命令"><a href="#常规launchctl命令" class="headerlink" title="常规launchctl命令"></a>常规launchctl命令</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">launchctl load -w lhd.backstage.program.plist</span><br><span class="line"></span><br><span class="line"># 删除任务。如果plist文件有调整，需要先删除任务，再重新加载。</span><br><span class="line">launchctl unload -w lhd.backstage.program.plist</span><br><span class="line"></span><br><span class="line"># 立即执行任务。忽略设定的时间，立即执行。可以用来检查执行情况。</span><br><span class="line">launchctl start lhd.backstage.program.plist</span><br><span class="line"></span><br><span class="line"># 查看任务列表, 使用grep过滤</span><br><span class="line">launchctl list | grep &apos;lhd&apos;</span><br></pre></td></tr></table></figure>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>个人觉得，都挺方便的。</p>
-<p>只不过windows一如既往的可以通过可视化的配置界面进行设定，mac要一直通过在terminal码命令行设置。</p>
-<p>windows：task_scheduler ➡️ powershell脚本 ➡️ py程序<br>macOS：launchctl ➡️ sh脚本 ➡️ py程序<br>思路都是一样的，就是：使用当前操作系统下，原生支持度最高的语言，编写脚本，调用实际执行程序或脚本。</p>
-<p>以上。</p>
+    <title>人力资源离职情况的初步数据分析</title>
+    <url>/2020/09/11/%E4%BA%BA%E5%8A%9B%E8%B5%84%E6%BA%90%E7%A6%BB%E8%81%8C%E6%83%85%E5%86%B5%E7%9A%84%E5%88%9D%E6%AD%A5%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<h1 id="【行业】人力资源离职情况的初步数据分析"><a href="#【行业】人力资源离职情况的初步数据分析" class="headerlink" title="【行业】人力资源离职情况的初步数据分析"></a>【行业】人力资源离职情况的初步数据分析</h1><p>做了一笔数据场景的爬取分析。<br>我们现在看一下大致数据反映出的数据图表，分析一下。</p>
+<h2 id="离职人数及分布"><a href="#离职人数及分布" class="headerlink" title="离职人数及分布"></a>离职人数及分布</h2><p>先看一下各省的离职人数，及分布：</p>
+<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_amount_province_bar.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe></p>
+<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_amount_province_map.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>可以看到，各省基本都有人员离职，说明公司的业务铺的很开，各省均有员工。<br>且人口大省，相对应的离职人员，也比较多，成正比。</p>
+<h2 id="离职原因"><a href="#离职原因" class="headerlink" title="离职原因"></a>离职原因</h2><p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_reason_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>离职原因上，1/3的情况是家庭因素。工作压力、薪资、劳动强度等原因，占比相对不高，但是也在前几之列。<br>所以大多数的离职，基本上可能还是家庭与工作无法平衡，这也一定程度反映现代社会的一个比较普遍的情况。</p>
+<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_reason_province_sankey.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe></p>
+<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_reason_area_sankey.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>从这两个流向图，可以看出来，工作5年以下的人数占了绝大部份，说明公司员工对公司的忠诚度和依赖度比较低。<br>华东华北，等发达地区，员工更易离职。</p>
+<h2 id="再入职意愿"><a href="#再入职意愿" class="headerlink" title="再入职意愿"></a>再入职意愿</h2><p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_reentry_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>离职员工再入职的意愿，近4/5选择了愿意再次入职。说明一定程度上，大家对于公司还是满意的状态，如果有机会会继续选择。<br>但是也不排除员工“好聚好散”的心里。</p>
+<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_areareentry_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>其中，东北地区，愿意的比例最高，也说明东北的工作满意度状态最好。<br>华中地区，不愿意比例较高，如果有需要，其实可以重点看一下。看一下员工的反馈情况，可能会发现一些信息。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>只是做了一些简单的分析，<br>毕竟数据的收集有限。如果数据样本足够大，其实分析的规律会更加贴近实际。<br>这里只是简单练个手，以后有机会做一做更深入的分析调研。</p>
 ]]></content>
       <categories>
-        <category>Tech</category>
+        <category>行业</category>
       </categories>
       <tags>
-        <tag>Windows</tag>
-        <tag>MacOS</tag>
+        <tag>行业</tag>
+        <tag>hr</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[小实验]自制个双色球程序，助力走上人生巅峰吧</title>
+    <url>/2020/07/11/%E5%B0%8F%E5%AE%9E%E9%AA%8C-%E8%87%AA%E5%88%B6%E4%B8%AA%E5%8F%8C%E8%89%B2%E7%90%83%E7%A8%8B%E5%BA%8F%EF%BC%8C%E5%8A%A9%E5%8A%9B%E8%B5%B0%E4%B8%8A%E4%BA%BA%E7%94%9F%E5%B7%85%E5%B3%B0%E5%90%A7/</url>
+    <content><![CDATA[<h1 id="【Lib】-小实验-自制个双色球程序，助力走上人生巅峰吧"><a href="#【Lib】-小实验-自制个双色球程序，助力走上人生巅峰吧" class="headerlink" title="【Lib】[小实验]自制个双色球程序，助力走上人生巅峰吧"></a>【Lib】[小实验]自制个双色球程序，助力走上人生巅峰吧</h1><p>最近我在买双色球。<br>期待是有的，更多的是给自己攒RP，而且不是还有一部分发展福利事业么。</p>
+<p>本来就是随便买的，所以每次都是机选4注。<br>买了几次我发现，机选还挺简单的，没啥逻辑，那为啥我不自己搞个程序，自己机选呢？</p>
+<p>好的，说干就干。</p>
+<h2 id="程序逻辑"><a href="#程序逻辑" class="headerlink" title="程序逻辑"></a>程序逻辑</h2><ul>
+<li>使用random模块，对33个白球16个蓝球进行随机取值；</li>
+<li>白球取值过程，重复6次；需注意判断random出来的值，是否与前几次重复。</li>
+<li>6白球1蓝球一组，生成一注。生成17注。</li>
+<li>在17注中，在random出来4注，作为最终的机选。<br>（为啥先出来17，再选4呢？是因为好玩吧，lucky17里再lucky4。）</li>
+<li>发送给企业微信的webhook，然后企业微信生成消息。</li>
+</ul>
+<h2 id="程序实现机选"><a href="#程序实现机选" class="headerlink" title="程序实现机选"></a>程序实现机选</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import random, json, certifi, urllib3</span><br><span class="line"></span><br><span class="line">def blueball():</span><br><span class="line">    bball = random.randint(1,16)</span><br><span class="line">    return bball</span><br><span class="line"></span><br><span class="line">def redballs():</span><br><span class="line">    rballs = []</span><br><span class="line">    for i in range(6):</span><br><span class="line">        rball = random.randint(1,33)</span><br><span class="line">        while rball in rballs:</span><br><span class="line">            rball = random.randint(1,33)</span><br><span class="line">        rballs.append(rball)</span><br><span class="line">    rballs.sort()</span><br><span class="line">    return rballs</span><br><span class="line"></span><br><span class="line">def main():</span><br><span class="line">    altballs = []</span><br><span class="line">    for i in range(17):</span><br><span class="line">        balls = [redballs(), blueball()]</span><br><span class="line">        altballs.append(balls)</span><br><span class="line">    luckyfour = random.sample(altballs, 4)</span><br><span class="line"></span><br><span class="line">    # 发送给企业微信的webhook显示。</span><br><span class="line">    http = urllib3.PoolManager(cert_reqs=&apos;CERT_REQUIRED&apos;, ca_certs=certifi.where())</span><br><span class="line">    # 李有财 hook_addr</span><br><span class="line">    hook_addr = &quot;https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=lalalalalalalalalala&quot;    # my robot</span><br><span class="line">    # 传输webhook图文消息    </span><br><span class="line">    data = &#123;</span><br><span class="line">    &quot;msgtype&quot;: &quot;markdown&quot;,</span><br><span class="line">    &quot;markdown&quot;: &#123;</span><br><span class="line">        &quot;content&quot;: &quot;**双色球**\n\</span><br><span class="line">        &gt;**第①注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第②注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第③注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第④注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n&quot;</span><br><span class="line">        %(luckyfour[0][0], luckyfour[0][1], luckyfour[1][0], luckyfour[1][1],</span><br><span class="line">            luckyfour[2][0], luckyfour[2][1], luckyfour[3][0], luckyfour[3][1])</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    data = json.dumps(data).encode()</span><br><span class="line">    response_hook = http.request(&apos;POST&apos;, hook_addr, body=data)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+<h2 id="优化改善"><a href="#优化改善" class="headerlink" title="优化改善"></a>优化改善</h2><p>为了方便我每次对奖方便，在程序里爬取下上期的开奖结果。<br>爬取500彩票网的结果界面。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def last_result():</span><br><span class="line">    addr = &apos;http://kaijiang.500.com/shtml/ssq/&apos;</span><br><span class="line">    http = urllib3.PoolManager(cert_reqs=&apos;CERT_REQUIRED&apos;, ca_certs=certifi.where())</span><br><span class="line">    response = http.request(&apos;GET&apos;, addr)</span><br><span class="line">    tree = html.fromstring(response.data)</span><br><span class="line">    r = tree.xpath(&apos;//div[@class=&quot;ball_box01&quot;]//li[@class=&quot;ball_red&quot;]//text()&apos;)</span><br><span class="line">    b = tree.xpath(&apos;//div[@class=&quot;ball_box01&quot;]//li[@class=&quot;ball_blue&quot;]//text()&apos;)</span><br><span class="line">    return r, b</span><br></pre></td></tr></table></figure></p>
+<p>同时在主函数里加上上期结果的发送：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def main():</span><br><span class="line">    ***</span><br><span class="line">    last_r, last_b = last_result()</span><br><span class="line">    ***</span><br><span class="line">    data = &#123;</span><br><span class="line">    &quot;msgtype&quot;: &quot;markdown&quot;,</span><br><span class="line">    &quot;markdown&quot;: &#123;</span><br><span class="line">        &quot;content&quot;: &quot;**双色球**\n\</span><br><span class="line">        %s, %s\n\</span><br><span class="line">        &gt;**第①注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第②注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第③注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第④注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n&quot;</span><br><span class="line">        %(last_r, last_b, luckyfour[0][0], luckyfour[0][1], luckyfour[1][0], luckyfour[1][1],</span><br><span class="line">            luckyfour[2][0], luckyfour[2][1], luckyfour[3][0], luckyfour[3][1])</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    ***</span><br></pre></td></tr></table></figure></p>
+<h2 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h2><p><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0708/dcball01.jpg" alt=""><br>上期结果就没做太多的修饰了，觉得麻烦也没必要。</p>
+<p>最后在电脑上设置个定时job，每周一/三/五，发给我自己。</p>
+<p>以后去彩票站就下注lucky4好啦。<br>感觉自己好像就要走上人生巅峰了呢。哈哈哈哈哈～～<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0708/psyduck_happy.gif" alt=""></p>
+]]></content>
+      <categories>
+        <category>Lib</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>web</tag>
       </tags>
   </entry>
   <entry>
@@ -244,6 +208,42 @@
       <tags>
         <tag>Pandas</tag>
         <tag>cloud</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows与MacOS上的定时JOB设置</title>
+    <url>/2020/05/06/Windows%E4%B8%8EMacOS%E4%B8%8A%E7%9A%84%E5%AE%9A%E6%97%B6JOB%E8%AE%BE%E7%BD%AE/</url>
+    <content><![CDATA[<h1 id="windows-amp-MacOS-的定时JOB设置"><a href="#windows-amp-MacOS-的定时JOB设置" class="headerlink" title="windows &amp; MacOS 的定时JOB设置"></a>windows &amp; MacOS 的定时JOB设置</h1><p>做了一些程序以后呢，爬取网站呀，获取监控呀，就需要设定定时作业。<br>定时作业部署在不关机的server上肯定谁最好的。但是正常人肯定不是随便就能搞到服务器的，服务器还是有成本的。</p>
+<p>那么就用自己的pc机器吧～<br>（更新：发现可以通过云平台的serverless服务执行定时脚本。<a href="http://tech.hahaalot.com/2020/05/10/腾讯云TencentCloud的Serverless云函数SCF/">腾讯云TencentCloud的Serverless云函数SCF</a>）</p>
+<h2 id="Windows-OS"><a href="#Windows-OS" class="headerlink" title="Windows OS"></a>Windows OS</h2><p>Windows，最普遍的操作系统。<br>本身自带一个程序【计划任务(Task Scheduler)】<br>我们使用它设定和执行定时任务。</p>
+<h3 id="Task-Scheduler（计划任务）"><a href="#Task-Scheduler（计划任务）" class="headerlink" title="Task Scheduler（计划任务）"></a>Task Scheduler（计划任务）</h3><p>搜索task scheduler就能找到，然后新建定时任务。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/task_schedule01.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/task_schedule02.png" alt=""></p>
+<h3 id="定时任务（方法一）"><a href="#定时任务（方法一）" class="headerlink" title="定时任务（方法一）"></a>定时任务（方法一）</h3><p>直接新建，然后设置【Trigger】，【Actions】选择要执行的程序。<br>注意，如果程序脚本中涉及到了读写文件的操作，文件地址一定要写全绝对路径。因为执行脚本的目录并不是程序所在的相对路径的。<br>（因为我的直接脚本都是python写的，所以我执行程序使用的python）<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/task_schedule03.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/task_schedule04.png" alt=""></p>
+<h3 id="定时任务（方法二）"><a href="#定时任务（方法二）" class="headerlink" title="定时任务（方法二）"></a>定时任务（方法二）</h3><p>除了直接执行程序，也可以选择写一个powershell脚本，执行脚本。然后在powershell脚本中调用程序脚本。<br><del>是有种“脱裤子放屁”的感觉哈。</del><br><del>除了能避免忽略文件绝对路径的问题，好像也没啥用途。</del> （也不是什么主要优点）<br>可能我本人，比较喜欢powershell脚本吧。    o(<em>￣︶￣</em>)o<br>Windows上如果是一般的脚本，建议还是通过powershell写。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/task_schedule05.png" alt=""></p>
+<h2 id="MacOS"><a href="#MacOS" class="headerlink" title="MacOS"></a>MacOS</h2><p>Mac使用自带的launchctl服务。</p>
+<h3 id="编写plist文件"><a href="#编写plist文件" class="headerlink" title="编写plist文件"></a>编写plist文件</h3><p>首先要编写plist文件，代码参考如下。<br>Plist文件，是launchctl服务执行使用的。对于其他脚本的执行，需将脚本名称写在plist文件里。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">    &lt;!DOCTYPE plist PUBLIC &quot;-//Apple Computer//DTD PLIST 1.0//EN&quot;</span><br><span class="line">        &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span><br><span class="line">    &lt;plist version=&quot;1.0&quot;&gt;</span><br><span class="line">    &lt;dict&gt;</span><br><span class="line">        &lt;!-- Label唯一的标识 --&gt;</span><br><span class="line">        &lt;key&gt;Label&lt;/key&gt;</span><br><span class="line">        &lt;string&gt;lhd.backstage.program.plist&lt;/string&gt;</span><br><span class="line">        &lt;!-- 指定要运行的脚本 --&gt;</span><br><span class="line">        &lt;key&gt;ProgramArguments&lt;/key&gt;</span><br><span class="line">        &lt;array&gt;</span><br><span class="line">            &lt;string&gt;/Users/konta/Sky_App/backstage_program/back_run.sh&lt;/string&gt;</span><br><span class="line">        &lt;/array&gt;</span><br><span class="line">        &lt;!-- 指定要运行的时间 --&gt;</span><br><span class="line">        &lt;key&gt;StartCalendarInterval&lt;/key&gt;</span><br><span class="line">        &lt;dict&gt;</span><br><span class="line">            &lt;key&gt;Minute&lt;/key&gt;</span><br><span class="line">            &lt;integer&gt;07&lt;/integer&gt;</span><br><span class="line">            &lt;key&gt;Hour&lt;/key&gt;</span><br><span class="line">            &lt;integer&gt;17&lt;/integer&gt;</span><br><span class="line">        &lt;/dict&gt;</span><br><span class="line">        &lt;!-- 标准输出文件 --&gt;</span><br><span class="line">        &lt;key&gt;StandardOutPath&lt;/key&gt;</span><br><span class="line">        &lt;string&gt;/Users/konta/Sky_App/backstage_program/backstage_program.log&lt;/string&gt;</span><br><span class="line">        &lt;!-- 标准错误输出文件，错误日志 --&gt;</span><br><span class="line">        &lt;key&gt;StandardErrorPath&lt;/key&gt;</span><br><span class="line">        &lt;string&gt;/Users/konta/Sky_App/backstage_program/backstage_program.err&lt;/string&gt;</span><br><span class="line">    &lt;/dict&gt;</span><br><span class="line">    &lt;/plist&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="编写sh脚本"><a href="#编写sh脚本" class="headerlink" title="编写sh脚本"></a>编写sh脚本</h3><p>plist文件中指定了脚本地址，我们需要创建这个sh脚本。<br>以如下代码为例，我直接是使用python执行py脚本。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line"># 进入py程序所在目录</span><br><span class="line">cd /Users/konta/Sky_App/backstage_program &amp;&amp;</span><br><span class="line"># 执行python脚本（注意前面要指定python运行环境/usr/bin/python，根据自己的情况改变。我python3使用的是anaconda环境，所以不一样）</span><br><span class="line">/Users/konta/anaconda3/bin/python web_info.py</span><br></pre></td></tr></table></figure></p>
+<h3 id="plist文件部署位置"><a href="#plist文件部署位置" class="headerlink" title="plist文件部署位置"></a>plist文件部署位置</h3><p>plist可以放在如下位置：</p>
+<ul>
+<li>~/Library/LaunchAgents  由用户自己定义的任务项</li>
+<li>/Library/LaunchAgents  由管理员为用户定义的任务项</li>
+<li>/Library/LaunchDaemons  由管理员定义的守护进程任务项</li>
+<li>/System/Library/LaunchAgents  由Mac OS X为用户定义的任务项</li>
+<li>/System/Library/LaunchDaemons  由Mac OS X定义的守护进程任务项<br>我自己是放在了 【~/Library/LaunchAgents 】里面。<br>【 /Library/LaunchAgents】目录，由于Mac本身的安全策略，无法直接把文件放进去，需要先解除安全策略，我嫌麻烦就没用。<h3 id="lauchctl命令加载"><a href="#lauchctl命令加载" class="headerlink" title="lauchctl命令加载"></a>lauchctl命令加载</h3>只有加载了文件的任务，才能定时执行。terminal中输入：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 加载任务, -w会将plist文件中无效的key覆盖掉，建议加上。</span><br><span class="line">launchctl load -w lhd.backstage.program.plist</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>以上，定时job就设置完成了。</p>
+<h3 id="常规launchctl命令"><a href="#常规launchctl命令" class="headerlink" title="常规launchctl命令"></a>常规launchctl命令</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">launchctl load -w lhd.backstage.program.plist</span><br><span class="line"></span><br><span class="line"># 删除任务。如果plist文件有调整，需要先删除任务，再重新加载。</span><br><span class="line">launchctl unload -w lhd.backstage.program.plist</span><br><span class="line"></span><br><span class="line"># 立即执行任务。忽略设定的时间，立即执行。可以用来检查执行情况。</span><br><span class="line">launchctl start lhd.backstage.program.plist</span><br><span class="line"></span><br><span class="line"># 查看任务列表, 使用grep过滤</span><br><span class="line">launchctl list | grep &apos;lhd&apos;</span><br></pre></td></tr></table></figure>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>个人觉得，都挺方便的。</p>
+<p>只不过windows一如既往的可以通过可视化的配置界面进行设定，mac要一直通过在terminal码命令行设置。</p>
+<p>windows：task_scheduler ➡️ powershell脚本 ➡️ py程序<br>macOS：launchctl ➡️ sh脚本 ➡️ py程序<br>思路都是一样的，就是：使用当前操作系统下，原生支持度最高的语言，编写脚本，调用实际执行程序或脚本。</p>
+<p>以上。</p>
+]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>MacOS</tag>
       </tags>
   </entry>
   <entry>
@@ -312,6 +312,27 @@
       </tags>
   </entry>
   <entry>
+    <title>腾讯云TencentCloud的Serverless云函数SCF</title>
+    <url>/2020/05/10/%E8%85%BE%E8%AE%AF%E4%BA%91TencentCloud%E7%9A%84Serverless%E4%BA%91%E5%87%BD%E6%95%B0SCF/</url>
+    <content><![CDATA[<h1 id="腾讯云TencentCloud的Serverless云函数SCF"><a href="#腾讯云TencentCloud的Serverless云函数SCF" class="headerlink" title="腾讯云TencentCloud的Serverless云函数SCF"></a>腾讯云TencentCloud的Serverless云函数SCF</h1><h2 id="SCF"><a href="#SCF" class="headerlink" title="SCF"></a>SCF</h2><p>偶然的机会，发现了腾讯云的SCF（Serverless Cloud Function）。感觉发现了个宝贝。还蛮有意思的。</p>
+<h3 id="serverless"><a href="#serverless" class="headerlink" title="serverless"></a>serverless</h3><p>做过后台管理，对server很敏感。最近两年经常在各种地方看到过“serverless”这个词。<br>顾名思义，就是抛除服务器的概念。<br>可是具体的服务一直没接触过。这次测试SCF，也算对serverless有了一点实践性的接触。<br>以后有机会看看要不要深入写一下。</p>
+<h3 id="TencentCloud的SCF"><a href="#TencentCloud的SCF" class="headerlink" title="TencentCloud的SCF"></a>TencentCloud的SCF</h3><p>之所以接触到了TencentCloud，可能是整个站点的基架都是腾讯云的各服务支撑的，自然而然的就用了SCF。<br>SCF提供了一定的<a href="https://cloud.tencent.com/document/product/583/12282" target="_blank" rel="noopener">免费额度</a>，我草草算了下，每天偶尔跑两次在额度范围内是绰绰有余的。<br>日常研究测试下，简直等同于白嫖呀。</p>
+<h2 id="SCF配置"><a href="#SCF配置" class="headerlink" title="SCF配置"></a>SCF配置</h2><h3 id="设置函数"><a href="#设置函数" class="headerlink" title="设置函数"></a>设置函数</h3><p>进入控制台-云函数，然后新建。<br>我使用了空白模版，然后因为我的脚本是python，所以语言python3.6。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf01.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf02.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf03.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf04.png" alt=""><br>完成后，就可以把自己的脚本代码复制进来，保存。</p>
+<p>需要注意的是，<strong>当前的执行方法是【index.main_handler】，所以想让你的脚本跑起来，方法名要调整。</strong><br>我直接把我自定义的方法放在了index.main_handler()里面。 <del>可能是因为我太懒了。</del><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf05.png" alt=""></p>
+<h3 id="设置触发器"><a href="#设置触发器" class="headerlink" title="设置触发器"></a>设置触发器</h3><p><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf06.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf07.png" alt=""></p>
+<h2 id="更多使用方法，可以参考官方文档。"><a href="#更多使用方法，可以参考官方文档。" class="headerlink" title="更多使用方法，可以参考官方文档。"></a>更多使用方法，可以参考官方文档。</h2><p>官方文档，写的真的是详细。<br>我，都能看懂～</p>
+<p>这样就设置完成了。<br>然后就等着看是否跑起来脚本代码了。</p>
+<p>嘿嘿嘿～<br><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1236019916,2423407424&amp;fm=26&amp;gp=0.jpg" alt=""></p>
+]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>cloud</tag>
+        <tag>serverless</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数据分析可视化的简单探究（三）--建立模型</title>
     <url>/2020/09/09/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9A%84%E7%AE%80%E5%8D%95%E6%8E%A2%E7%A9%B63/</url>
     <content><![CDATA[<p><a href="https://tech.hahaalot.com/2020/09/06/数据分析可视化的简单探究/"><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario-gif.gif" width="10%" height="10%" alt="点击跳转" align="left"></a><br><br>(Click Mario)</p>
@@ -331,6 +352,23 @@
       <tags>
         <tag>Pandas</tag>
         <tag>cloud</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网站访问情况的简单监控</title>
+    <url>/2020/04/27/%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E6%83%85%E5%86%B5%E7%9A%84%E7%AE%80%E5%8D%95%E7%9B%91%E6%8E%A7/</url>
+    <content><![CDATA[<h1 id="网站访问情况的简单监控"><a href="#网站访问情况的简单监控" class="headerlink" title="网站访问情况的简单监控"></a>网站访问情况的简单监控</h1><h2 id="我呢，想做这样一个事情："><a href="#我呢，想做这样一个事情：" class="headerlink" title="我呢，想做这样一个事情："></a>我呢，想做这样一个事情：</h2><p>通过爬取blog封面最下方的记数，将每天访问网站的信息抓取出来。然后调用WechatWork的webhook，将每天的访问数发给自己。<br>这样就能粗略了解，网站的访问情况。</p>
+<h3 id="1-获取网站的访问记数："><a href="#1-获取网站的访问记数：" class="headerlink" title="1. 获取网站的访问记数："></a>1. 获取网站的访问记数：</h3><p>开始的脚本想用python的requests库抓，但是发现个问题。<br>那就是封面加载的时候，页面记数不会立刻返回到界面中。我开始以为是我的xpath写法有问题，试了好久才发现其实是获取的text里第一时间不存在记数（应该是在调用busuanzi的服务，所以数据不是立刻返回。）<br>这样就导致使用requests.get()方法，无法抓到数据。每次抓的记数都不存在。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/pythonrequests01.jpeg" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/pythonrequests02.gif" alt=""><br>查了下资料，好像requests库没办法实现等待页面几秒再返回数据的情况。<br>所以我改成使用selenium库进行页面内容的抓取。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/pythonrequests03.png" alt=""><br>定义获取计数的函数get_counts()：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def get_counts():    # 使用selenuim，加载动态界面，抓取计数；</span><br><span class="line">    browser = webdriver.Chrome()</span><br><span class="line">    browser.get(&quot;https://****.com&quot;)</span><br><span class="line"></span><br><span class="line">    count_site_pv = browser.find_element(By.ID, &quot;busuanzi_value_site_pv&quot;).text</span><br><span class="line">    count_site_uv = browser.find_element(By.ID, &quot;busuanzi_value_site_uv&quot;).text</span><br><span class="line">    count_page_pv = browser.find_element(By.ID, &quot;busuanzi_value_page_pv&quot;).text</span><br><span class="line"></span><br><span class="line">    browser.close()</span><br><span class="line">    return count_site_pv, count_site_uv, count_page_pv</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-在WechatWork里创建一个webhook："><a href="#2-在WechatWork里创建一个webhook：" class="headerlink" title="2. 在WechatWork里创建一个webhook："></a>2. 在WechatWork里创建一个webhook：</h3><p>Webhook在企业微信里只能在群机器人下使用。<br>所以我先拉了两个同事，创建个聊天群，然后再把他们移走。这样就创建了一个只有我自己的群。</p>
+<h3 id="3-向webhook发送消息，推送至企业微信："><a href="#3-向webhook发送消息，推送至企业微信：" class="headerlink" title="3. 向webhook发送消息，推送至企业微信："></a>3. 向webhook发送消息，推送至企业微信：</h3><p>这个就按照群机器人配置说明中的说明，进行消息推送即可。<br>我使用的是urllib3库。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def ewc_webhook(a, b, c):    # 调用ewc的webhook，发送消息；</span><br><span class="line">    a, b, c = a, b, c</span><br><span class="line">    hook_addr = &apos;https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=*************&apos;</span><br><span class="line">    http = urllib3.PoolManager()</span><br><span class="line">    time = datetime.datetime.now()</span><br><span class="line">    today = time.strftime(&apos;%Y-%m-%d&apos;)</span><br><span class="line"></span><br><span class="line">    data = &#123;</span><br><span class="line">    &quot;msgtype&quot;: &quot;markdown&quot;,</span><br><span class="line">    &quot;markdown&quot;: &#123;</span><br><span class="line">        &quot;content&quot;: &quot;&lt;font color=\&quot;info\&quot;&gt;%s&lt;/font&gt;\n\</span><br><span class="line">        &gt;Blog总访问量:&lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;\n\</span><br><span class="line">        &gt;Blog访客数量:&lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;\n\</span><br><span class="line">        &gt;封面访问数:&lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;&quot; </span><br><span class="line">        %(today, a, b, c)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    data = json.dumps(data).encode()</span><br><span class="line">    response = http.request(&apos;POST&apos;, hook_addr, body=data)</span><br></pre></td></tr></table></figure></p>
+<h3 id="4-在本地电脑上设置定时job，每天执行程序。"><a href="#4-在本地电脑上设置定时job，每天执行程序。" class="headerlink" title="4. 在本地电脑上设置定时job，每天执行程序。"></a>4. 在本地电脑上设置定时job，每天执行程序。</h3><p>最终效果：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/pythonrequests04.png" alt=""></p>
+]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>crawler</tag>
       </tags>
   </entry>
   <entry>
@@ -361,44 +399,6 @@
       </categories>
       <tags>
         <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>网站访问情况的简单监控</title>
-    <url>/2020/04/27/%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E6%83%85%E5%86%B5%E7%9A%84%E7%AE%80%E5%8D%95%E7%9B%91%E6%8E%A7/</url>
-    <content><![CDATA[<h1 id="网站访问情况的简单监控"><a href="#网站访问情况的简单监控" class="headerlink" title="网站访问情况的简单监控"></a>网站访问情况的简单监控</h1><h2 id="我呢，想做这样一个事情："><a href="#我呢，想做这样一个事情：" class="headerlink" title="我呢，想做这样一个事情："></a>我呢，想做这样一个事情：</h2><p>通过爬取blog封面最下方的记数，将每天访问网站的信息抓取出来。然后调用WechatWork的webhook，将每天的访问数发给自己。<br>这样就能粗略了解，网站的访问情况。</p>
-<h3 id="1-获取网站的访问记数："><a href="#1-获取网站的访问记数：" class="headerlink" title="1. 获取网站的访问记数："></a>1. 获取网站的访问记数：</h3><p>开始的脚本想用python的requests库抓，但是发现个问题。<br>那就是封面加载的时候，页面记数不会立刻返回到界面中。我开始以为是我的xpath写法有问题，试了好久才发现其实是获取的text里第一时间不存在记数（应该是在调用busuanzi的服务，所以数据不是立刻返回。）<br>这样就导致使用requests.get()方法，无法抓到数据。每次抓的记数都不存在。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/pythonrequests01.jpeg" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/pythonrequests02.gif" alt=""><br>查了下资料，好像requests库没办法实现等待页面几秒再返回数据的情况。<br>所以我改成使用selenium库进行页面内容的抓取。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/pythonrequests03.png" alt=""><br>定义获取计数的函数get_counts()：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def get_counts():    # 使用selenuim，加载动态界面，抓取计数；</span><br><span class="line">    browser = webdriver.Chrome()</span><br><span class="line">    browser.get(&quot;https://****.com&quot;)</span><br><span class="line"></span><br><span class="line">    count_site_pv = browser.find_element(By.ID, &quot;busuanzi_value_site_pv&quot;).text</span><br><span class="line">    count_site_uv = browser.find_element(By.ID, &quot;busuanzi_value_site_uv&quot;).text</span><br><span class="line">    count_page_pv = browser.find_element(By.ID, &quot;busuanzi_value_page_pv&quot;).text</span><br><span class="line"></span><br><span class="line">    browser.close()</span><br><span class="line">    return count_site_pv, count_site_uv, count_page_pv</span><br></pre></td></tr></table></figure></p>
-<h3 id="2-在WechatWork里创建一个webhook："><a href="#2-在WechatWork里创建一个webhook：" class="headerlink" title="2. 在WechatWork里创建一个webhook："></a>2. 在WechatWork里创建一个webhook：</h3><p>Webhook在企业微信里只能在群机器人下使用。<br>所以我先拉了两个同事，创建个聊天群，然后再把他们移走。这样就创建了一个只有我自己的群。</p>
-<h3 id="3-向webhook发送消息，推送至企业微信："><a href="#3-向webhook发送消息，推送至企业微信：" class="headerlink" title="3. 向webhook发送消息，推送至企业微信："></a>3. 向webhook发送消息，推送至企业微信：</h3><p>这个就按照群机器人配置说明中的说明，进行消息推送即可。<br>我使用的是urllib3库。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def ewc_webhook(a, b, c):    # 调用ewc的webhook，发送消息；</span><br><span class="line">    a, b, c = a, b, c</span><br><span class="line">    hook_addr = &apos;https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=*************&apos;</span><br><span class="line">    http = urllib3.PoolManager()</span><br><span class="line">    time = datetime.datetime.now()</span><br><span class="line">    today = time.strftime(&apos;%Y-%m-%d&apos;)</span><br><span class="line"></span><br><span class="line">    data = &#123;</span><br><span class="line">    &quot;msgtype&quot;: &quot;markdown&quot;,</span><br><span class="line">    &quot;markdown&quot;: &#123;</span><br><span class="line">        &quot;content&quot;: &quot;&lt;font color=\&quot;info\&quot;&gt;%s&lt;/font&gt;\n\</span><br><span class="line">        &gt;Blog总访问量:&lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;\n\</span><br><span class="line">        &gt;Blog访客数量:&lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;\n\</span><br><span class="line">        &gt;封面访问数:&lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;&quot; </span><br><span class="line">        %(today, a, b, c)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    data = json.dumps(data).encode()</span><br><span class="line">    response = http.request(&apos;POST&apos;, hook_addr, body=data)</span><br></pre></td></tr></table></figure></p>
-<h3 id="4-在本地电脑上设置定时job，每天执行程序。"><a href="#4-在本地电脑上设置定时job，每天执行程序。" class="headerlink" title="4. 在本地电脑上设置定时job，每天执行程序。"></a>4. 在本地电脑上设置定时job，每天执行程序。</h3><p>最终效果：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/pythonrequests04.png" alt=""></p>
-]]></content>
-      <categories>
-        <category>Tech</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>crawler</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>腾讯云TencentCloud的Serverless云函数SCF</title>
-    <url>/2020/05/10/%E8%85%BE%E8%AE%AF%E4%BA%91TencentCloud%E7%9A%84Serverless%E4%BA%91%E5%87%BD%E6%95%B0SCF/</url>
-    <content><![CDATA[<h1 id="腾讯云TencentCloud的Serverless云函数SCF"><a href="#腾讯云TencentCloud的Serverless云函数SCF" class="headerlink" title="腾讯云TencentCloud的Serverless云函数SCF"></a>腾讯云TencentCloud的Serverless云函数SCF</h1><h2 id="SCF"><a href="#SCF" class="headerlink" title="SCF"></a>SCF</h2><p>偶然的机会，发现了腾讯云的SCF（Serverless Cloud Function）。感觉发现了个宝贝。还蛮有意思的。</p>
-<h3 id="serverless"><a href="#serverless" class="headerlink" title="serverless"></a>serverless</h3><p>做过后台管理，对server很敏感。最近两年经常在各种地方看到过“serverless”这个词。<br>顾名思义，就是抛除服务器的概念。<br>可是具体的服务一直没接触过。这次测试SCF，也算对serverless有了一点实践性的接触。<br>以后有机会看看要不要深入写一下。</p>
-<h3 id="TencentCloud的SCF"><a href="#TencentCloud的SCF" class="headerlink" title="TencentCloud的SCF"></a>TencentCloud的SCF</h3><p>之所以接触到了TencentCloud，可能是整个站点的基架都是腾讯云的各服务支撑的，自然而然的就用了SCF。<br>SCF提供了一定的<a href="https://cloud.tencent.com/document/product/583/12282" target="_blank" rel="noopener">免费额度</a>，我草草算了下，每天偶尔跑两次在额度范围内是绰绰有余的。<br>日常研究测试下，简直等同于白嫖呀。</p>
-<h2 id="SCF配置"><a href="#SCF配置" class="headerlink" title="SCF配置"></a>SCF配置</h2><h3 id="设置函数"><a href="#设置函数" class="headerlink" title="设置函数"></a>设置函数</h3><p>进入控制台-云函数，然后新建。<br>我使用了空白模版，然后因为我的脚本是python，所以语言python3.6。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf01.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf02.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf03.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf04.png" alt=""><br>完成后，就可以把自己的脚本代码复制进来，保存。</p>
-<p>需要注意的是，<strong>当前的执行方法是【index.main_handler】，所以想让你的脚本跑起来，方法名要调整。</strong><br>我直接把我自定义的方法放在了index.main_handler()里面。 <del>可能是因为我太懒了。</del><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf05.png" alt=""></p>
-<h3 id="设置触发器"><a href="#设置触发器" class="headerlink" title="设置触发器"></a>设置触发器</h3><p><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf06.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf07.png" alt=""></p>
-<h2 id="更多使用方法，可以参考官方文档。"><a href="#更多使用方法，可以参考官方文档。" class="headerlink" title="更多使用方法，可以参考官方文档。"></a>更多使用方法，可以参考官方文档。</h2><p>官方文档，写的真的是详细。<br>我，都能看懂～</p>
-<p>这样就设置完成了。<br>然后就等着看是否跑起来脚本代码了。</p>
-<p>嘿嘿嘿～<br><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1236019916,2423407424&amp;fm=26&amp;gp=0.jpg" alt=""></p>
-]]></content>
-      <categories>
-        <category>Tech</category>
-      </categories>
-      <tags>
-        <tag>cloud</tag>
-        <tag>serverless</tag>
       </tags>
   </entry>
 </search>
