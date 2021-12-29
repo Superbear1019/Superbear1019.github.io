@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Blog搭建信息</title>
+    <url>/2020/04/21/Blog%E6%90%AD%E5%BB%BA%E4%BF%A1%E6%81%AF/</url>
+    <content><![CDATA[<h1 id="Blog搭建信息"><a href="#Blog搭建信息" class="headerlink" title="Blog搭建信息"></a>Blog搭建信息</h1><h2 id="代码托管平台：Coding"><a href="#代码托管平台：Coding" class="headerlink" title="代码托管平台：Coding"></a>代码托管平台：Coding</h2><p>喜欢小猴子的logo。<br>参考：<a href="https://coding.net/" target="_blank" rel="noopener">CODING - 一站式软件研发管理平台</a></p>
+<h2 id="blog框架：Hexo"><a href="#blog框架：Hexo" class="headerlink" title="blog框架：Hexo"></a>blog框架：Hexo</h2><p>A fast, simple &amp; powerful blog framework。<br>参考：<a href="https://hexo.io/" target="_blank" rel="noopener">hexo</a></p>
+<h2 id="主题：Chic"><a href="#主题：Chic" class="headerlink" title="主题：Chic"></a>主题：Chic</h2><p>选择的原因：极简设计，博客封面。<br>后来知道Chic是法语，同英语elegant。Elegant是我最喜欢的英文单词之一。<br>参考：<a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank" rel="noopener">Chic主题</a></p>
+<h2 id="对象存储：COS"><a href="#对象存储：COS" class="headerlink" title="对象存储：COS"></a>对象存储：COS</h2><p>主要是防盗链。费用么应该不多。</p>
+<h2 id="页面计数服务：busuanzi"><a href="#页面计数服务：busuanzi" class="headerlink" title="页面计数服务：busuanzi"></a>页面计数服务：busuanzi</h2><p>可能是配置最方便吧。<br>参考：<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">不蒜子 - 极简网页计数器</a></p>
+<h2 id="封面链接图标：iconfont"><a href="#封面链接图标：iconfont" class="headerlink" title="封面链接图标：iconfont"></a>封面链接图标：iconfont</h2><p>参考：<a href="https://www.iconfont.cn/home/index" target="_blank" rel="noopener">Iconfont-阿里巴巴矢量图标库</a></p>
+<h2 id="可能后续考虑要不要加的服务支持："><a href="#可能后续考虑要不要加的服务支持：" class="headerlink" title="可能后续考虑要不要加的服务支持："></a>可能后续考虑要不要加的服务支持：</h2><p>Live2d ——目前感觉不实用<br>jsdelivr ——CDN<br>valine ——暂时也没人看，也不需要评论服务。</p>
+]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo搭建的自定义服务</title>
     <url>/2020/04/22/Hexo%E6%90%AD%E5%BB%BA%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A1/</url>
     <content><![CDATA[<h2 id="说在前："><a href="#说在前：" class="headerlink" title="说在前："></a>说在前：</h2><p>Hexo主题我选的是Chic，设计师的理念是“less is more”，<br>所以很多功能他是没有放进去的。我后来呢想了想也是有道理的，所以好多服务都没有加进去。<br>目前用了页面统计。别的都没有了。</p>
@@ -14,6 +33,60 @@
         <tag>hexo</tag>
         <tag>blog</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>[DEMO]demo</title>
+    <url>/2018/12/30/DEMO-demo/</url>
+    <content><![CDATA[<h2 id="说在前："><a href="#说在前：" class="headerlink" title="说在前："></a>说在前：</h2><p>Demo</p>
+<p>P1:</p>
+<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_reason_area_sankey.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
+
+<p>P2:</p>
+<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_reason_province_sankey.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
+
+<p>P3:</p>
+<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_amount_province_map.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
+
+<p>P4:</p>
+<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_amount_province_bar.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
+
+<p>P5:</p>
+<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_reason_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
+
+<p>P6:</p>
+<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_reentry_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
+
+<p>P7:</p>
+<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_areareentry_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
+
+<p>Pic01：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario111_PNG80.png" alt="DEMODEMO"></p>
+<p>Pic02：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario_PNG80.png" alt="DEMODEMO" title="DEMO测试"></p>
+<p>Pic03：<br>参考：<br><a href="https://tech.hahaalot.com/"><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario_PNG80.png" alt="替换文本文本" title="TITLE跳转跳转"></a></p>
+<p>Pic04:<br><a href="https://tech.hahaalot.com/"><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1599552413367&amp;di=13f71db32fb0c20ca8b37f6a9d168e7e&amp;imgtype=0&amp;src=http%3A%2F%2Fpic.90370.com%2Fupload%2F2017-3%2F20173301736172260.png &quot;TITLE跳转跳转&quot;#pic_center# =200x200" alt="标签"></a></p>
+<p>Pic05:<br><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599552413367&di=13f71db32fb0c20ca8b37f6a9d168e7e&imgtype=0&src=http%3A%2F%2Fpic.90370.com%2Fupload%2F2017-3%2F20173301736172260.png" width="10%" height="10%" alt="示例" align="left"><br><a href="https://tech.hahaalot.com/"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599552413367&di=13f71db32fb0c20ca8b37f6a9d168e7e&imgtype=0&src=http%3A%2F%2Fpic.90370.com%2Fupload%2F2017-3%2F20173301736172260.png" width="20%" height="20%" alt="示例" align="center"></a></p>
+<p>插入picture<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![Alt text](图片链接 &quot;optional title&quot;)</span><br><span class="line">Alt text：图片的Alt标签，用来描述图片的关键词，可以不写。</span><br><span class="line">最初的本意是当图片因为某种原因不能被显示时而出现的替代文字，后来又被用于SEO，可以方便搜索引擎根据Alt text里面的关键词搜索到图片。 </span><br><span class="line">图片链接：可以是图片的本地地址或者是网址。</span><br><span class="line">&quot;optional title&quot;：鼠标悬置于图片上会出现的标题文字，可以不写。</span><br></pre></td></tr></table></figure></p>
+<p>OK～～～</p>
+]]></content>
+      <categories>
+        <category>Demo</category>
+      </categories>
+      <tags>
+        <tag>Demo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2018/12/29/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>WechatWork企业微信的webhook使用</title>
@@ -88,20 +161,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2018/12/29/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>人力资源离职情况的初步数据分析</title>
     <url>/2020/09/11/%E4%BA%BA%E5%8A%9B%E8%B5%84%E6%BA%90%E7%A6%BB%E8%81%8C%E6%83%85%E5%86%B5%E7%9A%84%E5%88%9D%E6%AD%A5%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</url>
     <content><![CDATA[<h1 id="【行业】人力资源离职情况的初步数据分析"><a href="#【行业】人力资源离职情况的初步数据分析" class="headerlink" title="【行业】人力资源离职情况的初步数据分析"></a>【行业】人力资源离职情况的初步数据分析</h1><p>做了一笔数据场景的爬取分析。<br>我们现在看一下大致数据反映出的数据图表，分析一下。</p>
@@ -167,65 +226,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Blog搭建信息</title>
-    <url>/2020/04/21/Blog%E6%90%AD%E5%BB%BA%E4%BF%A1%E6%81%AF/</url>
-    <content><![CDATA[<h1 id="Blog搭建信息"><a href="#Blog搭建信息" class="headerlink" title="Blog搭建信息"></a>Blog搭建信息</h1><h2 id="代码托管平台：Coding"><a href="#代码托管平台：Coding" class="headerlink" title="代码托管平台：Coding"></a>代码托管平台：Coding</h2><p>喜欢小猴子的logo。<br>参考：<a href="https://coding.net/" target="_blank" rel="noopener">CODING - 一站式软件研发管理平台</a></p>
-<h2 id="blog框架：Hexo"><a href="#blog框架：Hexo" class="headerlink" title="blog框架：Hexo"></a>blog框架：Hexo</h2><p>A fast, simple &amp; powerful blog framework。<br>参考：<a href="https://hexo.io/" target="_blank" rel="noopener">hexo</a></p>
-<h2 id="主题：Chic"><a href="#主题：Chic" class="headerlink" title="主题：Chic"></a>主题：Chic</h2><p>选择的原因：极简设计，博客封面。<br>后来知道Chic是法语，同英语elegant。Elegant是我最喜欢的英文单词之一。<br>参考：<a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank" rel="noopener">Chic主题</a></p>
-<h2 id="对象存储：COS"><a href="#对象存储：COS" class="headerlink" title="对象存储：COS"></a>对象存储：COS</h2><p>主要是防盗链。费用么应该不多。</p>
-<h2 id="页面计数服务：busuanzi"><a href="#页面计数服务：busuanzi" class="headerlink" title="页面计数服务：busuanzi"></a>页面计数服务：busuanzi</h2><p>可能是配置最方便吧。<br>参考：<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">不蒜子 - 极简网页计数器</a></p>
-<h2 id="封面链接图标：iconfont"><a href="#封面链接图标：iconfont" class="headerlink" title="封面链接图标：iconfont"></a>封面链接图标：iconfont</h2><p>参考：<a href="https://www.iconfont.cn/home/index" target="_blank" rel="noopener">Iconfont-阿里巴巴矢量图标库</a></p>
-<h2 id="可能后续考虑要不要加的服务支持："><a href="#可能后续考虑要不要加的服务支持：" class="headerlink" title="可能后续考虑要不要加的服务支持："></a>可能后续考虑要不要加的服务支持：</h2><p>Live2d ——目前感觉不实用<br>jsdelivr ——CDN<br>valine ——暂时也没人看，也不需要评论服务。</p>
-]]></content>
-      <categories>
-        <category>Tech</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[DEMO]demo</title>
-    <url>/2018/12/30/DEMO-demo/</url>
-    <content><![CDATA[<h2 id="说在前："><a href="#说在前：" class="headerlink" title="说在前："></a>说在前：</h2><p>Demo</p>
-<p>P1:</p>
-<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_reason_area_sankey.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
-
-<p>P2:</p>
-<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_reason_province_sankey.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
-
-<p>P3:</p>
-<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_amount_province_map.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
-
-<p>P4:</p>
-<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_amount_province_bar.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
-
-<p>P5:</p>
-<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_reason_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
-
-<p>P6:</p>
-<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_reentry_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
-
-<p>P7:</p>
-<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_areareentry_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
-
-<p>Pic01：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario111_PNG80.png" alt="DEMODEMO"></p>
-<p>Pic02：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario_PNG80.png" alt="DEMODEMO" title="DEMO测试"></p>
-<p>Pic03：<br>参考：<br><a href="https://tech.hahaalot.com/"><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario_PNG80.png" alt="替换文本文本" title="TITLE跳转跳转"></a></p>
-<p>Pic04:<br><a href="https://tech.hahaalot.com/"><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1599552413367&amp;di=13f71db32fb0c20ca8b37f6a9d168e7e&amp;imgtype=0&amp;src=http%3A%2F%2Fpic.90370.com%2Fupload%2F2017-3%2F20173301736172260.png &quot;TITLE跳转跳转&quot;#pic_center# =200x200" alt="标签"></a></p>
-<p>Pic05:<br><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599552413367&di=13f71db32fb0c20ca8b37f6a9d168e7e&imgtype=0&src=http%3A%2F%2Fpic.90370.com%2Fupload%2F2017-3%2F20173301736172260.png" width="10%" height="10%" alt="示例" align="left"><br><a href="https://tech.hahaalot.com/"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599552413367&di=13f71db32fb0c20ca8b37f6a9d168e7e&imgtype=0&src=http%3A%2F%2Fpic.90370.com%2Fupload%2F2017-3%2F20173301736172260.png" width="20%" height="20%" alt="示例" align="center"></a></p>
-<p>插入picture<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![Alt text](图片链接 &quot;optional title&quot;)</span><br><span class="line">Alt text：图片的Alt标签，用来描述图片的关键词，可以不写。</span><br><span class="line">最初的本意是当图片因为某种原因不能被显示时而出现的替代文字，后来又被用于SEO，可以方便搜索引擎根据Alt text里面的关键词搜索到图片。 </span><br><span class="line">图片链接：可以是图片的本地地址或者是网址。</span><br><span class="line">&quot;optional title&quot;：鼠标悬置于图片上会出现的标题文字，可以不写。</span><br></pre></td></tr></table></figure></p>
-<p>OK～～～</p>
-]]></content>
-      <categories>
-        <category>Demo</category>
-      </categories>
-      <tags>
-        <tag>Demo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>数据分析可视化的简单探究（一）--数据抓取</title>
     <url>/2020/09/07/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9A%84%E7%AE%80%E5%8D%95%E6%8E%A2%E7%A9%B61/</url>
     <content><![CDATA[<p>上回写了自己搞了一个小小的项目学习测试。<br>然后其中用到了一些知识点，个人觉得还是挺有意义和用途的，接下来写几篇稿子记录一下。</p>
@@ -236,42 +236,6 @@
 <p>其他所需要的信息同理。</p>
 <h3 id="抓取值的函数"><a href="#抓取值的函数" class="headerlink" title="抓取值的函数"></a>抓取值的函数</h3><p>分析好后，写了这样一个函数：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def xml_info_parameter(data):</span><br><span class="line">    tree = html.fromstring(data.encode(&apos;utf-8&apos;))</span><br><span class="line">    void = tree.xpath(&apos;//void[@method=&quot;put&quot;]/string/text()&apos;)</span><br><span class="line">    # xpath抓取出来的值，抓取出原因/员工等信息。</span><br><span class="line">    # 根据xml分析，以姓名为例，标签均为string，定位到string标签内容为name的索引，索引+1找到string标签的值为姓名。</span><br><span class="line">    # 找出index</span><br><span class="line">    for index ,values in enumerate(void):</span><br><span class="line">    # 使用了enumerate()函数，抓取list中的重复数据所在的索引。</span><br><span class="line">        if values == &apos;yy&apos;:</span><br><span class="line">            index_reason = index</span><br><span class="line">        elif values == &apos;name&apos;:</span><br><span class="line">            index_name = index</span><br><span class="line">        elif values == &apos;zhiweiname&apos;:</span><br><span class="line">            index_zhiwei = index</span><br><span class="line">        elif values == &apos;year&apos;:</span><br><span class="line">            index_year = index</span><br><span class="line">        elif values == &apos;zcrz&apos;:</span><br><span class="line">            index_zcrz = index</span><br><span class="line">    values_reason = void[index_reason + 1]</span><br><span class="line">    values_name = void[index_name + 1]</span><br><span class="line">    values_zhiwei = void[index_zhiwei + 1]</span><br><span class="line">    values_year = void[index_year + 1]</span><br><span class="line">    values_zcrz = void[index_zcrz + 1]</span><br><span class="line">    return values_reason, values_name, values_zhiwei, values_year, values_zcrz</span><br></pre></td></tr></table></figure></p>
 <p>这样，所需要的信息就抓到了。<br>但是要注意下，如果有些值的位置是空的，那么函数抓出来的信息，有的时候会有误差。后面要对数据做一些清理的操作。</p>
-]]></content>
-      <categories>
-        <category>Lib</category>
-      </categories>
-      <tags>
-        <tag>Pandas</tag>
-        <tag>cloud</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据分析可视化的简单探究（零）</title>
-    <url>/2020/09/06/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9A%84%E7%AE%80%E5%8D%95%E6%8E%A2%E7%A9%B6/</url>
-    <content><![CDATA[<h1 id="【Tech】数据分析可视化的探究"><a href="#【Tech】数据分析可视化的探究" class="headerlink" title="【Tech】数据分析可视化的探究"></a>【Tech】数据分析可视化的探究</h1><p>想搞个人力资源信息的分析。<br>构思了一下整体的实现场景，然后发现很多环节要做。而且还有一些技术操作，还不会……<br>只能一点点试着学起来。加上呀，最近工作真的是好多好多。所以断断续续的研究，一个环节一个环节实现、测试。好像真的花了好多时间呢。<br>也应该算是一个小小小小的小项目了吧。</p>
-<h2 id="小项目背景"><a href="#小项目背景" class="headerlink" title="小项目背景"></a>小项目背景</h2><p>工作的原因，对HR数据比较好奇，想从各个维度对员工离职的情形做下分析。</p>
-<h2 id="小项目实现思路"><a href="#小项目实现思路" class="headerlink" title="小项目实现思路"></a>小项目实现思路</h2><pre><code>* 最终的效果是web界面，但是其中数据分析尽量要可视化。
-研究了下，数据分析可视化工具最后使用pyecharts。生成的可视化charts通过iframe嵌入到web界面中。
-* 原始数据通过爬取获得。使用pandas，将数据做清理，以及各个维度的标签标记。
-* 爬取数据，在PC上使用周期job，以保证数据会更新。
-* pyecharts生成html，需随数据同步更新，并且需可访问。
-通过对象存储存储生成的html。同时需要在html更新后，及时同步至对象存储上。
-</code></pre><h2 id="小项目实现"><a href="#小项目实现" class="headerlink" title="小项目实现"></a>小项目实现</h2><ol>
-<li>lxml模块，进行html的xpath解析，抓取需要的数据。</li>
-<li>pyecharts模块， 应用了一些图表：<ul>
-<li>Sankey桑基图：离职原因及在职年份分析；</li>
-<li>Map地图：离职员工地域分布；</li>
-<li>Bar条形图：离职员工所在省份；</li>
-<li>Pie饼图：离职原因比例，及再次入职意愿比例</li>
-</ul>
-</li>
-<li>qcloud_cos模块，使用腾讯云的sdk，用于将生成的图表传入到COS中。同时web界面通过将图表嵌入iframe中展示。</li>
-<li>最后用windows自带的task scheduler设置定时job，进行上述几个步骤的脚本运行。</li>
-</ol>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>总结呢，就是给自己又搞了个大坑。<br>真的是……哎……</p>
-<p>毕竟，在数据上，从数据获取到可视化模型建立；网页实现上，网页排版到视图插入且同步更新；架构上，图表文件实时更新到存储实时同步，每个环节上都需要设计和开发。<br>而且完完全全自己实现……</p>
-<p>真的是……花费了好多时间呀呀呀。</p>
-<p>希望自己在不断挖坑、填坑的过程中，能慢慢加油，学习掌握更多的知识吧。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario_PNG80.png" alt=""></p>
 ]]></content>
       <categories>
         <category>Lib</category>
@@ -366,6 +330,27 @@
       </tags>
   </entry>
   <entry>
+    <title>腾讯云TencentCloud的Serverless云函数SCF</title>
+    <url>/2020/05/10/%E8%85%BE%E8%AE%AF%E4%BA%91TencentCloud%E7%9A%84Serverless%E4%BA%91%E5%87%BD%E6%95%B0SCF/</url>
+    <content><![CDATA[<h1 id="腾讯云TencentCloud的Serverless云函数SCF"><a href="#腾讯云TencentCloud的Serverless云函数SCF" class="headerlink" title="腾讯云TencentCloud的Serverless云函数SCF"></a>腾讯云TencentCloud的Serverless云函数SCF</h1><h2 id="SCF"><a href="#SCF" class="headerlink" title="SCF"></a>SCF</h2><p>偶然的机会，发现了腾讯云的SCF（Serverless Cloud Function）。感觉发现了个宝贝。还蛮有意思的。</p>
+<h3 id="serverless"><a href="#serverless" class="headerlink" title="serverless"></a>serverless</h3><p>做过后台管理，对server很敏感。最近两年经常在各种地方看到过“serverless”这个词。<br>顾名思义，就是抛除服务器的概念。<br>可是具体的服务一直没接触过。这次测试SCF，也算对serverless有了一点实践性的接触。<br>以后有机会看看要不要深入写一下。</p>
+<h3 id="TencentCloud的SCF"><a href="#TencentCloud的SCF" class="headerlink" title="TencentCloud的SCF"></a>TencentCloud的SCF</h3><p>之所以接触到了TencentCloud，可能是整个站点的基架都是腾讯云的各服务支撑的，自然而然的就用了SCF。<br>SCF提供了一定的<a href="https://cloud.tencent.com/document/product/583/12282" target="_blank" rel="noopener">免费额度</a>，我草草算了下，每天偶尔跑两次在额度范围内是绰绰有余的。<br>日常研究测试下，简直等同于白嫖呀。</p>
+<h2 id="SCF配置"><a href="#SCF配置" class="headerlink" title="SCF配置"></a>SCF配置</h2><h3 id="设置函数"><a href="#设置函数" class="headerlink" title="设置函数"></a>设置函数</h3><p>进入控制台-云函数，然后新建。<br>我使用了空白模版，然后因为我的脚本是python，所以语言python3.6。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf01.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf02.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf03.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf04.png" alt=""><br>完成后，就可以把自己的脚本代码复制进来，保存。</p>
+<p>需要注意的是，<strong>当前的执行方法是【index.main_handler】，所以想让你的脚本跑起来，方法名要调整。</strong><br>我直接把我自定义的方法放在了index.main_handler()里面。 <del>可能是因为我太懒了。</del><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf05.png" alt=""></p>
+<h3 id="设置触发器"><a href="#设置触发器" class="headerlink" title="设置触发器"></a>设置触发器</h3><p><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf06.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf07.png" alt=""></p>
+<h2 id="更多使用方法，可以参考官方文档。"><a href="#更多使用方法，可以参考官方文档。" class="headerlink" title="更多使用方法，可以参考官方文档。"></a>更多使用方法，可以参考官方文档。</h2><p>官方文档，写的真的是详细。<br>我，都能看懂～</p>
+<p>这样就设置完成了。<br>然后就等着看是否跑起来脚本代码了。</p>
+<p>嘿嘿嘿～<br><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1236019916,2423407424&amp;fm=26&amp;gp=0.jpg" alt=""></p>
+]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>cloud</tag>
+        <tag>serverless</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>随笔 工作上的蛋疼一则</title>
     <url>/2020/04/30/%E9%9A%8F%E7%AC%94-%E5%B7%A5%E4%BD%9C%E4%B8%8A%E7%9A%84%E8%9B%8B%E7%96%BC%E4%B8%80%E5%88%99/</url>
     <content><![CDATA[<p>#随笔 工作上的蛋疼一则<br><strong><em>今天呢，发生了件很恶心的事情。</em></strong></p>
@@ -396,24 +381,39 @@
       </tags>
   </entry>
   <entry>
-    <title>腾讯云TencentCloud的Serverless云函数SCF</title>
-    <url>/2020/05/10/%E8%85%BE%E8%AE%AF%E4%BA%91TencentCloud%E7%9A%84Serverless%E4%BA%91%E5%87%BD%E6%95%B0SCF/</url>
-    <content><![CDATA[<h1 id="腾讯云TencentCloud的Serverless云函数SCF"><a href="#腾讯云TencentCloud的Serverless云函数SCF" class="headerlink" title="腾讯云TencentCloud的Serverless云函数SCF"></a>腾讯云TencentCloud的Serverless云函数SCF</h1><h2 id="SCF"><a href="#SCF" class="headerlink" title="SCF"></a>SCF</h2><p>偶然的机会，发现了腾讯云的SCF（Serverless Cloud Function）。感觉发现了个宝贝。还蛮有意思的。</p>
-<h3 id="serverless"><a href="#serverless" class="headerlink" title="serverless"></a>serverless</h3><p>做过后台管理，对server很敏感。最近两年经常在各种地方看到过“serverless”这个词。<br>顾名思义，就是抛除服务器的概念。<br>可是具体的服务一直没接触过。这次测试SCF，也算对serverless有了一点实践性的接触。<br>以后有机会看看要不要深入写一下。</p>
-<h3 id="TencentCloud的SCF"><a href="#TencentCloud的SCF" class="headerlink" title="TencentCloud的SCF"></a>TencentCloud的SCF</h3><p>之所以接触到了TencentCloud，可能是整个站点的基架都是腾讯云的各服务支撑的，自然而然的就用了SCF。<br>SCF提供了一定的<a href="https://cloud.tencent.com/document/product/583/12282" target="_blank" rel="noopener">免费额度</a>，我草草算了下，每天偶尔跑两次在额度范围内是绰绰有余的。<br>日常研究测试下，简直等同于白嫖呀。</p>
-<h2 id="SCF配置"><a href="#SCF配置" class="headerlink" title="SCF配置"></a>SCF配置</h2><h3 id="设置函数"><a href="#设置函数" class="headerlink" title="设置函数"></a>设置函数</h3><p>进入控制台-云函数，然后新建。<br>我使用了空白模版，然后因为我的脚本是python，所以语言python3.6。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf01.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf02.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf03.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf04.png" alt=""><br>完成后，就可以把自己的脚本代码复制进来，保存。</p>
-<p>需要注意的是，<strong>当前的执行方法是【index.main_handler】，所以想让你的脚本跑起来，方法名要调整。</strong><br>我直接把我自定义的方法放在了index.main_handler()里面。 <del>可能是因为我太懒了。</del><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf05.png" alt=""></p>
-<h3 id="设置触发器"><a href="#设置触发器" class="headerlink" title="设置触发器"></a>设置触发器</h3><p><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf06.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf07.png" alt=""></p>
-<h2 id="更多使用方法，可以参考官方文档。"><a href="#更多使用方法，可以参考官方文档。" class="headerlink" title="更多使用方法，可以参考官方文档。"></a>更多使用方法，可以参考官方文档。</h2><p>官方文档，写的真的是详细。<br>我，都能看懂～</p>
-<p>这样就设置完成了。<br>然后就等着看是否跑起来脚本代码了。</p>
-<p>嘿嘿嘿～<br><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1236019916,2423407424&amp;fm=26&amp;gp=0.jpg" alt=""></p>
+    <title>数据分析可视化的简单探究（零）</title>
+    <url>/2020/09/06/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9A%84%E7%AE%80%E5%8D%95%E6%8E%A2%E7%A9%B6/</url>
+    <content><![CDATA[<h1 id="【Tech】数据分析可视化的探究"><a href="#【Tech】数据分析可视化的探究" class="headerlink" title="【Tech】数据分析可视化的探究"></a>【Tech】数据分析可视化的探究</h1><p>想搞个人力资源信息的分析。<br>构思了一下整体的实现场景，然后发现很多环节要做。而且还有一些技术操作，还不会……<br>只能一点点试着学起来。加上呀，最近工作真的是好多好多。所以断断续续的研究，一个环节一个环节实现、测试。好像真的花了好多时间呢。<br>也应该算是一个小小小小的小项目了吧。</p>
+<h2 id="小项目背景"><a href="#小项目背景" class="headerlink" title="小项目背景"></a>小项目背景</h2><p>工作的原因，对HR数据比较好奇，想从各个维度对员工离职的情形做下分析。</p>
+<h2 id="小项目实现思路"><a href="#小项目实现思路" class="headerlink" title="小项目实现思路"></a>小项目实现思路</h2><pre><code>* 最终的效果是web界面，但是其中数据分析尽量要可视化。
+研究了下，数据分析可视化工具最后使用pyecharts。生成的可视化charts通过iframe嵌入到web界面中。
+* 原始数据通过爬取获得。使用pandas，将数据做清理，以及各个维度的标签标记。
+* 爬取数据，在PC上使用周期job，以保证数据会更新。
+* pyecharts生成html，需随数据同步更新，并且需可访问。
+通过对象存储存储生成的html。同时需要在html更新后，及时同步至对象存储上。
+</code></pre><h2 id="小项目实现"><a href="#小项目实现" class="headerlink" title="小项目实现"></a>小项目实现</h2><ol>
+<li>lxml模块，进行html的xpath解析，抓取需要的数据。</li>
+<li>pyecharts模块， 应用了一些图表：<ul>
+<li>Sankey桑基图：离职原因及在职年份分析；</li>
+<li>Map地图：离职员工地域分布；</li>
+<li>Bar条形图：离职员工所在省份；</li>
+<li>Pie饼图：离职原因比例，及再次入职意愿比例</li>
+</ul>
+</li>
+<li>qcloud_cos模块，使用腾讯云的sdk，用于将生成的图表传入到COS中。同时web界面通过将图表嵌入iframe中展示。</li>
+<li>最后用windows自带的task scheduler设置定时job，进行上述几个步骤的脚本运行。</li>
+</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>总结呢，就是给自己又搞了个大坑。<br>真的是……哎……</p>
+<p>毕竟，在数据上，从数据获取到可视化模型建立；网页实现上，网页排版到视图插入且同步更新；架构上，图表文件实时更新到存储实时同步，每个环节上都需要设计和开发。<br>而且完完全全自己实现……</p>
+<p>真的是……花费了好多时间呀呀呀。</p>
+<p>希望自己在不断挖坑、填坑的过程中，能慢慢加油，学习掌握更多的知识吧。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario_PNG80.png" alt=""></p>
 ]]></content>
       <categories>
-        <category>Tech</category>
+        <category>Lib</category>
       </categories>
       <tags>
+        <tag>Pandas</tag>
         <tag>cloud</tag>
-        <tag>serverless</tag>
       </tags>
   </entry>
 </search>
