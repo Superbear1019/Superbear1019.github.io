@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Blog搭建信息</title>
-    <url>/2020/04/21/Blog%E6%90%AD%E5%BB%BA%E4%BF%A1%E6%81%AF/</url>
-    <content><![CDATA[<h1 id="Blog搭建信息"><a href="#Blog搭建信息" class="headerlink" title="Blog搭建信息"></a>Blog搭建信息</h1><h2 id="代码托管平台：Coding"><a href="#代码托管平台：Coding" class="headerlink" title="代码托管平台：Coding"></a>代码托管平台：Coding</h2><p>喜欢小猴子的logo。<br>参考：<a href="https://coding.net/" target="_blank" rel="noopener">CODING - 一站式软件研发管理平台</a></p>
-<h2 id="blog框架：Hexo"><a href="#blog框架：Hexo" class="headerlink" title="blog框架：Hexo"></a>blog框架：Hexo</h2><p>A fast, simple &amp; powerful blog framework。<br>参考：<a href="https://hexo.io/" target="_blank" rel="noopener">hexo</a></p>
-<h2 id="主题：Chic"><a href="#主题：Chic" class="headerlink" title="主题：Chic"></a>主题：Chic</h2><p>选择的原因：极简设计，博客封面。<br>后来知道Chic是法语，同英语elegant。Elegant是我最喜欢的英文单词之一。<br>参考：<a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank" rel="noopener">Chic主题</a></p>
-<h2 id="对象存储：COS"><a href="#对象存储：COS" class="headerlink" title="对象存储：COS"></a>对象存储：COS</h2><p>主要是防盗链。费用么应该不多。</p>
-<h2 id="页面计数服务：busuanzi"><a href="#页面计数服务：busuanzi" class="headerlink" title="页面计数服务：busuanzi"></a>页面计数服务：busuanzi</h2><p>可能是配置最方便吧。<br>参考：<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">不蒜子 - 极简网页计数器</a></p>
-<h2 id="封面链接图标：iconfont"><a href="#封面链接图标：iconfont" class="headerlink" title="封面链接图标：iconfont"></a>封面链接图标：iconfont</h2><p>参考：<a href="https://www.iconfont.cn/home/index" target="_blank" rel="noopener">Iconfont-阿里巴巴矢量图标库</a></p>
-<h2 id="可能后续考虑要不要加的服务支持："><a href="#可能后续考虑要不要加的服务支持：" class="headerlink" title="可能后续考虑要不要加的服务支持："></a>可能后续考虑要不要加的服务支持：</h2><p>Live2d ——目前感觉不实用<br>jsdelivr ——CDN<br>valine ——暂时也没人看，也不需要评论服务。</p>
+    <title>Hexo搭建的自定义服务</title>
+    <url>/2020/04/22/Hexo%E6%90%AD%E5%BB%BA%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A1/</url>
+    <content><![CDATA[<h2 id="说在前："><a href="#说在前：" class="headerlink" title="说在前："></a>说在前：</h2><p>Hexo主题我选的是Chic，设计师的理念是“less is more”，<br>所以很多功能他是没有放进去的。我后来呢想了想也是有道理的，所以好多服务都没有加进去。<br>目前用了页面统计。别的都没有了。</p>
+<h2 id="自定义服务设置："><a href="#自定义服务设置：" class="headerlink" title="自定义服务设置："></a>自定义服务设置：</h2><h3 id="busuanzi：页面计数"><a href="#busuanzi：页面计数" class="headerlink" title="busuanzi：页面计数"></a>busuanzi：页面计数</h3><p>参考官方说明，直接在footer.ejs文件里加了一段代码。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/busuanzi01.png" alt=""><br>分别是统计站点访问数，访问人次，页面访问数。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/busuanzi02.png" alt=""></p>
+<h3 id="封面新增iconfont"><a href="#封面新增iconfont" class="headerlink" title="封面新增iconfont"></a>封面新增iconfont</h3><p>增加了客制的iconfont代码。从阿里矢量图标站上下载的代码。<br>下载代码后，放置在fonts文件夹下，<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/iconfont01.png" alt=""><br>同时修改css下的style.styl，增加一行代码<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/iconfont03.jpg" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/iconfont02.png" alt=""></p>
 ]]></content>
       <categories>
         <category>Tech</category>
@@ -20,11 +16,15 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo搭建的自定义服务</title>
-    <url>/2020/04/22/Hexo%E6%90%AD%E5%BB%BA%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A1/</url>
-    <content><![CDATA[<h2 id="说在前："><a href="#说在前：" class="headerlink" title="说在前："></a>说在前：</h2><p>Hexo主题我选的是Chic，设计师的理念是“less is more”，<br>所以很多功能他是没有放进去的。我后来呢想了想也是有道理的，所以好多服务都没有加进去。<br>目前用了页面统计。别的都没有了。</p>
-<h2 id="自定义服务设置："><a href="#自定义服务设置：" class="headerlink" title="自定义服务设置："></a>自定义服务设置：</h2><h3 id="busuanzi：页面计数"><a href="#busuanzi：页面计数" class="headerlink" title="busuanzi：页面计数"></a>busuanzi：页面计数</h3><p>参考官方说明，直接在footer.ejs文件里加了一段代码。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/busuanzi01.png" alt=""><br>分别是统计站点访问数，访问人次，页面访问数。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/busuanzi02.png" alt=""></p>
-<h3 id="封面新增iconfont"><a href="#封面新增iconfont" class="headerlink" title="封面新增iconfont"></a>封面新增iconfont</h3><p>增加了客制的iconfont代码。从阿里矢量图标站上下载的代码。<br>下载代码后，放置在fonts文件夹下，<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/iconfont01.png" alt=""><br>同时修改css下的style.styl，增加一行代码<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/iconfont03.jpg" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/iconfont02.png" alt=""></p>
+    <title>Blog搭建信息</title>
+    <url>/2020/04/21/Blog%E6%90%AD%E5%BB%BA%E4%BF%A1%E6%81%AF/</url>
+    <content><![CDATA[<h1 id="Blog搭建信息"><a href="#Blog搭建信息" class="headerlink" title="Blog搭建信息"></a>Blog搭建信息</h1><h2 id="代码托管平台：Coding"><a href="#代码托管平台：Coding" class="headerlink" title="代码托管平台：Coding"></a>代码托管平台：Coding</h2><p>喜欢小猴子的logo。<br>参考：<a href="https://coding.net/" target="_blank" rel="noopener">CODING - 一站式软件研发管理平台</a></p>
+<h2 id="blog框架：Hexo"><a href="#blog框架：Hexo" class="headerlink" title="blog框架：Hexo"></a>blog框架：Hexo</h2><p>A fast, simple &amp; powerful blog framework。<br>参考：<a href="https://hexo.io/" target="_blank" rel="noopener">hexo</a></p>
+<h2 id="主题：Chic"><a href="#主题：Chic" class="headerlink" title="主题：Chic"></a>主题：Chic</h2><p>选择的原因：极简设计，博客封面。<br>后来知道Chic是法语，同英语elegant。Elegant是我最喜欢的英文单词之一。<br>参考：<a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank" rel="noopener">Chic主题</a></p>
+<h2 id="对象存储：COS"><a href="#对象存储：COS" class="headerlink" title="对象存储：COS"></a>对象存储：COS</h2><p>主要是防盗链。费用么应该不多。</p>
+<h2 id="页面计数服务：busuanzi"><a href="#页面计数服务：busuanzi" class="headerlink" title="页面计数服务：busuanzi"></a>页面计数服务：busuanzi</h2><p>可能是配置最方便吧。<br>参考：<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">不蒜子 - 极简网页计数器</a></p>
+<h2 id="封面链接图标：iconfont"><a href="#封面链接图标：iconfont" class="headerlink" title="封面链接图标：iconfont"></a>封面链接图标：iconfont</h2><p>参考：<a href="https://www.iconfont.cn/home/index" target="_blank" rel="noopener">Iconfont-阿里巴巴矢量图标库</a></p>
+<h2 id="可能后续考虑要不要加的服务支持："><a href="#可能后续考虑要不要加的服务支持：" class="headerlink" title="可能后续考虑要不要加的服务支持："></a>可能后续考虑要不要加的服务支持：</h2><p>Live2d ——目前感觉不实用<br>jsdelivr ——CDN<br>valine ——暂时也没人看，也不需要评论服务。</p>
 ]]></content>
       <categories>
         <category>Tech</category>
@@ -85,28 +85,6 @@
       </tags>
   </entry>
   <entry>
-    <title>人力资源离职情况的初步数据分析</title>
-    <url>/2020/09/11/%E4%BA%BA%E5%8A%9B%E8%B5%84%E6%BA%90%E7%A6%BB%E8%81%8C%E6%83%85%E5%86%B5%E7%9A%84%E5%88%9D%E6%AD%A5%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</url>
-    <content><![CDATA[<h1 id="【行业】人力资源离职情况的初步数据分析"><a href="#【行业】人力资源离职情况的初步数据分析" class="headerlink" title="【行业】人力资源离职情况的初步数据分析"></a>【行业】人力资源离职情况的初步数据分析</h1><p>做了一笔数据场景的爬取分析。<br>我们现在看一下大致数据反映出的数据图表，分析一下。</p>
-<h2 id="离职人数及分布"><a href="#离职人数及分布" class="headerlink" title="离职人数及分布"></a>离职人数及分布</h2><p>先看一下各省的离职人数，及分布：</p>
-<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_amount_province_bar.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe></p>
-<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_amount_province_map.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>可以看到，各省基本都有人员离职，说明公司的业务铺的很开，各省均有员工。<br>且人口大省，相对应的离职人员，也比较多，成正比。</p>
-<h2 id="离职原因"><a href="#离职原因" class="headerlink" title="离职原因"></a>离职原因</h2><p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_reason_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>离职原因上，1/3的情况是家庭因素。工作压力、薪资、劳动强度等原因，占比相对不高，但是也在前几之列。<br>所以大多数的离职，基本上可能还是家庭与工作无法平衡，这也一定程度反映现代社会的一个比较普遍的情况。</p>
-<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_reason_province_sankey.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe></p>
-<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_reason_area_sankey.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>从这两个流向图，可以看出来，工作5年以下的人数占了绝大部份，说明公司员工对公司的忠诚度和依赖度比较低。<br>华东华北，等发达地区，员工更易离职。</p>
-<h2 id="再入职意愿"><a href="#再入职意愿" class="headerlink" title="再入职意愿"></a>再入职意愿</h2><p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_reentry_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>离职员工再入职的意愿，近4/5选择了愿意再次入职。说明一定程度上，大家对于公司还是满意的状态，如果有机会会继续选择。<br>但是也不排除员工“好聚好散”的心里。</p>
-<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_areareentry_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>其中，东北地区，愿意的比例最高，也说明东北的工作满意度状态最好。<br>华中地区，不愿意比例较高，如果有需要，其实可以重点看一下。看一下员工的反馈情况，可能会发现一些信息。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>只是做了一些简单的分析，<br>毕竟数据的收集有限。如果数据样本足够大，其实分析的规律会更加贴近实际。<br>这里只是简单练个手，以后有机会做一做更深入的分析调研。</p>
-]]></content>
-      <categories>
-        <category>行业</category>
-      </categories>
-      <tags>
-        <tag>行业</tag>
-        <tag>hr</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Windows与MacOS上的定时JOB设置</title>
     <url>/2020/05/06/Windows%E4%B8%8EMacOS%E4%B8%8A%E7%9A%84%E5%AE%9A%E6%97%B6JOB%E8%AE%BE%E7%BD%AE/</url>
     <content><![CDATA[<h1 id="windows-amp-MacOS-的定时JOB设置"><a href="#windows-amp-MacOS-的定时JOB设置" class="headerlink" title="windows &amp; MacOS 的定时JOB设置"></a>windows &amp; MacOS 的定时JOB设置</h1><p>做了一些程序以后呢，爬取网站呀，获取监控呀，就需要设定定时作业。<br>定时作业部署在不关机的server上肯定谁最好的。但是正常人肯定不是随便就能搞到服务器的，服务器还是有成本的。</p>
@@ -140,6 +118,28 @@
       <tags>
         <tag>Windows</tag>
         <tag>MacOS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>人力资源离职情况的初步数据分析</title>
+    <url>/2020/09/11/%E4%BA%BA%E5%8A%9B%E8%B5%84%E6%BA%90%E7%A6%BB%E8%81%8C%E6%83%85%E5%86%B5%E7%9A%84%E5%88%9D%E6%AD%A5%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<h1 id="【行业】人力资源离职情况的初步数据分析"><a href="#【行业】人力资源离职情况的初步数据分析" class="headerlink" title="【行业】人力资源离职情况的初步数据分析"></a>【行业】人力资源离职情况的初步数据分析</h1><p>做了一笔数据场景的爬取分析。<br>我们现在看一下大致数据反映出的数据图表，分析一下。</p>
+<h2 id="离职人数及分布"><a href="#离职人数及分布" class="headerlink" title="离职人数及分布"></a>离职人数及分布</h2><p>先看一下各省的离职人数，及分布：</p>
+<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_amount_province_bar.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe></p>
+<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_amount_province_map.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>可以看到，各省基本都有人员离职，说明公司的业务铺的很开，各省均有员工。<br>且人口大省，相对应的离职人员，也比较多，成正比。</p>
+<h2 id="离职原因"><a href="#离职原因" class="headerlink" title="离职原因"></a>离职原因</h2><p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_reason_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>离职原因上，1/3的情况是家庭因素。工作压力、薪资、劳动强度等原因，占比相对不高，但是也在前几之列。<br>所以大多数的离职，基本上可能还是家庭与工作无法平衡，这也一定程度反映现代社会的一个比较普遍的情况。</p>
+<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_reason_province_sankey.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe></p>
+<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_reason_area_sankey.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>从这两个流向图，可以看出来，工作5年以下的人数占了绝大部份，说明公司员工对公司的忠诚度和依赖度比较低。<br>华东华北，等发达地区，员工更易离职。</p>
+<h2 id="再入职意愿"><a href="#再入职意愿" class="headerlink" title="再入职意愿"></a>再入职意愿</h2><p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_reentry_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>离职员工再入职的意愿，近4/5选择了愿意再次入职。说明一定程度上，大家对于公司还是满意的状态，如果有机会会继续选择。<br>但是也不排除员工“好聚好散”的心里。</p>
+<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_areareentry_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>其中，东北地区，愿意的比例最高，也说明东北的工作满意度状态最好。<br>华中地区，不愿意比例较高，如果有需要，其实可以重点看一下。看一下员工的反馈情况，可能会发现一些信息。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>只是做了一些简单的分析，<br>毕竟数据的收集有限。如果数据样本足够大，其实分析的规律会更加贴近实际。<br>这里只是简单练个手，以后有机会做一做更深入的分析调研。</p>
+]]></content>
+      <categories>
+        <category>行业</category>
+      </categories>
+      <tags>
+        <tag>行业</tag>
+        <tag>hr</tag>
       </tags>
   </entry>
   <entry>
@@ -183,6 +183,21 @@
       </tags>
   </entry>
   <entry>
+    <title>拜拜啦，2020</title>
+    <url>/2020/12/31/%E6%8B%9C%E6%8B%9C%E5%95%A6%EF%BC%8C2020/</url>
+    <content><![CDATA[<h1 id="拜拜啦，2020"><a href="#拜拜啦，2020" class="headerlink" title="拜拜啦，2020"></a>拜拜啦，2020</h1><p>没想到2020最后的几个月自己忙的不成样子……</p>
+<p>2020的最后一天，平静又平常。<br>嗯，不对，最后一天家里的水管被冻住了，好魔幻……<br>下了班，肯定毫无怀念的把台历扔进垃圾桶。</p>
+<p>做很多决定挺难的，今年应该是也做了一个很大很要决心的事情。<br>然后完成了一些很辛苦很难搞的工作。<br>2020，想过好多可能，但是经历这么多，后来才觉得，活在当下、懂得珍惜，弥足重要。<br>2021，不想啥期待了，一切都好吧。</p>
+<p>最后用学到的matplotlib库做了几个图片，还挺有意思的，nice<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_xkcd_year00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_textbox_yearwords00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_fillarea_work00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_pie_costs00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_radar_ability00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_gauge_goals00.jpg" alt=""></p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[小实验]自制个双色球程序，助力走上人生巅峰吧</title>
     <url>/2020/07/11/%E5%B0%8F%E5%AE%9E%E9%AA%8C-%E8%87%AA%E5%88%B6%E4%B8%AA%E5%8F%8C%E8%89%B2%E7%90%83%E7%A8%8B%E5%BA%8F%EF%BC%8C%E5%8A%A9%E5%8A%9B%E8%B5%B0%E4%B8%8A%E4%BA%BA%E7%94%9F%E5%B7%85%E5%B3%B0%E5%90%A7/</url>
     <content><![CDATA[<h1 id="【Lib】-小实验-自制个双色球程序，助力走上人生巅峰吧"><a href="#【Lib】-小实验-自制个双色球程序，助力走上人生巅峰吧" class="headerlink" title="【Lib】[小实验]自制个双色球程序，助力走上人生巅峰吧"></a>【Lib】[小实验]自制个双色球程序，助力走上人生巅峰吧</h1><p>最近我在买双色球。<br>期待是有的，更多的是给自己攒RP，而且不是还有一部分发展福利事业么。</p>
@@ -211,18 +226,25 @@
       </tags>
   </entry>
   <entry>
-    <title>拜拜啦，2020</title>
-    <url>/2020/12/31/%E6%8B%9C%E6%8B%9C%E5%95%A6%EF%BC%8C2020/</url>
-    <content><![CDATA[<h1 id="拜拜啦，2020"><a href="#拜拜啦，2020" class="headerlink" title="拜拜啦，2020"></a>拜拜啦，2020</h1><p>没想到2020最后的几个月自己忙的不成样子……</p>
-<p>2020的最后一天，平静又平常。<br>嗯，不对，最后一天家里的水管被冻住了，好魔幻……<br>下了班，肯定毫无怀念的把台历扔进垃圾桶。</p>
-<p>做很多决定挺难的，今年应该是也做了一个很大很要决心的事情。<br>然后完成了一些很辛苦很难搞的工作。<br>2020，想过好多可能，但是经历这么多，后来才觉得，活在当下、懂得珍惜，弥足重要。<br>2021，不想啥期待了，一切都好吧。</p>
-<p>最后用学到的matplotlib库做了几个图片，还挺有意思的，nice<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_xkcd_year00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_textbox_yearwords00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_fillarea_work00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_pie_costs00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_radar_ability00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_gauge_goals00.jpg" alt=""></p>
+    <title>数据分析可视化的简单探究（三）--建立模型</title>
+    <url>/2020/09/09/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9A%84%E7%AE%80%E5%8D%95%E6%8E%A2%E7%A9%B63/</url>
+    <content><![CDATA[<p><a href="https://tech.hahaalot.com/2020/09/06/数据分析可视化的简单探究/"><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario-gif.gif" width="10%" height="10%" alt="点击跳转" align="left"></a><br><br>(Click Mario)</p>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>第三步，建立显示的图表模型。<br>我使用的是pyecharts库，通过它的chart模型，生成需要的图表。</p>
+<h3 id="PyEcharts-amp-ECharts"><a href="#PyEcharts-amp-ECharts" class="headerlink" title="PyEcharts &amp; ECharts"></a>PyEcharts &amp; ECharts</h3><p>ECharts是一个由百度开发的纯 Javascript 的图表库，pyecharts是某三位大佬将ECharts移植到Python项目中的产物。</p>
+<p>因为我自己在学python，所以基本实现就是用pyecharts。pyecharts模块，chartst还很全的第三方库。<br>但是其中每个chart的使用，还是要学习下的。官网提供了比较详细可靠的代码示例。按照例子自己做一些测试验证，还是最后能搞出来比较good-looking的图表的。</p>
+<p>官网参考：<br><a href="https://echarts.apache.org/zh/index.html" target="_blank" rel="noopener">Apache ECharts (incubating)</a><br><a href="https://gallery.pyecharts.org/#/README" target="_blank" rel="noopener">pyecharts-galley</a></p>
+<h2 id="使用模型"><a href="#使用模型" class="headerlink" title="使用模型"></a>使用模型</h2><h3 id="Sankey桑基图"><a href="#Sankey桑基图" class="headerlink" title="Sankey桑基图"></a>Sankey桑基图</h3><p>展示关系流向，目前比较流行的一个图表。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def sankey_custom(nodes, links) -&gt; Sankey:</span><br><span class="line">    now = datetime.datetime.now()</span><br><span class="line">    s_date = str(now.strftime(&apos;%Y-%m-%d&apos;))</span><br><span class="line">    chart_title = &apos;原因分析&apos; + &apos; &apos; + s_date</span><br><span class="line">    # 绘制Sankey。如果想要垂直显示，只需要在add函数里面加一个orient=&quot;vertical&quot;就好。</span><br><span class="line">    s = (</span><br><span class="line">        Sankey()</span><br><span class="line">        .add(&apos;原因&apos;,   # 图例名称</span><br><span class="line">            nodes,  # 传入节点数据</span><br><span class="line">            links,  # 传入边和流量数据</span><br><span class="line">            # 设置透明度、弯曲度、颜色</span><br><span class="line">            linestyle_opt = opts.LineStyleOpts(opacity=0.3, curve=0.5, color=&quot;source&quot;),</span><br><span class="line">            # 标签显示位置</span><br><span class="line">            label_opts = opts.LabelOpts(position=&quot;right&quot;),</span><br><span class="line">            # 节点之前的距离</span><br><span class="line">            node_gap = 10,</span><br><span class="line">            )</span><br><span class="line">            .set_global_opts(title_opts=opts.TitleOpts(title=chart_title))</span><br><span class="line">        )</span><br><span class="line">    return s</span><br></pre></td></tr></table></figure></p>
+<h3 id="Map地图"><a href="#Map地图" class="headerlink" title="Map地图"></a>Map地图</h3><p>显示地图区域数据的数据密度<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def chinamap_custom(provinces, value, max_value) -&gt; Map:</span><br><span class="line">    now = datetime.datetime.now()</span><br><span class="line">    s_date = str(now.strftime(&apos;%Y-%m-%d&apos;))</span><br><span class="line">    chart_title = &apos;人数分布&apos; + &apos; &apos; + s_date</span><br><span class="line">    # 绘制China的Map图。</span><br><span class="line">    m = (</span><br><span class="line">        Map()</span><br><span class="line">        .add(&quot;人数&quot;, [list(z) for z in zip(provinces, value)], &quot;china&quot;)</span><br><span class="line">        .set_global_opts(</span><br><span class="line">            title_opts=opts.TitleOpts(title=chart_title),</span><br><span class="line">            # visualmap_opts=opts.VisualMapOpts(max_ = int(max_value + 1), is_piecewise=True),</span><br><span class="line">            visualmap_opts=opts.VisualMapOpts(max_ = int(max_value + 1)),</span><br><span class="line">            )</span><br><span class="line">        #.render(&quot;map_visualmap_piecewise001.html&quot;)</span><br><span class="line">        )</span><br><span class="line">    return m</span><br></pre></td></tr></table></figure></p>
+<h3 id="Bar条形图"><a href="#Bar条形图" class="headerlink" title="Bar条形图"></a>Bar条形图</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def bar_custom(list_provinces, list_value) -&gt; Bar:</span><br><span class="line">    now = datetime.datetime.now()</span><br><span class="line">    s_date = str(now.strftime(&apos;%Y-%m-%d&apos;))</span><br><span class="line">    chart_title = &apos;离人数分布&apos; + &apos; &apos; + s_date</span><br><span class="line">    # 绘制bar图，自定义柱状图颜色。</span><br><span class="line">    b = (</span><br><span class="line">        Bar()</span><br><span class="line">        .add_xaxis(list_provinces)</span><br><span class="line">        .add_yaxis(</span><br><span class="line">            &quot;离职人员&quot;, </span><br><span class="line">            list_value,</span><br><span class="line">            itemstyle_opts=opts.ItemStyleOpts(color=&apos;green&apos;),</span><br><span class="line">            )</span><br><span class="line">        .set_global_opts(</span><br><span class="line">            title_opts=opts.TitleOpts(title=chart_title),</span><br><span class="line">            yaxis_opts=opts.AxisOpts(name=&quot;人数&quot;),</span><br><span class="line">            xaxis_opts=opts.AxisOpts(name=&quot;省份&quot;, axislabel_opts=opts.LabelOpts(rotate=-50)),</span><br><span class="line">        )</span><br><span class="line">    )</span><br><span class="line">    return b</span><br></pre></td></tr></table></figure>
+<h3 id="Pie饼图"><a href="#Pie饼图" class="headerlink" title="Pie饼图"></a>Pie饼图</h3><p>我使用了好几个样式的饼图。下面放一段富文本格式的饼图，效果比较美观。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def pie_custom_richtext(list_reason, list_value) -&gt; Pie:</span><br><span class="line">    now = datetime.datetime.now()</span><br><span class="line">    s_date = str(now.strftime(&apos;%Y-%m-%d&apos;))</span><br><span class="line">    chart_title = &apos;原因比例&apos; + &apos; &apos; + s_date</span><br><span class="line">    # 绘制pie图。富文本自定义样式。</span><br><span class="line">    p = (</span><br><span class="line">        Pie()</span><br><span class="line">        .add(</span><br><span class="line">            &quot;&quot;,</span><br><span class="line">            [list(z) for z in zip(list_reason, list_value)],</span><br><span class="line">            radius=[&quot;40%&quot;, &quot;60%&quot;],</span><br><span class="line">            label_opts=opts.LabelOpts(</span><br><span class="line">                position=&quot;outside&quot;,</span><br><span class="line">                formatter=&quot;&#123;hr|&#125;\n &#123;b|&#123;b&#125;: &#125;&#123;c&#125;  &#123;per|&#123;d&#125;%&#125;  &quot;,</span><br><span class="line">                background_color=&quot;#eee&quot;,</span><br><span class="line">                border_color=&quot;#aaa&quot;,</span><br><span class="line">                border_width=1,</span><br><span class="line">                border_radius=4,</span><br><span class="line">                rich=&#123;</span><br><span class="line">                    &quot;a&quot;: &#123;&quot;color&quot;: &quot;#999&quot;, &quot;lineHeight&quot;: 22, &quot;align&quot;: &quot;center&quot;&#125;,</span><br><span class="line">                    &quot;abg&quot;: &#123;</span><br><span class="line">                        &quot;backgroundColor&quot;: &quot;#e3e3e3&quot;,</span><br><span class="line">                        &quot;width&quot;: &quot;100%&quot;,</span><br><span class="line">                        &quot;align&quot;: &quot;right&quot;,</span><br><span class="line">                        &quot;height&quot;: 22,</span><br><span class="line">                        &quot;borderRadius&quot;: [4, 4, 0, 0],</span><br><span class="line">                    &#125;,</span><br><span class="line">                    &quot;hr&quot;: &#123;</span><br><span class="line">                        &quot;borderColor&quot;: &quot;#aaa&quot;,</span><br><span class="line">                        &quot;width&quot;: &quot;100%&quot;,</span><br><span class="line">                        &quot;borderWidth&quot;: 0.5,</span><br><span class="line">                        &quot;height&quot;: 0,</span><br><span class="line">                    &#125;,</span><br><span class="line">                    &quot;b&quot;: &#123;&quot;fontSize&quot;: 11, &quot;lineHeight&quot;: 33&#125;,  # 标签</span><br><span class="line">                    &quot;per&quot;: &#123;</span><br><span class="line">                        &quot;color&quot;: &quot;#eee&quot;,</span><br><span class="line">                        &quot;backgroundColor&quot;: &quot;#334455&quot;,</span><br><span class="line">                        &quot;padding&quot;: [2, 4],</span><br><span class="line">                        &quot;borderRadius&quot;: 2,</span><br><span class="line">                    &#125;,</span><br><span class="line">                &#125;,</span><br><span class="line">            ),</span><br><span class="line">        )</span><br><span class="line">        .set_global_opts(</span><br><span class="line">            title_opts=opts.TitleOpts(title=chart_title),</span><br><span class="line">            legend_opts=opts.LegendOpts(is_show=True, type_=&quot;scroll&quot;, pos_left=&quot;85%&quot;, orient=&quot;vertical&quot;),</span><br><span class="line">            )</span><br><span class="line">    )</span><br><span class="line">    return p</span><br></pre></td></tr></table></figure></p>
+<p>以上。</p>
 ]]></content>
       <categories>
-        <category>随笔</category>
+        <category>Lib</category>
       </categories>
       <tags>
-        <tag>随笔</tag>
+        <tag>Pandas</tag>
+        <tag>cloud</tag>
       </tags>
   </entry>
   <entry>
@@ -327,49 +349,6 @@
       </tags>
   </entry>
   <entry>
-    <title>数据分析可视化的简单探究（三）--建立模型</title>
-    <url>/2020/09/09/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9A%84%E7%AE%80%E5%8D%95%E6%8E%A2%E7%A9%B63/</url>
-    <content><![CDATA[<p><a href="https://tech.hahaalot.com/2020/09/06/数据分析可视化的简单探究/"><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario-gif.gif" width="10%" height="10%" alt="点击跳转" align="left"></a><br><br>(Click Mario)</p>
-<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>第三步，建立显示的图表模型。<br>我使用的是pyecharts库，通过它的chart模型，生成需要的图表。</p>
-<h3 id="PyEcharts-amp-ECharts"><a href="#PyEcharts-amp-ECharts" class="headerlink" title="PyEcharts &amp; ECharts"></a>PyEcharts &amp; ECharts</h3><p>ECharts是一个由百度开发的纯 Javascript 的图表库，pyecharts是某三位大佬将ECharts移植到Python项目中的产物。</p>
-<p>因为我自己在学python，所以基本实现就是用pyecharts。pyecharts模块，chartst还很全的第三方库。<br>但是其中每个chart的使用，还是要学习下的。官网提供了比较详细可靠的代码示例。按照例子自己做一些测试验证，还是最后能搞出来比较good-looking的图表的。</p>
-<p>官网参考：<br><a href="https://echarts.apache.org/zh/index.html" target="_blank" rel="noopener">Apache ECharts (incubating)</a><br><a href="https://gallery.pyecharts.org/#/README" target="_blank" rel="noopener">pyecharts-galley</a></p>
-<h2 id="使用模型"><a href="#使用模型" class="headerlink" title="使用模型"></a>使用模型</h2><h3 id="Sankey桑基图"><a href="#Sankey桑基图" class="headerlink" title="Sankey桑基图"></a>Sankey桑基图</h3><p>展示关系流向，目前比较流行的一个图表。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def sankey_custom(nodes, links) -&gt; Sankey:</span><br><span class="line">    now = datetime.datetime.now()</span><br><span class="line">    s_date = str(now.strftime(&apos;%Y-%m-%d&apos;))</span><br><span class="line">    chart_title = &apos;原因分析&apos; + &apos; &apos; + s_date</span><br><span class="line">    # 绘制Sankey。如果想要垂直显示，只需要在add函数里面加一个orient=&quot;vertical&quot;就好。</span><br><span class="line">    s = (</span><br><span class="line">        Sankey()</span><br><span class="line">        .add(&apos;原因&apos;,   # 图例名称</span><br><span class="line">            nodes,  # 传入节点数据</span><br><span class="line">            links,  # 传入边和流量数据</span><br><span class="line">            # 设置透明度、弯曲度、颜色</span><br><span class="line">            linestyle_opt = opts.LineStyleOpts(opacity=0.3, curve=0.5, color=&quot;source&quot;),</span><br><span class="line">            # 标签显示位置</span><br><span class="line">            label_opts = opts.LabelOpts(position=&quot;right&quot;),</span><br><span class="line">            # 节点之前的距离</span><br><span class="line">            node_gap = 10,</span><br><span class="line">            )</span><br><span class="line">            .set_global_opts(title_opts=opts.TitleOpts(title=chart_title))</span><br><span class="line">        )</span><br><span class="line">    return s</span><br></pre></td></tr></table></figure></p>
-<h3 id="Map地图"><a href="#Map地图" class="headerlink" title="Map地图"></a>Map地图</h3><p>显示地图区域数据的数据密度<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def chinamap_custom(provinces, value, max_value) -&gt; Map:</span><br><span class="line">    now = datetime.datetime.now()</span><br><span class="line">    s_date = str(now.strftime(&apos;%Y-%m-%d&apos;))</span><br><span class="line">    chart_title = &apos;人数分布&apos; + &apos; &apos; + s_date</span><br><span class="line">    # 绘制China的Map图。</span><br><span class="line">    m = (</span><br><span class="line">        Map()</span><br><span class="line">        .add(&quot;人数&quot;, [list(z) for z in zip(provinces, value)], &quot;china&quot;)</span><br><span class="line">        .set_global_opts(</span><br><span class="line">            title_opts=opts.TitleOpts(title=chart_title),</span><br><span class="line">            # visualmap_opts=opts.VisualMapOpts(max_ = int(max_value + 1), is_piecewise=True),</span><br><span class="line">            visualmap_opts=opts.VisualMapOpts(max_ = int(max_value + 1)),</span><br><span class="line">            )</span><br><span class="line">        #.render(&quot;map_visualmap_piecewise001.html&quot;)</span><br><span class="line">        )</span><br><span class="line">    return m</span><br></pre></td></tr></table></figure></p>
-<h3 id="Bar条形图"><a href="#Bar条形图" class="headerlink" title="Bar条形图"></a>Bar条形图</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def bar_custom(list_provinces, list_value) -&gt; Bar:</span><br><span class="line">    now = datetime.datetime.now()</span><br><span class="line">    s_date = str(now.strftime(&apos;%Y-%m-%d&apos;))</span><br><span class="line">    chart_title = &apos;离人数分布&apos; + &apos; &apos; + s_date</span><br><span class="line">    # 绘制bar图，自定义柱状图颜色。</span><br><span class="line">    b = (</span><br><span class="line">        Bar()</span><br><span class="line">        .add_xaxis(list_provinces)</span><br><span class="line">        .add_yaxis(</span><br><span class="line">            &quot;离职人员&quot;, </span><br><span class="line">            list_value,</span><br><span class="line">            itemstyle_opts=opts.ItemStyleOpts(color=&apos;green&apos;),</span><br><span class="line">            )</span><br><span class="line">        .set_global_opts(</span><br><span class="line">            title_opts=opts.TitleOpts(title=chart_title),</span><br><span class="line">            yaxis_opts=opts.AxisOpts(name=&quot;人数&quot;),</span><br><span class="line">            xaxis_opts=opts.AxisOpts(name=&quot;省份&quot;, axislabel_opts=opts.LabelOpts(rotate=-50)),</span><br><span class="line">        )</span><br><span class="line">    )</span><br><span class="line">    return b</span><br></pre></td></tr></table></figure>
-<h3 id="Pie饼图"><a href="#Pie饼图" class="headerlink" title="Pie饼图"></a>Pie饼图</h3><p>我使用了好几个样式的饼图。下面放一段富文本格式的饼图，效果比较美观。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def pie_custom_richtext(list_reason, list_value) -&gt; Pie:</span><br><span class="line">    now = datetime.datetime.now()</span><br><span class="line">    s_date = str(now.strftime(&apos;%Y-%m-%d&apos;))</span><br><span class="line">    chart_title = &apos;原因比例&apos; + &apos; &apos; + s_date</span><br><span class="line">    # 绘制pie图。富文本自定义样式。</span><br><span class="line">    p = (</span><br><span class="line">        Pie()</span><br><span class="line">        .add(</span><br><span class="line">            &quot;&quot;,</span><br><span class="line">            [list(z) for z in zip(list_reason, list_value)],</span><br><span class="line">            radius=[&quot;40%&quot;, &quot;60%&quot;],</span><br><span class="line">            label_opts=opts.LabelOpts(</span><br><span class="line">                position=&quot;outside&quot;,</span><br><span class="line">                formatter=&quot;&#123;hr|&#125;\n &#123;b|&#123;b&#125;: &#125;&#123;c&#125;  &#123;per|&#123;d&#125;%&#125;  &quot;,</span><br><span class="line">                background_color=&quot;#eee&quot;,</span><br><span class="line">                border_color=&quot;#aaa&quot;,</span><br><span class="line">                border_width=1,</span><br><span class="line">                border_radius=4,</span><br><span class="line">                rich=&#123;</span><br><span class="line">                    &quot;a&quot;: &#123;&quot;color&quot;: &quot;#999&quot;, &quot;lineHeight&quot;: 22, &quot;align&quot;: &quot;center&quot;&#125;,</span><br><span class="line">                    &quot;abg&quot;: &#123;</span><br><span class="line">                        &quot;backgroundColor&quot;: &quot;#e3e3e3&quot;,</span><br><span class="line">                        &quot;width&quot;: &quot;100%&quot;,</span><br><span class="line">                        &quot;align&quot;: &quot;right&quot;,</span><br><span class="line">                        &quot;height&quot;: 22,</span><br><span class="line">                        &quot;borderRadius&quot;: [4, 4, 0, 0],</span><br><span class="line">                    &#125;,</span><br><span class="line">                    &quot;hr&quot;: &#123;</span><br><span class="line">                        &quot;borderColor&quot;: &quot;#aaa&quot;,</span><br><span class="line">                        &quot;width&quot;: &quot;100%&quot;,</span><br><span class="line">                        &quot;borderWidth&quot;: 0.5,</span><br><span class="line">                        &quot;height&quot;: 0,</span><br><span class="line">                    &#125;,</span><br><span class="line">                    &quot;b&quot;: &#123;&quot;fontSize&quot;: 11, &quot;lineHeight&quot;: 33&#125;,  # 标签</span><br><span class="line">                    &quot;per&quot;: &#123;</span><br><span class="line">                        &quot;color&quot;: &quot;#eee&quot;,</span><br><span class="line">                        &quot;backgroundColor&quot;: &quot;#334455&quot;,</span><br><span class="line">                        &quot;padding&quot;: [2, 4],</span><br><span class="line">                        &quot;borderRadius&quot;: 2,</span><br><span class="line">                    &#125;,</span><br><span class="line">                &#125;,</span><br><span class="line">            ),</span><br><span class="line">        )</span><br><span class="line">        .set_global_opts(</span><br><span class="line">            title_opts=opts.TitleOpts(title=chart_title),</span><br><span class="line">            legend_opts=opts.LegendOpts(is_show=True, type_=&quot;scroll&quot;, pos_left=&quot;85%&quot;, orient=&quot;vertical&quot;),</span><br><span class="line">            )</span><br><span class="line">    )</span><br><span class="line">    return p</span><br></pre></td></tr></table></figure></p>
-<p>以上。</p>
-]]></content>
-      <categories>
-        <category>Lib</category>
-      </categories>
-      <tags>
-        <tag>Pandas</tag>
-        <tag>cloud</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>腾讯云TencentCloud的Serverless云函数SCF</title>
-    <url>/2020/05/10/%E8%85%BE%E8%AE%AF%E4%BA%91TencentCloud%E7%9A%84Serverless%E4%BA%91%E5%87%BD%E6%95%B0SCF/</url>
-    <content><![CDATA[<h1 id="腾讯云TencentCloud的Serverless云函数SCF"><a href="#腾讯云TencentCloud的Serverless云函数SCF" class="headerlink" title="腾讯云TencentCloud的Serverless云函数SCF"></a>腾讯云TencentCloud的Serverless云函数SCF</h1><h2 id="SCF"><a href="#SCF" class="headerlink" title="SCF"></a>SCF</h2><p>偶然的机会，发现了腾讯云的SCF（Serverless Cloud Function）。感觉发现了个宝贝。还蛮有意思的。</p>
-<h3 id="serverless"><a href="#serverless" class="headerlink" title="serverless"></a>serverless</h3><p>做过后台管理，对server很敏感。最近两年经常在各种地方看到过“serverless”这个词。<br>顾名思义，就是抛除服务器的概念。<br>可是具体的服务一直没接触过。这次测试SCF，也算对serverless有了一点实践性的接触。<br>以后有机会看看要不要深入写一下。</p>
-<h3 id="TencentCloud的SCF"><a href="#TencentCloud的SCF" class="headerlink" title="TencentCloud的SCF"></a>TencentCloud的SCF</h3><p>之所以接触到了TencentCloud，可能是整个站点的基架都是腾讯云的各服务支撑的，自然而然的就用了SCF。<br>SCF提供了一定的<a href="https://cloud.tencent.com/document/product/583/12282" target="_blank" rel="noopener">免费额度</a>，我草草算了下，每天偶尔跑两次在额度范围内是绰绰有余的。<br>日常研究测试下，简直等同于白嫖呀。</p>
-<h2 id="SCF配置"><a href="#SCF配置" class="headerlink" title="SCF配置"></a>SCF配置</h2><h3 id="设置函数"><a href="#设置函数" class="headerlink" title="设置函数"></a>设置函数</h3><p>进入控制台-云函数，然后新建。<br>我使用了空白模版，然后因为我的脚本是python，所以语言python3.6。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf01.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf02.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf03.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf04.png" alt=""><br>完成后，就可以把自己的脚本代码复制进来，保存。</p>
-<p>需要注意的是，<strong>当前的执行方法是【index.main_handler】，所以想让你的脚本跑起来，方法名要调整。</strong><br>我直接把我自定义的方法放在了index.main_handler()里面。 <del>可能是因为我太懒了。</del><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf05.png" alt=""></p>
-<h3 id="设置触发器"><a href="#设置触发器" class="headerlink" title="设置触发器"></a>设置触发器</h3><p><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf06.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf07.png" alt=""></p>
-<h2 id="更多使用方法，可以参考官方文档。"><a href="#更多使用方法，可以参考官方文档。" class="headerlink" title="更多使用方法，可以参考官方文档。"></a>更多使用方法，可以参考官方文档。</h2><p>官方文档，写的真的是详细。<br>我，都能看懂～</p>
-<p>这样就设置完成了。<br>然后就等着看是否跑起来脚本代码了。</p>
-<p>嘿嘿嘿～<br><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1236019916,2423407424&amp;fm=26&amp;gp=0.jpg" alt=""></p>
-]]></content>
-      <categories>
-        <category>Tech</category>
-      </categories>
-      <tags>
-        <tag>cloud</tag>
-        <tag>serverless</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>随笔 工作上的蛋疼一则</title>
     <url>/2020/04/30/%E9%9A%8F%E7%AC%94-%E5%B7%A5%E4%BD%9C%E4%B8%8A%E7%9A%84%E8%9B%8B%E7%96%BC%E4%B8%80%E5%88%99/</url>
     <content><![CDATA[<p>#随笔 工作上的蛋疼一则<br><strong><em>今天呢，发生了件很恶心的事情。</em></strong></p>
@@ -397,6 +376,27 @@
       </categories>
       <tags>
         <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>腾讯云TencentCloud的Serverless云函数SCF</title>
+    <url>/2020/05/10/%E8%85%BE%E8%AE%AF%E4%BA%91TencentCloud%E7%9A%84Serverless%E4%BA%91%E5%87%BD%E6%95%B0SCF/</url>
+    <content><![CDATA[<h1 id="腾讯云TencentCloud的Serverless云函数SCF"><a href="#腾讯云TencentCloud的Serverless云函数SCF" class="headerlink" title="腾讯云TencentCloud的Serverless云函数SCF"></a>腾讯云TencentCloud的Serverless云函数SCF</h1><h2 id="SCF"><a href="#SCF" class="headerlink" title="SCF"></a>SCF</h2><p>偶然的机会，发现了腾讯云的SCF（Serverless Cloud Function）。感觉发现了个宝贝。还蛮有意思的。</p>
+<h3 id="serverless"><a href="#serverless" class="headerlink" title="serverless"></a>serverless</h3><p>做过后台管理，对server很敏感。最近两年经常在各种地方看到过“serverless”这个词。<br>顾名思义，就是抛除服务器的概念。<br>可是具体的服务一直没接触过。这次测试SCF，也算对serverless有了一点实践性的接触。<br>以后有机会看看要不要深入写一下。</p>
+<h3 id="TencentCloud的SCF"><a href="#TencentCloud的SCF" class="headerlink" title="TencentCloud的SCF"></a>TencentCloud的SCF</h3><p>之所以接触到了TencentCloud，可能是整个站点的基架都是腾讯云的各服务支撑的，自然而然的就用了SCF。<br>SCF提供了一定的<a href="https://cloud.tencent.com/document/product/583/12282" target="_blank" rel="noopener">免费额度</a>，我草草算了下，每天偶尔跑两次在额度范围内是绰绰有余的。<br>日常研究测试下，简直等同于白嫖呀。</p>
+<h2 id="SCF配置"><a href="#SCF配置" class="headerlink" title="SCF配置"></a>SCF配置</h2><h3 id="设置函数"><a href="#设置函数" class="headerlink" title="设置函数"></a>设置函数</h3><p>进入控制台-云函数，然后新建。<br>我使用了空白模版，然后因为我的脚本是python，所以语言python3.6。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf01.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf02.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf03.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf04.png" alt=""><br>完成后，就可以把自己的脚本代码复制进来，保存。</p>
+<p>需要注意的是，<strong>当前的执行方法是【index.main_handler】，所以想让你的脚本跑起来，方法名要调整。</strong><br>我直接把我自定义的方法放在了index.main_handler()里面。 <del>可能是因为我太懒了。</del><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf05.png" alt=""></p>
+<h3 id="设置触发器"><a href="#设置触发器" class="headerlink" title="设置触发器"></a>设置触发器</h3><p><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf06.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf07.png" alt=""></p>
+<h2 id="更多使用方法，可以参考官方文档。"><a href="#更多使用方法，可以参考官方文档。" class="headerlink" title="更多使用方法，可以参考官方文档。"></a>更多使用方法，可以参考官方文档。</h2><p>官方文档，写的真的是详细。<br>我，都能看懂～</p>
+<p>这样就设置完成了。<br>然后就等着看是否跑起来脚本代码了。</p>
+<p>嘿嘿嘿～<br><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1236019916,2423407424&amp;fm=26&amp;gp=0.jpg" alt=""></p>
+]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>cloud</tag>
+        <tag>serverless</tag>
       </tags>
   </entry>
   <entry>
