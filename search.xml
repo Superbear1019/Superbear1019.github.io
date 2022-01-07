@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Blog搭建信息</title>
-    <url>/2020/04/21/Blog%E6%90%AD%E5%BB%BA%E4%BF%A1%E6%81%AF/</url>
-    <content><![CDATA[<h1 id="Blog搭建信息"><a href="#Blog搭建信息" class="headerlink" title="Blog搭建信息"></a>Blog搭建信息</h1><h2 id="代码托管平台：Coding"><a href="#代码托管平台：Coding" class="headerlink" title="代码托管平台：Coding"></a>代码托管平台：Coding</h2><p>喜欢小猴子的logo。<br>参考：<a href="https://coding.net/" target="_blank" rel="noopener">CODING - 一站式软件研发管理平台</a></p>
-<h2 id="blog框架：Hexo"><a href="#blog框架：Hexo" class="headerlink" title="blog框架：Hexo"></a>blog框架：Hexo</h2><p>A fast, simple &amp; powerful blog framework。<br>参考：<a href="https://hexo.io/" target="_blank" rel="noopener">hexo</a></p>
-<h2 id="主题：Chic"><a href="#主题：Chic" class="headerlink" title="主题：Chic"></a>主题：Chic</h2><p>选择的原因：极简设计，博客封面。<br>后来知道Chic是法语，同英语elegant。Elegant是我最喜欢的英文单词之一。<br>参考：<a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank" rel="noopener">Chic主题</a></p>
-<h2 id="对象存储：COS"><a href="#对象存储：COS" class="headerlink" title="对象存储：COS"></a>对象存储：COS</h2><p>主要是防盗链。费用么应该不多。</p>
-<h2 id="页面计数服务：busuanzi"><a href="#页面计数服务：busuanzi" class="headerlink" title="页面计数服务：busuanzi"></a>页面计数服务：busuanzi</h2><p>可能是配置最方便吧。<br>参考：<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">不蒜子 - 极简网页计数器</a></p>
-<h2 id="封面链接图标：iconfont"><a href="#封面链接图标：iconfont" class="headerlink" title="封面链接图标：iconfont"></a>封面链接图标：iconfont</h2><p>参考：<a href="https://www.iconfont.cn/home/index" target="_blank" rel="noopener">Iconfont-阿里巴巴矢量图标库</a></p>
-<h2 id="可能后续考虑要不要加的服务支持："><a href="#可能后续考虑要不要加的服务支持：" class="headerlink" title="可能后续考虑要不要加的服务支持："></a>可能后续考虑要不要加的服务支持：</h2><p>Live2d ——目前感觉不实用<br>jsdelivr ——CDN<br>valine ——暂时也没人看，也不需要评论服务。</p>
-]]></content>
-      <categories>
-        <category>Tech</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo搭建的自定义服务</title>
     <url>/2020/04/22/Hexo%E6%90%AD%E5%BB%BA%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A1/</url>
     <content><![CDATA[<h2 id="说在前："><a href="#说在前：" class="headerlink" title="说在前："></a>说在前：</h2><p>Hexo主题我选的是Chic，设计师的理念是“less is more”，<br>所以很多功能他是没有放进去的。我后来呢想了想也是有道理的，所以好多服务都没有加进去。<br>目前用了页面统计。别的都没有了。</p>
@@ -111,63 +92,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2018/12/29/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>[小实验]自制个双色球程序，助力走上人生巅峰吧</title>
-    <url>/2020/07/11/%E5%B0%8F%E5%AE%9E%E9%AA%8C-%E8%87%AA%E5%88%B6%E4%B8%AA%E5%8F%8C%E8%89%B2%E7%90%83%E7%A8%8B%E5%BA%8F%EF%BC%8C%E5%8A%A9%E5%8A%9B%E8%B5%B0%E4%B8%8A%E4%BA%BA%E7%94%9F%E5%B7%85%E5%B3%B0%E5%90%A7/</url>
-    <content><![CDATA[<h1 id="【Lib】-小实验-自制个双色球程序，助力走上人生巅峰吧"><a href="#【Lib】-小实验-自制个双色球程序，助力走上人生巅峰吧" class="headerlink" title="【Lib】[小实验]自制个双色球程序，助力走上人生巅峰吧"></a>【Lib】[小实验]自制个双色球程序，助力走上人生巅峰吧</h1><p>最近我在买双色球。<br>期待是有的，更多的是给自己攒RP，而且不是还有一部分发展福利事业么。</p>
-<p>本来就是随便买的，所以每次都是机选4注。<br>买了几次我发现，机选还挺简单的，没啥逻辑，那为啥我不自己搞个程序，自己机选呢？</p>
-<p>好的，说干就干。</p>
-<h2 id="程序逻辑"><a href="#程序逻辑" class="headerlink" title="程序逻辑"></a>程序逻辑</h2><ul>
-<li>使用random模块，对33个白球16个蓝球进行随机取值；</li>
-<li>白球取值过程，重复6次；需注意判断random出来的值，是否与前几次重复。</li>
-<li>6白球1蓝球一组，生成一注。生成17注。</li>
-<li>在17注中，在random出来4注，作为最终的机选。<br>（为啥先出来17，再选4呢？是因为好玩吧，lucky17里再lucky4。）</li>
-<li>发送给企业微信的webhook，然后企业微信生成消息。</li>
-</ul>
-<h2 id="程序实现机选"><a href="#程序实现机选" class="headerlink" title="程序实现机选"></a>程序实现机选</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import random, json, certifi, urllib3</span><br><span class="line"></span><br><span class="line">def blueball():</span><br><span class="line">    bball = random.randint(1,16)</span><br><span class="line">    return bball</span><br><span class="line"></span><br><span class="line">def redballs():</span><br><span class="line">    rballs = []</span><br><span class="line">    for i in range(6):</span><br><span class="line">        rball = random.randint(1,33)</span><br><span class="line">        while rball in rballs:</span><br><span class="line">            rball = random.randint(1,33)</span><br><span class="line">        rballs.append(rball)</span><br><span class="line">    rballs.sort()</span><br><span class="line">    return rballs</span><br><span class="line"></span><br><span class="line">def main():</span><br><span class="line">    altballs = []</span><br><span class="line">    for i in range(17):</span><br><span class="line">        balls = [redballs(), blueball()]</span><br><span class="line">        altballs.append(balls)</span><br><span class="line">    luckyfour = random.sample(altballs, 4)</span><br><span class="line"></span><br><span class="line">    # 发送给企业微信的webhook显示。</span><br><span class="line">    http = urllib3.PoolManager(cert_reqs=&apos;CERT_REQUIRED&apos;, ca_certs=certifi.where())</span><br><span class="line">    # 李有财 hook_addr</span><br><span class="line">    hook_addr = &quot;https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=lalalalalalalalalala&quot;    # my robot</span><br><span class="line">    # 传输webhook图文消息    </span><br><span class="line">    data = &#123;</span><br><span class="line">    &quot;msgtype&quot;: &quot;markdown&quot;,</span><br><span class="line">    &quot;markdown&quot;: &#123;</span><br><span class="line">        &quot;content&quot;: &quot;**双色球**\n\</span><br><span class="line">        &gt;**第①注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第②注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第③注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第④注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n&quot;</span><br><span class="line">        %(luckyfour[0][0], luckyfour[0][1], luckyfour[1][0], luckyfour[1][1],</span><br><span class="line">            luckyfour[2][0], luckyfour[2][1], luckyfour[3][0], luckyfour[3][1])</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    data = json.dumps(data).encode()</span><br><span class="line">    response_hook = http.request(&apos;POST&apos;, hook_addr, body=data)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-<h2 id="优化改善"><a href="#优化改善" class="headerlink" title="优化改善"></a>优化改善</h2><p>为了方便我每次对奖方便，在程序里爬取下上期的开奖结果。<br>爬取500彩票网的结果界面。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def last_result():</span><br><span class="line">    addr = &apos;http://kaijiang.500.com/shtml/ssq/&apos;</span><br><span class="line">    http = urllib3.PoolManager(cert_reqs=&apos;CERT_REQUIRED&apos;, ca_certs=certifi.where())</span><br><span class="line">    response = http.request(&apos;GET&apos;, addr)</span><br><span class="line">    tree = html.fromstring(response.data)</span><br><span class="line">    r = tree.xpath(&apos;//div[@class=&quot;ball_box01&quot;]//li[@class=&quot;ball_red&quot;]//text()&apos;)</span><br><span class="line">    b = tree.xpath(&apos;//div[@class=&quot;ball_box01&quot;]//li[@class=&quot;ball_blue&quot;]//text()&apos;)</span><br><span class="line">    return r, b</span><br></pre></td></tr></table></figure></p>
-<p>同时在主函数里加上上期结果的发送：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def main():</span><br><span class="line">    ***</span><br><span class="line">    last_r, last_b = last_result()</span><br><span class="line">    ***</span><br><span class="line">    data = &#123;</span><br><span class="line">    &quot;msgtype&quot;: &quot;markdown&quot;,</span><br><span class="line">    &quot;markdown&quot;: &#123;</span><br><span class="line">        &quot;content&quot;: &quot;**双色球**\n\</span><br><span class="line">        %s, %s\n\</span><br><span class="line">        &gt;**第①注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第②注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第③注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第④注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n&quot;</span><br><span class="line">        %(last_r, last_b, luckyfour[0][0], luckyfour[0][1], luckyfour[1][0], luckyfour[1][1],</span><br><span class="line">            luckyfour[2][0], luckyfour[2][1], luckyfour[3][0], luckyfour[3][1])</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    ***</span><br></pre></td></tr></table></figure></p>
-<h2 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h2><p><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0708/dcball01.jpg" alt=""><br>上期结果就没做太多的修饰了，觉得麻烦也没必要。</p>
-<p>最后在电脑上设置个定时job，每周一/三/五，发给我自己。</p>
-<p>以后去彩票站就下注lucky4好啦。<br>感觉自己好像就要走上人生巅峰了呢。哈哈哈哈哈～～<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0708/psyduck_happy.gif" alt=""></p>
-]]></content>
-      <categories>
-        <category>Lib</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>拜拜啦，2020</title>
-    <url>/2020/12/31/%E6%8B%9C%E6%8B%9C%E5%95%A6%EF%BC%8C2020/</url>
-    <content><![CDATA[<h1 id="拜拜啦，2020"><a href="#拜拜啦，2020" class="headerlink" title="拜拜啦，2020"></a>拜拜啦，2020</h1><p>没想到2020最后的几个月自己忙的不成样子……</p>
-<p>2020的最后一天，平静又平常。<br>嗯，不对，最后一天家里的水管被冻住了，好魔幻……<br>下了班，肯定毫无怀念的把台历扔进垃圾桶。</p>
-<p>做很多决定挺难的，今年应该是也做了一个很大很要决心的事情。<br>然后完成了一些很辛苦很难搞的工作。<br>2020，想过好多可能，但是经历这么多，后来才觉得，活在当下、懂得珍惜，弥足重要。<br>2021，不想啥期待了，一切都好吧。</p>
-<p>最后用学到的matplotlib库做了几个图片，还挺有意思的，nice<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_xkcd_year00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_textbox_yearwords00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_fillarea_work00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_pie_costs00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_radar_ability00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_gauge_goals00.jpg" alt=""></p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Windows与MacOS上的定时JOB设置</title>
     <url>/2020/05/06/Windows%E4%B8%8EMacOS%E4%B8%8A%E7%9A%84%E5%AE%9A%E6%97%B6JOB%E8%AE%BE%E7%BD%AE/</url>
     <content><![CDATA[<h1 id="windows-amp-MacOS-的定时JOB设置"><a href="#windows-amp-MacOS-的定时JOB设置" class="headerlink" title="windows &amp; MacOS 的定时JOB设置"></a>windows &amp; MacOS 的定时JOB设置</h1><p>做了一些程序以后呢，爬取网站呀，获取监控呀，就需要设定定时作业。<br>定时作业部署在不关机的server上肯定谁最好的。但是正常人肯定不是随便就能搞到服务器的，服务器还是有成本的。</p>
@@ -204,26 +128,42 @@
       </tags>
   </entry>
   <entry>
-    <title>人力资源离职情况的初步数据分析</title>
-    <url>/2020/09/11/%E4%BA%BA%E5%8A%9B%E8%B5%84%E6%BA%90%E7%A6%BB%E8%81%8C%E6%83%85%E5%86%B5%E7%9A%84%E5%88%9D%E6%AD%A5%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</url>
-    <content><![CDATA[<h1 id="【行业】人力资源离职情况的初步数据分析"><a href="#【行业】人力资源离职情况的初步数据分析" class="headerlink" title="【行业】人力资源离职情况的初步数据分析"></a>【行业】人力资源离职情况的初步数据分析</h1><p>做了一笔数据场景的爬取分析。<br>我们现在看一下大致数据反映出的数据图表，分析一下。</p>
-<h2 id="离职人数及分布"><a href="#离职人数及分布" class="headerlink" title="离职人数及分布"></a>离职人数及分布</h2><p>先看一下各省的离职人数，及分布：</p>
-<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_amount_province_bar.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe></p>
-<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_amount_province_map.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>可以看到，各省基本都有人员离职，说明公司的业务铺的很开，各省均有员工。<br>且人口大省，相对应的离职人员，也比较多，成正比。</p>
-<h2 id="离职原因"><a href="#离职原因" class="headerlink" title="离职原因"></a>离职原因</h2><p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_reason_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>离职原因上，1/3的情况是家庭因素。工作压力、薪资、劳动强度等原因，占比相对不高，但是也在前几之列。<br>所以大多数的离职，基本上可能还是家庭与工作无法平衡，这也一定程度反映现代社会的一个比较普遍的情况。</p>
-<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_reason_province_sankey.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe></p>
-<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_reason_area_sankey.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>从这两个流向图，可以看出来，工作5年以下的人数占了绝大部份，说明公司员工对公司的忠诚度和依赖度比较低。<br>华东华北，等发达地区，员工更易离职。</p>
-<h2 id="再入职意愿"><a href="#再入职意愿" class="headerlink" title="再入职意愿"></a>再入职意愿</h2><p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_reentry_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>离职员工再入职的意愿，近4/5选择了愿意再次入职。说明一定程度上，大家对于公司还是满意的状态，如果有机会会继续选择。<br>但是也不排除员工“好聚好散”的心里。</p>
-<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_areareentry_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>其中，东北地区，愿意的比例最高，也说明东北的工作满意度状态最好。<br>华中地区，不愿意比例较高，如果有需要，其实可以重点看一下。看一下员工的反馈情况，可能会发现一些信息。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>只是做了一些简单的分析，<br>毕竟数据的收集有限。如果数据样本足够大，其实分析的规律会更加贴近实际。<br>这里只是简单练个手，以后有机会做一做更深入的分析调研。</p>
+    <title>python调用SAP_RFC函数研究</title>
+    <url>/2022/01/06/python%E8%B0%83%E7%94%A8SAP-RFC%E5%87%BD%E6%95%B0%E7%A0%94%E7%A9%B6/</url>
+    <content><![CDATA[<h1 id="python调用SAP-RFC函数研究"><a href="#python调用SAP-RFC函数研究" class="headerlink" title="python调用SAP_RFC函数研究"></a>python调用SAP_RFC函数研究</h1><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>由于本职工作的原因，会经常用到SAP的function。<br>SAP的remote函数本身，支持外部调用。可以通过sap封装webservice，供外部系统调用；也可以适配sap的应用系统自己调用。</p>
+<p>之前外部系统调用SAP的时候，经常做Microsoft BizTalk连接SAP RFC调用的实例。因为BizTalk本身拥有适配sap的adapter，配置起来很方便。</p>
+<p>一直想试着python语音是否有第三方库可以实现rfc的调用，前几天搜了下发现有这个pyrfc的库，所以就搞一搞测试一下。</p>
+<h2 id="环境安装"><a href="#环境安装" class="headerlink" title="环境安装"></a>环境安装</h2><p>官方参考文档：<a href="https://sap.github.io/PyRFC/install.html" target="_blank" rel="noopener">Installation — pyrfc 2.0.2 documentation</a><br>因为我用的mac，所以安装操作都是macOS：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/pyrfc01.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/pyrfc02.png" alt=""></p>
+<p>其中用到了2个SAP官网的下载文件，需要用到SAP企业账号才可以下载。</p>
+<ol>
+<li>第三步的RFC SDK：<br>Download the <a href="https://launchpad.support.sap.com/#/notes/2573790" target="_blank" rel="noopener">7.50 version of the SAP NetWeaver RFC SDK</a></li>
+<li>第五步的uchar.h文件。</li>
+</ol>
+<p>整体按照安装指引操作，还蛮顺利的。</p>
+<h2 id="测试验证"><a href="#测试验证" class="headerlink" title="测试验证"></a>测试验证</h2><p>Pyrfc项目里，提供了一些demo程序，我用了clientPrintDescription这支测试连通性，这个是打印rfc描述的程序，不实际调用rfc函数，只是打印函数结构，用来测试很安全。<br><a href="https://github.com/SAP/PyRFC/blob/main/examples/clientPrintDescription.py" target="_blank" rel="noopener">PyRFC/clientPrintDescription.py at main · SAP/PyRFC · GitHub</a><br>这个测试后面会再写一篇介绍，因为程序脚本使用了configparser配置解析库。这个之前没搞过，所以单独又学习了一下。</p>
+<h2 id="补充问题"><a href="#补充问题" class="headerlink" title="补充问题"></a>补充问题</h2><p>我在连接测试的时候，执行遇到了这个报错：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/pyrfc03.png" alt=""><br>后来在朋友帮助指出下，是因为环境变量DYLD_LIBRARY_PATH没有设置到lib，增加一条环境变量记录。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/pyrfc04.png" alt=""><br>然后问题就解决了。</p>
 ]]></content>
       <categories>
-        <category>行业</category>
+        <category>Tech</category>
       </categories>
       <tags>
-        <tag>行业</tag>
-        <tag>hr</tag>
+        <tag>python</tag>
+        <tag>SAP</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2018/12/29/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>数据分析可视化的简单探究（零）</title>
@@ -262,6 +202,97 @@
       </tags>
   </entry>
   <entry>
+    <title>[小实验]自制个双色球程序，助力走上人生巅峰吧</title>
+    <url>/2020/07/11/%E5%B0%8F%E5%AE%9E%E9%AA%8C-%E8%87%AA%E5%88%B6%E4%B8%AA%E5%8F%8C%E8%89%B2%E7%90%83%E7%A8%8B%E5%BA%8F%EF%BC%8C%E5%8A%A9%E5%8A%9B%E8%B5%B0%E4%B8%8A%E4%BA%BA%E7%94%9F%E5%B7%85%E5%B3%B0%E5%90%A7/</url>
+    <content><![CDATA[<h1 id="【Lib】-小实验-自制个双色球程序，助力走上人生巅峰吧"><a href="#【Lib】-小实验-自制个双色球程序，助力走上人生巅峰吧" class="headerlink" title="【Lib】[小实验]自制个双色球程序，助力走上人生巅峰吧"></a>【Lib】[小实验]自制个双色球程序，助力走上人生巅峰吧</h1><p>最近我在买双色球。<br>期待是有的，更多的是给自己攒RP，而且不是还有一部分发展福利事业么。</p>
+<p>本来就是随便买的，所以每次都是机选4注。<br>买了几次我发现，机选还挺简单的，没啥逻辑，那为啥我不自己搞个程序，自己机选呢？</p>
+<p>好的，说干就干。</p>
+<h2 id="程序逻辑"><a href="#程序逻辑" class="headerlink" title="程序逻辑"></a>程序逻辑</h2><ul>
+<li>使用random模块，对33个白球16个蓝球进行随机取值；</li>
+<li>白球取值过程，重复6次；需注意判断random出来的值，是否与前几次重复。</li>
+<li>6白球1蓝球一组，生成一注。生成17注。</li>
+<li>在17注中，在random出来4注，作为最终的机选。<br>（为啥先出来17，再选4呢？是因为好玩吧，lucky17里再lucky4。）</li>
+<li>发送给企业微信的webhook，然后企业微信生成消息。</li>
+</ul>
+<h2 id="程序实现机选"><a href="#程序实现机选" class="headerlink" title="程序实现机选"></a>程序实现机选</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import random, json, certifi, urllib3</span><br><span class="line"></span><br><span class="line">def blueball():</span><br><span class="line">    bball = random.randint(1,16)</span><br><span class="line">    return bball</span><br><span class="line"></span><br><span class="line">def redballs():</span><br><span class="line">    rballs = []</span><br><span class="line">    for i in range(6):</span><br><span class="line">        rball = random.randint(1,33)</span><br><span class="line">        while rball in rballs:</span><br><span class="line">            rball = random.randint(1,33)</span><br><span class="line">        rballs.append(rball)</span><br><span class="line">    rballs.sort()</span><br><span class="line">    return rballs</span><br><span class="line"></span><br><span class="line">def main():</span><br><span class="line">    altballs = []</span><br><span class="line">    for i in range(17):</span><br><span class="line">        balls = [redballs(), blueball()]</span><br><span class="line">        altballs.append(balls)</span><br><span class="line">    luckyfour = random.sample(altballs, 4)</span><br><span class="line"></span><br><span class="line">    # 发送给企业微信的webhook显示。</span><br><span class="line">    http = urllib3.PoolManager(cert_reqs=&apos;CERT_REQUIRED&apos;, ca_certs=certifi.where())</span><br><span class="line">    # 李有财 hook_addr</span><br><span class="line">    hook_addr = &quot;https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=lalalalalalalalalala&quot;    # my robot</span><br><span class="line">    # 传输webhook图文消息    </span><br><span class="line">    data = &#123;</span><br><span class="line">    &quot;msgtype&quot;: &quot;markdown&quot;,</span><br><span class="line">    &quot;markdown&quot;: &#123;</span><br><span class="line">        &quot;content&quot;: &quot;**双色球**\n\</span><br><span class="line">        &gt;**第①注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第②注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第③注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第④注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n&quot;</span><br><span class="line">        %(luckyfour[0][0], luckyfour[0][1], luckyfour[1][0], luckyfour[1][1],</span><br><span class="line">            luckyfour[2][0], luckyfour[2][1], luckyfour[3][0], luckyfour[3][1])</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    data = json.dumps(data).encode()</span><br><span class="line">    response_hook = http.request(&apos;POST&apos;, hook_addr, body=data)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+<h2 id="优化改善"><a href="#优化改善" class="headerlink" title="优化改善"></a>优化改善</h2><p>为了方便我每次对奖方便，在程序里爬取下上期的开奖结果。<br>爬取500彩票网的结果界面。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def last_result():</span><br><span class="line">    addr = &apos;http://kaijiang.500.com/shtml/ssq/&apos;</span><br><span class="line">    http = urllib3.PoolManager(cert_reqs=&apos;CERT_REQUIRED&apos;, ca_certs=certifi.where())</span><br><span class="line">    response = http.request(&apos;GET&apos;, addr)</span><br><span class="line">    tree = html.fromstring(response.data)</span><br><span class="line">    r = tree.xpath(&apos;//div[@class=&quot;ball_box01&quot;]//li[@class=&quot;ball_red&quot;]//text()&apos;)</span><br><span class="line">    b = tree.xpath(&apos;//div[@class=&quot;ball_box01&quot;]//li[@class=&quot;ball_blue&quot;]//text()&apos;)</span><br><span class="line">    return r, b</span><br></pre></td></tr></table></figure></p>
+<p>同时在主函数里加上上期结果的发送：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def main():</span><br><span class="line">    ***</span><br><span class="line">    last_r, last_b = last_result()</span><br><span class="line">    ***</span><br><span class="line">    data = &#123;</span><br><span class="line">    &quot;msgtype&quot;: &quot;markdown&quot;,</span><br><span class="line">    &quot;markdown&quot;: &#123;</span><br><span class="line">        &quot;content&quot;: &quot;**双色球**\n\</span><br><span class="line">        %s, %s\n\</span><br><span class="line">        &gt;**第①注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第②注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第③注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第④注: &lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;- &lt;font color=\&quot;warning\&quot;&gt;%s&lt;/font&gt;**\n&quot;</span><br><span class="line">        %(last_r, last_b, luckyfour[0][0], luckyfour[0][1], luckyfour[1][0], luckyfour[1][1],</span><br><span class="line">            luckyfour[2][0], luckyfour[2][1], luckyfour[3][0], luckyfour[3][1])</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    ***</span><br></pre></td></tr></table></figure></p>
+<h2 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h2><p><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0708/dcball01.jpg" alt=""><br>上期结果就没做太多的修饰了，觉得麻烦也没必要。</p>
+<p>最后在电脑上设置个定时job，每周一/三/五，发给我自己。</p>
+<p>以后去彩票站就下注lucky4好啦。<br>感觉自己好像就要走上人生巅峰了呢。哈哈哈哈哈～～<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0708/psyduck_happy.gif" alt=""></p>
+]]></content>
+      <categories>
+        <category>Lib</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>人力资源离职情况的初步数据分析</title>
+    <url>/2020/09/11/%E4%BA%BA%E5%8A%9B%E8%B5%84%E6%BA%90%E7%A6%BB%E8%81%8C%E6%83%85%E5%86%B5%E7%9A%84%E5%88%9D%E6%AD%A5%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<h1 id="【行业】人力资源离职情况的初步数据分析"><a href="#【行业】人力资源离职情况的初步数据分析" class="headerlink" title="【行业】人力资源离职情况的初步数据分析"></a>【行业】人力资源离职情况的初步数据分析</h1><p>做了一笔数据场景的爬取分析。<br>我们现在看一下大致数据反映出的数据图表，分析一下。</p>
+<h2 id="离职人数及分布"><a href="#离职人数及分布" class="headerlink" title="离职人数及分布"></a>离职人数及分布</h2><p>先看一下各省的离职人数，及分布：</p>
+<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_amount_province_bar.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe></p>
+<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_amount_province_map.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>可以看到，各省基本都有人员离职，说明公司的业务铺的很开，各省均有员工。<br>且人口大省，相对应的离职人员，也比较多，成正比。</p>
+<h2 id="离职原因"><a href="#离职原因" class="headerlink" title="离职原因"></a>离职原因</h2><p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_reason_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>离职原因上，1/3的情况是家庭因素。工作压力、薪资、劳动强度等原因，占比相对不高，但是也在前几之列。<br>所以大多数的离职，基本上可能还是家庭与工作无法平衡，这也一定程度反映现代社会的一个比较普遍的情况。</p>
+<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_reason_province_sankey.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe></p>
+<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_reason_area_sankey.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>从这两个流向图，可以看出来，工作5年以下的人数占了绝大部份，说明公司员工对公司的忠诚度和依赖度比较低。<br>华东华北，等发达地区，员工更易离职。</p>
+<h2 id="再入职意愿"><a href="#再入职意愿" class="headerlink" title="再入职意愿"></a>再入职意愿</h2><p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_reentry_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>离职员工再入职的意愿，近4/5选择了愿意再次入职。说明一定程度上，大家对于公司还是满意的状态，如果有机会会继续选择。<br>但是也不排除员工“好聚好散”的心里。</p>
+<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_areareentry_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>其中，东北地区，愿意的比例最高，也说明东北的工作满意度状态最好。<br>华中地区，不愿意比例较高，如果有需要，其实可以重点看一下。看一下员工的反馈情况，可能会发现一些信息。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>只是做了一些简单的分析，<br>毕竟数据的收集有限。如果数据样本足够大，其实分析的规律会更加贴近实际。<br>这里只是简单练个手，以后有机会做一做更深入的分析调研。</p>
+]]></content>
+      <categories>
+        <category>行业</category>
+      </categories>
+      <tags>
+        <tag>行业</tag>
+        <tag>hr</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>拜拜啦，2020</title>
+    <url>/2020/12/31/%E6%8B%9C%E6%8B%9C%E5%95%A6%EF%BC%8C2020/</url>
+    <content><![CDATA[<h1 id="拜拜啦，2020"><a href="#拜拜啦，2020" class="headerlink" title="拜拜啦，2020"></a>拜拜啦，2020</h1><p>没想到2020最后的几个月自己忙的不成样子……</p>
+<p>2020的最后一天，平静又平常。<br>嗯，不对，最后一天家里的水管被冻住了，好魔幻……<br>下了班，肯定毫无怀念的把台历扔进垃圾桶。</p>
+<p>做很多决定挺难的，今年应该是也做了一个很大很要决心的事情。<br>然后完成了一些很辛苦很难搞的工作。<br>2020，想过好多可能，但是经历这么多，后来才觉得，活在当下、懂得珍惜，弥足重要。<br>2021，不想啥期待了，一切都好吧。</p>
+<p>最后用学到的matplotlib库做了几个图片，还挺有意思的，nice<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_xkcd_year00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_textbox_yearwords00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_fillarea_work00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_pie_costs00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_radar_ability00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_gauge_goals00.jpg" alt=""></p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据分析可视化的简单探究（二）--数据清洗</title>
+    <url>/2020/09/08/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9A%84%E7%AE%80%E5%8D%95%E6%8E%A2%E7%A9%B62/</url>
+    <content><![CDATA[<p><a href="https://tech.hahaalot.com/2020/09/06/数据分析可视化的简单探究/"><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario-gif.gif" width="10%" height="10%" alt="点击跳转" align="left"></a><br><br>(Click Mario)</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>第二步，数据清洗。<br>清洗的逻辑很简单，就是把一些无效的数据、空数据清理掉。</p>
+<p>同时做了如下的逻辑处理：</p>
+<blockquote>
+<pre><code>将一些无效数值置空并drop掉；  
+增加一列数量：如果原因有多条，则计算分号的数量并加1，即表示有几个原因。并按照原因的数量划分比例，创建Amount列。  
+考虑了一种情况，入职不足月的人员，工作时间是0.5月，没有年数，所以将此部分数据处理下增加年数。  
+截取在职年份的年数值，并创建year列。  
+将公司代码及省份merge进来。  
+将年份分段。  
+按照索引排列。  
+</code></pre></blockquote>
+<p>实现代码：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def dataframe_cleaning():</span><br><span class="line">    # 数据的初始清理；</span><br><span class="line">    df = pd.read_csv(&quot;./resign/resign.csv&quot;)</span><br><span class="line">    &apos;&apos;&apos; </span><br><span class="line">    依次对df数据做清理和整合：</span><br><span class="line">    1-2. 将一些无效数值置空并drop掉；</span><br><span class="line">    3. 增加一列数量：如果原因有多条，则计算分号的数量并加1，即表示有几个原因。并按照原因的数量划分比例，创建Amount列。</span><br><span class="line">    4. 考虑了一种情况，入职不足月的人员，工作时间是0.5月，没有年数，所以将此部分数据处理下增加年数。</span><br><span class="line">    5. 截取在职年份的年数值，并创建year列。</span><br><span class="line">    7. 将公司代码及省份merge进来。</span><br><span class="line">    8. 将年份分段。</span><br><span class="line">    9. 按照索引排列。</span><br><span class="line">    &apos;&apos;&apos;</span><br><span class="line">    df = df.replace([&quot;4jjj&quot;, &quot;ddsdhtjsr&quot;, &quot;ootype&quot;], np.nan)</span><br><span class="line">    df = df[[&quot;BUKRS&quot;, &quot;REASON&quot;, &quot;DETAIL&quot;, &quot;WORKINGTIME&quot;, &quot;SUGGESTION&quot;, &quot;ZCRZ&quot;]].dropna()</span><br><span class="line">    df01 = (1 / (df[&quot;REASON&quot;].str.count(&quot;;&quot;)+1).rename(&quot;Amount&quot;)).round(2)</span><br><span class="line">    df[&quot;WORKINGTIME&quot;].replace(&apos;0.5个月&apos;, &apos;0年0.5个月&apos;, inplace=True)</span><br><span class="line">    df02 = df[&quot;WORKINGTIME&quot;].str.split(&apos;年&apos;, expand=True).iloc[:,0].rename(&apos;year&apos;)</span><br><span class="line">    df = pd.concat([df[[&quot;BUKRS&quot;, &quot;REASON&quot;, &quot;SUGGESTION&quot;, &quot;DETAIL&quot;, &quot;ZCRZ&quot;]], df01, df02], axis=1)</span><br><span class="line">    df = pd.merge(df, df_bukrs, on=&apos;BUKRS&apos;, right_index=True) </span><br><span class="line">    df[&apos;year&apos;] = pd.cut(df.year.astype(int), bins=[0, 1, 5, 10, 100], right=False,</span><br><span class="line">            labels=[&quot;不足1年&quot;, &quot;1-5年&quot;, &quot;5-10年&quot;, &quot;10年以上&quot;])</span><br><span class="line">    df.sort_index(inplace=True)</span><br><span class="line">    # df.reset_index()</span><br><span class="line">    return df</span><br></pre></td></tr></table></figure></p>
+<p>使用pandas模块对于dataframe进行数据清理，挺高效的。<br>但是代码的使用，还是要研究几轮的。反正我是学习了好久，摊手～～</p>
+]]></content>
+      <categories>
+        <category>Lib</category>
+      </categories>
+      <tags>
+        <tag>Pandas</tag>
+        <tag>cloud</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数据分析可视化的简单探究（一）--数据抓取</title>
     <url>/2020/09/07/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9A%84%E7%AE%80%E5%8D%95%E6%8E%A2%E7%A9%B61/</url>
     <content><![CDATA[<p>上回写了自己搞了一个小小的项目学习测试。<br>然后其中用到了一些知识点，个人觉得还是挺有意义和用途的，接下来写几篇稿子记录一下。</p>
@@ -282,22 +313,18 @@
       </tags>
   </entry>
   <entry>
-    <title>数据分析可视化的简单探究（二）--数据清洗</title>
-    <url>/2020/09/08/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9A%84%E7%AE%80%E5%8D%95%E6%8E%A2%E7%A9%B62/</url>
+    <title>数据分析可视化的简单探究（三）--建立模型</title>
+    <url>/2020/09/09/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9A%84%E7%AE%80%E5%8D%95%E6%8E%A2%E7%A9%B63/</url>
     <content><![CDATA[<p><a href="https://tech.hahaalot.com/2020/09/06/数据分析可视化的简单探究/"><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario-gif.gif" width="10%" height="10%" alt="点击跳转" align="left"></a><br><br>(Click Mario)</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>第二步，数据清洗。<br>清洗的逻辑很简单，就是把一些无效的数据、空数据清理掉。</p>
-<p>同时做了如下的逻辑处理：</p>
-<blockquote>
-<pre><code>将一些无效数值置空并drop掉；  
-增加一列数量：如果原因有多条，则计算分号的数量并加1，即表示有几个原因。并按照原因的数量划分比例，创建Amount列。  
-考虑了一种情况，入职不足月的人员，工作时间是0.5月，没有年数，所以将此部分数据处理下增加年数。  
-截取在职年份的年数值，并创建year列。  
-将公司代码及省份merge进来。  
-将年份分段。  
-按照索引排列。  
-</code></pre></blockquote>
-<p>实现代码：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def dataframe_cleaning():</span><br><span class="line">    # 数据的初始清理；</span><br><span class="line">    df = pd.read_csv(&quot;./resign/resign.csv&quot;)</span><br><span class="line">    &apos;&apos;&apos; </span><br><span class="line">    依次对df数据做清理和整合：</span><br><span class="line">    1-2. 将一些无效数值置空并drop掉；</span><br><span class="line">    3. 增加一列数量：如果原因有多条，则计算分号的数量并加1，即表示有几个原因。并按照原因的数量划分比例，创建Amount列。</span><br><span class="line">    4. 考虑了一种情况，入职不足月的人员，工作时间是0.5月，没有年数，所以将此部分数据处理下增加年数。</span><br><span class="line">    5. 截取在职年份的年数值，并创建year列。</span><br><span class="line">    7. 将公司代码及省份merge进来。</span><br><span class="line">    8. 将年份分段。</span><br><span class="line">    9. 按照索引排列。</span><br><span class="line">    &apos;&apos;&apos;</span><br><span class="line">    df = df.replace([&quot;4jjj&quot;, &quot;ddsdhtjsr&quot;, &quot;ootype&quot;], np.nan)</span><br><span class="line">    df = df[[&quot;BUKRS&quot;, &quot;REASON&quot;, &quot;DETAIL&quot;, &quot;WORKINGTIME&quot;, &quot;SUGGESTION&quot;, &quot;ZCRZ&quot;]].dropna()</span><br><span class="line">    df01 = (1 / (df[&quot;REASON&quot;].str.count(&quot;;&quot;)+1).rename(&quot;Amount&quot;)).round(2)</span><br><span class="line">    df[&quot;WORKINGTIME&quot;].replace(&apos;0.5个月&apos;, &apos;0年0.5个月&apos;, inplace=True)</span><br><span class="line">    df02 = df[&quot;WORKINGTIME&quot;].str.split(&apos;年&apos;, expand=True).iloc[:,0].rename(&apos;year&apos;)</span><br><span class="line">    df = pd.concat([df[[&quot;BUKRS&quot;, &quot;REASON&quot;, &quot;SUGGESTION&quot;, &quot;DETAIL&quot;, &quot;ZCRZ&quot;]], df01, df02], axis=1)</span><br><span class="line">    df = pd.merge(df, df_bukrs, on=&apos;BUKRS&apos;, right_index=True) </span><br><span class="line">    df[&apos;year&apos;] = pd.cut(df.year.astype(int), bins=[0, 1, 5, 10, 100], right=False,</span><br><span class="line">            labels=[&quot;不足1年&quot;, &quot;1-5年&quot;, &quot;5-10年&quot;, &quot;10年以上&quot;])</span><br><span class="line">    df.sort_index(inplace=True)</span><br><span class="line">    # df.reset_index()</span><br><span class="line">    return df</span><br></pre></td></tr></table></figure></p>
-<p>使用pandas模块对于dataframe进行数据清理，挺高效的。<br>但是代码的使用，还是要研究几轮的。反正我是学习了好久，摊手～～</p>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>第三步，建立显示的图表模型。<br>我使用的是pyecharts库，通过它的chart模型，生成需要的图表。</p>
+<h3 id="PyEcharts-amp-ECharts"><a href="#PyEcharts-amp-ECharts" class="headerlink" title="PyEcharts &amp; ECharts"></a>PyEcharts &amp; ECharts</h3><p>ECharts是一个由百度开发的纯 Javascript 的图表库，pyecharts是某三位大佬将ECharts移植到Python项目中的产物。</p>
+<p>因为我自己在学python，所以基本实现就是用pyecharts。pyecharts模块，chartst还很全的第三方库。<br>但是其中每个chart的使用，还是要学习下的。官网提供了比较详细可靠的代码示例。按照例子自己做一些测试验证，还是最后能搞出来比较good-looking的图表的。</p>
+<p>官网参考：<br><a href="https://echarts.apache.org/zh/index.html" target="_blank" rel="noopener">Apache ECharts (incubating)</a><br><a href="https://gallery.pyecharts.org/#/README" target="_blank" rel="noopener">pyecharts-galley</a></p>
+<h2 id="使用模型"><a href="#使用模型" class="headerlink" title="使用模型"></a>使用模型</h2><h3 id="Sankey桑基图"><a href="#Sankey桑基图" class="headerlink" title="Sankey桑基图"></a>Sankey桑基图</h3><p>展示关系流向，目前比较流行的一个图表。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def sankey_custom(nodes, links) -&gt; Sankey:</span><br><span class="line">    now = datetime.datetime.now()</span><br><span class="line">    s_date = str(now.strftime(&apos;%Y-%m-%d&apos;))</span><br><span class="line">    chart_title = &apos;原因分析&apos; + &apos; &apos; + s_date</span><br><span class="line">    # 绘制Sankey。如果想要垂直显示，只需要在add函数里面加一个orient=&quot;vertical&quot;就好。</span><br><span class="line">    s = (</span><br><span class="line">        Sankey()</span><br><span class="line">        .add(&apos;原因&apos;,   # 图例名称</span><br><span class="line">            nodes,  # 传入节点数据</span><br><span class="line">            links,  # 传入边和流量数据</span><br><span class="line">            # 设置透明度、弯曲度、颜色</span><br><span class="line">            linestyle_opt = opts.LineStyleOpts(opacity=0.3, curve=0.5, color=&quot;source&quot;),</span><br><span class="line">            # 标签显示位置</span><br><span class="line">            label_opts = opts.LabelOpts(position=&quot;right&quot;),</span><br><span class="line">            # 节点之前的距离</span><br><span class="line">            node_gap = 10,</span><br><span class="line">            )</span><br><span class="line">            .set_global_opts(title_opts=opts.TitleOpts(title=chart_title))</span><br><span class="line">        )</span><br><span class="line">    return s</span><br></pre></td></tr></table></figure></p>
+<h3 id="Map地图"><a href="#Map地图" class="headerlink" title="Map地图"></a>Map地图</h3><p>显示地图区域数据的数据密度<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def chinamap_custom(provinces, value, max_value) -&gt; Map:</span><br><span class="line">    now = datetime.datetime.now()</span><br><span class="line">    s_date = str(now.strftime(&apos;%Y-%m-%d&apos;))</span><br><span class="line">    chart_title = &apos;人数分布&apos; + &apos; &apos; + s_date</span><br><span class="line">    # 绘制China的Map图。</span><br><span class="line">    m = (</span><br><span class="line">        Map()</span><br><span class="line">        .add(&quot;人数&quot;, [list(z) for z in zip(provinces, value)], &quot;china&quot;)</span><br><span class="line">        .set_global_opts(</span><br><span class="line">            title_opts=opts.TitleOpts(title=chart_title),</span><br><span class="line">            # visualmap_opts=opts.VisualMapOpts(max_ = int(max_value + 1), is_piecewise=True),</span><br><span class="line">            visualmap_opts=opts.VisualMapOpts(max_ = int(max_value + 1)),</span><br><span class="line">            )</span><br><span class="line">        #.render(&quot;map_visualmap_piecewise001.html&quot;)</span><br><span class="line">        )</span><br><span class="line">    return m</span><br></pre></td></tr></table></figure></p>
+<h3 id="Bar条形图"><a href="#Bar条形图" class="headerlink" title="Bar条形图"></a>Bar条形图</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def bar_custom(list_provinces, list_value) -&gt; Bar:</span><br><span class="line">    now = datetime.datetime.now()</span><br><span class="line">    s_date = str(now.strftime(&apos;%Y-%m-%d&apos;))</span><br><span class="line">    chart_title = &apos;离人数分布&apos; + &apos; &apos; + s_date</span><br><span class="line">    # 绘制bar图，自定义柱状图颜色。</span><br><span class="line">    b = (</span><br><span class="line">        Bar()</span><br><span class="line">        .add_xaxis(list_provinces)</span><br><span class="line">        .add_yaxis(</span><br><span class="line">            &quot;离职人员&quot;, </span><br><span class="line">            list_value,</span><br><span class="line">            itemstyle_opts=opts.ItemStyleOpts(color=&apos;green&apos;),</span><br><span class="line">            )</span><br><span class="line">        .set_global_opts(</span><br><span class="line">            title_opts=opts.TitleOpts(title=chart_title),</span><br><span class="line">            yaxis_opts=opts.AxisOpts(name=&quot;人数&quot;),</span><br><span class="line">            xaxis_opts=opts.AxisOpts(name=&quot;省份&quot;, axislabel_opts=opts.LabelOpts(rotate=-50)),</span><br><span class="line">        )</span><br><span class="line">    )</span><br><span class="line">    return b</span><br></pre></td></tr></table></figure>
+<h3 id="Pie饼图"><a href="#Pie饼图" class="headerlink" title="Pie饼图"></a>Pie饼图</h3><p>我使用了好几个样式的饼图。下面放一段富文本格式的饼图，效果比较美观。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def pie_custom_richtext(list_reason, list_value) -&gt; Pie:</span><br><span class="line">    now = datetime.datetime.now()</span><br><span class="line">    s_date = str(now.strftime(&apos;%Y-%m-%d&apos;))</span><br><span class="line">    chart_title = &apos;原因比例&apos; + &apos; &apos; + s_date</span><br><span class="line">    # 绘制pie图。富文本自定义样式。</span><br><span class="line">    p = (</span><br><span class="line">        Pie()</span><br><span class="line">        .add(</span><br><span class="line">            &quot;&quot;,</span><br><span class="line">            [list(z) for z in zip(list_reason, list_value)],</span><br><span class="line">            radius=[&quot;40%&quot;, &quot;60%&quot;],</span><br><span class="line">            label_opts=opts.LabelOpts(</span><br><span class="line">                position=&quot;outside&quot;,</span><br><span class="line">                formatter=&quot;&#123;hr|&#125;\n &#123;b|&#123;b&#125;: &#125;&#123;c&#125;  &#123;per|&#123;d&#125;%&#125;  &quot;,</span><br><span class="line">                background_color=&quot;#eee&quot;,</span><br><span class="line">                border_color=&quot;#aaa&quot;,</span><br><span class="line">                border_width=1,</span><br><span class="line">                border_radius=4,</span><br><span class="line">                rich=&#123;</span><br><span class="line">                    &quot;a&quot;: &#123;&quot;color&quot;: &quot;#999&quot;, &quot;lineHeight&quot;: 22, &quot;align&quot;: &quot;center&quot;&#125;,</span><br><span class="line">                    &quot;abg&quot;: &#123;</span><br><span class="line">                        &quot;backgroundColor&quot;: &quot;#e3e3e3&quot;,</span><br><span class="line">                        &quot;width&quot;: &quot;100%&quot;,</span><br><span class="line">                        &quot;align&quot;: &quot;right&quot;,</span><br><span class="line">                        &quot;height&quot;: 22,</span><br><span class="line">                        &quot;borderRadius&quot;: [4, 4, 0, 0],</span><br><span class="line">                    &#125;,</span><br><span class="line">                    &quot;hr&quot;: &#123;</span><br><span class="line">                        &quot;borderColor&quot;: &quot;#aaa&quot;,</span><br><span class="line">                        &quot;width&quot;: &quot;100%&quot;,</span><br><span class="line">                        &quot;borderWidth&quot;: 0.5,</span><br><span class="line">                        &quot;height&quot;: 0,</span><br><span class="line">                    &#125;,</span><br><span class="line">                    &quot;b&quot;: &#123;&quot;fontSize&quot;: 11, &quot;lineHeight&quot;: 33&#125;,  # 标签</span><br><span class="line">                    &quot;per&quot;: &#123;</span><br><span class="line">                        &quot;color&quot;: &quot;#eee&quot;,</span><br><span class="line">                        &quot;backgroundColor&quot;: &quot;#334455&quot;,</span><br><span class="line">                        &quot;padding&quot;: [2, 4],</span><br><span class="line">                        &quot;borderRadius&quot;: 2,</span><br><span class="line">                    &#125;,</span><br><span class="line">                &#125;,</span><br><span class="line">            ),</span><br><span class="line">        )</span><br><span class="line">        .set_global_opts(</span><br><span class="line">            title_opts=opts.TitleOpts(title=chart_title),</span><br><span class="line">            legend_opts=opts.LegendOpts(is_show=True, type_=&quot;scroll&quot;, pos_left=&quot;85%&quot;, orient=&quot;vertical&quot;),</span><br><span class="line">            )</span><br><span class="line">    )</span><br><span class="line">    return p</span><br></pre></td></tr></table></figure></p>
+<p>以上。</p>
 ]]></content>
       <categories>
         <category>Lib</category>
@@ -329,17 +356,33 @@
       </tags>
   </entry>
   <entry>
-    <title>数据分析可视化的简单探究（三）--建立模型</title>
-    <url>/2020/09/09/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9A%84%E7%AE%80%E5%8D%95%E6%8E%A2%E7%A9%B63/</url>
+    <title>Blog搭建信息</title>
+    <url>/2020/04/21/Blog%E6%90%AD%E5%BB%BA%E4%BF%A1%E6%81%AF/</url>
+    <content><![CDATA[<h1 id="Blog搭建信息"><a href="#Blog搭建信息" class="headerlink" title="Blog搭建信息"></a>Blog搭建信息</h1><h2 id="代码托管平台：Coding"><a href="#代码托管平台：Coding" class="headerlink" title="代码托管平台：Coding"></a>代码托管平台：Coding</h2><p>喜欢小猴子的logo。<br>参考：<a href="https://coding.net/" target="_blank" rel="noopener">CODING - 一站式软件研发管理平台</a></p>
+<h2 id="blog框架：Hexo"><a href="#blog框架：Hexo" class="headerlink" title="blog框架：Hexo"></a>blog框架：Hexo</h2><p>A fast, simple &amp; powerful blog framework。<br>参考：<a href="https://hexo.io/" target="_blank" rel="noopener">hexo</a></p>
+<h2 id="主题：Chic"><a href="#主题：Chic" class="headerlink" title="主题：Chic"></a>主题：Chic</h2><p>选择的原因：极简设计，博客封面。<br>后来知道Chic是法语，同英语elegant。Elegant是我最喜欢的英文单词之一。<br>参考：<a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank" rel="noopener">Chic主题</a></p>
+<h2 id="对象存储：COS"><a href="#对象存储：COS" class="headerlink" title="对象存储：COS"></a>对象存储：COS</h2><p>主要是防盗链。费用么应该不多。</p>
+<h2 id="页面计数服务：busuanzi"><a href="#页面计数服务：busuanzi" class="headerlink" title="页面计数服务：busuanzi"></a>页面计数服务：busuanzi</h2><p>可能是配置最方便吧。<br>参考：<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">不蒜子 - 极简网页计数器</a></p>
+<h2 id="封面链接图标：iconfont"><a href="#封面链接图标：iconfont" class="headerlink" title="封面链接图标：iconfont"></a>封面链接图标：iconfont</h2><p>参考：<a href="https://www.iconfont.cn/home/index" target="_blank" rel="noopener">Iconfont-阿里巴巴矢量图标库</a></p>
+<h2 id="可能后续考虑要不要加的服务支持："><a href="#可能后续考虑要不要加的服务支持：" class="headerlink" title="可能后续考虑要不要加的服务支持："></a>可能后续考虑要不要加的服务支持：</h2><p>Live2d ——目前感觉不实用<br>jsdelivr ——CDN<br>valine ——暂时也没人看，也不需要评论服务。</p>
+]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据分析可视化的简单探究（四）--图表云存储</title>
+    <url>/2020/09/10/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9A%84%E7%AE%80%E5%8D%95%E6%8E%A2%E7%A9%B64/</url>
     <content><![CDATA[<p><a href="https://tech.hahaalot.com/2020/09/06/数据分析可视化的简单探究/"><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario-gif.gif" width="10%" height="10%" alt="点击跳转" align="left"></a><br><br>(Click Mario)</p>
-<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>第三步，建立显示的图表模型。<br>我使用的是pyecharts库，通过它的chart模型，生成需要的图表。</p>
-<h3 id="PyEcharts-amp-ECharts"><a href="#PyEcharts-amp-ECharts" class="headerlink" title="PyEcharts &amp; ECharts"></a>PyEcharts &amp; ECharts</h3><p>ECharts是一个由百度开发的纯 Javascript 的图表库，pyecharts是某三位大佬将ECharts移植到Python项目中的产物。</p>
-<p>因为我自己在学python，所以基本实现就是用pyecharts。pyecharts模块，chartst还很全的第三方库。<br>但是其中每个chart的使用，还是要学习下的。官网提供了比较详细可靠的代码示例。按照例子自己做一些测试验证，还是最后能搞出来比较good-looking的图表的。</p>
-<p>官网参考：<br><a href="https://echarts.apache.org/zh/index.html" target="_blank" rel="noopener">Apache ECharts (incubating)</a><br><a href="https://gallery.pyecharts.org/#/README" target="_blank" rel="noopener">pyecharts-galley</a></p>
-<h2 id="使用模型"><a href="#使用模型" class="headerlink" title="使用模型"></a>使用模型</h2><h3 id="Sankey桑基图"><a href="#Sankey桑基图" class="headerlink" title="Sankey桑基图"></a>Sankey桑基图</h3><p>展示关系流向，目前比较流行的一个图表。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def sankey_custom(nodes, links) -&gt; Sankey:</span><br><span class="line">    now = datetime.datetime.now()</span><br><span class="line">    s_date = str(now.strftime(&apos;%Y-%m-%d&apos;))</span><br><span class="line">    chart_title = &apos;原因分析&apos; + &apos; &apos; + s_date</span><br><span class="line">    # 绘制Sankey。如果想要垂直显示，只需要在add函数里面加一个orient=&quot;vertical&quot;就好。</span><br><span class="line">    s = (</span><br><span class="line">        Sankey()</span><br><span class="line">        .add(&apos;原因&apos;,   # 图例名称</span><br><span class="line">            nodes,  # 传入节点数据</span><br><span class="line">            links,  # 传入边和流量数据</span><br><span class="line">            # 设置透明度、弯曲度、颜色</span><br><span class="line">            linestyle_opt = opts.LineStyleOpts(opacity=0.3, curve=0.5, color=&quot;source&quot;),</span><br><span class="line">            # 标签显示位置</span><br><span class="line">            label_opts = opts.LabelOpts(position=&quot;right&quot;),</span><br><span class="line">            # 节点之前的距离</span><br><span class="line">            node_gap = 10,</span><br><span class="line">            )</span><br><span class="line">            .set_global_opts(title_opts=opts.TitleOpts(title=chart_title))</span><br><span class="line">        )</span><br><span class="line">    return s</span><br></pre></td></tr></table></figure></p>
-<h3 id="Map地图"><a href="#Map地图" class="headerlink" title="Map地图"></a>Map地图</h3><p>显示地图区域数据的数据密度<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def chinamap_custom(provinces, value, max_value) -&gt; Map:</span><br><span class="line">    now = datetime.datetime.now()</span><br><span class="line">    s_date = str(now.strftime(&apos;%Y-%m-%d&apos;))</span><br><span class="line">    chart_title = &apos;人数分布&apos; + &apos; &apos; + s_date</span><br><span class="line">    # 绘制China的Map图。</span><br><span class="line">    m = (</span><br><span class="line">        Map()</span><br><span class="line">        .add(&quot;人数&quot;, [list(z) for z in zip(provinces, value)], &quot;china&quot;)</span><br><span class="line">        .set_global_opts(</span><br><span class="line">            title_opts=opts.TitleOpts(title=chart_title),</span><br><span class="line">            # visualmap_opts=opts.VisualMapOpts(max_ = int(max_value + 1), is_piecewise=True),</span><br><span class="line">            visualmap_opts=opts.VisualMapOpts(max_ = int(max_value + 1)),</span><br><span class="line">            )</span><br><span class="line">        #.render(&quot;map_visualmap_piecewise001.html&quot;)</span><br><span class="line">        )</span><br><span class="line">    return m</span><br></pre></td></tr></table></figure></p>
-<h3 id="Bar条形图"><a href="#Bar条形图" class="headerlink" title="Bar条形图"></a>Bar条形图</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def bar_custom(list_provinces, list_value) -&gt; Bar:</span><br><span class="line">    now = datetime.datetime.now()</span><br><span class="line">    s_date = str(now.strftime(&apos;%Y-%m-%d&apos;))</span><br><span class="line">    chart_title = &apos;离人数分布&apos; + &apos; &apos; + s_date</span><br><span class="line">    # 绘制bar图，自定义柱状图颜色。</span><br><span class="line">    b = (</span><br><span class="line">        Bar()</span><br><span class="line">        .add_xaxis(list_provinces)</span><br><span class="line">        .add_yaxis(</span><br><span class="line">            &quot;离职人员&quot;, </span><br><span class="line">            list_value,</span><br><span class="line">            itemstyle_opts=opts.ItemStyleOpts(color=&apos;green&apos;),</span><br><span class="line">            )</span><br><span class="line">        .set_global_opts(</span><br><span class="line">            title_opts=opts.TitleOpts(title=chart_title),</span><br><span class="line">            yaxis_opts=opts.AxisOpts(name=&quot;人数&quot;),</span><br><span class="line">            xaxis_opts=opts.AxisOpts(name=&quot;省份&quot;, axislabel_opts=opts.LabelOpts(rotate=-50)),</span><br><span class="line">        )</span><br><span class="line">    )</span><br><span class="line">    return b</span><br></pre></td></tr></table></figure>
-<h3 id="Pie饼图"><a href="#Pie饼图" class="headerlink" title="Pie饼图"></a>Pie饼图</h3><p>我使用了好几个样式的饼图。下面放一段富文本格式的饼图，效果比较美观。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def pie_custom_richtext(list_reason, list_value) -&gt; Pie:</span><br><span class="line">    now = datetime.datetime.now()</span><br><span class="line">    s_date = str(now.strftime(&apos;%Y-%m-%d&apos;))</span><br><span class="line">    chart_title = &apos;原因比例&apos; + &apos; &apos; + s_date</span><br><span class="line">    # 绘制pie图。富文本自定义样式。</span><br><span class="line">    p = (</span><br><span class="line">        Pie()</span><br><span class="line">        .add(</span><br><span class="line">            &quot;&quot;,</span><br><span class="line">            [list(z) for z in zip(list_reason, list_value)],</span><br><span class="line">            radius=[&quot;40%&quot;, &quot;60%&quot;],</span><br><span class="line">            label_opts=opts.LabelOpts(</span><br><span class="line">                position=&quot;outside&quot;,</span><br><span class="line">                formatter=&quot;&#123;hr|&#125;\n &#123;b|&#123;b&#125;: &#125;&#123;c&#125;  &#123;per|&#123;d&#125;%&#125;  &quot;,</span><br><span class="line">                background_color=&quot;#eee&quot;,</span><br><span class="line">                border_color=&quot;#aaa&quot;,</span><br><span class="line">                border_width=1,</span><br><span class="line">                border_radius=4,</span><br><span class="line">                rich=&#123;</span><br><span class="line">                    &quot;a&quot;: &#123;&quot;color&quot;: &quot;#999&quot;, &quot;lineHeight&quot;: 22, &quot;align&quot;: &quot;center&quot;&#125;,</span><br><span class="line">                    &quot;abg&quot;: &#123;</span><br><span class="line">                        &quot;backgroundColor&quot;: &quot;#e3e3e3&quot;,</span><br><span class="line">                        &quot;width&quot;: &quot;100%&quot;,</span><br><span class="line">                        &quot;align&quot;: &quot;right&quot;,</span><br><span class="line">                        &quot;height&quot;: 22,</span><br><span class="line">                        &quot;borderRadius&quot;: [4, 4, 0, 0],</span><br><span class="line">                    &#125;,</span><br><span class="line">                    &quot;hr&quot;: &#123;</span><br><span class="line">                        &quot;borderColor&quot;: &quot;#aaa&quot;,</span><br><span class="line">                        &quot;width&quot;: &quot;100%&quot;,</span><br><span class="line">                        &quot;borderWidth&quot;: 0.5,</span><br><span class="line">                        &quot;height&quot;: 0,</span><br><span class="line">                    &#125;,</span><br><span class="line">                    &quot;b&quot;: &#123;&quot;fontSize&quot;: 11, &quot;lineHeight&quot;: 33&#125;,  # 标签</span><br><span class="line">                    &quot;per&quot;: &#123;</span><br><span class="line">                        &quot;color&quot;: &quot;#eee&quot;,</span><br><span class="line">                        &quot;backgroundColor&quot;: &quot;#334455&quot;,</span><br><span class="line">                        &quot;padding&quot;: [2, 4],</span><br><span class="line">                        &quot;borderRadius&quot;: 2,</span><br><span class="line">                    &#125;,</span><br><span class="line">                &#125;,</span><br><span class="line">            ),</span><br><span class="line">        )</span><br><span class="line">        .set_global_opts(</span><br><span class="line">            title_opts=opts.TitleOpts(title=chart_title),</span><br><span class="line">            legend_opts=opts.LegendOpts(is_show=True, type_=&quot;scroll&quot;, pos_left=&quot;85%&quot;, orient=&quot;vertical&quot;),</span><br><span class="line">            )</span><br><span class="line">    )</span><br><span class="line">    return p</span><br></pre></td></tr></table></figure></p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>最后一步，将创建好的图表传输到云存储。<br>然后web界面就直接嵌入iframe使用。</p>
+<p>我一直用的对象云存储是COS。腾讯云提供了官方的sdk，所以看一下技术文档，就知道怎么用了。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from qcloud_cos import CosConfig</span><br><span class="line">from qcloud_cos import CosS3Client</span><br><span class="line">import sys</span><br><span class="line">import logging</span><br><span class="line">import os</span><br><span class="line"></span><br><span class="line">logging.basicConfig(level=logging.INFO, stream=sys.stdout)</span><br><span class="line"></span><br><span class="line">secret_id = &apos;A***************&apos;      # 替换为用户的 secretId</span><br><span class="line">secret_key = &apos;*******&apos;      # 替换为用户的 secretKey</span><br><span class="line">region = &apos;ap-shanghai&apos;     # 替换为用户的 Region</span><br><span class="line">token = None                # 使用临时密钥需要传入 Token，默认为空，可不填</span><br><span class="line">scheme = &apos;https&apos;            # 指定使用 http/https 协议来访问 COS，默认为 https，可不填</span><br><span class="line">config = CosConfig(Region=region, SecretId=secret_id, SecretKey=secret_key, Token=token, Scheme=scheme)</span><br><span class="line"></span><br><span class="line"># 2. 获取客户端对象</span><br><span class="line">client = CosS3Client(config)</span><br><span class="line"># 参照下文的描述。或者参照 Demo 程序，详见 https://github.com/tencentyun/cos-python-sdk-v5/blob/master/qcloud_cos/demo.py</span><br><span class="line">#### 文件流简单上传（不支持超过5G的文件，推荐使用下方高级上传接口）</span><br><span class="line"># 强烈建议您以二进制模式(binary mode)打开文件,否则可能会导致错误</span><br><span class="line">for root, dirs, files in os.walk(&quot;charts_folder&quot;):    </span><br><span class="line"># root-表示当前正在访问的文件夹路径；dirs-表示该文件夹下的子目录名list；files-表示该文件夹下的文件list</span><br><span class="line">    for f in files:</span><br><span class="line">        with open(os.path.join(root, f), &apos;rb&apos;) as fp:</span><br><span class="line">            response = client.put_object(</span><br><span class="line">                Bucket=&apos;****-nnnn&apos;,</span><br><span class="line">                Body=fp,</span><br><span class="line">                Key=&apos;objects/pyecharts/&apos; + f,</span><br><span class="line">                StorageClass=&apos;STANDARD&apos;,</span><br><span class="line">                EnableMD5=False</span><br><span class="line">            )</span><br><span class="line">        print(response[&apos;ETag&apos;])</span><br></pre></td></tr></table></figure>
+<p>这样就可以把pyecharts生成的html传输到COS中了。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这样一个比较数据可视化作业的流程就串起来了。<br>然后就是根据数据和图表进行下数据的分析了。</p>
 <p>以上。</p>
 ]]></content>
       <categories>
@@ -348,23 +391,6 @@
       <tags>
         <tag>Pandas</tag>
         <tag>cloud</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>网站访问情况的简单监控</title>
-    <url>/2020/04/27/%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E6%83%85%E5%86%B5%E7%9A%84%E7%AE%80%E5%8D%95%E7%9B%91%E6%8E%A7/</url>
-    <content><![CDATA[<h1 id="网站访问情况的简单监控"><a href="#网站访问情况的简单监控" class="headerlink" title="网站访问情况的简单监控"></a>网站访问情况的简单监控</h1><h2 id="我呢，想做这样一个事情："><a href="#我呢，想做这样一个事情：" class="headerlink" title="我呢，想做这样一个事情："></a>我呢，想做这样一个事情：</h2><p>通过爬取blog封面最下方的记数，将每天访问网站的信息抓取出来。然后调用WechatWork的webhook，将每天的访问数发给自己。<br>这样就能粗略了解，网站的访问情况。</p>
-<h3 id="1-获取网站的访问记数："><a href="#1-获取网站的访问记数：" class="headerlink" title="1. 获取网站的访问记数："></a>1. 获取网站的访问记数：</h3><p>开始的脚本想用python的requests库抓，但是发现个问题。<br>那就是封面加载的时候，页面记数不会立刻返回到界面中。我开始以为是我的xpath写法有问题，试了好久才发现其实是获取的text里第一时间不存在记数（应该是在调用busuanzi的服务，所以数据不是立刻返回。）<br>这样就导致使用requests.get()方法，无法抓到数据。每次抓的记数都不存在。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/pythonrequests01.jpeg" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/pythonrequests02.gif" alt=""><br>查了下资料，好像requests库没办法实现等待页面几秒再返回数据的情况。<br>所以我改成使用selenium库进行页面内容的抓取。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/pythonrequests03.png" alt=""><br>定义获取计数的函数get_counts()：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def get_counts():    # 使用selenuim，加载动态界面，抓取计数；</span><br><span class="line">    browser = webdriver.Chrome()</span><br><span class="line">    browser.get(&quot;https://****.com&quot;)</span><br><span class="line"></span><br><span class="line">    count_site_pv = browser.find_element(By.ID, &quot;busuanzi_value_site_pv&quot;).text</span><br><span class="line">    count_site_uv = browser.find_element(By.ID, &quot;busuanzi_value_site_uv&quot;).text</span><br><span class="line">    count_page_pv = browser.find_element(By.ID, &quot;busuanzi_value_page_pv&quot;).text</span><br><span class="line"></span><br><span class="line">    browser.close()</span><br><span class="line">    return count_site_pv, count_site_uv, count_page_pv</span><br></pre></td></tr></table></figure></p>
-<h3 id="2-在WechatWork里创建一个webhook："><a href="#2-在WechatWork里创建一个webhook：" class="headerlink" title="2. 在WechatWork里创建一个webhook："></a>2. 在WechatWork里创建一个webhook：</h3><p>Webhook在企业微信里只能在群机器人下使用。<br>所以我先拉了两个同事，创建个聊天群，然后再把他们移走。这样就创建了一个只有我自己的群。</p>
-<h3 id="3-向webhook发送消息，推送至企业微信："><a href="#3-向webhook发送消息，推送至企业微信：" class="headerlink" title="3. 向webhook发送消息，推送至企业微信："></a>3. 向webhook发送消息，推送至企业微信：</h3><p>这个就按照群机器人配置说明中的说明，进行消息推送即可。<br>我使用的是urllib3库。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def ewc_webhook(a, b, c):    # 调用ewc的webhook，发送消息；</span><br><span class="line">    a, b, c = a, b, c</span><br><span class="line">    hook_addr = &apos;https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=*************&apos;</span><br><span class="line">    http = urllib3.PoolManager()</span><br><span class="line">    time = datetime.datetime.now()</span><br><span class="line">    today = time.strftime(&apos;%Y-%m-%d&apos;)</span><br><span class="line"></span><br><span class="line">    data = &#123;</span><br><span class="line">    &quot;msgtype&quot;: &quot;markdown&quot;,</span><br><span class="line">    &quot;markdown&quot;: &#123;</span><br><span class="line">        &quot;content&quot;: &quot;&lt;font color=\&quot;info\&quot;&gt;%s&lt;/font&gt;\n\</span><br><span class="line">        &gt;Blog总访问量:&lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;\n\</span><br><span class="line">        &gt;Blog访客数量:&lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;\n\</span><br><span class="line">        &gt;封面访问数:&lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;&quot; </span><br><span class="line">        %(today, a, b, c)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    data = json.dumps(data).encode()</span><br><span class="line">    response = http.request(&apos;POST&apos;, hook_addr, body=data)</span><br></pre></td></tr></table></figure></p>
-<h3 id="4-在本地电脑上设置定时job，每天执行程序。"><a href="#4-在本地电脑上设置定时job，每天执行程序。" class="headerlink" title="4. 在本地电脑上设置定时job，每天执行程序。"></a>4. 在本地电脑上设置定时job，每天执行程序。</h3><p>最终效果：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/pythonrequests04.png" alt=""></p>
-]]></content>
-      <categories>
-        <category>Tech</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>crawler</tag>
       </tags>
   </entry>
   <entry>
@@ -398,46 +424,20 @@
       </tags>
   </entry>
   <entry>
-    <title>数据分析可视化的简单探究（四）--图表云存储</title>
-    <url>/2020/09/10/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9A%84%E7%AE%80%E5%8D%95%E6%8E%A2%E7%A9%B64/</url>
-    <content><![CDATA[<p><a href="https://tech.hahaalot.com/2020/09/06/数据分析可视化的简单探究/"><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario-gif.gif" width="10%" height="10%" alt="点击跳转" align="left"></a><br><br>(Click Mario)</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>最后一步，将创建好的图表传输到云存储。<br>然后web界面就直接嵌入iframe使用。</p>
-<p>我一直用的对象云存储是COS。腾讯云提供了官方的sdk，所以看一下技术文档，就知道怎么用了。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from qcloud_cos import CosConfig</span><br><span class="line">from qcloud_cos import CosS3Client</span><br><span class="line">import sys</span><br><span class="line">import logging</span><br><span class="line">import os</span><br><span class="line"></span><br><span class="line">logging.basicConfig(level=logging.INFO, stream=sys.stdout)</span><br><span class="line"></span><br><span class="line">secret_id = &apos;A***************&apos;      # 替换为用户的 secretId</span><br><span class="line">secret_key = &apos;*******&apos;      # 替换为用户的 secretKey</span><br><span class="line">region = &apos;ap-shanghai&apos;     # 替换为用户的 Region</span><br><span class="line">token = None                # 使用临时密钥需要传入 Token，默认为空，可不填</span><br><span class="line">scheme = &apos;https&apos;            # 指定使用 http/https 协议来访问 COS，默认为 https，可不填</span><br><span class="line">config = CosConfig(Region=region, SecretId=secret_id, SecretKey=secret_key, Token=token, Scheme=scheme)</span><br><span class="line"></span><br><span class="line"># 2. 获取客户端对象</span><br><span class="line">client = CosS3Client(config)</span><br><span class="line"># 参照下文的描述。或者参照 Demo 程序，详见 https://github.com/tencentyun/cos-python-sdk-v5/blob/master/qcloud_cos/demo.py</span><br><span class="line">#### 文件流简单上传（不支持超过5G的文件，推荐使用下方高级上传接口）</span><br><span class="line"># 强烈建议您以二进制模式(binary mode)打开文件,否则可能会导致错误</span><br><span class="line">for root, dirs, files in os.walk(&quot;charts_folder&quot;):    </span><br><span class="line"># root-表示当前正在访问的文件夹路径；dirs-表示该文件夹下的子目录名list；files-表示该文件夹下的文件list</span><br><span class="line">    for f in files:</span><br><span class="line">        with open(os.path.join(root, f), &apos;rb&apos;) as fp:</span><br><span class="line">            response = client.put_object(</span><br><span class="line">                Bucket=&apos;****-nnnn&apos;,</span><br><span class="line">                Body=fp,</span><br><span class="line">                Key=&apos;objects/pyecharts/&apos; + f,</span><br><span class="line">                StorageClass=&apos;STANDARD&apos;,</span><br><span class="line">                EnableMD5=False</span><br><span class="line">            )</span><br><span class="line">        print(response[&apos;ETag&apos;])</span><br></pre></td></tr></table></figure>
-<p>这样就可以把pyecharts生成的html传输到COS中了。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这样一个比较数据可视化作业的流程就串起来了。<br>然后就是根据数据和图表进行下数据的分析了。</p>
-<p>以上。</p>
-]]></content>
-      <categories>
-        <category>Lib</category>
-      </categories>
-      <tags>
-        <tag>Pandas</tag>
-        <tag>cloud</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python调用SAP_RFC函数研究</title>
-    <url>/2022/01/06/python%E8%B0%83%E7%94%A8SAP-RFC%E5%87%BD%E6%95%B0%E7%A0%94%E7%A9%B6/</url>
-    <content><![CDATA[<h1 id="python调用SAP-RFC函数研究"><a href="#python调用SAP-RFC函数研究" class="headerlink" title="python调用SAP_RFC函数研究"></a>python调用SAP_RFC函数研究</h1><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>由于本职工作的原因，会经常用到SAP的function。<br>SAP的remote函数本身，支持外部调用。可以通过sap封装webservice，供外部系统调用；也可以适配sap的应用系统自己调用。</p>
-<p>之前外部系统调用SAP的时候，经常做Microsoft BizTalk连接SAP RFC调用的实例。因为BizTalk本身拥有适配sap的adapter，配置起来很方便。</p>
-<p>一直想试着python语音是否有第三方库可以实现rfc的调用，前几天搜了下发现有这个pyrfc的库，所以就搞一搞测试一下。</p>
-<h2 id="环境安装"><a href="#环境安装" class="headerlink" title="环境安装"></a>环境安装</h2><p>官方参考文档：<a href="https://sap.github.io/PyRFC/install.html" target="_blank" rel="noopener">Installation — pyrfc 2.0.2 documentation</a><br>因为我用的mac，所以安装操作都是macOS：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/pyrfc01.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/pyrfc02.png" alt=""></p>
-<p>其中用到了2个SAP官网的下载文件，需要用到SAP企业账号才可以下载。</p>
-<ol>
-<li>第三步的RFC SDK：<br>Download the <a href="https://launchpad.support.sap.com/#/notes/2573790" target="_blank" rel="noopener">7.50 version of the SAP NetWeaver RFC SDK</a></li>
-<li>第五步的uchar.h文件。</li>
-</ol>
-<p>整体按照安装指引操作，还蛮顺利的。</p>
-<h2 id="测试验证"><a href="#测试验证" class="headerlink" title="测试验证"></a>测试验证</h2><p>Pyrfc项目里，提供了一些demo程序，我用了clientPrintDescription这支测试连通性，这个是打印rfc描述的程序，不实际调用rfc函数，只是打印函数结构，用来测试很安全。<br><a href="https://github.com/SAP/PyRFC/blob/main/examples/clientPrintDescription.py" target="_blank" rel="noopener">PyRFC/clientPrintDescription.py at main · SAP/PyRFC · GitHub</a><br>这个测试后面会再写一篇介绍，因为程序脚本使用了configparser配置解析库。这个之前没搞过，所以单独又学习了一下。</p>
-<h2 id="补充问题"><a href="#补充问题" class="headerlink" title="补充问题"></a>补充问题</h2><p>我在连接测试的时候，执行遇到了这个报错：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/pyrfc03.png" alt=""><br>后来在朋友帮助指出下，是因为环境变量DYLD_LIBRARY_PATH没有设置到lib，增加一条环境变量记录。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/pyrfc04.png" alt=""><br>然后问题就解决了。</p>
+    <title>网站访问情况的简单监控</title>
+    <url>/2020/04/27/%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E6%83%85%E5%86%B5%E7%9A%84%E7%AE%80%E5%8D%95%E7%9B%91%E6%8E%A7/</url>
+    <content><![CDATA[<h1 id="网站访问情况的简单监控"><a href="#网站访问情况的简单监控" class="headerlink" title="网站访问情况的简单监控"></a>网站访问情况的简单监控</h1><h2 id="我呢，想做这样一个事情："><a href="#我呢，想做这样一个事情：" class="headerlink" title="我呢，想做这样一个事情："></a>我呢，想做这样一个事情：</h2><p>通过爬取blog封面最下方的记数，将每天访问网站的信息抓取出来。然后调用WechatWork的webhook，将每天的访问数发给自己。<br>这样就能粗略了解，网站的访问情况。</p>
+<h3 id="1-获取网站的访问记数："><a href="#1-获取网站的访问记数：" class="headerlink" title="1. 获取网站的访问记数："></a>1. 获取网站的访问记数：</h3><p>开始的脚本想用python的requests库抓，但是发现个问题。<br>那就是封面加载的时候，页面记数不会立刻返回到界面中。我开始以为是我的xpath写法有问题，试了好久才发现其实是获取的text里第一时间不存在记数（应该是在调用busuanzi的服务，所以数据不是立刻返回。）<br>这样就导致使用requests.get()方法，无法抓到数据。每次抓的记数都不存在。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/pythonrequests01.jpeg" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/pythonrequests02.gif" alt=""><br>查了下资料，好像requests库没办法实现等待页面几秒再返回数据的情况。<br>所以我改成使用selenium库进行页面内容的抓取。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/pythonrequests03.png" alt=""><br>定义获取计数的函数get_counts()：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def get_counts():    # 使用selenuim，加载动态界面，抓取计数；</span><br><span class="line">    browser = webdriver.Chrome()</span><br><span class="line">    browser.get(&quot;https://****.com&quot;)</span><br><span class="line"></span><br><span class="line">    count_site_pv = browser.find_element(By.ID, &quot;busuanzi_value_site_pv&quot;).text</span><br><span class="line">    count_site_uv = browser.find_element(By.ID, &quot;busuanzi_value_site_uv&quot;).text</span><br><span class="line">    count_page_pv = browser.find_element(By.ID, &quot;busuanzi_value_page_pv&quot;).text</span><br><span class="line"></span><br><span class="line">    browser.close()</span><br><span class="line">    return count_site_pv, count_site_uv, count_page_pv</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-在WechatWork里创建一个webhook："><a href="#2-在WechatWork里创建一个webhook：" class="headerlink" title="2. 在WechatWork里创建一个webhook："></a>2. 在WechatWork里创建一个webhook：</h3><p>Webhook在企业微信里只能在群机器人下使用。<br>所以我先拉了两个同事，创建个聊天群，然后再把他们移走。这样就创建了一个只有我自己的群。</p>
+<h3 id="3-向webhook发送消息，推送至企业微信："><a href="#3-向webhook发送消息，推送至企业微信：" class="headerlink" title="3. 向webhook发送消息，推送至企业微信："></a>3. 向webhook发送消息，推送至企业微信：</h3><p>这个就按照群机器人配置说明中的说明，进行消息推送即可。<br>我使用的是urllib3库。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def ewc_webhook(a, b, c):    # 调用ewc的webhook，发送消息；</span><br><span class="line">    a, b, c = a, b, c</span><br><span class="line">    hook_addr = &apos;https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=*************&apos;</span><br><span class="line">    http = urllib3.PoolManager()</span><br><span class="line">    time = datetime.datetime.now()</span><br><span class="line">    today = time.strftime(&apos;%Y-%m-%d&apos;)</span><br><span class="line"></span><br><span class="line">    data = &#123;</span><br><span class="line">    &quot;msgtype&quot;: &quot;markdown&quot;,</span><br><span class="line">    &quot;markdown&quot;: &#123;</span><br><span class="line">        &quot;content&quot;: &quot;&lt;font color=\&quot;info\&quot;&gt;%s&lt;/font&gt;\n\</span><br><span class="line">        &gt;Blog总访问量:&lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;\n\</span><br><span class="line">        &gt;Blog访客数量:&lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;\n\</span><br><span class="line">        &gt;封面访问数:&lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;&quot; </span><br><span class="line">        %(today, a, b, c)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    data = json.dumps(data).encode()</span><br><span class="line">    response = http.request(&apos;POST&apos;, hook_addr, body=data)</span><br></pre></td></tr></table></figure></p>
+<h3 id="4-在本地电脑上设置定时job，每天执行程序。"><a href="#4-在本地电脑上设置定时job，每天执行程序。" class="headerlink" title="4. 在本地电脑上设置定时job，每天执行程序。"></a>4. 在本地电脑上设置定时job，每天执行程序。</h3><p>最终效果：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/pythonrequests04.png" alt=""></p>
 ]]></content>
       <categories>
         <category>Tech</category>
       </categories>
       <tags>
         <tag>python</tag>
-        <tag>SAP</tag>
+        <tag>crawler</tag>
       </tags>
   </entry>
 </search>
