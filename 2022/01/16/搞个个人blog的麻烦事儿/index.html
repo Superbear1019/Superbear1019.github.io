@@ -13,7 +13,7 @@
 
 
 
-<title>python的configparser配置解析库应用 | Haha not only a lot</title>
+<title>搞个个人blog的麻烦事儿 | Haha not only a lot</title>
 
 
 
@@ -194,7 +194,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">python的configparser配置解析库应用</h1>
+            <h1 class="post-title">搞个个人blog的麻烦事儿</h1>
             
                 <div class="post-meta">
                     
@@ -203,14 +203,14 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">一月 10, 2022&nbsp;&nbsp;20:31:54</a>
+                        Date: <a href="#">一月 16, 2022&nbsp;&nbsp;18:00:27</a>
                         </span>
                     
                     
                         <span class="post-category">
                     Category:
                             
-                                <a href="/categories/Tech/">Tech</a>
+                                <a href="/categories/随笔/">随笔</a>
                             
                         </span>
                     
@@ -219,10 +219,17 @@
         </header>
 
         <div class="post-content">
-            <h1 id="【Tech】python的configparser配置解析库应用"><a href="#【Tech】python的configparser配置解析库应用" class="headerlink" title="【Tech】python的configparser配置解析库应用"></a>【Tech】python的configparser配置解析库应用</h1><p>使用configparser库，可以通过将连接配置预设在一个【<em>**</em>.cfg】的配置文件里。这样在程序使用时，只需要通过读取cfg的配置文件就可以了。</p>
-<p>比如，我设置一个sapnwrfc.cfg文件，里面设置3对连接信息：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">[p7019s16]</span><br><span class="line">user = demo</span><br><span class="line">passwd = Welcome</span><br><span class="line">ashost =  10.117.19.101</span><br><span class="line">saprouter = /H/203.13.155.17/W/xjkb3d/H/172.19.138.120/H/</span><br><span class="line">sysnr = 00</span><br><span class="line">lang = EN</span><br><span class="line">client = 100</span><br><span class="line"></span><br><span class="line">[coevi51]</span><br><span class="line">user = demo</span><br><span class="line">passwd = welcome</span><br><span class="line">ashost = 10.68.110.51</span><br><span class="line">sysnr = 00</span><br><span class="line">client = 620</span><br><span class="line">lang = EN</span><br><span class="line"></span><br><span class="line">[coe_he_66]</span><br><span class="line">user = demo</span><br><span class="line">passwd = welcome</span><br><span class="line">ashost = 10.68.104.164</span><br><span class="line">sysnr = 00</span><br><span class="line">client = 620</span><br><span class="line">lang = EN</span><br></pre></td></tr></table></figure></p>
-<p>然后程序中直接调用即可：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">from configparser import ConfigParser</span><br><span class="line"></span><br><span class="line">config = ConfigParser()</span><br><span class="line">config.read(&quot;sapnwrfc.cfg&quot;)   # 读取定义的sapnwrfc文件</span><br><span class="line">params_connection = config._sections[&quot;p7019s16&quot;]   # 取p7019s16这一个连接块里的连接信息</span><br></pre></td></tr></table></figure></p>
-<p>还是比较简单的用法。</p>
+            <h1 id="【随笔】搞个个人blog的麻烦事儿"><a href="#【随笔】搞个个人blog的麻烦事儿" class="headerlink" title="【随笔】搞个个人blog的麻烦事儿"></a>【随笔】搞个个人blog的麻烦事儿</h1><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>之前我的静态网页是挂在扣钉Coding上的。<br>但是21年12月开始就一直给我发消息，说产品战略调整后续不再支持静态网站托管，可以使用腾讯云的dev base等功能。</p>
+<h2 id="嗯嗯嗯"><a href="#嗯嗯嗯" class="headerlink" title="嗯嗯嗯"></a>嗯嗯嗯</h2><p>于是乎我就搞了一圈，发现很多问题。最后都搞通了后，最大的问题来了，我无法使用自定义域名……<br>腾讯云可以自定义域名，但是一定要做备案。<br>备案我是支持的，支持，支持的！<br>但是我自行备案时需要云平台的备案码，阿里和腾讯的备案码都必须要买至少一个虚拟机才可以申请。</p>
+<p>来缕缕哈：</p>
+<ul>
+<li>简单的静态网页文件托管 —&gt; 云平台支持</li>
+<li>自定义域名 —&gt; 备案 —&gt; 买虚拟机等资源 —&gt;我只需要静态文件托管</li>
+</ul>
+<p>那我图个啥呢……这个逻辑像强盗，但是又不说说啥，可能有各种监管要求。这就导致我的网站托管不能放到腾讯云了。</p>
+<h2 id="哦哦哦"><a href="#哦哦哦" class="headerlink" title="哦哦哦"></a>哦哦哦</h2><p>最后取舍下，还是放到GitHub上吧……github是我最初玩静态文件的阵地，但是因为受制于网络状况的限制，感觉经常不顺畅。<br>但是没办法了，github的个人网站repo在被我扔在那里毛长了三四年后，还是被我捡回来了。</p>
+<p>最后，还是用的hexo博客框架，本地generate静态文件后，deploy到GitHub上。<br>在平时工作很忙很忙的情况下，利用闲散时间分精力去搞这些真的挺懵的，断断续续搞了好多天。</p>
+<p>希望GitHub好好听话，不要被封禁掉。<br>这样我就不要花时间再去搞这些基建工程了。<br>Peace &amp; Love.</p>
 
         </div>
 
@@ -244,7 +251,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://tech.hahaalot.com/2022/01/10/python的configparser配置解析库应用/">http://tech.hahaalot.com/2022/01/10/python的configparser配置解析库应用/</a></span>
+                        <span><a href="http://tech.hahaalot.com/2022/01/16/搞个个人blog的麻烦事儿/">http://tech.hahaalot.com/2022/01/16/搞个个人blog的麻烦事儿/</a></span>
                     </p>
                 
                 
@@ -268,7 +275,7 @@
                 <span class="tag">
                     
                     
-                        <a href="/tags/python/"># python</a>
+                        <a href="/tags/随笔/"># 随笔</a>
                     
                         
                 </span>
@@ -281,10 +288,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2022/01/16/搞个个人blog的麻烦事儿/">搞个个人blog的麻烦事儿</a>
             
-            
-            <a class="next" rel="next" href="/2022/01/06/python调用SAP-RFC函数研究/">python调用SAP_RFC函数研究</a>
+            <a class="next" rel="next" href="/2022/01/10/python的configparser配置解析库应用/">python的configparser配置解析库应用</a>
             
         </section>
 
