@@ -13,7 +13,7 @@
 
 
 
-<title>搞个个人blog的麻烦事儿 | Haha not only a lot</title>
+<title>SAP ECC的FI凭证项目GR/IR合并 | Haha not only a lot</title>
 
 
 
@@ -194,7 +194,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">搞个个人blog的麻烦事儿</h1>
+            <h1 class="post-title">SAP ECC的FI凭证项目GR/IR合并</h1>
             
                 <div class="post-meta">
                     
@@ -203,14 +203,14 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">一月 16, 2022&nbsp;&nbsp;18:00:27</a>
+                        Date: <a href="#">一月 24, 2022&nbsp;&nbsp;18:17:51</a>
                         </span>
                     
                     
                         <span class="post-category">
                     Category:
                             
-                                <a href="/categories/随笔/">随笔</a>
+                                <a href="/categories/行业/">行业</a>
                             
                         </span>
                     
@@ -219,18 +219,23 @@
         </header>
 
         <div class="post-content">
-            <h1 id="【随笔】搞个个人blog的麻烦事儿"><a href="#【随笔】搞个个人blog的麻烦事儿" class="headerlink" title="【随笔】搞个个人blog的麻烦事儿"></a>【随笔】搞个个人blog的麻烦事儿</h1><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>之前我的静态网页是挂在扣钉Coding上的。<br>但是21年12月开始就一直给我发消息，说产品战略调整后续不再支持静态网站托管，可以使用腾讯云的dev base等功能。</p>
-<h2 id="嗯嗯嗯"><a href="#嗯嗯嗯" class="headerlink" title="嗯嗯嗯"></a>嗯嗯嗯</h2><p>于是乎我就搞了一圈，发现很多问题。最后都搞通了后，最大的问题来了，我无法使用自定义域名……<br>腾讯云可以自定义域名，但是一定要做备案。<br>备案我是支持的，支持，支持的！<br>但是我自行备案时需要云平台的备案码，阿里和腾讯的备案码都必须要买至少一个虚拟机才可以申请。</p>
-<p>来缕缕哈：</p>
-<ul>
-<li>简单的静态网页文件托管 —&gt; 云平台支持</li>
-<li>自定义域名 —&gt; 备案 —&gt; 买虚拟机等资源 —&gt;我只需要静态文件托管</li>
+            <h1 id="SAP-ECC的FI凭证项目GR-IR合并"><a href="#SAP-ECC的FI凭证项目GR-IR合并" class="headerlink" title="SAP ECC的FI凭证项目GR/IR合并"></a>SAP ECC的FI凭证项目GR/IR合并</h1><h2 id="背景："><a href="#背景：" class="headerlink" title="背景："></a>背景：</h2><p>SAP ECC生成FI凭证时，当凭证行项目超过999的时候，就会报错。<br>原因是FI凭证行项目table-BSEG的BUZEI字段长度3位，所以超过999就无法写表了。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/eccgrir00.png" alt=""></p>
+<p>但是从MM或SD模块自动生成的会计凭证可能会超过999行，所以就会报错。<br>一般场景来讲，可以从业务端要求他们订单或发票行项目限定住，这样就不用调整。<br>如果要调整的话，只能是将凭证行项目根据规则做合并汇总，减少行项目的数量。</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>这个SAP是有标准配置实现的，但是官方资料还是网上资料写的都不是很清楚呀！我为了测试这个功能，也花了很多时间呀。</p>
+<p>TCode：OBCY（配置项数据对应的底层Table——TTYPV）</p>
+<ol>
+<li>选择参考交易。<br>MM生成的一般选择MKPF。SD过去的一般是发票，选择RMRP</li>
+<li>维护视图。<br>两列，一列表名，因为是合并FI凭证行项目，所以选择BSEG。<br>字段名，维护BSEG存在的字段。<br>（填哪个字段，是要根据合并行项目的规则去找的，下一段会尽量写清楚）</li>
+</ol>
+<p>设置就完成了。很简单。<br>后面说一下具体的逻辑点。</p>
+<h2 id="逻辑点"><a href="#逻辑点" class="headerlink" title="逻辑点"></a>逻辑点</h2><ul>
+<li>选择的参考交易类型，怎么确定。<br>可以根据FI凭证抬头table——BKPF去找，看BKPF—AWTYP参考交易字段。<br>比如，通过MIGO采购入库创建的FI凭证，BKPF的 字段，值就是MKPF；MIRO发票校验的，就是RMRP。</li>
+<li>维护视图的字段，如何确定。<br>目前我测试下来的规则，OBCY维护了哪个字段，则生成FI Document时，就会把这个字段原有的值，清除。然后根据BSEG其他的列，相同列做金额汇总。<br>下图具体举例下：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/eccgrir1.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/eccgrir2.png" alt=""><br>应该画的还挺清楚的，我感觉。嘿嘿。</li>
 </ul>
-<p>那我图个啥呢……这个逻辑像强盗，但是又不说说啥，可能有各种监管要求。这就导致我的网站托管不能放到腾讯云了。</p>
-<h2 id="哦哦哦"><a href="#哦哦哦" class="headerlink" title="哦哦哦"></a>哦哦哦</h2><p>最后取舍下，还是放到GitHub上吧……github是我最初玩静态文件的阵地，但是因为受制于网络状况的限制，感觉经常不顺畅。<br>但是没办法了，github的个人网站repo在被我扔在那里毛长了三四年后，还是被我捡回来了。</p>
-<p>最后，还是用的hexo博客框架，本地generate静态文件后，deploy到GitHub上。<br>在平时工作很忙很忙的情况下，利用闲散时间分精力去搞这些真的挺懵的，断断续续搞了好多天。</p>
-<p>不过，讲真的，github真的，我每次发布的时候，都会失败几次，都是timeout……不知道咋搞呀，好难。</p>
-<p>希望GitHub好好听话，不要被封禁掉。<br>这样我就不要花时间再去搞这些基建工程了。<br>Peace &amp; Love.</p>
+<h2 id="注意问题"><a href="#注意问题" class="headerlink" title="注意问题"></a>注意问题</h2><ul>
+<li>OBCY维护时，如果报错说字段不在TTYPV里，需要先行维护table——TTYPS。TTYPS是定义了TTYPV可以维护哪些字段。</li>
+<li>OBCY选取的字段，最好根据原有的凭证，去找出可以清除掉的字段，多观察找到规律后去选。<br>因为各个公司对于凭证行字段可能有自己的定义用法，盲目参考网上的去维护，要么发现不成功，要么可能把重要的字段给清除了。</li>
+</ul>
 
         </div>
 
@@ -252,7 +257,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://tech.hahaalot.com/2022/01/16/搞个个人blog的麻烦事儿/">http://tech.hahaalot.com/2022/01/16/搞个个人blog的麻烦事儿/</a></span>
+                        <span><a href="http://tech.hahaalot.com/2022/01/24/SAPECC的FI凭证项目GRIR合并/">http://tech.hahaalot.com/2022/01/24/SAPECC的FI凭证项目GRIR合并/</a></span>
                     </p>
                 
                 
@@ -276,7 +281,7 @@
                 <span class="tag">
                     
                     
-                        <a href="/tags/随笔/"># 随笔</a>
+                        <a href="/tags/SAP/"># SAP</a>
                     
                         
                 </span>
@@ -289,10 +294,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2022/01/24/SAPECC的FI凭证项目GRIR合并/">SAP ECC的FI凭证项目GR/IR合并</a>
             
-            
-            <a class="next" rel="next" href="/2022/01/10/python的configparser配置解析库应用/">python的configparser配置解析库应用</a>
+            <a class="next" rel="next" href="/2022/01/16/搞个个人blog的麻烦事儿/">搞个个人blog的麻烦事儿</a>
             
         </section>
 
