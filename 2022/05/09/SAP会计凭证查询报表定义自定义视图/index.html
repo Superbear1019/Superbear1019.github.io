@@ -13,7 +13,7 @@
 
 
 
-<title>SAP的ReportPainter报表金额显示X异常的问题 | Haha not only a lot</title>
+<title>SAP会计凭证查询报表定义自定义视图 | Haha not only a lot</title>
 
 
 
@@ -194,7 +194,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">SAP的ReportPainter报表金额显示X异常的问题</h1>
+            <h1 class="post-title">SAP会计凭证查询报表定义自定义视图</h1>
             
                 <div class="post-meta">
                     
@@ -203,7 +203,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">四月 9, 2022&nbsp;&nbsp;23:27:08</a>
+                        Date: <a href="#">五月 9, 2022&nbsp;&nbsp;17:15:22</a>
                         </span>
                     
                     
@@ -219,9 +219,9 @@
         </header>
 
         <div class="post-content">
-            <h1 id="SAP的ReportPainter报表金额显示X异常的问题"><a href="#SAP的ReportPainter报表金额显示X异常的问题" class="headerlink" title="SAP的ReportPainter报表金额显示X异常的问题"></a>SAP的ReportPainter报表金额显示X异常的问题</h1><h2 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h2><p>Report painter的报表，显示金额的地方，显示“X”。而不是实际金额。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/grrx.png" alt=""></p>
-<h2 id="Solution："><a href="#Solution：" class="headerlink" title="Solution："></a>Solution：</h2><p>查询了下，一般显示这种X的行，都是金额的汇总值，是多个项目的加总金额。<br>但是如果用来加总的分项项目，金额的计量单位不同，存在差异，就会导致无法做金额汇总。这样的情况下，这种汇总项的金额就无法显示，所以显示“X”。</p>
-<p>比如：一个集团的折旧费，有3家公司折旧费汇总。<br>A家是USD记账，B家是EUR记账，C家是HKD记账。各家单独报表显示都是OK的，但是如果看集团的报表，三家记账货币不一致，就导致集团的报表无法金额加总，故显示“X”。</p>
+            <h1 id="【SAP】会计凭证查询报表定义自定义视图"><a href="#【SAP】会计凭证查询报表定义自定义视图" class="headerlink" title="【SAP】会计凭证查询报表定义自定义视图"></a>【SAP】会计凭证查询报表定义自定义视图</h1><h2 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h2><p>经常会有这种情况，某个财会人员为了显示自己需要的数据，改了显示视图。<br>但是改掉后还设置成默认视图。导致其他人查报表时，发现格式变了……<br>甚至如果有人在视图里设置了筛选，其他人不清楚的话，直接看报表数据显示都会缺失。</p>
+<h2 id="Solution："><a href="#Solution：" class="headerlink" title="Solution："></a>Solution：</h2><p>建议的是，使用人员如果有自己的使用习惯，保存视图，保存成只适用自己账号的视图。这样不会影响其他人，其他人改了视图也不会影响自己。<br>（大前提是，从basis后台端对视图修改权限没有做限制。如果对权限做了限制，不让大家修改视图，硬管控也可以。）</p>
+<p>下面演示下大致的操作：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidocview01.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidocview02.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidocview03.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidocview04.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidocview05.png" alt=""></p>
 
         </div>
 
@@ -243,7 +243,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://tech.hahaalot.com/2022/04/09/SAP的ReportPainter报表金额显示X异常/">http://tech.hahaalot.com/2022/04/09/SAP的ReportPainter报表金额显示X异常/</a></span>
+                        <span><a href="http://tech.hahaalot.com/2022/05/09/SAP会计凭证查询报表定义自定义视图/">http://tech.hahaalot.com/2022/05/09/SAP会计凭证查询报表定义自定义视图/</a></span>
                     </p>
                 
                 
@@ -280,10 +280,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2022/05/01/SM36如何设置后台作业每月最后一天运行/">SM36如何设置后台作业每月最后一天运行</a>
             
-            
-            <a class="next" rel="next" href="/2022/01/24/SAPECC的FI凭证项目GRIR合并/">SAP ECC的FI凭证项目GR/IR合并</a>
+            <a class="next" rel="next" href="/2022/05/01/SM36如何设置后台作业每月最后一天运行/">SM36如何设置后台作业每月最后一天运行</a>
             
         </section>
 
