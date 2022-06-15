@@ -13,7 +13,7 @@
 
 
 
-<title>SAP FI凭证记账自定义汇率 | Haha not only a lot</title>
+<title>SAP-AA固定资产修改残值率或折旧年限引起的计提折旧变化 | Haha not only a lot</title>
 
 
 
@@ -194,7 +194,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">SAP FI凭证记账自定义汇率</h1>
+            <h1 class="post-title">SAP-AA固定资产修改残值率或折旧年限引起的计提折旧变化</h1>
             
                 <div class="post-meta">
                     
@@ -203,7 +203,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">五月 20, 2022&nbsp;&nbsp;20:55:49</a>
+                        Date: <a href="#">六月 14, 2022&nbsp;&nbsp;21:56:07</a>
                         </span>
                     
                     
@@ -219,9 +219,28 @@
         </header>
 
         <div class="post-content">
-            <h1 id="FI凭证记账自定义汇率，不使用系统汇率"><a href="#FI凭证记账自定义汇率，不使用系统汇率" class="headerlink" title="FI凭证记账自定义汇率，不使用系统汇率"></a>FI凭证记账自定义汇率，不使用系统汇率</h1><h2 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h2><p>记凭证时，如果涉及到外币记账，汇率会自动进行换算的，使用的是OB08维护的汇率。<br>但是如果不想使用系统的汇率，自定义一个汇率值怎么办呢？</p>
-<h2 id="Solution："><a href="#Solution：" class="headerlink" title="Solution："></a>Solution：</h2><p>记账时使用预制凭证。然后过账预制凭证。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidochl01.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidochl02.png" alt=""></p>
-<p>下面是SAP系统的提示帮助说明：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidochl03.png" alt=""></p>
+            <h1 id="AA固定资产修改残值率或折旧年限引起的计提折旧变化"><a href="#AA固定资产修改残值率或折旧年限引起的计提折旧变化" class="headerlink" title="AA固定资产修改残值率或折旧年限引起的计提折旧变化"></a>AA固定资产修改残值率或折旧年限引起的计提折旧变化</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>业务用户这边想了解下资产折旧计提的逻辑，然后我做了下相关的测试。<br>自己做一下记录。<br>主要场景就是测试一下，在使用资产折旧期间内，调整残值率和折旧年限，相应计提折旧规则的变化情况。</p>
+<h2 id="残值率调整"><a href="#残值率调整" class="headerlink" title="残值率调整"></a>残值率调整</h2><ul>
+<li><strong>折旧已完全计提完毕，但未做报废处理的资产</strong><br>该情况的资产，已过折旧年限，折旧完全计提完毕，只有残值。<br>原残值率为10%，测试将残值率调整为5%。</li>
+</ul>
+<p>调整方法，直接在资产主数据的帐面折旧视图，将残值率改为5%。<br>下图可以看到，折旧码对应的残值率为10%。<br>在两个残值率不一致时，优先取自定义的残值率5%。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt01.jpg" alt=""></p>
+<p>然后查看资产价值，发现计划折旧会增加一期。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt02.jpg" alt=""></p>
+<ul>
+<li><strong>折旧未计提完毕的资产</strong><br>该情况的资产，仍有折旧待计提。<br>原残值率为10%，测试将残值率调整为5%。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt03.jpg" alt=""></li>
+</ul>
+<h2 id="折旧年度调整"><a href="#折旧年度调整" class="headerlink" title="折旧年度调整"></a>折旧年度调整</h2><ul>
+<li><strong>资产剩余待提年限，大于缩短年限</strong><br>原折旧年限5年，测试缩短至4年。<br>该情况下资产剩余折旧年限，大于1年。</li>
+</ul>
+<p>调整方法，直接资产主数据修改使用年限。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt04.jpg" alt=""><br>调整后，重新查看资产价值。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt05.jpg" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt06.jpg" alt=""></p>
+<ul>
+<li><strong>资产剩余待提年限，不足缩短年限</strong><br>原折旧年限5年，测试缩短至4年。<br>该情况下资产剩余折旧年限，小于1年。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt07.jpg" alt=""></li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<li>无论如何调整，在使用直线折旧计算情况下，折旧都会按设定的年限及残值率计算计提金额。</li>
+<li>已折旧月份记录，不会变化。</li>
+<li>当前年度过去月份的金额差异，会再下一次计提时补齐。</li>
+<li>过去年度的差异，会在全部折旧月份结束后，新增一期折旧做计提。</li>
+</ol>
 
         </div>
 
@@ -243,7 +262,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://tech.hahaalot.com/2022/05/20/SAPFI凭证记账自定义汇率/">http://tech.hahaalot.com/2022/05/20/SAPFI凭证记账自定义汇率/</a></span>
+                        <span><a href="http://tech.hahaalot.com/2022/06/14/AA固定资产修改残值率或折旧年限引起的计提折旧变化/">http://tech.hahaalot.com/2022/06/14/AA固定资产修改残值率或折旧年限引起的计提折旧变化/</a></span>
                     </p>
                 
                 
@@ -280,10 +299,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2022/06/14/AA固定资产修改残值率或折旧年限引起的计提折旧变化/">SAP-AA固定资产修改残值率或折旧年限引起的计提折旧变化</a>
             
-            
-            <a class="next" rel="next" href="/2022/05/09/SAP会计凭证查询报表定义自定义视图/">SAP会计凭证查询报表定义自定义视图</a>
+            <a class="next" rel="next" href="/2022/05/20/SAPFI凭证记账自定义汇率/">SAP FI凭证记账自定义汇率</a>
             
         </section>
 

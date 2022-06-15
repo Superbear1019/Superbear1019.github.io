@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>SAP-AA固定资产修改残值率或折旧年限引起的计提折旧变化</title>
+    <url>/2022/06/14/AA%E5%9B%BA%E5%AE%9A%E8%B5%84%E4%BA%A7%E4%BF%AE%E6%94%B9%E6%AE%8B%E5%80%BC%E7%8E%87%E6%88%96%E6%8A%98%E6%97%A7%E5%B9%B4%E9%99%90%E5%BC%95%E8%B5%B7%E7%9A%84%E8%AE%A1%E6%8F%90%E6%8A%98%E6%97%A7%E5%8F%98%E5%8C%96/</url>
+    <content><![CDATA[<h1 id="AA固定资产修改残值率或折旧年限引起的计提折旧变化"><a href="#AA固定资产修改残值率或折旧年限引起的计提折旧变化" class="headerlink" title="AA固定资产修改残值率或折旧年限引起的计提折旧变化"></a>AA固定资产修改残值率或折旧年限引起的计提折旧变化</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>业务用户这边想了解下资产折旧计提的逻辑，然后我做了下相关的测试。<br>自己做一下记录。<br>主要场景就是测试一下，在使用资产折旧期间内，调整残值率和折旧年限，相应计提折旧规则的变化情况。</p>
+<h2 id="残值率调整"><a href="#残值率调整" class="headerlink" title="残值率调整"></a>残值率调整</h2><ul>
+<li><strong>折旧已完全计提完毕，但未做报废处理的资产</strong><br>该情况的资产，已过折旧年限，折旧完全计提完毕，只有残值。<br>原残值率为10%，测试将残值率调整为5%。</li>
+</ul>
+<p>调整方法，直接在资产主数据的帐面折旧视图，将残值率改为5%。<br>下图可以看到，折旧码对应的残值率为10%。<br>在两个残值率不一致时，优先取自定义的残值率5%。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt01.jpg" alt=""></p>
+<p>然后查看资产价值，发现计划折旧会增加一期。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt02.jpg" alt=""></p>
+<ul>
+<li><strong>折旧未计提完毕的资产</strong><br>该情况的资产，仍有折旧待计提。<br>原残值率为10%，测试将残值率调整为5%。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt03.jpg" alt=""></li>
+</ul>
+<h2 id="折旧年度调整"><a href="#折旧年度调整" class="headerlink" title="折旧年度调整"></a>折旧年度调整</h2><ul>
+<li><strong>资产剩余待提年限，大于缩短年限</strong><br>原折旧年限5年，测试缩短至4年。<br>该情况下资产剩余折旧年限，大于1年。</li>
+</ul>
+<p>调整方法，直接资产主数据修改使用年限。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt04.jpg" alt=""><br>调整后，重新查看资产价值。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt05.jpg" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt06.jpg" alt=""></p>
+<ul>
+<li><strong>资产剩余待提年限，不足缩短年限</strong><br>原折旧年限5年，测试缩短至4年。<br>该情况下资产剩余折旧年限，小于1年。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt07.jpg" alt=""></li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<li>无论如何调整，在使用直线折旧计算情况下，折旧都会按设定的年限及残值率计算计提金额。</li>
+<li>已折旧月份记录，不会变化。</li>
+<li>当前年度过去月份的金额差异，会再下一次计提时补齐。</li>
+<li>过去年度的差异，会在全部折旧月份结束后，新增一期折旧做计提。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>行业</category>
+      </categories>
+      <tags>
+        <tag>SAP</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Blog搭建信息</title>
     <url>/2020/04/21/Blog%E6%90%AD%E5%BB%BA%E4%BF%A1%E6%81%AF/</url>
     <content><![CDATA[<h1 id="Blog搭建信息"><a href="#Blog搭建信息" class="headerlink" title="Blog搭建信息"></a>Blog搭建信息</h1><h2 id="代码托管平台：Coding"><a href="#代码托管平台：Coding" class="headerlink" title="代码托管平台：Coding"></a>代码托管平台：Coding</h2><p>喜欢小猴子的logo。<br>参考：<a href="https://coding.net/" target="_blank" rel="noopener">CODING - 一站式软件研发管理平台</a></p>
@@ -20,6 +53,46 @@
       </tags>
   </entry>
   <entry>
+    <title>[DEMO]demo</title>
+    <url>/2018/12/30/DEMO-demo/</url>
+    <content><![CDATA[<h2 id="说在前："><a href="#说在前：" class="headerlink" title="说在前："></a>说在前：</h2><p>Demo</p>
+<p>P1:</p>
+<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_reason_area_sankey.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
+
+<p>P2:</p>
+<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_reason_province_sankey.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
+
+<p>P3:</p>
+<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_amount_province_map.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
+
+<p>P4:</p>
+<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_amount_province_bar.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
+
+<p>P5:</p>
+<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_reason_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
+
+<p>P6:</p>
+<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_reentry_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
+
+<p>P7:</p>
+<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_areareentry_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
+
+<p>Pic01：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario111_PNG80.png" alt="DEMODEMO"></p>
+<p>Pic02：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario_PNG80.png" alt="DEMODEMO" title="DEMO测试"></p>
+<p>Pic03：<br>参考：<br><a href="https://tech.hahaalot.com/"><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario_PNG80.png" alt="替换文本文本" title="TITLE跳转跳转"></a></p>
+<p>Pic04:<br><a href="https://tech.hahaalot.com/"><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1599552413367&amp;di=13f71db32fb0c20ca8b37f6a9d168e7e&amp;imgtype=0&amp;src=http%3A%2F%2Fpic.90370.com%2Fupload%2F2017-3%2F20173301736172260.png &quot;TITLE跳转跳转&quot;#pic_center# =200x200" alt="标签"></a></p>
+<p>Pic05:<br><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599552413367&di=13f71db32fb0c20ca8b37f6a9d168e7e&imgtype=0&src=http%3A%2F%2Fpic.90370.com%2Fupload%2F2017-3%2F20173301736172260.png" width="10%" height="10%" alt="示例" align="left"><br><a href="https://tech.hahaalot.com/"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599552413367&di=13f71db32fb0c20ca8b37f6a9d168e7e&imgtype=0&src=http%3A%2F%2Fpic.90370.com%2Fupload%2F2017-3%2F20173301736172260.png" width="20%" height="20%" alt="示例" align="center"></a></p>
+<p>插入picture<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![Alt text](图片链接 &quot;optional title&quot;)</span><br><span class="line">Alt text：图片的Alt标签，用来描述图片的关键词，可以不写。</span><br><span class="line">最初的本意是当图片因为某种原因不能被显示时而出现的替代文字，后来又被用于SEO，可以方便搜索引擎根据Alt text里面的关键词搜索到图片。 </span><br><span class="line">图片链接：可以是图片的本地地址或者是网址。</span><br><span class="line">&quot;optional title&quot;：鼠标悬置于图片上会出现的标题文字，可以不写。</span><br></pre></td></tr></table></figure></p>
+<p>OK～～～</p>
+]]></content>
+      <categories>
+        <category>Demo</category>
+      </categories>
+      <tags>
+        <tag>Demo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo搭建的自定义服务</title>
     <url>/2020/04/22/Hexo%E6%90%AD%E5%BB%BA%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A1/</url>
     <content><![CDATA[<h2 id="说在前："><a href="#说在前：" class="headerlink" title="说在前："></a>说在前：</h2><p>Hexo主题我选的是Chic，设计师的理念是“less is more”，<br>所以很多功能他是没有放进去的。我后来呢想了想也是有道理的，所以好多服务都没有加进去。<br>目前用了页面统计。别的都没有了。</p>
@@ -32,20 +105,6 @@
       <tags>
         <tag>hexo</tag>
         <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SAP会计凭证查询报表定义自定义视图</title>
-    <url>/2022/05/09/SAP%E4%BC%9A%E8%AE%A1%E5%87%AD%E8%AF%81%E6%9F%A5%E8%AF%A2%E6%8A%A5%E8%A1%A8%E5%AE%9A%E4%B9%89%E8%87%AA%E5%AE%9A%E4%B9%89%E8%A7%86%E5%9B%BE/</url>
-    <content><![CDATA[<h1 id="【SAP】会计凭证查询报表定义自定义视图"><a href="#【SAP】会计凭证查询报表定义自定义视图" class="headerlink" title="【SAP】会计凭证查询报表定义自定义视图"></a>【SAP】会计凭证查询报表定义自定义视图</h1><h2 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h2><p>经常会有这种情况，某个财会人员为了显示自己需要的数据，改了显示视图。<br>但是改掉后还设置成默认视图。导致其他人查报表时，发现格式变了……<br>甚至如果有人在视图里设置了筛选，其他人不清楚的话，直接看报表数据显示都会缺失。</p>
-<h2 id="Solution："><a href="#Solution：" class="headerlink" title="Solution："></a>Solution：</h2><p>建议的是，使用人员如果有自己的使用习惯，保存视图，保存成只适用自己账号的视图。这样不会影响其他人，其他人改了视图也不会影响自己。<br>（大前提是，从basis后台端对视图修改权限没有做限制。如果对权限做了限制，不让大家修改视图，硬管控也可以。）</p>
-<p>下面演示下大致的操作：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidocview01.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidocview02.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidocview03.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidocview04.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidocview05.png" alt=""></p>
-]]></content>
-      <categories>
-        <category>行业</category>
-      </categories>
-      <tags>
-        <tag>SAP</tag>
       </tags>
   </entry>
   <entry>
@@ -91,11 +150,11 @@
       </tags>
   </entry>
   <entry>
-    <title>SM36如何设置后台作业每月最后一天运行</title>
-    <url>/2022/05/01/SM36%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E5%90%8E%E5%8F%B0%E4%BD%9C%E4%B8%9A%E6%AF%8F%E6%9C%88%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9%E8%BF%90%E8%A1%8C/</url>
-    <content><![CDATA[<h2 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h2><p>SAP里设定某些后台作业在月底最后一天自动执行。</p>
-<h2 id="Solution："><a href="#Solution：" class="headerlink" title="Solution："></a>Solution：</h2><p>SM36建立后台作业，然后依次按照操作设置即可。挺简单的。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/backjob01.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/backjob02.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/backjob03.png" alt=""></p>
-<h2 id="补充信息："><a href="#补充信息：" class="headerlink" title="补充信息："></a>补充信息：</h2><p>工厂日历，填写在有效期里面的日历即可。<br>日历的设置，用SCAL事务码查看。</p>
+    <title>SAP会计凭证查询报表定义自定义视图</title>
+    <url>/2022/05/09/SAP%E4%BC%9A%E8%AE%A1%E5%87%AD%E8%AF%81%E6%9F%A5%E8%AF%A2%E6%8A%A5%E8%A1%A8%E5%AE%9A%E4%B9%89%E8%87%AA%E5%AE%9A%E4%B9%89%E8%A7%86%E5%9B%BE/</url>
+    <content><![CDATA[<h1 id="【SAP】会计凭证查询报表定义自定义视图"><a href="#【SAP】会计凭证查询报表定义自定义视图" class="headerlink" title="【SAP】会计凭证查询报表定义自定义视图"></a>【SAP】会计凭证查询报表定义自定义视图</h1><h2 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h2><p>经常会有这种情况，某个财会人员为了显示自己需要的数据，改了显示视图。<br>但是改掉后还设置成默认视图。导致其他人查报表时，发现格式变了……<br>甚至如果有人在视图里设置了筛选，其他人不清楚的话，直接看报表数据显示都会缺失。</p>
+<h2 id="Solution："><a href="#Solution：" class="headerlink" title="Solution："></a>Solution：</h2><p>建议的是，使用人员如果有自己的使用习惯，保存视图，保存成只适用自己账号的视图。这样不会影响其他人，其他人改了视图也不会影响自己。<br>（大前提是，从basis后台端对视图修改权限没有做限制。如果对权限做了限制，不让大家修改视图，硬管控也可以。）</p>
+<p>下面演示下大致的操作：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidocview01.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidocview02.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidocview03.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidocview04.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidocview05.png" alt=""></p>
 ]]></content>
       <categories>
         <category>行业</category>
@@ -116,6 +175,48 @@
       </categories>
       <tags>
         <tag>SAP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SM36如何设置后台作业每月最后一天运行</title>
+    <url>/2022/05/01/SM36%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E5%90%8E%E5%8F%B0%E4%BD%9C%E4%B8%9A%E6%AF%8F%E6%9C%88%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9%E8%BF%90%E8%A1%8C/</url>
+    <content><![CDATA[<h2 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h2><p>SAP里设定某些后台作业在月底最后一天自动执行。</p>
+<h2 id="Solution："><a href="#Solution：" class="headerlink" title="Solution："></a>Solution：</h2><p>SM36建立后台作业，然后依次按照操作设置即可。挺简单的。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/backjob01.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/backjob02.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/backjob03.png" alt=""></p>
+<h2 id="补充信息："><a href="#补充信息：" class="headerlink" title="补充信息："></a>补充信息：</h2><p>工厂日历，填写在有效期里面的日历即可。<br>日历的设置，用SCAL事务码查看。</p>
+]]></content>
+      <categories>
+        <category>行业</category>
+      </categories>
+      <tags>
+        <tag>SAP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[DEMO]ECARDS</title>
+    <url>/2018/12/31/ecards/</url>
+    <content><![CDATA[<h1 id="企业微信"><a href="#企业微信" class="headerlink" title="企业微信"></a>企业微信</h1><p><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/about/ewc.jpg" width="35%" height="35%" alt="示例" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<h1 id="钉钉"><a href="#钉钉" class="headerlink" title="钉钉"></a>钉钉</h1><p><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/about/dingding.jpg" width="35%" height="35%" alt="示例" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+]]></content>
+      <categories>
+        <category>Demo</category>
+      </categories>
+      <tags>
+        <tag>Demo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python的configparser配置解析库应用</title>
+    <url>/2022/01/10/python%E7%9A%84configparser%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%BA%93%E5%BA%94%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="【Tech】python的configparser配置解析库应用"><a href="#【Tech】python的configparser配置解析库应用" class="headerlink" title="【Tech】python的configparser配置解析库应用"></a>【Tech】python的configparser配置解析库应用</h1><p>使用configparser库，可以通过将连接配置预设在一个【<em>**</em>.cfg】的配置文件里。这样在程序使用时，只需要通过读取cfg的配置文件就可以了。</p>
+<p>比如，我设置一个sapnwrfc.cfg文件，里面设置3对连接信息：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[p7019s16]</span><br><span class="line">user = demo</span><br><span class="line">passwd = Welcome</span><br><span class="line">ashost =  10.117.19.101</span><br><span class="line">saprouter = /H/203.13.155.17/W/xjkb3d/H/172.19.138.120/H/</span><br><span class="line">sysnr = 00</span><br><span class="line">lang = EN</span><br><span class="line">client = 100</span><br><span class="line"></span><br><span class="line">[coevi51]</span><br><span class="line">user = demo</span><br><span class="line">passwd = welcome</span><br><span class="line">ashost = 10.68.110.51</span><br><span class="line">sysnr = 00</span><br><span class="line">client = 620</span><br><span class="line">lang = EN</span><br><span class="line"></span><br><span class="line">[coe_he_66]</span><br><span class="line">user = demo</span><br><span class="line">passwd = welcome</span><br><span class="line">ashost = 10.68.104.164</span><br><span class="line">sysnr = 00</span><br><span class="line">client = 620</span><br><span class="line">lang = EN</span><br></pre></td></tr></table></figure></p>
+<p>然后程序中直接调用即可：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from configparser import ConfigParser</span><br><span class="line"></span><br><span class="line">config = ConfigParser()</span><br><span class="line">config.read(&quot;sapnwrfc.cfg&quot;)   # 读取定义的sapnwrfc文件</span><br><span class="line">params_connection = config._sections[&quot;p7019s16&quot;]   # 取p7019s16这一个连接块里的连接信息</span><br></pre></td></tr></table></figure></p>
+<p>还是比较简单的用法。</p>
+]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -205,19 +306,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>[DEMO]ECARDS</title>
-    <url>/2018/12/31/ecards/</url>
-    <content><![CDATA[<h1 id="企业微信"><a href="#企业微信" class="headerlink" title="企业微信"></a>企业微信</h1><p><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/about/ewc.jpg" width="35%" height="35%" alt="示例" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-<h1 id="钉钉"><a href="#钉钉" class="headerlink" title="钉钉"></a>钉钉</h1><p><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/about/dingding.jpg" width="35%" height="35%" alt="示例" align="left"><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
-]]></content>
-      <categories>
-        <category>Demo</category>
-      </categories>
-      <tags>
-        <tag>Demo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>python调用SAP_RFC函数研究</title>
     <url>/2022/01/06/python%E8%B0%83%E7%94%A8SAP-RFC%E5%87%BD%E6%95%B0%E7%A0%94%E7%A9%B6/</url>
     <content><![CDATA[<h1 id="python调用SAP-RFC函数研究"><a href="#python调用SAP-RFC函数研究" class="headerlink" title="python调用SAP_RFC函数研究"></a>python调用SAP_RFC函数研究</h1><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>由于本职工作的原因，会经常用到SAP的function。<br>SAP的remote函数本身，支持外部调用。可以通过sap封装webservice，供外部系统调用；也可以适配sap的应用系统自己调用。</p>
@@ -287,6 +375,21 @@
       </tags>
   </entry>
   <entry>
+    <title>拜拜啦，2020</title>
+    <url>/2020/12/31/%E6%8B%9C%E6%8B%9C%E5%95%A6%EF%BC%8C2020/</url>
+    <content><![CDATA[<h1 id="拜拜啦，2020"><a href="#拜拜啦，2020" class="headerlink" title="拜拜啦，2020"></a>拜拜啦，2020</h1><p>没想到2020最后的几个月自己忙的不成样子……</p>
+<p>2020的最后一天，平静又平常。<br>嗯，不对，最后一天家里的水管被冻住了，好魔幻……<br>下了班，肯定毫无怀念的把台历扔进垃圾桶。</p>
+<p>做很多决定挺难的，今年应该是也做了一个很大很要决心的事情。<br>然后完成了一些很辛苦很难搞的工作。<br>2020，想过好多可能，但是经历这么多，后来才觉得，活在当下、懂得珍惜，弥足重要。<br>2021，不想啥期待了，一切都好吧。</p>
+<p>最后用学到的matplotlib库做了几个图片，还挺有意思的，nice<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_xkcd_year00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_textbox_yearwords00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_fillarea_work00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_pie_costs00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_radar_ability00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_gauge_goals00.jpg" alt=""></p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>[小实验]自制个双色球程序，助力走上人生巅峰吧</title>
     <url>/2020/07/11/%E5%B0%8F%E5%AE%9E%E9%AA%8C-%E8%87%AA%E5%88%B6%E4%B8%AA%E5%8F%8C%E8%89%B2%E7%90%83%E7%A8%8B%E5%BA%8F%EF%BC%8C%E5%8A%A9%E5%8A%9B%E8%B5%B0%E4%B8%8A%E4%BA%BA%E7%94%9F%E5%B7%85%E5%B3%B0%E5%90%A7/</url>
     <content><![CDATA[<h1 id="【Lib】-小实验-自制个双色球程序，助力走上人生巅峰吧"><a href="#【Lib】-小实验-自制个双色球程序，助力走上人生巅峰吧" class="headerlink" title="【Lib】[小实验]自制个双色球程序，助力走上人生巅峰吧"></a>【Lib】[小实验]自制个双色球程序，助力走上人生巅峰吧</h1><p>最近我在买双色球。<br>期待是有的，更多的是给自己攒RP，而且不是还有一部分发展福利事业么。</p>
@@ -312,55 +415,6 @@
       <tags>
         <tag>python</tag>
         <tag>web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>拜拜啦，2020</title>
-    <url>/2020/12/31/%E6%8B%9C%E6%8B%9C%E5%95%A6%EF%BC%8C2020/</url>
-    <content><![CDATA[<h1 id="拜拜啦，2020"><a href="#拜拜啦，2020" class="headerlink" title="拜拜啦，2020"></a>拜拜啦，2020</h1><p>没想到2020最后的几个月自己忙的不成样子……</p>
-<p>2020的最后一天，平静又平常。<br>嗯，不对，最后一天家里的水管被冻住了，好魔幻……<br>下了班，肯定毫无怀念的把台历扔进垃圾桶。</p>
-<p>做很多决定挺难的，今年应该是也做了一个很大很要决心的事情。<br>然后完成了一些很辛苦很难搞的工作。<br>2020，想过好多可能，但是经历这么多，后来才觉得，活在当下、懂得珍惜，弥足重要。<br>2021，不想啥期待了，一切都好吧。</p>
-<p>最后用学到的matplotlib库做了几个图片，还挺有意思的，nice<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_xkcd_year00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_textbox_yearwords00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_fillarea_work00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_pie_costs00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_radar_ability00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_gauge_goals00.jpg" alt=""></p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据分析可视化的简单探究（四）--图表云存储</title>
-    <url>/2020/09/10/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9A%84%E7%AE%80%E5%8D%95%E6%8E%A2%E7%A9%B64/</url>
-    <content><![CDATA[<p><a href="https://tech.hahaalot.com/2020/09/06/数据分析可视化的简单探究/"><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario-gif.gif" width="10%" height="10%" alt="点击跳转" align="left"></a><br><br>(Click Mario)</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>最后一步，将创建好的图表传输到云存储。<br>然后web界面就直接嵌入iframe使用。</p>
-<p>我一直用的对象云存储是COS。腾讯云提供了官方的sdk，所以看一下技术文档，就知道怎么用了。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from qcloud_cos import CosConfig</span><br><span class="line">from qcloud_cos import CosS3Client</span><br><span class="line">import sys</span><br><span class="line">import logging</span><br><span class="line">import os</span><br><span class="line"></span><br><span class="line">logging.basicConfig(level=logging.INFO, stream=sys.stdout)</span><br><span class="line"></span><br><span class="line">secret_id = &apos;A***************&apos;      # 替换为用户的 secretId</span><br><span class="line">secret_key = &apos;*******&apos;      # 替换为用户的 secretKey</span><br><span class="line">region = &apos;ap-shanghai&apos;     # 替换为用户的 Region</span><br><span class="line">token = None                # 使用临时密钥需要传入 Token，默认为空，可不填</span><br><span class="line">scheme = &apos;https&apos;            # 指定使用 http/https 协议来访问 COS，默认为 https，可不填</span><br><span class="line">config = CosConfig(Region=region, SecretId=secret_id, SecretKey=secret_key, Token=token, Scheme=scheme)</span><br><span class="line"></span><br><span class="line"># 2. 获取客户端对象</span><br><span class="line">client = CosS3Client(config)</span><br><span class="line"># 参照下文的描述。或者参照 Demo 程序，详见 https://github.com/tencentyun/cos-python-sdk-v5/blob/master/qcloud_cos/demo.py</span><br><span class="line">#### 文件流简单上传（不支持超过5G的文件，推荐使用下方高级上传接口）</span><br><span class="line"># 强烈建议您以二进制模式(binary mode)打开文件,否则可能会导致错误</span><br><span class="line">for root, dirs, files in os.walk(&quot;charts_folder&quot;):    </span><br><span class="line"># root-表示当前正在访问的文件夹路径；dirs-表示该文件夹下的子目录名list；files-表示该文件夹下的文件list</span><br><span class="line">    for f in files:</span><br><span class="line">        with open(os.path.join(root, f), &apos;rb&apos;) as fp:</span><br><span class="line">            response = client.put_object(</span><br><span class="line">                Bucket=&apos;****-nnnn&apos;,</span><br><span class="line">                Body=fp,</span><br><span class="line">                Key=&apos;objects/pyecharts/&apos; + f,</span><br><span class="line">                StorageClass=&apos;STANDARD&apos;,</span><br><span class="line">                EnableMD5=False</span><br><span class="line">            )</span><br><span class="line">        print(response[&apos;ETag&apos;])</span><br></pre></td></tr></table></figure>
-<p>这样就可以把pyecharts生成的html传输到COS中了。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这样一个比较数据可视化作业的流程就串起来了。<br>然后就是根据数据和图表进行下数据的分析了。</p>
-<p>以上。</p>
-]]></content>
-      <categories>
-        <category>Lib</category>
-      </categories>
-      <tags>
-        <tag>Pandas</tag>
-        <tag>cloud</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python的configparser配置解析库应用</title>
-    <url>/2022/01/10/python%E7%9A%84configparser%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%BA%93%E5%BA%94%E7%94%A8/</url>
-    <content><![CDATA[<h1 id="【Tech】python的configparser配置解析库应用"><a href="#【Tech】python的configparser配置解析库应用" class="headerlink" title="【Tech】python的configparser配置解析库应用"></a>【Tech】python的configparser配置解析库应用</h1><p>使用configparser库，可以通过将连接配置预设在一个【<em>**</em>.cfg】的配置文件里。这样在程序使用时，只需要通过读取cfg的配置文件就可以了。</p>
-<p>比如，我设置一个sapnwrfc.cfg文件，里面设置3对连接信息：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[p7019s16]</span><br><span class="line">user = demo</span><br><span class="line">passwd = Welcome</span><br><span class="line">ashost =  10.117.19.101</span><br><span class="line">saprouter = /H/203.13.155.17/W/xjkb3d/H/172.19.138.120/H/</span><br><span class="line">sysnr = 00</span><br><span class="line">lang = EN</span><br><span class="line">client = 100</span><br><span class="line"></span><br><span class="line">[coevi51]</span><br><span class="line">user = demo</span><br><span class="line">passwd = welcome</span><br><span class="line">ashost = 10.68.110.51</span><br><span class="line">sysnr = 00</span><br><span class="line">client = 620</span><br><span class="line">lang = EN</span><br><span class="line"></span><br><span class="line">[coe_he_66]</span><br><span class="line">user = demo</span><br><span class="line">passwd = welcome</span><br><span class="line">ashost = 10.68.104.164</span><br><span class="line">sysnr = 00</span><br><span class="line">client = 620</span><br><span class="line">lang = EN</span><br></pre></td></tr></table></figure></p>
-<p>然后程序中直接调用即可：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from configparser import ConfigParser</span><br><span class="line"></span><br><span class="line">config = ConfigParser()</span><br><span class="line">config.read(&quot;sapnwrfc.cfg&quot;)   # 读取定义的sapnwrfc文件</span><br><span class="line">params_connection = config._sections[&quot;p7019s16&quot;]   # 取p7019s16这一个连接块里的连接信息</span><br></pre></td></tr></table></figure></p>
-<p>还是比较简单的用法。</p>
-]]></content>
-      <categories>
-        <category>Tech</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -446,6 +500,23 @@
       </tags>
   </entry>
   <entry>
+    <title>网站访问情况的简单监控</title>
+    <url>/2020/04/27/%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E6%83%85%E5%86%B5%E7%9A%84%E7%AE%80%E5%8D%95%E7%9B%91%E6%8E%A7/</url>
+    <content><![CDATA[<h1 id="网站访问情况的简单监控"><a href="#网站访问情况的简单监控" class="headerlink" title="网站访问情况的简单监控"></a>网站访问情况的简单监控</h1><h2 id="我呢，想做这样一个事情："><a href="#我呢，想做这样一个事情：" class="headerlink" title="我呢，想做这样一个事情："></a>我呢，想做这样一个事情：</h2><p>通过爬取blog封面最下方的记数，将每天访问网站的信息抓取出来。然后调用WechatWork的webhook，将每天的访问数发给自己。<br>这样就能粗略了解，网站的访问情况。</p>
+<h3 id="1-获取网站的访问记数："><a href="#1-获取网站的访问记数：" class="headerlink" title="1. 获取网站的访问记数："></a>1. 获取网站的访问记数：</h3><p>开始的脚本想用python的requests库抓，但是发现个问题。<br>那就是封面加载的时候，页面记数不会立刻返回到界面中。我开始以为是我的xpath写法有问题，试了好久才发现其实是获取的text里第一时间不存在记数（应该是在调用busuanzi的服务，所以数据不是立刻返回。）<br>这样就导致使用requests.get()方法，无法抓到数据。每次抓的记数都不存在。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/pythonrequests01.jpeg" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/pythonrequests02.gif" alt=""><br>查了下资料，好像requests库没办法实现等待页面几秒再返回数据的情况。<br>所以我改成使用selenium库进行页面内容的抓取。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/pythonrequests03.png" alt=""><br>定义获取计数的函数get_counts()：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def get_counts():    # 使用selenuim，加载动态界面，抓取计数；</span><br><span class="line">    browser = webdriver.Chrome()</span><br><span class="line">    browser.get(&quot;https://****.com&quot;)</span><br><span class="line"></span><br><span class="line">    count_site_pv = browser.find_element(By.ID, &quot;busuanzi_value_site_pv&quot;).text</span><br><span class="line">    count_site_uv = browser.find_element(By.ID, &quot;busuanzi_value_site_uv&quot;).text</span><br><span class="line">    count_page_pv = browser.find_element(By.ID, &quot;busuanzi_value_page_pv&quot;).text</span><br><span class="line"></span><br><span class="line">    browser.close()</span><br><span class="line">    return count_site_pv, count_site_uv, count_page_pv</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-在WechatWork里创建一个webhook："><a href="#2-在WechatWork里创建一个webhook：" class="headerlink" title="2. 在WechatWork里创建一个webhook："></a>2. 在WechatWork里创建一个webhook：</h3><p>Webhook在企业微信里只能在群机器人下使用。<br>所以我先拉了两个同事，创建个聊天群，然后再把他们移走。这样就创建了一个只有我自己的群。</p>
+<h3 id="3-向webhook发送消息，推送至企业微信："><a href="#3-向webhook发送消息，推送至企业微信：" class="headerlink" title="3. 向webhook发送消息，推送至企业微信："></a>3. 向webhook发送消息，推送至企业微信：</h3><p>这个就按照群机器人配置说明中的说明，进行消息推送即可。<br>我使用的是urllib3库。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def ewc_webhook(a, b, c):    # 调用ewc的webhook，发送消息；</span><br><span class="line">    a, b, c = a, b, c</span><br><span class="line">    hook_addr = &apos;https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=*************&apos;</span><br><span class="line">    http = urllib3.PoolManager()</span><br><span class="line">    time = datetime.datetime.now()</span><br><span class="line">    today = time.strftime(&apos;%Y-%m-%d&apos;)</span><br><span class="line"></span><br><span class="line">    data = &#123;</span><br><span class="line">    &quot;msgtype&quot;: &quot;markdown&quot;,</span><br><span class="line">    &quot;markdown&quot;: &#123;</span><br><span class="line">        &quot;content&quot;: &quot;&lt;font color=\&quot;info\&quot;&gt;%s&lt;/font&gt;\n\</span><br><span class="line">        &gt;Blog总访问量:&lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;\n\</span><br><span class="line">        &gt;Blog访客数量:&lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;\n\</span><br><span class="line">        &gt;封面访问数:&lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;&quot; </span><br><span class="line">        %(today, a, b, c)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    data = json.dumps(data).encode()</span><br><span class="line">    response = http.request(&apos;POST&apos;, hook_addr, body=data)</span><br></pre></td></tr></table></figure></p>
+<h3 id="4-在本地电脑上设置定时job，每天执行程序。"><a href="#4-在本地电脑上设置定时job，每天执行程序。" class="headerlink" title="4. 在本地电脑上设置定时job，每天执行程序。"></a>4. 在本地电脑上设置定时job，每天执行程序。</h3><p>最终效果：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/pythonrequests04.png" alt=""></p>
+]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>crawler</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数据分析可视化的简单探究（三）--建立模型</title>
     <url>/2020/09/09/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9A%84%E7%AE%80%E5%8D%95%E6%8E%A2%E7%A9%B63/</url>
     <content><![CDATA[<p><a href="https://tech.hahaalot.com/2020/09/06/数据分析可视化的简单探究/"><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario-gif.gif" width="10%" height="10%" alt="点击跳转" align="left"></a><br><br>(Click Mario)</p>
@@ -468,20 +539,22 @@
       </tags>
   </entry>
   <entry>
-    <title>网站访问情况的简单监控</title>
-    <url>/2020/04/27/%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E6%83%85%E5%86%B5%E7%9A%84%E7%AE%80%E5%8D%95%E7%9B%91%E6%8E%A7/</url>
-    <content><![CDATA[<h1 id="网站访问情况的简单监控"><a href="#网站访问情况的简单监控" class="headerlink" title="网站访问情况的简单监控"></a>网站访问情况的简单监控</h1><h2 id="我呢，想做这样一个事情："><a href="#我呢，想做这样一个事情：" class="headerlink" title="我呢，想做这样一个事情："></a>我呢，想做这样一个事情：</h2><p>通过爬取blog封面最下方的记数，将每天访问网站的信息抓取出来。然后调用WechatWork的webhook，将每天的访问数发给自己。<br>这样就能粗略了解，网站的访问情况。</p>
-<h3 id="1-获取网站的访问记数："><a href="#1-获取网站的访问记数：" class="headerlink" title="1. 获取网站的访问记数："></a>1. 获取网站的访问记数：</h3><p>开始的脚本想用python的requests库抓，但是发现个问题。<br>那就是封面加载的时候，页面记数不会立刻返回到界面中。我开始以为是我的xpath写法有问题，试了好久才发现其实是获取的text里第一时间不存在记数（应该是在调用busuanzi的服务，所以数据不是立刻返回。）<br>这样就导致使用requests.get()方法，无法抓到数据。每次抓的记数都不存在。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/pythonrequests01.jpeg" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/pythonrequests02.gif" alt=""><br>查了下资料，好像requests库没办法实现等待页面几秒再返回数据的情况。<br>所以我改成使用selenium库进行页面内容的抓取。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/pythonrequests03.png" alt=""><br>定义获取计数的函数get_counts()：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def get_counts():    # 使用selenuim，加载动态界面，抓取计数；</span><br><span class="line">    browser = webdriver.Chrome()</span><br><span class="line">    browser.get(&quot;https://****.com&quot;)</span><br><span class="line"></span><br><span class="line">    count_site_pv = browser.find_element(By.ID, &quot;busuanzi_value_site_pv&quot;).text</span><br><span class="line">    count_site_uv = browser.find_element(By.ID, &quot;busuanzi_value_site_uv&quot;).text</span><br><span class="line">    count_page_pv = browser.find_element(By.ID, &quot;busuanzi_value_page_pv&quot;).text</span><br><span class="line"></span><br><span class="line">    browser.close()</span><br><span class="line">    return count_site_pv, count_site_uv, count_page_pv</span><br></pre></td></tr></table></figure></p>
-<h3 id="2-在WechatWork里创建一个webhook："><a href="#2-在WechatWork里创建一个webhook：" class="headerlink" title="2. 在WechatWork里创建一个webhook："></a>2. 在WechatWork里创建一个webhook：</h3><p>Webhook在企业微信里只能在群机器人下使用。<br>所以我先拉了两个同事，创建个聊天群，然后再把他们移走。这样就创建了一个只有我自己的群。</p>
-<h3 id="3-向webhook发送消息，推送至企业微信："><a href="#3-向webhook发送消息，推送至企业微信：" class="headerlink" title="3. 向webhook发送消息，推送至企业微信："></a>3. 向webhook发送消息，推送至企业微信：</h3><p>这个就按照群机器人配置说明中的说明，进行消息推送即可。<br>我使用的是urllib3库。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def ewc_webhook(a, b, c):    # 调用ewc的webhook，发送消息；</span><br><span class="line">    a, b, c = a, b, c</span><br><span class="line">    hook_addr = &apos;https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=*************&apos;</span><br><span class="line">    http = urllib3.PoolManager()</span><br><span class="line">    time = datetime.datetime.now()</span><br><span class="line">    today = time.strftime(&apos;%Y-%m-%d&apos;)</span><br><span class="line"></span><br><span class="line">    data = &#123;</span><br><span class="line">    &quot;msgtype&quot;: &quot;markdown&quot;,</span><br><span class="line">    &quot;markdown&quot;: &#123;</span><br><span class="line">        &quot;content&quot;: &quot;&lt;font color=\&quot;info\&quot;&gt;%s&lt;/font&gt;\n\</span><br><span class="line">        &gt;Blog总访问量:&lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;\n\</span><br><span class="line">        &gt;Blog访客数量:&lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;\n\</span><br><span class="line">        &gt;封面访问数:&lt;font color=\&quot;comment\&quot;&gt;%s&lt;/font&gt;&quot; </span><br><span class="line">        %(today, a, b, c)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    data = json.dumps(data).encode()</span><br><span class="line">    response = http.request(&apos;POST&apos;, hook_addr, body=data)</span><br></pre></td></tr></table></figure></p>
-<h3 id="4-在本地电脑上设置定时job，每天执行程序。"><a href="#4-在本地电脑上设置定时job，每天执行程序。" class="headerlink" title="4. 在本地电脑上设置定时job，每天执行程序。"></a>4. 在本地电脑上设置定时job，每天执行程序。</h3><p>最终效果：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/pythonrequests04.png" alt=""></p>
+    <title>数据分析可视化的简单探究（四）--图表云存储</title>
+    <url>/2020/09/10/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9A%84%E7%AE%80%E5%8D%95%E6%8E%A2%E7%A9%B64/</url>
+    <content><![CDATA[<p><a href="https://tech.hahaalot.com/2020/09/06/数据分析可视化的简单探究/"><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario-gif.gif" width="10%" height="10%" alt="点击跳转" align="left"></a><br><br>(Click Mario)</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>最后一步，将创建好的图表传输到云存储。<br>然后web界面就直接嵌入iframe使用。</p>
+<p>我一直用的对象云存储是COS。腾讯云提供了官方的sdk，所以看一下技术文档，就知道怎么用了。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from qcloud_cos import CosConfig</span><br><span class="line">from qcloud_cos import CosS3Client</span><br><span class="line">import sys</span><br><span class="line">import logging</span><br><span class="line">import os</span><br><span class="line"></span><br><span class="line">logging.basicConfig(level=logging.INFO, stream=sys.stdout)</span><br><span class="line"></span><br><span class="line">secret_id = &apos;A***************&apos;      # 替换为用户的 secretId</span><br><span class="line">secret_key = &apos;*******&apos;      # 替换为用户的 secretKey</span><br><span class="line">region = &apos;ap-shanghai&apos;     # 替换为用户的 Region</span><br><span class="line">token = None                # 使用临时密钥需要传入 Token，默认为空，可不填</span><br><span class="line">scheme = &apos;https&apos;            # 指定使用 http/https 协议来访问 COS，默认为 https，可不填</span><br><span class="line">config = CosConfig(Region=region, SecretId=secret_id, SecretKey=secret_key, Token=token, Scheme=scheme)</span><br><span class="line"></span><br><span class="line"># 2. 获取客户端对象</span><br><span class="line">client = CosS3Client(config)</span><br><span class="line"># 参照下文的描述。或者参照 Demo 程序，详见 https://github.com/tencentyun/cos-python-sdk-v5/blob/master/qcloud_cos/demo.py</span><br><span class="line">#### 文件流简单上传（不支持超过5G的文件，推荐使用下方高级上传接口）</span><br><span class="line"># 强烈建议您以二进制模式(binary mode)打开文件,否则可能会导致错误</span><br><span class="line">for root, dirs, files in os.walk(&quot;charts_folder&quot;):    </span><br><span class="line"># root-表示当前正在访问的文件夹路径；dirs-表示该文件夹下的子目录名list；files-表示该文件夹下的文件list</span><br><span class="line">    for f in files:</span><br><span class="line">        with open(os.path.join(root, f), &apos;rb&apos;) as fp:</span><br><span class="line">            response = client.put_object(</span><br><span class="line">                Bucket=&apos;****-nnnn&apos;,</span><br><span class="line">                Body=fp,</span><br><span class="line">                Key=&apos;objects/pyecharts/&apos; + f,</span><br><span class="line">                StorageClass=&apos;STANDARD&apos;,</span><br><span class="line">                EnableMD5=False</span><br><span class="line">            )</span><br><span class="line">        print(response[&apos;ETag&apos;])</span><br></pre></td></tr></table></figure>
+<p>这样就可以把pyecharts生成的html传输到COS中了。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这样一个比较数据可视化作业的流程就串起来了。<br>然后就是根据数据和图表进行下数据的分析了。</p>
+<p>以上。</p>
 ]]></content>
       <categories>
-        <category>Tech</category>
+        <category>Lib</category>
       </categories>
       <tags>
-        <tag>python</tag>
-        <tag>crawler</tag>
+        <tag>Pandas</tag>
+        <tag>cloud</tag>
       </tags>
   </entry>
   <entry>
@@ -533,46 +606,6 @@
       </categories>
       <tags>
         <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[DEMO]demo</title>
-    <url>/2018/12/30/DEMO-demo/</url>
-    <content><![CDATA[<h2 id="说在前："><a href="#说在前：" class="headerlink" title="说在前："></a>说在前：</h2><p>Demo</p>
-<p>P1:</p>
-<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_reason_area_sankey.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
-
-<p>P2:</p>
-<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_reason_province_sankey.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
-
-<p>P3:</p>
-<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_amount_province_map.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
-
-<p>P4:</p>
-<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_amount_province_bar.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
-
-<p>P5:</p>
-<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_reason_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
-
-<p>P6:</p>
-<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_reentry_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
-
-<p>P7:</p>
-<iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_areareentry_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe>
-
-<p>Pic01：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario111_PNG80.png" alt="DEMODEMO"></p>
-<p>Pic02：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario_PNG80.png" alt="DEMODEMO" title="DEMO测试"></p>
-<p>Pic03：<br>参考：<br><a href="https://tech.hahaalot.com/"><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario_PNG80.png" alt="替换文本文本" title="TITLE跳转跳转"></a></p>
-<p>Pic04:<br><a href="https://tech.hahaalot.com/"><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1599552413367&amp;di=13f71db32fb0c20ca8b37f6a9d168e7e&amp;imgtype=0&amp;src=http%3A%2F%2Fpic.90370.com%2Fupload%2F2017-3%2F20173301736172260.png &quot;TITLE跳转跳转&quot;#pic_center# =200x200" alt="标签"></a></p>
-<p>Pic05:<br><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599552413367&di=13f71db32fb0c20ca8b37f6a9d168e7e&imgtype=0&src=http%3A%2F%2Fpic.90370.com%2Fupload%2F2017-3%2F20173301736172260.png" width="10%" height="10%" alt="示例" align="left"><br><a href="https://tech.hahaalot.com/"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599552413367&di=13f71db32fb0c20ca8b37f6a9d168e7e&imgtype=0&src=http%3A%2F%2Fpic.90370.com%2Fupload%2F2017-3%2F20173301736172260.png" width="20%" height="20%" alt="示例" align="center"></a></p>
-<p>插入picture<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![Alt text](图片链接 &quot;optional title&quot;)</span><br><span class="line">Alt text：图片的Alt标签，用来描述图片的关键词，可以不写。</span><br><span class="line">最初的本意是当图片因为某种原因不能被显示时而出现的替代文字，后来又被用于SEO，可以方便搜索引擎根据Alt text里面的关键词搜索到图片。 </span><br><span class="line">图片链接：可以是图片的本地地址或者是网址。</span><br><span class="line">&quot;optional title&quot;：鼠标悬置于图片上会出现的标题文字，可以不写。</span><br></pre></td></tr></table></figure></p>
-<p>OK～～～</p>
-]]></content>
-      <categories>
-        <category>Demo</category>
-      </categories>
-      <tags>
-        <tag>Demo</tag>
       </tags>
   </entry>
 </search>
