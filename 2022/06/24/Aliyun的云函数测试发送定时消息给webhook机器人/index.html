@@ -13,7 +13,7 @@
 
 
 
-<title>数据分析可视化的简单探究（四）--图表云存储 | Haha not only a lot</title>
+<title>Aliyun的云函数测试发送定时消息给webhook机器人 | Haha not only a lot</title>
 
 
 
@@ -194,7 +194,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">数据分析可视化的简单探究（四）--图表云存储</h1>
+            <h1 class="post-title">Aliyun的云函数测试发送定时消息给webhook机器人</h1>
             
                 <div class="post-meta">
                     
@@ -203,14 +203,14 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">九月 10, 2020&nbsp;&nbsp;20:02:02</a>
+                        Date: <a href="#">六月 24, 2022&nbsp;&nbsp;21:50:07</a>
                         </span>
                     
                     
                         <span class="post-category">
                     Category:
                             
-                                <a href="/categories/Lib/">Lib</a>
+                                <a href="/categories/Tech/">Tech</a>
                             
                         </span>
                     
@@ -219,13 +219,14 @@
         </header>
 
         <div class="post-content">
-            <p><a href="https://tech.hahaalot.com/2020/09/06/数据分析可视化的简单探究/"><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario-gif.gif" width="10%" height="10%" alt="点击跳转" align="left"></a><br><br>(Click Mario)</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>最后一步，将创建好的图表传输到云存储。<br>然后web界面就直接嵌入iframe使用。</p>
-<p>我一直用的对象云存储是COS。腾讯云提供了官方的sdk，所以看一下技术文档，就知道怎么用了。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">from qcloud_cos import CosConfig</span><br><span class="line">from qcloud_cos import CosS3Client</span><br><span class="line">import sys</span><br><span class="line">import logging</span><br><span class="line">import os</span><br><span class="line"></span><br><span class="line">logging.basicConfig(level=logging.INFO, stream=sys.stdout)</span><br><span class="line"></span><br><span class="line">secret_id = &apos;A***************&apos;      # 替换为用户的 secretId</span><br><span class="line">secret_key = &apos;*******&apos;      # 替换为用户的 secretKey</span><br><span class="line">region = &apos;ap-shanghai&apos;     # 替换为用户的 Region</span><br><span class="line">token = None                # 使用临时密钥需要传入 Token，默认为空，可不填</span><br><span class="line">scheme = &apos;https&apos;            # 指定使用 http/https 协议来访问 COS，默认为 https，可不填</span><br><span class="line">config = CosConfig(Region=region, SecretId=secret_id, SecretKey=secret_key, Token=token, Scheme=scheme)</span><br><span class="line"></span><br><span class="line"># 2. 获取客户端对象</span><br><span class="line">client = CosS3Client(config)</span><br><span class="line"># 参照下文的描述。或者参照 Demo 程序，详见 https://github.com/tencentyun/cos-python-sdk-v5/blob/master/qcloud_cos/demo.py</span><br><span class="line">#### 文件流简单上传（不支持超过5G的文件，推荐使用下方高级上传接口）</span><br><span class="line"># 强烈建议您以二进制模式(binary mode)打开文件,否则可能会导致错误</span><br><span class="line">for root, dirs, files in os.walk(&quot;charts_folder&quot;):    </span><br><span class="line"># root-表示当前正在访问的文件夹路径；dirs-表示该文件夹下的子目录名list；files-表示该文件夹下的文件list</span><br><span class="line">    for f in files:</span><br><span class="line">        with open(os.path.join(root, f), &apos;rb&apos;) as fp:</span><br><span class="line">            response = client.put_object(</span><br><span class="line">                Bucket=&apos;****-nnnn&apos;,</span><br><span class="line">                Body=fp,</span><br><span class="line">                Key=&apos;objects/pyecharts/&apos; + f,</span><br><span class="line">                StorageClass=&apos;STANDARD&apos;,</span><br><span class="line">                EnableMD5=False</span><br><span class="line">            )</span><br><span class="line">        print(response[&apos;ETag&apos;])</span><br></pre></td></tr></table></figure>
-<p>这样就可以把pyecharts生成的html传输到COS中了。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这样一个比较数据可视化作业的流程就串起来了。<br>然后就是根据数据和图表进行下数据的分析了。</p>
-<p>以上。</p>
+            <h1 id="Aliyun的云函数测试发送定时消息给webhook机器人"><a href="#Aliyun的云函数测试发送定时消息给webhook机器人" class="headerlink" title="Aliyun的云函数测试发送定时消息给webhook机器人"></a>Aliyun的云函数测试发送定时消息给webhook机器人</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前呢，我做过这个：<br><a href="https://tech.hahaalot.com/2020/05/10/%E8%85%BE%E8%AE%AF%E4%BA%91TencentCloud%E7%9A%84Serverless%E4%BA%91%E5%87%BD%E6%95%B0SCF/">腾讯云TencentCloud的Serverless云函数SCF | Haha not only a lot</a><br><a href="https://tech.hahaalot.com/2020/04/29/WechatWork%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E7%9A%84webhook%E4%BD%BF%E7%94%A8/#">WechatWork企业微信的webhook使用 | Haha not only a lot</a><br>实现了用腾讯云每天定时给自己的企业微信推送个订阅消息。</p>
+<p>今天为啥要搞这个呢……<br>因为腾讯云的云函数，羊毛薅光了。腾讯云收费策略调整了，云函数每月基础收费12块，像我这种每天就发一个消息给自己的，一天4毛钱的支出简直是比巨款。<br>腾讯云调整的通知也没注意，直到我账户里预充的10元钱不到一个月被扣光了，所有腾讯云服务暂停了，我才知道……</p>
+<p>把欠款补了，云函数删掉了……查了圈，发现aliyun也搞了个云函数计算，而且收费标准是：免费限额+超额按量收费。这种方式对我就很友善了。</p>
+<p>于是，就只能做迁移了。</p>
+<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><p>阿里云的函数计算地址：<a href="https://fcnext.console.aliyun.com/overview" target="_blank" rel="noopener">阿里云登录 - 欢迎登录阿里云，安全稳定的云计算服务平台</a><br>然后具体的操作：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/alialiali01.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/alialiali02.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/alialiali03.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/alialiali04.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/alialiali05.png" alt=""></p>
+<p><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/alialiali06.png" alt=""><br>然后测试运行一下，看看是否有收到webhook机器人发过去的消息。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>其实操作还比较简单。<br>但是吧，给我的感觉：一是阿里云的整个界面就是比腾讯云丑，版面布局也很奇怪；二是整体的手册和指导，不是很清楚……<br>最开始玩腾讯云的SCF时，我也是啥都不知道的，但是对着网站的说明指导一步步去学去操作，就搞定了。<br>但是阿里云的吧，我是真的看的很懵，帮助文档读的不易懂，经常读着读着不知道说的是啥……就比如我到底是要新建什么东西去跑我的python代码，我都没弄清楚，还是瞎蒙着四处鼓捣，最后才弄出来的。</p>
+<p>但是吧，可能是由于我不是专业做这种云计算开发的工程师吧，所以不适应他们的帮助手册吧，可能专业的人会觉得阿里云的帮助文档写得很清楚吧……</p>
 
         </div>
 
@@ -247,7 +248,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://tech.hahaalot.com/2020/09/10/数据分析可视化的简单探究4/">http://tech.hahaalot.com/2020/09/10/数据分析可视化的简单探究4/</a></span>
+                        <span><a href="http://tech.hahaalot.com/2022/06/24/Aliyun的云函数测试发送定时消息给webhook机器人/">http://tech.hahaalot.com/2022/06/24/Aliyun的云函数测试发送定时消息给webhook机器人/</a></span>
                     </p>
                 
                 
@@ -273,7 +274,7 @@
                     
                         <a href="/tags/cloud/"># cloud</a>
                     
-                        <a href="/tags/Pandas/"># Pandas</a>
+                        <a href="/tags/serverless/"># serverless</a>
                     
                         
                 </span>
@@ -286,10 +287,10 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2020/09/11/人力资源离职情况的初步数据分析/">人力资源离职情况的初步数据分析</a>
+                <a class="prev" rel="prev" href="/2022/06/25/ios的消息推送测试/">ios的消息推送测试</a>
             
             
-            <a class="next" rel="next" href="/2020/09/09/数据分析可视化的简单探究3/">数据分析可视化的简单探究（三）--建立模型</a>
+            <a class="next" rel="next" href="/2022/06/14/AA固定资产修改残值率或折旧年限引起的计提折旧变化/">SAP-AA固定资产修改残值率或折旧年限引起的计提折旧变化</a>
             
         </section>
 

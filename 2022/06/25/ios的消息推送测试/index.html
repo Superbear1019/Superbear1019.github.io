@@ -13,7 +13,7 @@
 
 
 
-<title>数据分析可视化的简单探究（四）--图表云存储 | Haha not only a lot</title>
+<title>ios的消息推送测试 | Haha not only a lot</title>
 
 
 
@@ -194,7 +194,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">数据分析可视化的简单探究（四）--图表云存储</h1>
+            <h1 class="post-title">ios的消息推送测试</h1>
             
                 <div class="post-meta">
                     
@@ -203,7 +203,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">九月 10, 2020&nbsp;&nbsp;20:02:02</a>
+                        Date: <a href="#">六月 25, 2022&nbsp;&nbsp;21:30:07</a>
                         </span>
                     
                     
@@ -219,13 +219,11 @@
         </header>
 
         <div class="post-content">
-            <p><a href="https://tech.hahaalot.com/2020/09/06/数据分析可视化的简单探究/"><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario-gif.gif" width="10%" height="10%" alt="点击跳转" align="left"></a><br><br>(Click Mario)</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>最后一步，将创建好的图表传输到云存储。<br>然后web界面就直接嵌入iframe使用。</p>
-<p>我一直用的对象云存储是COS。腾讯云提供了官方的sdk，所以看一下技术文档，就知道怎么用了。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">from qcloud_cos import CosConfig</span><br><span class="line">from qcloud_cos import CosS3Client</span><br><span class="line">import sys</span><br><span class="line">import logging</span><br><span class="line">import os</span><br><span class="line"></span><br><span class="line">logging.basicConfig(level=logging.INFO, stream=sys.stdout)</span><br><span class="line"></span><br><span class="line">secret_id = &apos;A***************&apos;      # 替换为用户的 secretId</span><br><span class="line">secret_key = &apos;*******&apos;      # 替换为用户的 secretKey</span><br><span class="line">region = &apos;ap-shanghai&apos;     # 替换为用户的 Region</span><br><span class="line">token = None                # 使用临时密钥需要传入 Token，默认为空，可不填</span><br><span class="line">scheme = &apos;https&apos;            # 指定使用 http/https 协议来访问 COS，默认为 https，可不填</span><br><span class="line">config = CosConfig(Region=region, SecretId=secret_id, SecretKey=secret_key, Token=token, Scheme=scheme)</span><br><span class="line"></span><br><span class="line"># 2. 获取客户端对象</span><br><span class="line">client = CosS3Client(config)</span><br><span class="line"># 参照下文的描述。或者参照 Demo 程序，详见 https://github.com/tencentyun/cos-python-sdk-v5/blob/master/qcloud_cos/demo.py</span><br><span class="line">#### 文件流简单上传（不支持超过5G的文件，推荐使用下方高级上传接口）</span><br><span class="line"># 强烈建议您以二进制模式(binary mode)打开文件,否则可能会导致错误</span><br><span class="line">for root, dirs, files in os.walk(&quot;charts_folder&quot;):    </span><br><span class="line"># root-表示当前正在访问的文件夹路径；dirs-表示该文件夹下的子目录名list；files-表示该文件夹下的文件list</span><br><span class="line">    for f in files:</span><br><span class="line">        with open(os.path.join(root, f), &apos;rb&apos;) as fp:</span><br><span class="line">            response = client.put_object(</span><br><span class="line">                Bucket=&apos;****-nnnn&apos;,</span><br><span class="line">                Body=fp,</span><br><span class="line">                Key=&apos;objects/pyecharts/&apos; + f,</span><br><span class="line">                StorageClass=&apos;STANDARD&apos;,</span><br><span class="line">                EnableMD5=False</span><br><span class="line">            )</span><br><span class="line">        print(response[&apos;ETag&apos;])</span><br></pre></td></tr></table></figure>
-<p>这样就可以把pyecharts生成的html传输到COS中了。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这样一个比较数据可视化作业的流程就串起来了。<br>然后就是根据数据和图表进行下数据的分析了。</p>
-<p>以上。</p>
+            <h1 id="ios的消息推送测试"><a href="#ios的消息推送测试" class="headerlink" title="ios的消息推送测试"></a>ios的消息推送测试</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我在最近搞阿里云云函数的时候，发现了个好玩的东西，竟然真的有大神搞每日签到打卡各种app的程序，然后推送给微信和手机这种……<br>挺有意思的，真有人搞……<br>所以我就学习这弄一弄。</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>首先第一步呢，是搞一下消息推送。<br>目前我搞过企业微信的群机器人、钉钉的机器人，他们都是webhook，可以进行组合消息的推送。<br>之前一直想说微信，有没有办法，毕竟微信的消息查看效率要高很多。估摸着有，但是一直没研究。</p>
+<h3 id="微信"><a href="#微信" class="headerlink" title="微信"></a>微信</h3><p>查了查，发现现在用的比较多的，是一个叫“Server酱”的服务。Server酱<a href="https://sct.ftqq.com/" target="_blank" rel="noopener">Server酱</a>。大致是需要关注个公众号，然后通过他的消息服务，调取api后消息发至这个公众号。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/iosmsg01.png" alt=""></p>
+<h3 id="ios端"><a href="#ios端" class="headerlink" title="ios端"></a>ios端</h3><p>iPhone手机，可以下载app，然后通过消息发至app上，从app提醒。<br>查了下，目前网上支持比较多的是Bark。<br>另外那个server酱的开发者也做了一个app，PushDeer<a href="http://www.pushdeer.com/official.html" target="_blank" rel="noopener">PushDeer·推送说明官方在线版 - </a>。<br>我都适用了下，都比较简单易用。<br>但是Bark可以替换提醒消息的图像ico，这个还挺好的。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/iosmsg02.jpg" alt=""></p>
+<p>总之，现在有办法给自己的苹果手机推送消息了。<br>在研究好那个打卡的功能，后面就可以天天自动打卡做提醒了。</p>
 
         </div>
 
@@ -247,7 +245,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://tech.hahaalot.com/2020/09/10/数据分析可视化的简单探究4/">http://tech.hahaalot.com/2020/09/10/数据分析可视化的简单探究4/</a></span>
+                        <span><a href="http://tech.hahaalot.com/2022/06/25/ios的消息推送测试/">http://tech.hahaalot.com/2022/06/25/ios的消息推送测试/</a></span>
                     </p>
                 
                 
@@ -271,9 +269,9 @@
                 <span class="tag">
                     
                     
-                        <a href="/tags/cloud/"># cloud</a>
+                        <a href="/tags/webhook/"># webhook</a>
                     
-                        <a href="/tags/Pandas/"># Pandas</a>
+                        <a href="/tags/ios/"># ios</a>
                     
                         
                 </span>
@@ -286,10 +284,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2020/09/11/人力资源离职情况的初步数据分析/">人力资源离职情况的初步数据分析</a>
             
-            
-            <a class="next" rel="next" href="/2020/09/09/数据分析可视化的简单探究3/">数据分析可视化的简单探究（三）--建立模型</a>
+            <a class="next" rel="next" href="/2022/06/24/Aliyun的云函数测试发送定时消息给webhook机器人/">Aliyun的云函数测试发送定时消息给webhook机器人</a>
             
         </section>
 
