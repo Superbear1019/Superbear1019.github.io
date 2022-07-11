@@ -13,7 +13,7 @@
 
 
 
-<title>ios的消息推送测试 | Haha not only a lot</title>
+<title>yonyoucloud开放平台自建应用接入demo | Haha not only a lot</title>
 
 
 
@@ -194,7 +194,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">ios的消息推送测试</h1>
+            <h1 class="post-title">yonyoucloud开放平台自建应用接入demo</h1>
             
                 <div class="post-meta">
                     
@@ -203,14 +203,14 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">六月 25, 2022&nbsp;&nbsp;21:30:07</a>
+                        Date: <a href="#">七月 8, 2022&nbsp;&nbsp;21:52:35</a>
                         </span>
                     
                     
                         <span class="post-category">
                     Category:
                             
-                                <a href="/categories/Lib/">Lib</a>
+                                <a href="/categories/行业/">行业</a>
                             
                         </span>
                     
@@ -219,11 +219,57 @@
         </header>
 
         <div class="post-content">
-            <h1 id="ios的消息推送测试"><a href="#ios的消息推送测试" class="headerlink" title="ios的消息推送测试"></a>ios的消息推送测试</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我在最近搞阿里云云函数的时候，发现了个好玩的东西，竟然真的有大神搞每日签到打卡各种app的程序，然后推送给微信和手机这种……<br>挺有意思的，真有人搞……<br>所以我就学习这弄一弄。</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>首先第一步呢，是搞一下消息推送。<br>目前我搞过企业微信的群机器人、钉钉的机器人，他们都是webhook，可以进行组合消息的推送。<br>之前一直想说微信，有没有办法，毕竟微信的消息查看效率要高很多。估摸着有，但是一直没研究。</p>
-<h3 id="微信"><a href="#微信" class="headerlink" title="微信"></a>微信</h3><p>查了查，发现现在用的比较多的，是一个叫“Server酱”的服务。Server酱<a href="https://sct.ftqq.com/" target="_blank" rel="noopener">Server酱</a>。大致是需要关注个公众号，然后通过他的消息服务，调取api后消息发至这个公众号。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/iosmsg01.png" alt=""></p>
-<h3 id="ios端"><a href="#ios端" class="headerlink" title="ios端"></a>ios端</h3><p>iPhone手机，可以下载app，然后通过消息发至app上，从app提醒。<br>查了下，目前网上支持比较多的是Bark。<br>另外那个server酱的开发者也做了一个app，PushDeer<a href="http://www.pushdeer.com/official.html" target="_blank" rel="noopener">PushDeer·推送说明官方在线版 - </a>。<br>我都适用了下，都比较简单易用。<br>但是Bark可以替换提醒消息的图像ico，这个还挺好的。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/iosmsg02.jpg" alt=""></p>
-<p>总之，现在有办法给自己的苹果手机推送消息了。<br>在研究好那个打卡的功能，后面就可以天天自动打卡做提醒了。</p>
+            <h1 id="用有云开放平台自建应用接入demo"><a href="#用有云开放平台自建应用接入demo" class="headerlink" title="用有云开放平台自建应用接入demo"></a>用有云开放平台自建应用接入demo</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在做一个银行的对接项目，<br>需要从银行端拉取流水信息的结构化数据和回单。<br>其中数据抓取涉及到了签名及token生成的步骤。</p>
+<p>我查了下token生成的接口，发现是参照了用友云开放平台的自建应用接入demo<a href="https://github.com/yonyoucloud-open/corp-demo" target="_blank" rel="noopener">GitHub - yonyoucloud-open/corp-demo: 开放平台自建应用接入 demo</a>里的逻辑。<br>但是demo里给出的代码部分，只有java代码，而且部分关键的引用库原始代码也没有提供出来。</p>
+<p>为了做下api的调用测试，而且我只会码python，又没有demo代码样例，所以只能自己动手了。</p>
+<h2 id="整体逻辑"><a href="#整体逻辑" class="headerlink" title="整体逻辑"></a>整体逻辑</h2><ul>
+<li>数据接口的传参params部分要传输token值，此token需要事前调取生成接口生成。</li>
+<li>token生成接口，传参涉及到签名，签名的signature需要进行加签和编码。<br><a href="https://github.com/yonyoucloud-open/corp-demo/blob/master/README.md#%E8%8E%B7%E5%8F%96-access_token" target="_blank" rel="noopener">corp-demo/README.md at master · yonyoucloud-open/corp-demo · GitHub</a></li>
+</ul>
+<h2 id="获取-token的方法"><a href="#获取-token的方法" class="headerlink" title="获取 token的方法"></a>获取 <code>token</code>的方法</h2><p><strong>请求参数:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">字段</th>
+<th style="text-align:center">类型</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">appKey</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">应用 appKey</td>
+</tr>
+<tr>
+<td style="text-align:left">timestamp</td>
+<td style="text-align:center">number long</td>
+<td style="text-align:left">unix timestamp, 毫秒时间戳</td>
+</tr>
+<tr>
+<td style="text-align:left">signature</td>
+<td style="text-align:center">string</td>
+<td style="text-align:left">校验签名，HmacSHA256，加签方式看下文</td>
+</tr>
+</tbody>
+</table>
+<p>其中，签名字段 <code>signature</code> 计算使用 <code>HmacSHA256</code>，具体计算方式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">URLEncode( Base64( HmacSHA256( parameterMap ) ) )</span><br></pre></td></tr></table></figure></p>
+<p>其中，<code>parameterMap</code> 按照参数名称排序，参数名称与参数值依次拼接(signature字段除外)，形成待计算签名的字符串。之后对 <code>parameterMap</code><br>使用 <code>HmacSHA256</code> 计算签名，<code>Hmac</code> 的 <code>key</code> 为自建应用的 <code>appSecret</code> 。计算出的二进制签名先进行 <code>base64</code>，之后进行 <code>urlEncode</code>，<br>即得到 <code>signatrue</code> 字段的值。</p>
+<h2 id="python代码部分"><a href="#python代码部分" class="headerlink" title="python代码部分"></a>python代码部分</h2><ol>
+<li><p>appkey：<br>首先是接口方提供的。<br>我呢把一些接口方提供的参数，都写在了一个外部的conf文件里，然后py程序去读取。conf文件里是定义了一个json字典。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import json</span><br><span class="line"></span><br><span class="line">with open(&quot;conf.cfg&quot;, &quot;r&quot;) as f:</span><br><span class="line">    conn_string = json.load(f)[&quot;elements&quot;]</span><br><span class="line">appKey = conn_string[&quot;appkey&quot;]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>timestamp：<br>用java中System.currentTimeMillis()方法返回的值，开发语言不同，需改为和java一样的时间戳。<br>这个在python里可以通过round函数直接转换生成。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import time</span><br><span class="line"></span><br><span class="line">timestamp = str(round(time.time() * 1000))</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>signature：<br>parameterMap需要将key和timestamp的参数及值进行拼接。<br>例如：key为<code>k1234</code>，timestamp转换出来的值为<code>1657184970319</code>。则拼接后parameterMap为：<code>keyk1234timestamp1657184970319</code><br>进行加签及编码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import hmac, base64</span><br><span class="line">from hashlib import sha256</span><br><span class="line">import urllib.parse</span><br><span class="line">import hashlib</span><br><span class="line"></span><br><span class="line">parameterMap = &apos;appKey&#123;&#125;timestamp&#123;&#125;&apos;.format(appKey, timestamp)</span><br><span class="line"></span><br><span class="line">appsecret = conn_string[&quot;appSecret&quot;].encode(&apos;utf-8&apos;)</span><br><span class="line">parameterMap = parameterMap.encode(&apos;utf-8&apos;)</span><br><span class="line">signature = base64.b64encode(hmac.new(appsecret, parameterMap, digestmod=hashlib.sha256).digest())</span><br><span class="line">signature = urllib.parse.quote_plus(signature)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>接口调用获取token：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import requests</span><br><span class="line"></span><br><span class="line">url = (&quot;****/getToken?&quot;</span><br><span class="line">    &quot;appKey=&#123;&#125;&quot;</span><br><span class="line">    &quot;&amp;timestamp=&#123;&#125;&quot;</span><br><span class="line">    &quot;&amp;signature=&#123;&#125;&quot;.format(appKey, timestamp, signature))</span><br><span class="line">response = requests.get(url)</span><br><span class="line"></span><br><span class="line">#获取的token就在这里。 </span><br><span class="line">token_get = json.loads(response.text)[&quot;data&quot;][&quot;access_token&quot;]</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>逻辑捋好了的话，其实代码部分很简单。<br>只是加签规则因为用到了好多没有过的方法，所以还是研究一下子的。<br>记录一下，后面如果有其他的项目能参考到，那就算没白研究了。</p>
 
         </div>
 
@@ -245,7 +291,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://tech.hahaalot.com/2022/06/25/ios的消息推送测试/">http://tech.hahaalot.com/2022/06/25/ios的消息推送测试/</a></span>
+                        <span><a href="http://tech.hahaalot.com/2022/07/08/yonyoucloud开放平台自建应用接入demo/">http://tech.hahaalot.com/2022/07/08/yonyoucloud开放平台自建应用接入demo/</a></span>
                     </p>
                 
                 
@@ -269,9 +315,13 @@
                 <span class="tag">
                     
                     
-                        <a href="/tags/webhook/"># webhook</a>
+                        <a href="/tags/行业/"># 行业</a>
                     
-                        <a href="/tags/ios/"># ios</a>
+                        <a href="/tags/用有云/"># 用有云</a>
+                    
+                        <a href="/tags/api/"># api</a>
+                    
+                        <a href="/tags/token/"># token</a>
                     
                         
                 </span>
@@ -284,10 +334,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2022/07/08/yonyoucloud开放平台自建应用接入demo/">yonyoucloud开放平台自建应用接入demo</a>
             
-            
-            <a class="next" rel="next" href="/2022/06/24/Aliyun的云函数测试发送定时消息给webhook机器人/">Aliyun的云函数测试发送定时消息给webhook机器人</a>
+            <a class="next" rel="next" href="/2022/06/25/ios的消息推送测试/">ios的消息推送测试</a>
             
         </section>
 
