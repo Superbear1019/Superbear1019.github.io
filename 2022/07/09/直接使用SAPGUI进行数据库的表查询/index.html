@@ -13,7 +13,7 @@
 
 
 
-<title>SAP-AA固定资产修改残值率或折旧年限引起的计提折旧变化 | Haha not only a lot</title>
+<title>直接使用SAPGUI进行数据库的表查询 | Haha not only a lot</title>
 
 
 
@@ -196,7 +196,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">SAP-AA固定资产修改残值率或折旧年限引起的计提折旧变化</h1>
+            <h1 class="post-title">直接使用SAPGUI进行数据库的表查询</h1>
             
                 <div class="post-meta">
                     
@@ -205,7 +205,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">六月 14, 2022&nbsp;&nbsp;21:56:07</a>
+                        Date: <a href="#">七月 9, 2022&nbsp;&nbsp;23:27:08</a>
                         </span>
                     
                     
@@ -221,28 +221,16 @@
         </header>
 
         <div class="post-content">
-            <h1 id="AA固定资产修改残值率或折旧年限引起的计提折旧变化"><a href="#AA固定资产修改残值率或折旧年限引起的计提折旧变化" class="headerlink" title="AA固定资产修改残值率或折旧年限引起的计提折旧变化"></a>AA固定资产修改残值率或折旧年限引起的计提折旧变化</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>业务用户这边想了解下资产折旧计提的逻辑，然后我做了下相关的测试。<br>自己做一下记录。<br>主要场景就是测试一下，在使用资产折旧期间内，调整残值率和折旧年限，相应计提折旧规则的变化情况。</p>
-<h2 id="残值率调整"><a href="#残值率调整" class="headerlink" title="残值率调整"></a>残值率调整</h2><ul>
-<li><strong>折旧已完全计提完毕，但未做报废处理的资产</strong><br>该情况的资产，已过折旧年限，折旧完全计提完毕，只有残值。<br>原残值率为10%，测试将残值率调整为5%。</li>
-</ul>
-<p>调整方法，直接在资产主数据的帐面折旧视图，将残值率改为5%。<br>下图可以看到，折旧码对应的残值率为10%。<br>在两个残值率不一致时，优先取自定义的残值率5%。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt01.jpg" alt=""></p>
-<p>然后查看资产价值，发现计划折旧会增加一期。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt02.jpg" alt=""></p>
-<ul>
-<li><strong>折旧未计提完毕的资产</strong><br>该情况的资产，仍有折旧待计提。<br>原残值率为10%，测试将残值率调整为5%。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt03.jpg" alt=""></li>
-</ul>
-<h2 id="折旧年度调整"><a href="#折旧年度调整" class="headerlink" title="折旧年度调整"></a>折旧年度调整</h2><ul>
-<li><strong>资产剩余待提年限，大于缩短年限</strong><br>原折旧年限5年，测试缩短至4年。<br>该情况下资产剩余折旧年限，大于1年。</li>
-</ul>
-<p>调整方法，直接资产主数据修改使用年限。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt04.jpg" alt=""><br>调整后，重新查看资产价值。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt05.jpg" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt06.jpg" alt=""></p>
-<ul>
-<li><strong>资产剩余待提年限，不足缩短年限</strong><br>原折旧年限5年，测试缩短至4年。<br>该情况下资产剩余折旧年限，小于1年。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt07.jpg" alt=""></li>
-</ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
-<li>无论如何调整，在使用直线折旧计算情况下，折旧都会按设定的年限及残值率计算计提金额。</li>
-<li>已折旧月份记录，不会变化。</li>
-<li>当前年度过去月份的金额差异，会再下一次计提时补齐。</li>
-<li>过去年度的差异，会在全部折旧月份结束后，新增一期折旧做计提。</li>
-</ol>
+            <h1 id="【Tech】直接使用SAPGUI进行数据库的表查询"><a href="#【Tech】直接使用SAPGUI进行数据库的表查询" class="headerlink" title="【Tech】直接使用SAPGUI进行数据库的表查询"></a>【Tech】直接使用SAPGUI进行数据库的表查询</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>因为一个莫名的需求，想统计一下SAP里，2021年度的所有会计科目在FI凭证中记账使用的次数。<br>😂😂😂😂😂😂😂</p>
+<p>大家都知道的是，凭证行项目明细是记在BSIS和BSAS里的，但是因为凭证量很巨大，哪怕直接在SE11里去查，估计也是无法完全导出的。<br>更何况其实只要count下科目记账的次数就好，SE11里直接按照某科目的条件去计算数量，科目很多的话一个一个科目去计算，很不现实，且GUI大概率会崩掉的。</p>
+<p>这个时候，如果，有一个直接查数据库的功能多好！<br>比如SQLServer的话，微软的SSMS去查，MySQL的话，mysql自己的workbench，就直接写个SQL，就好了。</p>
+<p>记得之前听basis同事说过，有一个TCode可以做SQL的查询，于是我就查了下资料，学习一下。</p>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>TCode：DBACOCKPIT<br>事务码进入后，找到<code>SQL Command Editor</code>，标准的路径应该是在<code>Performance–&gt;Additional Functions–&gt;SQL Command Editor</code>，也可能自己公司配置的问题，地址有差异。</p>
+<p>进入后在<code>SQL Code</code>视图输入sql的语句就可以了。<br>（这个语句应该是根据当前SQL对应的DB来写的，比如数据库如果是SQLServer，那要用sqlserver的sql。不是ABAP里的数据表查询语法。）<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/gui01.png" alt=""><br>输入好后，执行execute，<br>就会在<code>Output</code>视图里，看到执行结果。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/gui02.png" alt=""></p>
+<p>可以看到哈，我就是做了个所有科目的记账数量的count。这种查法在sap gui里是不可能通过se11的表查询实现的。</p>
+<p>所以这个code一定程度上还是非常好用的。</p>
+<p>哦，对了，要补充一下，这个code可能要生产机上做授权才能使用。毕竟能查的东西太多了。</p>
+<p><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
 
         </div>
 
@@ -264,7 +252,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://tech.hahaalot.com/2022/06/14/AA固定资产修改残值率或折旧年限引起的计提折旧变化/">http://tech.hahaalot.com/2022/06/14/AA固定资产修改残值率或折旧年限引起的计提折旧变化/</a></span>
+                        <span><a href="http://tech.hahaalot.com/2022/07/09/直接使用SAPGUI进行数据库的表查询/">http://tech.hahaalot.com/2022/07/09/直接使用SAPGUI进行数据库的表查询/</a></span>
                     </p>
                 
                 
@@ -292,6 +280,8 @@
                     
                         <a href="/tags/行业/"># 行业</a>
                     
+                        <a href="/tags/Tech/"># Tech</a>
+                    
                         
                 </span>
             </div>
@@ -303,10 +293,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2022/06/24/Aliyun的云函数测试发送定时消息给webhook机器人/">Aliyun的云函数测试发送定时消息给webhook机器人</a>
             
-            
-            <a class="next" rel="next" href="/2022/05/20/SAPFI凭证记账自定义汇率/">SAP FI凭证记账自定义汇率</a>
+            <a class="next" rel="next" href="/2022/07/08/yonyoucloud开放平台自建应用接入demo/">yonyoucloud开放平台自建应用接入demo</a>
             
         </section>
 
