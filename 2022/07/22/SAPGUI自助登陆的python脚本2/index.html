@@ -13,7 +13,7 @@
 
 
 
-<title>直接使用SAPGUI进行数据库的表查询 | Haha not only a lot</title>
+<title>写一个SAPGUI自助登陆的python脚本程序2⃣——提出及设计 | Haha not only a lot</title>
 
 
 
@@ -196,7 +196,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">直接使用SAPGUI进行数据库的表查询</h1>
+            <h1 class="post-title">写一个SAPGUI自助登陆的python脚本程序2⃣——提出及设计</h1>
             
                 <div class="post-meta">
                     
@@ -205,14 +205,14 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">七月 9, 2022&nbsp;&nbsp;23:27:08</a>
+                        Date: <a href="#">七月 22, 2022&nbsp;&nbsp;21:11:16</a>
                         </span>
                     
                     
                         <span class="post-category">
                     Category:
                             
-                                <a href="/categories/行业/">行业</a>
+                                <a href="/categories/Tech/">Tech</a>
                             
                         </span>
                     
@@ -221,16 +221,22 @@
         </header>
 
         <div class="post-content">
-            <h1 id="直接使用SAPGUI进行数据库的表查询"><a href="#直接使用SAPGUI进行数据库的表查询" class="headerlink" title="直接使用SAPGUI进行数据库的表查询"></a>直接使用SAPGUI进行数据库的表查询</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>因为一个莫名的需求，想统计一下SAP里，2021年度的所有会计科目在FI凭证中记账使用的次数。<br>😂😂😂😂😂😂😂</p>
-<p>大家都知道的是，凭证行项目明细是记在BSIS和BSAS里的，但是因为凭证量很巨大，哪怕直接在SE11里去查，估计也是无法完全导出的。<br>更何况其实只要count下科目记账的次数就好，SE11里直接按照某科目的条件去计算数量，科目很多的话一个一个科目去计算，很不现实，且GUI大概率会崩掉的。</p>
-<p>这个时候，如果，有一个直接查数据库的功能多好！<br>比如SQLServer的话，微软的SSMS去查，MySQL的话，mysql自己的workbench，就直接写个SQL，就好了。</p>
-<p>记得之前听basis同事说过，有一个TCode可以做SQL的查询，于是我就查了下资料，学习一下。</p>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>TCode：<code>DBACOCKPIT</code><br>事务码进入后，找到<code>SQL Command Editor</code>，标准的路径应该是在<code>Performance–&gt;Additional Functions–&gt;SQL Command Editor</code>，也可能自己公司配置的问题，地址有差异。</p>
-<p>进入后在<code>SQL Code</code>视图输入sql的语句就可以了。<br>（这个语句应该是根据当前SQL对应的DB来写的，比如数据库如果是SQLServer，那要用sqlserver的sql。不是ABAP里的数据表查询语法。）<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/gui01.png" alt=""><br>输入好后，执行execute，<br>就会在<code>Output</code>视图里，看到执行结果。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/gui02.png" alt=""></p>
-<p>可以看到哈，我就是做了个所有科目的记账数量的count。这种查法在sap gui里是不可能通过se11的表查询实现的。</p>
-<p>所以这个code一定程度上还是非常好用的。</p>
-<p>哦，对了，要补充一下，这个code可能要生产机上做授权才能使用。毕竟能查的东西太多了。</p>
-<p><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
+            <h1 id="写一个SAPGUI自助登陆的python脚本程序2⃣️——句柄抓取"><a href="#写一个SAPGUI自助登陆的python脚本程序2⃣️——句柄抓取" class="headerlink" title="写一个SAPGUI自助登陆的python脚本程序2⃣️——句柄抓取"></a>写一个SAPGUI自助登陆的python脚本程序2⃣️——句柄抓取</h1><h2 id="何为句柄"><a href="#何为句柄" class="headerlink" title="何为句柄"></a>何为句柄</h2><p>Windows操作系统中的句柄：<br>在windows程序里，各种程序的图标、窗口这些资源，都会在使用时被分配一定的内存去做处理，所以就需要有标识这些资源的符号。<br>叫做<code>handle</code>，译作<code>句柄</code>。</p>
+<p>所以也就是说，每一个电脑开出来的应用程序的窗口，都是有一个handle标识它的，找到它，就能定位到窗口，去做我们想做的操作。</p>
+<h2 id="抓取句柄"><a href="#抓取句柄" class="headerlink" title="抓取句柄"></a>抓取句柄</h2><p>抓句柄，可以通过VisualStudio的工具<code>spy</code>去抓取。<br>如果电脑完整安装了vs的话，那么就可以在安装目录里找到它，位置是在tools的文件夹里，大概是下图的这个位置呢。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/winhandle00.jpg" alt=""></p>
+<p>现在使用spyxx去抓。<br>操作就是使用<code>Find Window</code>，然后拖动capture到想要捕获的窗口上就好了。<br>需要注意的是，比如登陆gui，看上去是一个窗口，但是界面、按钮，甚至筛选器，都对应到不同的句柄。所以要注意capture捕获放置的位置。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/winhandle01.gif" alt=""></p>
+<h2 id="正式操作"><a href="#正式操作" class="headerlink" title="正式操作"></a>正式操作</h2><ol>
+<li>抓登陆gui的句柄。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/winhandle01.gif" alt=""></li>
+<li>在gui的句柄下，抓filter的句柄。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/winhandle02.gif" alt=""></li>
+<li>在filter位置输入要登陆的client，<br>然后抓<code>登陆</code>按钮的句柄，抓到后，键入<code>鼠标左键单击</code>。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/winhandle04.gif" alt=""><br>这样抓取窗口部分就完成了。</li>
+</ol>
+<h2 id="相关代码"><a href="#相关代码" class="headerlink" title="相关代码"></a>相关代码</h2><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">client = input("\n选择登陆的Client：")</span><br><span class="line"></span><br><span class="line">sys = {'1':'TRB', '20000':'TRC', '3':'TRD', '4':'TRF', '5000':'TRW',</span><br><span class="line">       '11':'PRB', '22':'PRC', '33':'PRD', '44':'PRF', '50000':'PRW'</span><br><span class="line">      }</span><br><span class="line">link = sys[client]</span><br><span class="line"></span><br><span class="line">…………省略部分代码…………</span><br><span class="line"></span><br><span class="line">sap_app = r"C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe"    #saplogon程序本地完整路径</span><br><span class="line">subprocess.Popen(sap_app)       # 打开程序</span><br><span class="line"></span><br><span class="line">time.sleep(1)</span><br><span class="line">flt = 0</span><br><span class="line">while flt == 0:</span><br><span class="line">    try:</span><br><span class="line">        hwnd = win32gui.FindWindow(None, "SAP Logon 760")</span><br><span class="line">        flt = win32gui.FindWindowEx(hwnd, None, "Edit", None)       # capture handle of filter,查找hwnd下第一个edit类。即筛选器。</span><br><span class="line">    except:</span><br><span class="line">        time.sleep(0.5)</span><br><span class="line"></span><br><span class="line"># 向筛选器里写入TRB等，筛选出需要的链接。</span><br><span class="line">win32gui.SendMessage(flt, win32con.WM_SETTEXT, None, link)      # filter里填入文本TRB</span><br><span class="line">win32gui.SendMessage(flt, win32con.WM_KEYDOWN, win32con.VK_RIGHT, 0)        # 确认按下，并光标右移</span><br><span class="line">win32gui.SendMessage(flt, win32con.WM_KEYUP, win32con.VK_RIGHT, 0)      # 确认释放，并光标右移</span><br><span class="line">time.sleep(0.1)</span><br><span class="line"></span><br><span class="line">dlg = win32gui.FindWindowEx(hwnd, None, "Button", None)     # 登陆（0）按钮</span><br><span class="line">win32gui.SendMessage(dlg, win32con.WM_LBUTTONDOWN, 0)       # 鼠标左键按下</span><br><span class="line">win32gui.SendMessage(dlg, win32con.WM_LBUTTONUP, 0)     # 鼠标左键释放</span><br></pre></td></tr></tbody></table></figure>
+<p>代码的部分说明：</p>
+<ul>
+<li>提前定义好，各个client的代号，然后根据输入的代号，对应到client，在抓到filter的句柄时，输入client代码。</li>
+<li><code>win32gui.FindWindow()</code>和<code>win32gui.FindWindowEx()</code>，一个是用来抓取主界面，一个是抓取主界面附属的子界面，两个的用法有差别。</li>
+</ul>
+<p>通过抓取句柄，捕获操作界面的部分，差不多就这样了。<br>后面再继续。</p>
 
         </div>
 
@@ -252,7 +258,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://tech.hahaalot.com/2022/07/09/直接使用SAPGUI进行数据库的表查询/">http://tech.hahaalot.com/2022/07/09/直接使用SAPGUI进行数据库的表查询/</a></span>
+                        <span><a href="http://tech.hahaalot.com/2022/07/22/SAPGUI自助登陆的python脚本2/">http://tech.hahaalot.com/2022/07/22/SAPGUI自助登陆的python脚本2/</a></span>
                     </p>
                 
                 
@@ -278,9 +284,9 @@
                     
                         <a href="/tags/SAP/"># SAP</a>
                     
-                        <a href="/tags/行业/"># 行业</a>
-                    
                         <a href="/tags/Tech/"># Tech</a>
+                    
+                        <a href="/tags/python/"># python</a>
                     
                         
                 </span>
@@ -293,10 +299,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2022/07/16/SAPGUI自助登陆的python脚本1/">写一个SAPGUI自助登陆的python脚本程序1⃣——提出及设计</a>
             
-            
-            <a class="next" rel="next" href="/2022/07/08/yonyoucloud开放平台自建应用接入demo/">yonyoucloud开放平台自建应用接入demo</a>
+            <a class="next" rel="next" href="/2022/07/19/seeyousometimes/">【随笔】嗯～半年后希望看到你～</a>
             
         </section>
 

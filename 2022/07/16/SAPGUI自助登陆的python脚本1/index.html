@@ -13,7 +13,7 @@
 
 
 
-<title>【随笔】嗯～半年后希望看到你～ | Haha not only a lot</title>
+<title>写一个SAPGUI自助登陆的python脚本程序1⃣——提出及设计 | Haha not only a lot</title>
 
 
 
@@ -130,11 +130,73 @@
             <div class="container">
     
     
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">【随笔】嗯～半年后希望看到你～</h1>
+            <h1 class="post-title">写一个SAPGUI自助登陆的python脚本程序1⃣——提出及设计</h1>
             
                 <div class="post-meta">
                     
@@ -143,14 +205,14 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">七月 19, 2022&nbsp;&nbsp;17:36:45</a>
+                        Date: <a href="#">七月 16, 2022&nbsp;&nbsp;14:11:16</a>
                         </span>
                     
                     
                         <span class="post-category">
                     Category:
                             
-                                <a href="/categories/随笔/">随笔</a>
+                                <a href="/categories/Tech/">Tech</a>
                             
                         </span>
                     
@@ -159,11 +221,22 @@
         </header>
 
         <div class="post-content">
-            <p>其实昨天晚上，发生了点事儿。</p>
-<p>让我有点意识到，还是要加加油，努把力的。但是又不知道着力点在哪里。</p>
-<p>但是又迫切的，十分迫切的，知道要做点什么。</p>
-<p>希望半年后，可以做到吧，先给自己半年，作为一个milestone的point。</p>
-<p>加油。</p>
+            <h1 id="写一个SAPGUI自助登陆的python脚本程序1⃣️——提出及设计"><a href="#写一个SAPGUI自助登陆的python脚本程序1⃣️——提出及设计" class="headerlink" title="写一个SAPGUI自助登陆的python脚本程序1⃣️——提出及设计"></a>写一个SAPGUI自助登陆的python脚本程序1⃣️——提出及设计</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我们集团总共有5套SAP ECC系统，然后每套呢还分别有生产环境、测试环境、开发环境各一套。<br>也就说，像我这种日常做模块管理的话，生产及测试环境要频繁的切换，经常要反复登录大概八九套的环境。</p>
+<p>SAP GUI登陆，然后不同的CLINET，账密要频繁的输入密码，而且本身后台密码策略也有要求，就你来回切换系统，很麻烦……<br>这个问题其实很困扰用户，所以后来basis做了单点的SSO登录，但是前提是你的客户端电脑要是加域才行。</p>
+<p>我呢，整天用着自己的本本，所以没加域。<br>于是想说做一个自助的登录脚本，方便一些。<br>查询了一圈资料，发现还是有一些方法设计的。就行动起来～</p>
+<h2 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h2><ul>
+<li>最初的思路是抓鼠标的x、y轴坐标，然后使用pyautogui去模拟键鼠的操作，执行鼠标单击、双击、回车、tab、输入文本、上下按键这些操作。<br>但是这样有个问题，就是GUI界面不能动位置，一旦gui窗口换了个位置，坐标定位就会有问题。脚本就会跑错……</li>
+<li>后来呢查询了一圈，发现windows下的程序界面，都会对应到进程服务，都会有一个windows的句柄。<br>那么呢通过抓SAPGUI的句柄，就抓到对应的界面，然后用win32gui库去模拟键盘操作执行。</li>
+<li>这里有个要注意的地方，就是并不是每个界面都能抓到句柄。可能和不同sap client的版本也有关系。<br>我实际最后做下来，有一些公司的测试client，是无法抓到的。我初步判断的是这些测试的client端版本有一些限制，所以抓不到。</li>
+</ul>
+<h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><p>大致实现的步骤：</p>
+<ul>
+<li>打开SAPGUI.exe；抓到登陆gui的句柄。</li>
+<li>在登陆gui里，搜索筛选器中输入登录的client，这里模糊搜索就够了。</li>
+<li>进入client的登陆界面，然后抓到这个的句柄，定位到登陆界面。</li>
+<li>输入账号密码，登陆。</li>
+</ul>
+<p>后面再详细的写一下每一步大概都做了什么。</p>
 
         </div>
 
@@ -185,7 +258,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://tech.hahaalot.com/2022/07/19/seeyousometimes/">http://tech.hahaalot.com/2022/07/19/seeyousometimes/</a></span>
+                        <span><a href="http://tech.hahaalot.com/2022/07/16/SAPGUI自助登陆的python脚本1/">http://tech.hahaalot.com/2022/07/16/SAPGUI自助登陆的python脚本1/</a></span>
                     </p>
                 
                 
@@ -209,7 +282,11 @@
                 <span class="tag">
                     
                     
-                        <a href="/tags/随笔/"># 随笔</a>
+                        <a href="/tags/SAP/"># SAP</a>
+                    
+                        <a href="/tags/Tech/"># Tech</a>
+                    
+                        <a href="/tags/python/"># python</a>
                     
                         
                 </span>
@@ -222,10 +299,10 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2022/07/22/SAPGUI自助登陆的python脚本2/">写一个SAPGUI自助登陆的python脚本程序2⃣——提出及设计</a>
+                <a class="prev" rel="prev" href="/2022/07/19/seeyousometimes/">【随笔】嗯～半年后希望看到你～</a>
             
             
-            <a class="next" rel="next" href="/2022/07/16/SAPGUI自助登陆的python脚本1/">写一个SAPGUI自助登陆的python脚本程序1⃣——提出及设计</a>
+            <a class="next" rel="next" href="/2022/07/09/直接使用SAPGUI进行数据库的表查询/">直接使用SAPGUI进行数据库的表查询</a>
             
         </section>
 
