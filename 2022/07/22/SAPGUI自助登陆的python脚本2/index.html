@@ -13,7 +13,7 @@
 
 
 
-<title>写一个SAPGUI自助登陆的python脚本程序2⃣——提出及设计 | Haha not only a lot</title>
+<title>写一个SAPGUI自助登陆的python脚本程序(2)——句柄抓取 | Haha not only a lot</title>
 
 
 
@@ -196,7 +196,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">写一个SAPGUI自助登陆的python脚本程序2⃣——提出及设计</h1>
+            <h1 class="post-title">写一个SAPGUI自助登陆的python脚本程序(2)——句柄抓取</h1>
             
                 <div class="post-meta">
                     
@@ -221,7 +221,7 @@
         </header>
 
         <div class="post-content">
-            <h1 id="写一个SAPGUI自助登陆的python脚本程序2⃣️——句柄抓取"><a href="#写一个SAPGUI自助登陆的python脚本程序2⃣️——句柄抓取" class="headerlink" title="写一个SAPGUI自助登陆的python脚本程序2⃣️——句柄抓取"></a>写一个SAPGUI自助登陆的python脚本程序2⃣️——句柄抓取</h1><h2 id="何为句柄"><a href="#何为句柄" class="headerlink" title="何为句柄"></a>何为句柄</h2><p>Windows操作系统中的句柄：<br>在windows程序里，各种程序的图标、窗口这些资源，都会在使用时被分配一定的内存去做处理，所以就需要有标识这些资源的符号。<br>叫做<code>handle</code>，译作<code>句柄</code>。</p>
+            <h1 id="写一个SAPGUI自助登陆的python脚本程序-2-——句柄抓取"><a href="#写一个SAPGUI自助登陆的python脚本程序-2-——句柄抓取" class="headerlink" title="写一个SAPGUI自助登陆的python脚本程序(2)——句柄抓取"></a>写一个SAPGUI自助登陆的python脚本程序(2)——句柄抓取</h1><h2 id="何为句柄"><a href="#何为句柄" class="headerlink" title="何为句柄"></a>何为句柄</h2><p>Windows操作系统中的句柄：<br>在windows程序里，各种程序的图标、窗口这些资源，都会在使用时被分配一定的内存去做处理，所以就需要有标识这些资源的符号。<br>叫做<code>handle</code>，译作<code>句柄</code>。</p>
 <p>所以也就是说，每一个电脑开出来的应用程序的窗口，都是有一个handle标识它的，找到它，就能定位到窗口，去做我们想做的操作。</p>
 <h2 id="抓取句柄"><a href="#抓取句柄" class="headerlink" title="抓取句柄"></a>抓取句柄</h2><p>抓句柄，可以通过VisualStudio的工具<code>spy</code>去抓取。<br>如果电脑完整安装了vs的话，那么就可以在安装目录里找到它，位置是在tools的文件夹里，大概是下图的这个位置呢。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/winhandle00.jpg" alt=""></p>
 <p>现在使用spyxx去抓。<br>操作就是使用<code>Find Window</code>，然后拖动capture到想要捕获的窗口上就好了。<br>需要注意的是，比如登陆gui，看上去是一个窗口，但是界面、按钮，甚至筛选器，都对应到不同的句柄。所以要注意capture捕获放置的位置。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/winhandle01.gif" alt=""></p>
@@ -298,6 +298,8 @@
             </div>
         </section>
         <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2022/07/23/SAPGUI自助登陆的python脚本3/">写一个SAPGUI自助登陆的python脚本程序(3)——SAP操作</a>
             
             
             <a class="next" rel="next" href="/2022/07/19/seeyousometimes/">【随笔】嗯～半年后希望看到你～</a>

@@ -13,7 +13,7 @@
 
 
 
-<title>直接使用SAPGUI进行数据库的表查询 | Haha not only a lot</title>
+<title>写一个SAPGUI自助登陆的python脚本程序(3)——SAP操作 | Haha not only a lot</title>
 
 
 
@@ -196,7 +196,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">直接使用SAPGUI进行数据库的表查询</h1>
+            <h1 class="post-title">写一个SAPGUI自助登陆的python脚本程序(3)——SAP操作</h1>
             
                 <div class="post-meta">
                     
@@ -205,14 +205,14 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">七月 9, 2022&nbsp;&nbsp;23:27:08</a>
+                        Date: <a href="#">七月 23, 2022&nbsp;&nbsp;21:11:16</a>
                         </span>
                     
                     
                         <span class="post-category">
                     Category:
                             
-                                <a href="/categories/行业/">行业</a>
+                                <a href="/categories/Tech/">Tech</a>
                             
                         </span>
                     
@@ -221,16 +221,23 @@
         </header>
 
         <div class="post-content">
-            <h1 id="直接使用SAPGUI进行数据库的表查询"><a href="#直接使用SAPGUI进行数据库的表查询" class="headerlink" title="直接使用SAPGUI进行数据库的表查询"></a>直接使用SAPGUI进行数据库的表查询</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>因为一个莫名的需求，想统计一下SAP里，2021年度的所有会计科目在FI凭证中记账使用的次数。<br>😂😂😂😂😂😂😂</p>
-<p>大家都知道的是，凭证行项目明细是记在BSIS和BSAS里的，但是因为凭证量很巨大，哪怕直接在SE11里去查，估计也是无法完全导出的。<br>更何况其实只要count下科目记账的次数就好，SE11里直接按照某科目的条件去计算数量，科目很多的话一个一个科目去计算，很不现实，且GUI大概率会崩掉的。</p>
-<p>这个时候，如果，有一个直接查数据库的功能多好！<br>比如SQLServer的话，微软的SSMS去查，MySQL的话，mysql自己的workbench，就直接写个SQL，就好了。</p>
-<p>记得之前听basis同事说过，有一个TCode可以做SQL的查询，于是我就查了下资料，学习一下。</p>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>TCode：<code>DBACOCKPIT</code><br>事务码进入后，找到<code>SQL Command Editor</code>，标准的路径应该是在<code>Performance–&gt;Additional Functions–&gt;SQL Command Editor</code>，也可能自己公司配置的问题，地址有差异。</p>
-<p>进入后在<code>SQL Code</code>视图输入sql的语句就可以了。<br>（这个语句应该是根据当前SQL对应的DB来写的，比如数据库如果是SQLServer，那要用sqlserver的sql。不是ABAP里的数据表查询语法。）<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/gui01.png" alt=""><br>输入好后，执行execute，<br>就会在<code>Output</code>视图里，看到执行结果。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/gui02.png" alt=""></p>
-<p>可以看到哈，我就是做了个所有科目的记账数量的count。这种查法在sap gui里是不可能通过se11的表查询实现的。</p>
-<p>所以这个code一定程度上还是非常好用的。</p>
-<p>哦，对了，要补充一下，这个code可能要生产机上做授权才能使用。毕竟能查的东西太多了。</p>
-<p><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
+            <h1 id="写一个SAPGUI自助登陆的python脚本程序-3-——SAP操作"><a href="#写一个SAPGUI自助登陆的python脚本程序-3-——SAP操作" class="headerlink" title="写一个SAPGUI自助登陆的python脚本程序(3)——SAP操作"></a>写一个SAPGUI自助登陆的python脚本程序(3)——SAP操作</h1><h2 id="SAP脚本抓取"><a href="#SAP脚本抓取" class="headerlink" title="SAP脚本抓取"></a>SAP脚本抓取</h2><p>打开了对应的client以后，就涉及到了，输入登录账号的工作了。</p>
+<p>在sap程序上操作是需要使用sap的脚本的，如在哪个位置输入账号和密码，对应的值是什么，映射到sap的程序执行上的脚本怎么跑的，这个我们是不知道的。<br>SAP本身提供了一些外部直接调用的gui的api，但是使用方法需要参考官方的说明去研究，挺麻烦的。</p>
+<p>我呢，搜寻了多方资料，找到了一个大家推荐的工具，可以在GUI上操作时，自动的抓取映射出的操作脚本，这样就会方便很多。</p>
+<p>SAP博客站的一个著名博主：Stefan Schnell（他写了很多sap script与其他语言结合的文章，非常受用）以及他开发的免费的sap脚本工具：<br><a href="https://blogs.sap.com/2014/11/20/scripting-tracker-development-tool-for-sap-gui-scripting/" target="_blank" rel="noopener">Scripting Tracker – Development Tool for SAP GUI Scripting</a><br>内含scripting Tracker的<a href="https://tracker.stschnell.de/" target="_blank" rel="noopener">下载链接</a></p>
+<p>总之呀，这个工具真的肥肠的霸道呀，我自己测试了后，简直有种顶礼膜拜的感觉。<br>你在sapgui上所有的操作，都可用它抓出来脚本，然后就可以自己写一些自动化的程序了。<br>真的是肥肠的霸道呀！！！</p>
+<h2 id="ScriptingTracker用一用"><a href="#ScriptingTracker用一用" class="headerlink" title="ScriptingTracker用一用"></a>ScriptingTracker用一用</h2><p>ScriptingTracker有录制操作生成脚本的功能，并且支持python、java、powerShell等脚本语言导出。所以就对我们很友好啦。</p>
+<p>首先我们进入后，先做一下<code>scan</code>，会扫出在运行的gui的进程。<br>然后进入<code>Recorder</code>视图，<br>选取到扫出来的sap session，选择要输出的脚本语言（我写python脚本，就选择python）。然后开始录制。<br>这时候在sapgui上操作就可以了，输入账号密码回车确认，就会发现recorder同步录制到了操作脚本。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/sapscript01.gif" alt=""></p>
+<p>录制到的脚本，有一些是实际上不需要的，所以需要后期依据需要做一些删减。</p>
+<h2 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h2><p>要考虑到一种情况，<br>比如，我已经登陆了2个client了，但是我现在要登陆第3个，<br>那么我在获取这第三个client的登陆窗口时，就要判断下找到的是它，而不是选到了另外2个client的窗口，否则输入账号密码肯定是会报错的。</p>
+<p>还有要注意脚本跑的会很快，但是程序的窗口上的操作时有时间延时的，所以需要在脚本上注意加一些时间的buffer空闲。</p>
+<h2 id="相关代码"><a href="#相关代码" class="headerlink" title="相关代码"></a>相关代码</h2><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">SapGuiAuto = win32com.client.GetObject("SAPGUI")        # 抓取对象</span><br><span class="line">if not type(SapGuiAuto) == win32com.client.CDispatch:</span><br><span class="line">    return</span><br><span class="line"></span><br><span class="line">application = SapGuiAuto.GetScriptingEngine</span><br><span class="line">if not type(application) == win32com.client.CDispatch:</span><br><span class="line">    SapGuiAuto = None</span><br><span class="line">    return</span><br><span class="line"></span><br><span class="line"># 会检测当前的连接，如果存在连接，即application.Children(0)已经有了。则后面session输入账号密码就会报错。</span><br><span class="line"># 所以优化下，判断当前application.Children(n+1)是否存在，存在，则加1。</span><br><span class="line"># 需要注意的是Children(0)是一定有的，不会不存在。检查的是下一个Children(n+1)是否存在，不存在，就取出Children(n)，这个有点绕。</span><br><span class="line">n = 0</span><br><span class="line">while True:</span><br><span class="line">    try:</span><br><span class="line">        application.Children(n+1)</span><br><span class="line">    except:</span><br><span class="line">        break</span><br><span class="line">    n += 1</span><br><span class="line"># connection = application.Children(0)</span><br><span class="line">connection = application.Children(n)</span><br><span class="line">if not type(connection) == win32com.client.CDispatch:</span><br><span class="line">    application = None</span><br><span class="line">    SapGuiAuto = None</span><br><span class="line">    return</span><br><span class="line">time.sleep(2)</span><br><span class="line"></span><br><span class="line">flag=0</span><br><span class="line">while flag==0:</span><br><span class="line">    try:</span><br><span class="line">        session = connection.Children(0)</span><br><span class="line">        flag=1</span><br><span class="line">    except:</span><br><span class="line">        time.sleep(0.5)</span><br><span class="line">        </span><br><span class="line">if not type(session) == win32com.client.CDispatch:</span><br><span class="line">    connection = None</span><br><span class="line">    application = None</span><br><span class="line">    SapGuiAuto = None</span><br><span class="line">    return</span><br><span class="line">session.findById("wnd[0]/usr/txtRSYST-BNAME").text = id     #SAP登陆用户名</span><br><span class="line">session.findById("wnd[0]/usr/pwdRSYST-BCODE").text = pwd     #SAP登陆密码</span><br><span class="line">session.findById("wnd[0]").sendVKey(0)</span><br></pre></td></tr></tbody></table></figure>
+<p>代码的部分说明：</p>
+<ul>
+<li>代码里可以看到，定义了4个变量，在来回的用。<br><code>connection、application、SapGuiAuto、session</code>这个怎么理解呢？<br>我们是要做一些判断的，这样才能找到正确的窗口。<br>可以简单这么理解，SapGuiAuto是用来找gui的程序，application对应client界面，connection对应client里新的界面，session是最后找到的输入账号密码的窗口。</li>
+</ul>
+<p>好啦，这样子sap界面的脚本执行操作，这部分的代码也差不多就这样了。<br>基本上两个大的代码段——句柄&amp;SAP，就完事了。</p>
+<p>后面展示下成品的效果吧。</p>
 
         </div>
 
@@ -252,7 +259,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://tech.hahaalot.com/2022/07/09/直接使用SAPGUI进行数据库的表查询/">http://tech.hahaalot.com/2022/07/09/直接使用SAPGUI进行数据库的表查询/</a></span>
+                        <span><a href="http://tech.hahaalot.com/2022/07/23/SAPGUI自助登陆的python脚本3/">http://tech.hahaalot.com/2022/07/23/SAPGUI自助登陆的python脚本3/</a></span>
                     </p>
                 
                 
@@ -278,9 +285,9 @@
                     
                         <a href="/tags/SAP/"># SAP</a>
                     
-                        <a href="/tags/行业/"># 行业</a>
-                    
                         <a href="/tags/Tech/"># Tech</a>
+                    
+                        <a href="/tags/python/"># python</a>
                     
                         
                 </span>
@@ -293,10 +300,10 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2022/07/16/SAPGUI自助登陆的python脚本1/">写一个SAPGUI自助登陆的python脚本程序(1)——提出及设计</a>
+                <a class="prev" rel="prev" href="/2022/07/24/SAPGUI自助登陆的python脚本4/">写一个SAPGUI自助登陆的python脚本程序(4)——最终效果</a>
             
             
-            <a class="next" rel="next" href="/2022/07/08/yonyoucloud开放平台自建应用接入demo/">yonyoucloud开放平台自建应用接入demo</a>
+            <a class="next" rel="next" href="/2022/07/22/SAPGUI自助登陆的python脚本2/">写一个SAPGUI自助登陆的python脚本程序(2)——句柄抓取</a>
             
         </section>
 

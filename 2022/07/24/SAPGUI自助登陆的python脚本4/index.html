@@ -13,7 +13,7 @@
 
 
 
-<title>【随笔】嗯～半年后希望看到你～ | Haha not only a lot</title>
+<title>写一个SAPGUI自助登陆的python脚本程序(4)——最终效果 | Haha not only a lot</title>
 
 
 
@@ -130,11 +130,73 @@
             <div class="container">
     
     
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">【随笔】嗯～半年后希望看到你～</h1>
+            <h1 class="post-title">写一个SAPGUI自助登陆的python脚本程序(4)——最终效果</h1>
             
                 <div class="post-meta">
                     
@@ -143,14 +205,14 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">七月 19, 2022&nbsp;&nbsp;17:36:45</a>
+                        Date: <a href="#">七月 24, 2022&nbsp;&nbsp;17:30:00</a>
                         </span>
                     
                     
                         <span class="post-category">
                     Category:
                             
-                                <a href="/categories/随笔/">随笔</a>
+                                <a href="/categories/Tech/">Tech</a>
                             
                         </span>
                     
@@ -159,11 +221,14 @@
         </header>
 
         <div class="post-content">
-            <p>其实昨天晚上，发生了点事儿。</p>
-<p>让我有点意识到，还是要加加油，努把力的。但是又不知道着力点在哪里。</p>
-<p>但是又迫切的，十分迫切的，知道要做点什么。</p>
-<p>希望半年后，可以做到吧，先给自己半年，作为一个milestone的point。</p>
-<p>加油。</p>
+            <h1 id="写一个SAPGUI自助登陆的python脚本程序-4-——最终效果"><a href="#写一个SAPGUI自助登陆的python脚本程序-4-——最终效果" class="headerlink" title="写一个SAPGUI自助登陆的python脚本程序(4)——最终效果"></a>写一个SAPGUI自助登陆的python脚本程序(4)——最终效果</h1><h2 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h2><p><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/sapguipy.gif" alt=""></p>
+<p>可以看到哈，我其实有做了一些修饰的。<br>把常用到的client先定义好，然后执行脚本时，选择要登陆的client序号，<br>就可以了。<br>如果输入的序号不对，那么就返回报错。</p>
+<p>然后账号和密码预先定义在程序里。<br>后续改密码的话，就把程序里的密码改掉。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这个程序呢，其实是我21年的时候就写好了的。🤪🤪<br>一直没有码写一段说明去讲讲逻辑，整个的过程，写这几篇文章，自己对着代码部分还捋了一遍逻辑。😳<br>写下来，留给自己看，毕竟记录了一部分成长。🧐🧐<br>如果有缘人看到了，能有一点启发和帮助，那可能就更好了。🥰</p>
+<p>当时真的花了好多心力去研究代码和逻辑，特别是抓窗口的逻辑，很多种情况要考虑，然后不断的测试，精简代码，<br>最后的成品，代码量其实很少的，120+行左右吧。但是真的是精炼了好多才出来的。</p>
+<p>后来呢，我真的是一直在用它，直到现在我每天也是会先打开powershell，时候准备去跑它。<br>因为我工作基本九成的操作是要在SAP里操作的，有了这个程序后，真的省掉了我超级超级超级多的时间，以往不停的输入账号密码，现在再也不需要了。<br>真的用起来溜极了……我甚至觉得比basis配置的sso登陆都丝滑。<br>而且每每同事看到我这么骚的登陆操作后，都有点惊讶。有种低调的高级感油然而生呀。</p>
+<p>玩python呢，纯粹就是自学自己搞着玩的，<br>但是慢慢发现通过自己的实践，在慢慢的给自己的工作和生活上带来一点一点的便捷和实用感，真的还是蛮有成就感的。🤠🤠🤠</p>
+<p>继续加油。⛽️⛽️</p>
 
         </div>
 
@@ -185,7 +250,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://tech.hahaalot.com/2022/07/19/seeyousometimes/">http://tech.hahaalot.com/2022/07/19/seeyousometimes/</a></span>
+                        <span><a href="http://tech.hahaalot.com/2022/07/24/SAPGUI自助登陆的python脚本4/">http://tech.hahaalot.com/2022/07/24/SAPGUI自助登陆的python脚本4/</a></span>
                     </p>
                 
                 
@@ -209,7 +274,11 @@
                 <span class="tag">
                     
                     
-                        <a href="/tags/随笔/"># 随笔</a>
+                        <a href="/tags/SAP/"># SAP</a>
+                    
+                        <a href="/tags/Tech/"># Tech</a>
+                    
+                        <a href="/tags/python/"># python</a>
                     
                         
                 </span>
@@ -222,10 +291,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2022/07/22/SAPGUI自助登陆的python脚本2/">写一个SAPGUI自助登陆的python脚本程序(2)——句柄抓取</a>
             
-            
-            <a class="next" rel="next" href="/2022/07/16/SAPGUI自助登陆的python脚本1/">写一个SAPGUI自助登陆的python脚本程序(1)——提出及设计</a>
+            <a class="next" rel="next" href="/2022/07/23/SAPGUI自助登陆的python脚本3/">写一个SAPGUI自助登陆的python脚本程序(3)——SAP操作</a>
             
         </section>
 
