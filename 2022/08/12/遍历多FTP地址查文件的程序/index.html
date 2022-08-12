@@ -13,7 +13,7 @@
 
 
 
-<title>写一个SAPGUI自助登陆的python脚本程序(4)——最终效果 | Haha not only a lot</title>
+<title>搞个遍历多FTP地址查文件的程序 | Haha not only a lot</title>
 
 
 
@@ -196,7 +196,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">写一个SAPGUI自助登陆的python脚本程序(4)——最终效果</h1>
+            <h1 class="post-title">搞个遍历多FTP地址查文件的程序</h1>
             
                 <div class="post-meta">
                     
@@ -205,7 +205,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">七月 24, 2022&nbsp;&nbsp;17:30:00</a>
+                        Date: <a href="#">八月 12, 2022&nbsp;&nbsp;23:52:40</a>
                         </span>
                     
                     
@@ -221,14 +221,23 @@
         </header>
 
         <div class="post-content">
-            <h1 id="写一个SAPGUI自助登陆的python脚本程序-4-——最终效果"><a href="#写一个SAPGUI自助登陆的python脚本程序-4-——最终效果" class="headerlink" title="写一个SAPGUI自助登陆的python脚本程序(4)——最终效果"></a>写一个SAPGUI自助登陆的python脚本程序(4)——最终效果</h1><h2 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h2><p><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/sapguipy.gif" alt=""></p>
-<p>可以看到哈，我其实有做了一些修饰的。<br>把常用到的client先定义好，然后执行脚本时，选择要登陆的client序号，<br>就可以了。<br>如果输入的序号不对，那么就返回报错。</p>
-<p>然后账号和密码预先定义在程序里。<br>后续改密码的话，就把程序里的密码改掉。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这个程序呢，其实是我21年的时候就写好了的。🤪🤪<br>一直没有码写一段说明去讲讲逻辑，整个的过程，写这几篇文章，自己对着代码部分还捋了一遍逻辑。😳<br>写下来，留给自己看，毕竟记录了一部分成长。🧐🧐<br>如果有缘人看到了，能有一点启发和帮助，那可能就更好了。🥰</p>
-<p>当时真的花了好多心力去研究代码和逻辑，特别是抓窗口的逻辑，很多种情况要考虑，然后不断的测试，精简代码，<br>最后的成品，代码量其实很少的，120+行左右吧。但是真的是精炼了好多才出来的。</p>
-<p>后来呢，我真的是一直在用它，直到现在我每天也是会先打开powershell，时候准备去跑它。<br>因为我工作基本九成的操作是要在SAP里操作的，有了这个程序后，真的省掉了我超级超级超级多的时间，以往不停的输入账号密码，现在再也不需要了。<br>真的用起来溜极了……我甚至觉得比basis配置的sso登陆都丝滑。<br>而且每每同事看到我这么骚的登陆操作后，都有点惊讶。有种低调的高级感油然而生呀。</p>
-<p>玩python呢，纯粹就是自学自己搞着玩的，<br>但是慢慢发现通过自己的实践，在慢慢的给自己的工作和生活上带来一点一点的便捷和实用感，真的还是蛮有成就感的。🤠🤠🤠</p>
-<p>继续加油。⛽️⛽️</p>
+            <h1 id="搞个遍历多FTP地址查文件的程序"><a href="#搞个遍历多FTP地址查文件的程序" class="headerlink" title="搞个遍历多FTP地址查文件的程序"></a>搞个遍历多FTP地址查文件的程序</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我们有这样一个场景，就是业务那边会用高拍仪，拍各种票。然后生成pdf的影像件，最后影像件放到FTP服务器里做归档管理。<br>这个影像件每天都很多，每天有，所以就导致FTP文件非常非常的多。<br>存到是还好，可是当要找某个文件的时候，就会很麻烦。<br>FTP本身无法实现全盘检索，只能在目录文件夹里，去检索文件。<br>也就是说，当我不确定文件在哪个文件夹，只是知道一个文件名字，找到他就非常非常的难受了……</p>
+<p>之前这种情况，我都是联系后台同事，帮忙在FTP的服务器上，在服务器上进行全盘检索。<br>但是每次都这么做，就很不好，因为毕竟经常麻烦别人很不好。</p>
+<p>所以我决定，研究出一个查询的程序～🧐🧐</p>
+<h2 id="设计"><a href="#设计" class="headerlink" title="设计"></a>设计</h2><p>查了查资料，python有一个支持FTP的库——ftplib。<br>我简单测试了下，大概知道咋用了。</p>
+<p>计划大概的思路呢，<br>维护一个外部的配置文件，在里面放入多个FTP地址，以及账密。</p>
+<p>程序呢，入参为要找的文件名字，<br>遍历每个FTP地址，每个FTP里，遍历所有的子文件夹及子子文件夹，去里面匹配文件名。<br>找到后，即将文件copy到本地。未找到，则记录不存在。<br>同时增加一个log文件，去记录搜寻的信息。</p>
+<p>嗯，开工～🤠🤠</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>这个逻辑呀，有一个很绕的地方，就是文件夹的层级不规则，路径不规则。<br>我开始没想到竟然这么不规则……<br>比如，有这样的路径：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/ftpftp01.png" alt=""><br>也有这样的：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/ftpftp02.png" alt=""><br>还有这样的：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/ftpftp03.png" alt=""><br>这样的：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/ftpftp04.png" alt=""><br>所以开始我一直没想明白我要怎么去写循环，因为ftp里没有类似于tree的功能，必须进入一个路径，ftp.nlst()才能知道子文件夹有哪些。<br>也就是说，我要不停的进路径，获取子地址，再进子地址，获取新的子地址……</p>
+<p>另外，目前ftplib库的用法里，无法区分出来文件和文件夹。<br>也就是说，我必须要进入到每个文件夹里，获取所有子项，然后再进入，能进入的，就是文件夹，无法进入的，就是文件。只能通过这个逻辑去判断文件。</p>
+<h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>真的这个代码，写的贼累……<br>因为例外的情况实在是太多太多了。<br>基本上写完，测试，发现其他情况没考虑到……增加逻辑，写完，测试，又发现新的情况出现了……<br>真的写的贼累，而且我感觉大脑起飞了，为了简化代码，完善逻辑，各种循环和判断，<br>嗯，不过最后还是写出来了呢……</p>
+<p>代码打算单独再找时间写进来，还有一些逻辑的说明。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>FTP的处理，主要用到了<code>ftplib</code>这个库。<br>官方使用参考：<a href="https://docs.python.org/zh-cn/3/library/ftplib.html#module-ftplib" target="_blank" rel="noopener">ftplib</a>  — FTP 协议客户端</p>
+<h2 id="遇到的一个问题"><a href="#遇到的一个问题" class="headerlink" title="遇到的一个问题"></a>遇到的一个问题</h2><p>这个呢，我必须写进来！<br>我查资料的时候，抓取ftp文件及文件夹，可以使用一个<code>FTP.mlsd()</code>的方法。通过它可以做些判断，判断抓取到的content是文件夹还是文件。<br>我开始也没细研究它，就是照着用，结果一直报错一直报错……我就各种翻查资料看是不是我写法不对，又甚至找资料把这个方法的说明都仔细学习了一遍……然后各种测试，就还是不ok。<br>做了各种分析，然后查报错，终于最后发现，mlsd的方法，不是所有FTP服务器都支持的…特别是IIS发布的，不支持……而我要连的FTP服务还真真就是IIS发布出来的……简直让我大无语呀……<br>所以我一定要把这个记下来！可能做完这个程序，我就一段时间不会鼓捣ftp的事情了，但是这个让我痛彻心扉的问题，要记住。<br>🤔🤔🤔🤔🤔🤔🤔</p>
+<p>测试了好多场景，然后其中的一个报错：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/ftpftp05.png" alt=""><br>也是查这个报错的资料，终于发现了个靠谱的答复：<br> <a href="https://stackoverflow.com/questions/49528887/ftplib-mlsd-command-gives-500-unknown-command" target="_blank" rel="noopener">ftplib MLSD command gives 500 Unknown command</a> </p>
+<h2 id="又遇到的问题"><a href="#又遇到的问题" class="headerlink" title="又遇到的问题"></a>又遇到的问题</h2><p>因为我程序设计的场景是只知道文件名去遍历查找，但是实际执行时发现，由于FTP地址里的项目实在是太多太多太多了，遍历一遍要跑非常非常非常的久……我测试去找了一个很深层级的文件夹里的文件，结果跑了将近3h，还没找到它，FTP Server就给我强制关闭连接了……<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/ftpftp06.png" alt=""><br>这我是万万没想到的呀……<br>这到底是多少的子项目呀，跑了这么久还没跑完……最后还被ftp服务踢出来了……<br>😱😱😱😱😱😱😱<br>后来呢，我又在晚上跑了一次，这次成功了，找到文件之前，扫描到了<code>350356</code>个项目（基本上99%应该都是文件），耗时7小时47分钟……<br>我真的要裂开了😳😳😳<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/ftpftp07.png" alt=""><br>但是呢，此时程序还没有完全把FTP的内容遍历完毕。也就是说，实际的文件数是更多。<br>这个呢，我想了想，还是做成查询了比如10000个子项目后，就关闭FTP连接，然后再登录进去，接着查询的方式。防止服务器终止访问，可能更保险一点。<br>最后终于还是写出来了。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/ftpftp08.png" alt=""></p>
+<p>我最后测试了一下搜索一个不存在的文件，<br>程序逻辑里，会将FTP遍历完，找不到最后就print不存在文件。于是，就把所有的文件遍历到了……<br>由于我重新调整了逻辑，这次遍历全盘的时间竟然才2h。不过，最后计的文件数约是<code>208W</code>……🤣🤣🤣🤣🤣🤣<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/ftpftp09.png" alt=""></p>
+<p>我真的服了自己了，竟然又给自己搞了这么一个大坑的事情去做。</p>
 
         </div>
 
@@ -250,7 +259,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://tech.hahaalot.com/2022/07/24/SAPGUI自助登陆的python脚本4/">http://tech.hahaalot.com/2022/07/24/SAPGUI自助登陆的python脚本4/</a></span>
+                        <span><a href="http://tech.hahaalot.com/2022/08/12/遍历多FTP地址查文件的程序/">http://tech.hahaalot.com/2022/08/12/遍历多FTP地址查文件的程序/</a></span>
                     </p>
                 
                 
@@ -274,11 +283,11 @@
                 <span class="tag">
                     
                     
-                        <a href="/tags/SAP/"># SAP</a>
-                    
                         <a href="/tags/Tech/"># Tech</a>
                     
                         <a href="/tags/python/"># python</a>
+                    
+                        <a href="/tags/FTP/"># FTP</a>
                     
                         
                 </span>
@@ -291,10 +300,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2022/08/12/遍历多FTP地址查文件的程序/">搞个遍历多FTP地址查文件的程序</a>
             
-            
-            <a class="next" rel="next" href="/2022/07/23/SAPGUI自助登陆的python脚本3/">写一个SAPGUI自助登陆的python脚本程序(3)——SAP操作</a>
+            <a class="next" rel="next" href="/2022/07/24/SAPGUI自助登陆的python脚本4/">写一个SAPGUI自助登陆的python脚本程序(4)——最终效果</a>
             
         </section>
 
