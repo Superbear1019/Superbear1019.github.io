@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Konta">
+
+
+    <meta name="subtitle" content="Superbear Tech Blog">
+
+
+
+
+<title>遍历FTP地址查文件的程序(code) | Haha not only a lot</title>
+
+
+
+    <link rel="icon" href="/favicon_haha.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Superbear&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">文章</a>
+                
+                    <a class="menu-item" href="/categories/Tech">Tech</a>
+                
+                    <a class="menu-item" href="/categories/Lib">实验</a>
+                
+                    <a class="menu-item" href="/categories/行业">行业</a>
+                
+                    <a class="menu-item" href="/categories/随笔">生活</a>
+                
+                    <a class="menu-item" href="/categories/随笔">随笔</a>
+                
+                    <a class="menu-item" href="/tag">标签</a>
+                
+                    <a class="menu-item" href="https://support.qq.com/product/153140">留言吐槽</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Superbear&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">文章</a>
+                
+                    <a class="menu-item" href="/categories/Tech">Tech</a>
+                
+                    <a class="menu-item" href="/categories/Lib">实验</a>
+                
+                    <a class="menu-item" href="/categories/行业">行业</a>
+                
+                    <a class="menu-item" href="/categories/随笔">生活</a>
+                
+                    <a class="menu-item" href="/categories/随笔">随笔</a>
+                
+                    <a class="menu-item" href="/tag">标签</a>
+                
+                    <a class="menu-item" href="https://support.qq.com/product/153140">留言吐槽</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">遍历FTP地址查文件的程序(code)</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Konta</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">八月 14, 2022&nbsp;&nbsp;16:27:43</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/Tech/">Tech</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h1 id="【Tech】遍历FTP地址查文件的程序"><a href="#【Tech】遍历FTP地址查文件的程序" class="headerlink" title="【Tech】遍历FTP地址查文件的程序"></a>【Tech】遍历FTP地址查文件的程序</h1><h2 id="唉"><a href="#唉" class="headerlink" title="唉"></a>唉</h2><p>不想说太多了，真的太费脑子了。<br>直接上核心部分的代码：<br></p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br></pre></td><td class="code"><pre><span class="line">def list_all_dir_find_first(ftp, ls_items, ls_files, file):</span><br><span class="line">    """</span><br><span class="line">    本意是查询所有的文件夹，顺便判断一下文件，匹配文件。</span><br><span class="line">    但考虑到一种情况，即如果查询多个文件，则每个文件都用这个方法去查，会耗用很多时间。</span><br><span class="line">    假设找3个文件，3个文件都在非常后面的文件夹深处，时间就会非常的长。</span><br><span class="line">    所以做了些优化，当第一个文件查出来时，其实大部分的文件夹已经遍历完毕，且已经区分出来一些文件了。</span><br><span class="line">    此时如果查询第二个及之后的文件，先去筛出来的文件里找，存在的话，就会找得很快；</span><br><span class="line">    即使没找到，再在第一次找的剩余项目（文件or文件夹都可能有）里接着去遍历，也会很快。</span><br><span class="line">    所以这么去设计做了一下子更新。</span><br><span class="line">    """</span><br><span class="line">    """</span><br><span class="line">    更新：实际执行时，ftp server会有超时时间。</span><br><span class="line">    查询的文件如果比较深，可能几个小时都没定位到，就被server端提出来了。</span><br><span class="line">    所以要考虑执行的次数，达到某个次数时，退出ftp，再重新登录，继续查找。</span><br><span class="line">    """</span><br><span class="line">    ftp = ftp</span><br><span class="line">    ls_dir, backup_files = ls_items, ls_files</span><br><span class="line">    file = file</span><br><span class="line">    backup_dir = []</span><br><span class="line">    </span><br><span class="line">    # 判断是否是初次执行，是的话，要从"/"根目录开始遍历</span><br><span class="line">    if len(ls_dir) != 0:</span><br><span class="line">        addr = ls_dir.pop(0)</span><br><span class="line">    else:</span><br><span class="line">        addr = ""</span><br><span class="line"></span><br><span class="line">    # 这里目的是：再次执行此函数的话，防止ls_items队列里首位是一个文件</span><br><span class="line">    # 是文件的话，就要判断，并将文件名放入ls_files里。</span><br><span class="line">    # 然后再从队列里取首位，再判断是不是文件。</span><br><span class="line">    kl = ''</span><br><span class="line">    while kl == '':</span><br><span class="line">        try:</span><br><span class="line">            ftp.cwd(addr)</span><br><span class="line">            kl = 'OK'</span><br><span class="line">            </span><br><span class="line">        except error_perm:</span><br><span class="line">            backup_files.append(addr)</span><br><span class="line">            if file == addr.split('/')[-1]:</span><br><span class="line">                return addr, ls_dir, backup_files</span><br><span class="line">                </span><br><span class="line">            if len(ls_dir) != 0:</span><br><span class="line">                addr = ls_dir.pop(0)</span><br><span class="line">            else:</span><br><span class="line">                return addr, ls_dir, backup_files</span><br><span class="line"></span><br><span class="line">            print("f: ", len(backup_files))</span><br><span class="line"></span><br><span class="line">    sub_dir = ftp.nlst()</span><br><span class="line"></span><br><span class="line">    count = 0</span><br><span class="line">    while (len(sub_dir) != 0 or len(ls_dir) != 0) and count &lt; 100:</span><br><span class="line">        addr = ftp.pwd()</span><br><span class="line">        sub_dir = [addr + "/" + s for s in sub_dir]</span><br><span class="line">        ls_dir = ls_dir + sub_dir</span><br><span class="line"></span><br><span class="line">        lhd = ls_dir.pop(0)</span><br><span class="line"></span><br><span class="line">        try:</span><br><span class="line">            ftp.cwd(lhd)</span><br><span class="line">            sub_dir = ftp.nlst()</span><br><span class="line">            backup_dir.append(lhd)          # 判断是文件夹放入backupdir</span><br><span class="line">        except error_perm:</span><br><span class="line">            # 如果无法进入，说明当前要进入的路径不是文件夹，而是子文件了。</span><br><span class="line">            # 则此时就判断文件名是否为我们要查询的。</span><br><span class="line">            backup_files.append(lhd)        # 判断是文件则放入backupfiles</span><br><span class="line">            if file == lhd.split('/')[-1]:</span><br><span class="line">                break</span><br><span class="line">            else:</span><br><span class="line">                sub_dir = []</span><br><span class="line">        count = count + 1                   # 重复次数，当达到数量后退出循环</span><br><span class="line">        print("Files: ", len(backup_files))</span><br><span class="line"></span><br><span class="line">    print("Current location or file: ", lhd)</span><br><span class="line">    print("Number of detected files: ", len(backup_files))</span><br><span class="line"></span><br><span class="line">    return lhd, ls_dir, backup_files</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def main():</span><br><span class="line">    files = input("\n文件名：")</span><br><span class="line"></span><br><span class="line">    files = re.split("[，.,。]", files)       # 防止输入的符号有问题，对多个分隔符号做切割。</span><br><span class="line">    files = list(filter(lambda x : x != "pdf", files))      # 防止输入了文件后缀名，将pdf排除</span><br><span class="line">    print("\n本次要进行查询的文件如下：", files)</span><br><span class="line">    # ##########################################################################</span><br><span class="line">    # 上面的部分没啥用</span><br><span class="line">    # 下面是主要的逻辑部分</span><br><span class="line">    # ##########################################################################</span><br><span class="line">    with open("ftpconfig.cfg", "r") as f:</span><br><span class="line">        conf_string = json.load(f)</span><br><span class="line">    localpath = conf_string["localpath"]</span><br><span class="line">    querylog = conf_string["querylog"]</span><br><span class="line">    ftp_addr = conf_string["ftp_addr"]</span><br><span class="line"></span><br><span class="line">    ftp_info = ftp_addr.pop(0)</span><br><span class="line">    host = ftp_info["host"]</span><br><span class="line">    port = ftp_info["port"]</span><br><span class="line">    username = ftp_info["username"]</span><br><span class="line">    password = ftp_info["password"]</span><br><span class="line"></span><br><span class="line">    ftp = ftpconnect(host, port, username, password)</span><br><span class="line"></span><br><span class="line">    start = datetime.datetime.now()</span><br><span class="line"></span><br><span class="line">    # 下面的执行函数，是核心的部分，逻辑非常非常非常的绕。</span><br><span class="line">    # 因为考虑到了很多种情况。比如查询多少个文件后就要退出来，重复进入接着查等等。</span><br><span class="line">    </span><br><span class="line">    file = files.pop(0)</span><br><span class="line">    file = file + ".pdf"</span><br><span class="line">    files_remained = []</span><br><span class="line">    # 第一次进入函数查询。</span><br><span class="line">    ls_items, ls_files = [], []</span><br><span class="line">    file_out, ls_items, ls_files = list_all_dir_find_first(ftp, ls_items, ls_files, file)</span><br><span class="line">    ftp.quit()</span><br><span class="line"></span><br><span class="line">    print("------------------------")</span><br><span class="line"></span><br><span class="line">    while file_out.split('/')[-1] != file and ls_items != []:</span><br><span class="line">        ftp = ftpconnect(host, port, username, password)</span><br><span class="line">        file_out, ls_items, ls_files = list_all_dir_find_first(ftp, ls_items, ls_files, file)</span><br><span class="line">        ftp.quit()</span><br><span class="line">        print("------------------------")</span><br><span class="line"></span><br><span class="line">    end = datetime.datetime.now()</span><br><span class="line"></span><br><span class="line">    print("------------------------")</span><br><span class="line">    if file_out.split('/')[-1] == file:</span><br><span class="line">        print('Finding file takes:[{}]'.format((end - start).seconds))</span><br><span class="line">        query_log_writer(querylog, file, file_out, start, end, "Yes")</span><br><span class="line">    else:</span><br><span class="line">        print('No File Founded:[{}]'.format((end - start).seconds))</span><br><span class="line">        query_log_writer(querylog, file, file_out, start, end, "No")</span><br><span class="line">        files_remained.append(file)</span><br><span class="line">    print("------------------------")</span><br><span class="line"></span><br><span class="line">    ftp = ftpconnect(host, port, username, password)</span><br><span class="line">    downloadfile(ftp, file_out, localpath)</span><br><span class="line">    ftp.quit()</span><br><span class="line"></span><br><span class="line">    # 如要找2个或2个以上的文件时，则执行下面的代码。</span><br><span class="line">    # 之所以没有和之前的代码，单文件找，代码在一个循环里，是因为逻辑不一样。</span><br><span class="line">    # 只查1个文件时，或者查多个文件，查找第一个文件时，是要初始遍历的。</span><br><span class="line">    # 但是查第二个文件时，从第一次遍历的输出文件list中先去找，这样就会更快速。</span><br><span class="line">    while len(files) != 0:</span><br><span class="line">        start = datetime.datetime.now()</span><br><span class="line">        file = files.pop(0)</span><br><span class="line">        file = file + ".pdf"</span><br><span class="line"></span><br><span class="line">        # 先在第一次遍历的输出文件list中先去找</span><br><span class="line">        for i in ls_files:</span><br><span class="line">            if i.split('/')[-1] == file:</span><br><span class="line">               break</span><br><span class="line">            else:</span><br><span class="line">                pass</span><br><span class="line">        if i.split('/')[-1] == file:</span><br><span class="line">            end = datetime.datetime.now()</span><br><span class="line">            print("------------------------")</span><br><span class="line">            print('Finding file takes:[{}]'.format((end - start).seconds))</span><br><span class="line">            query_log_writer(querylog, file, i, start, end, "Yes")</span><br><span class="line"></span><br><span class="line">            ftp = ftpconnect(host, port, username, password)</span><br><span class="line">            downloadfile(ftp, i, localpath)</span><br><span class="line">            ftp.quit()</span><br><span class="line"></span><br><span class="line">        # 没找到的话，则重新跑list_all_dir_find_first函数，去找。</span><br><span class="line">        elif ls_items == []:</span><br><span class="line">            end = datetime.datetime.now()</span><br><span class="line">            print("------------------------")</span><br><span class="line">            print('No File Founded:[{}]'.format((end - start).seconds))</span><br><span class="line">            query_log_writer(querylog, file, i, start, end, "No")</span><br><span class="line">            files_remained.append(file)</span><br><span class="line">        else: </span><br><span class="line">            ftp = ftpconnect(host, port, username, password)</span><br><span class="line">            file_out, ls_items, ls_files = list_all_dir_find_first(ftp, ls_items, ls_files, file)</span><br><span class="line">            ftp.quit()</span><br><span class="line">            print("------------------------")</span><br><span class="line">            while file_out.split('/')[-1] != file and ls_items != []:</span><br><span class="line">                ftp = ftpconnect(host, port, username, password)</span><br><span class="line">                file_out, ls_items, ls_files = list_all_dir_find_first(ftp, ls_items, ls_files, file)</span><br><span class="line">                ftp.quit()</span><br><span class="line">                print("------------------------")</span><br><span class="line"></span><br><span class="line">            end = datetime.datetime.now()</span><br><span class="line">            print("------------------------")</span><br><span class="line">            if file_out.split('/')[-1] == file:</span><br><span class="line">                print('Finding file takes:[{}]'.format((end - start).seconds))</span><br><span class="line">                query_log_writer(querylog, file, file_out, start, end, "Yes")</span><br><span class="line">            else:</span><br><span class="line">                print('No File Founded:[{}]'.format((end - start).seconds))</span><br><span class="line">                query_log_writer(querylog, file, file_out, start, end, "No")</span><br><span class="line">                files_remained.append(file)</span><br><span class="line">            print("------------------------")</span><br><span class="line"></span><br><span class="line">            ftp = ftpconnect(host, port, username, password)</span><br><span class="line">            downloadfile(ftp, file_out, localpath)</span><br><span class="line">            ftp.quit()</span><br><span class="line">        pass</span><br><span class="line"></span><br><span class="line">    print("\nTask finished.")</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="嗯"><a href="#嗯" class="headerlink" title="嗯"></a>嗯</h2><p>我也不知道该说啥去解释它了，因为真的是逻辑和例外情况写了挺多的。<br>包含但不限于：</p>
+<ol>
+<li>防止FTP连接状态过久，被服务器强制timeout。查询一定文件后，退出ftp，重新登录ftp接续查询。</li>
+<li>单次执行，查询多个文件。后面文件在前次文件查询的列表里继续查找，为了省时间。<br>还有一些零零散散的小逻辑，为了省代码啥的。</li>
+</ol>
+<p>其实没有太多的难的代码，主要是在未知ftp目录情况下，去全盘筛查文件，然后主要是循环的逻辑，以及一些异常情况的特殊处理逻辑。还有执行效率的考虑。</p>
+<p>真的累。各种循环把我脑仁都循环疼了……</p>
+<p>好在，终于把自己挖的坑，填上了。</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>Konta</span>
+                    </p>
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>Discuss:</span>
+                        <span><a href="https://support.qq.com/products/153140">吐槽及留言</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="http://tech.hahaalot.com/2022/08/14/遍历FTP地址查文件的程序/">http://tech.hahaalot.com/2022/08/14/遍历FTP地址查文件的程序/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2020 <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>YOLO!</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/Tech/"># Tech</a>
+                    
+                        <a href="/tags/python/"># python</a>
+                    
+                        <a href="/tags/FTP/"># FTP</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2022/08/12/遍历多FTP地址查文件的程序/">搞个遍历多FTP地址查文件的程序</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span id="busuanzi_container_site_pv">
+        总访问量<span id="busuanzi_value_site_pv"></span>次
+        </span> | 
+        <span id="busuanzi_container_site_uv">
+        访客数<span id="busuanzi_value_site_uv"></span>人
+        </span> | 
+        <span id="busuanzi_container_page_pv">
+        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        </span><br>
+        <span>© Konta | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    </div>
+</body>
+</html>
