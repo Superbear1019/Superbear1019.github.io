@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Konta">
+
+
+    <meta name="subtitle" content="Superbear Tech Blog">
+
+
+
+
+<title>API调用的方式触发程序的调用 | Haha not only a lot</title>
+
+
+
+    <link rel="icon" href="/favicon_haha.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Superbear&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">文章</a>
+                
+                    <a class="menu-item" href="/categories/Tech">Tech</a>
+                
+                    <a class="menu-item" href="/categories/Lib">实验</a>
+                
+                    <a class="menu-item" href="/categories/行业">行业</a>
+                
+                    <a class="menu-item" href="/categories/随笔">生活</a>
+                
+                    <a class="menu-item" href="/categories/随笔">随笔</a>
+                
+                    <a class="menu-item" href="/tag">标签</a>
+                
+                    <a class="menu-item" href="https://support.qq.com/product/153140">留言吐槽</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Superbear&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">文章</a>
+                
+                    <a class="menu-item" href="/categories/Tech">Tech</a>
+                
+                    <a class="menu-item" href="/categories/Lib">实验</a>
+                
+                    <a class="menu-item" href="/categories/行业">行业</a>
+                
+                    <a class="menu-item" href="/categories/随笔">生活</a>
+                
+                    <a class="menu-item" href="/categories/随笔">随笔</a>
+                
+                    <a class="menu-item" href="/tag">标签</a>
+                
+                    <a class="menu-item" href="https://support.qq.com/product/153140">留言吐槽</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">API调用的方式触发程序的调用</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Konta</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">八月 19, 2022&nbsp;&nbsp;21:27:43</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/Tech/">Tech</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h1 id="【Tech】API调用的方式触发程序的调用"><a href="#【Tech】API调用的方式触发程序的调用" class="headerlink" title="【Tech】API调用的方式触发程序的调用"></a>【Tech】API调用的方式触发程序的调用</h1><h2 id="一个新的坑"><a href="#一个新的坑" class="headerlink" title="一个新的坑"></a>一个新的坑</h2><p>我之前不是写了个查询ftp文件的程序么，费死劲写完了。<br>但是现实是，你没办法让一个不会用python的人，电脑没装python环境的人，去用它。<br>当然也可以教他，但是吧，没啥太大的意义。毕竟他们的需要就是查个文件而已。<br>所以我想了想，怎么能让他们很方便的去查呢……<br>……<br>所以，就弄了个api接口出来……<br>通过get方法，给传参，传参就是要查的文件名字。这样用的人只需要打开浏览器，拼好一个url，直接访问就好了。<br>当然，这只解决了查的问题，文件还是要返回给他们的。<br>你不能让他们api调用了，一直等返回。文件如果找了一个小时，不可能网页转1个小时的。<br>……<br>所以，做第二个api接口出来……<br>Get方法，传参为之前去搜的文件。这次是去检查之前查询的结构，如果找到了，就把文件通过前端网页给出来；没找到提示文件不存在；没找完，提示还在找。<br>……<br>好像可以了呢😌<br>又给自己搞了个坑去研究了呢。</p>
+<h2 id="技术实现"><a href="#技术实现" class="headerlink" title="技术实现"></a>技术实现</h2><p>查了查，<code>Flask</code>框架可以实现轻量级的web功能，做简单的rest接口。挺适合的。<br>又不小心要研究下新东西了。 </p>
+<p>因为我又不是前端开发，具体的flask用法，我还真的没想去系统的学习，网上找了示例学习了下，大概知道api接口怎么定义的规则了。掌握需要的实用技巧就可以了。</p>
+<h2 id="样例示例"><a href="#样例示例" class="headerlink" title="样例示例"></a>样例示例</h2><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"># 返回声明</span><br><span class="line">@app.route('/', methods=['GET'])</span><br><span class="line">def get_statement():</span><br><span class="line">    return Response(statement, mimetype='text/plain') </span><br><span class="line"></span><br><span class="line"># 调用查询程序去开始遍历ftp服务器</span><br><span class="line">@app.route('/invoicefilesearch/api/v1/files/&lt;string:files&gt;', methods=['GET'])</span><br><span class="line">def get_searchapp(files):</span><br><span class="line">    s = '本次查询的文件如下:\n' + files + '\n\n' + app_res + '\n' + statement    </span><br><span class="line">    response = Response(s, mimetype='text/plain')</span><br><span class="line"></span><br><span class="line">    @response.call_on_close</span><br><span class="line">    def on_close():</span><br><span class="line">        ksf_invoicefile_file_search_app_v1.main(files)</span><br><span class="line">    return response</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ == '__main__':</span><br><span class="line">    app.run(debug=False, threaded = False, processes=100)</span><br><span class="line">    # app.run(host='0.0.0.0', port=8070, debug=False, threaded=True)</span><br><span class="line">    # app.run()</span><br></pre></td></tr></tbody></table></figure>
+<p>其实还是挺简单的，<br>就是不同的api方法，定义不同的装饰器，然后启用后，通过装饰器定义的不同地址，进行web调用就好了。</p>
+<p><code>app.run(host='0.0.0.0', port=8070, debug=False, threaded=True)</code>这个启动的函数，参数部分，可以自定义host、port，是否多并发等。</p>
+<h2 id="一个问题"><a href="#一个问题" class="headerlink" title="一个问题"></a>一个问题</h2><p>正常情况下，一次api调用，是一个请求Request，返回一个响应Response。<br>响应给到调用的客户端后，这个api方法就结束了。</p>
+<p>那么问题就来了，如果按照常规的逻辑写法，<br>客户端调用api，传入request，然后程序开始执行。我是使用了之前写好的遍历FTP的程序，所以就是调用该支程序。<br>程序遍历FTP找文件，可能要找几个小时，找到后该程序结束。然后api方法返回response。<br>这一个过程下来，客户端一直等待很不现实。</p>
+<p>我们需要的其实就是，客户端一个request进来，触发遍历程序开始执行就好了。所以最好的设计是，request进来，触发遍历程序执行，就返回response出去。</p>
+<p>查了下资料，使用<code>response.call_on_close</code>函数就好了。<br>所以上面代码部分的逻辑，就是这个的用法。</p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>最后的效果：<br><a href="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/flaskftpdemo01.gif" target="_blank" rel="noopener"></a><br>嘿嘿嘿，反正是我自己做的东西，我就加了点彩蛋进去～<br>搞个api好好玩～<br>🤪🤪🤪🤪🤪🤪🤪<br><a href="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/flaskftpdemo02.gif" target="_blank" rel="noopener"></a></p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>Konta</span>
+                    </p>
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>Discuss:</span>
+                        <span><a href="https://support.qq.com/products/153140">吐槽及留言</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="http://tech.hahaalot.com/2022/08/19/API调用的方式触发程序的调用/">http://tech.hahaalot.com/2022/08/19/API调用的方式触发程序的调用/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2020 <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>YOLO!</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/Tech/"># Tech</a>
+                    
+                        <a href="/tags/python/"># python</a>
+                    
+                        <a href="/tags/FTP/"># FTP</a>
+                    
+                        <a href="/tags/API/"># API</a>
+                    
+                        <a href="/tags/Flask/"># Flask</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2022/08/14/遍历FTP地址查文件的程序/">遍历FTP地址查文件的程序(code)</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span id="busuanzi_container_site_pv">
+        总访问量<span id="busuanzi_value_site_pv"></span>次
+        </span> | 
+        <span id="busuanzi_container_site_uv">
+        访客数<span id="busuanzi_value_site_uv"></span>人
+        </span> | 
+        <span id="busuanzi_container_page_pv">
+        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        </span><br>
+        <span>© Konta | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    </div>
+</body>
+</html>
