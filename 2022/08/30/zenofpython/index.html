@@ -13,7 +13,7 @@
 
 
 
-<title>API调取FTP遍历程序抓取文件 | Haha not only a lot</title>
+<title>Zen of Python | Haha not only a lot</title>
 
 
 
@@ -196,7 +196,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">API调取FTP遍历程序抓取文件</h1>
+            <h1 class="post-title">Zen of Python</h1>
             
                 <div class="post-meta">
                     
@@ -205,14 +205,14 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">八月 21, 2022&nbsp;&nbsp;16:07:07</a>
+                        Date: <a href="#">八月 30, 2022&nbsp;&nbsp;21:49:15</a>
                         </span>
                     
                     
                         <span class="post-category">
                     Category:
                             
-                                <a href="/categories/Tech/">Tech</a>
+                                <a href="/categories/随笔/">随笔</a>
                             
                         </span>
                     
@@ -221,20 +221,9 @@
         </header>
 
         <div class="post-content">
-            <h1 id="API调取FTP遍历程序抓取文件"><a href="#API调取FTP遍历程序抓取文件" class="headerlink" title="API调取FTP遍历程序抓取文件"></a>API调取FTP遍历程序抓取文件</h1><p>嗯，我觉得之前这个还是有些慢。<a href="https://tech.hahaalot.com/2022/08/19/API%E8%B0%83%E7%94%A8%E7%9A%84%E6%96%B9%E5%BC%8F%E8%A7%A6%E5%8F%91%E7%A8%8B%E5%BA%8F%E7%9A%84%E8%B0%83%E7%94%A8/">API调用的方式触发程序的调用 | Haha not only a lot</a><br>先前的逻辑，还是要调用api接口，触发遍历程序执行。这样如果着急要找某个文件，其实还是要等待一段时间的。</p>
-<p>突然某个时间点，我开窍了：<br>既然我都可以遍历FTP全盘了，可以识别到文件，那为什么不索性把所有文件扫到后，直接把文件的绝对路径保存。需要调取某个文件时，直接去保存的记录里检索这个文件的绝对路径，然后实时下载下来，再返回到调用的客户端。</p>
-<p>这样子的话，就可以实时调取了。<br>但是这个的前提是：FTP里原有的文件相对稳定，文件所在的目录不会经常变。FTP新增文件和目录的频率不是很快。<br>然后同步配合定期去遍历一遍FTP全盘，标记所有文件出来就可以了。</p>
-<p>其实之前我最最帅气的大强哥，和我建议过这么设计。我也想到过。<br>但是我觉得做到这个程度，有点太过了。<br>因为本身我是希望这部分海量的文件，通过更合理的文档管理理念去做管理，对文档定义标签，做分类和规划使用。但是呢，我又没有做这个决定的能力。<br>所以这个FTP抓文件的逻辑和操作，做的越便捷，一定程度上，就扛住了部分文档管理的功能……我希望的是更系统的规划这个事情……</p>
-<p>不过最后，我还是这么做了。<br>可能就是希望做得更好一点，然后就弄了。</p>
-<p>🤔🤔🤔🤔🤔🤔🤔</p>
-<p>设计和代码就会简单很多了。</p>
-<ul>
-<li>因为我已经有遍历的程序了，逻辑我认为写的也很完善了。我只需要执行那个程序，查找的文件是一个实际肯定不存在的，那程序就是会遍历全盘去找他。然后找到最后，所有的文件都识别出来后，将文件和绝对路径，写到个json文件里保存。</li>
-<li>API增加2个方法：一个方法是触发全盘检索程序，这样可以间隔一周调用这个方法，更新一下FTP内所有的文件及其地址。一个是直接给文件名做入参，调用即去上步保存的json里去找，然后调用文件下载。</li>
-</ul>
-<p>200多万的文件，json里存的键值对就有200w个。我试了下，直接查字典，效率还可以接受。也可以存在数据库表里，但是查询效率不知道会不会提升很多。<br></p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"># 加载json文件，加速检查文件是否定位到，定位到则即刻调取文件。</span><br><span class="line">@app.route('/invoicefilesget/api/v1/speedup/&lt;string:filename&gt;', methods=['GET', 'POST'])</span><br><span class="line">def speedup_filesapp(filename):</span><br><span class="line">    res, path, file = ksf_invoicefile_file_speedup_app_v5.main(filename)</span><br><span class="line">    if res == 'File is not founded in FTP.':</span><br><span class="line">        resp = ("&lt;h1&gt;{}该文件暂时没有预扫描到&lt;/h1&gt;"</span><br><span class="line">            "&lt;br&gt;"</span><br><span class="line">            "&lt;h1&gt;目前计划大概会在每周后台预先扫描一次FTP全盘，定位所有文件的位置&lt;/h1&gt;"</span><br><span class="line">            "&lt;h1&gt;显示此界面，则表示最近一次的预扫时，文件不存在&lt;/h1&gt;"</span><br><span class="line">            "&lt;h1&gt;如果急用，则请使用自行查询的那个网页，让程序去找&lt;/h1&gt;".format(filename))</span><br><span class="line">        return resp</span><br><span class="line">    else:</span><br><span class="line">        try:</span><br><span class="line">            return send_from_directory(directory=path, filename=file)</span><br><span class="line">        except:</span><br><span class="line">            res = ("&lt;h1&gt;{}该文件暂时没有预扫描到，或文件路径发生了变化&lt;/h1&gt;"</span><br><span class="line">                "&lt;br&gt;"</span><br><span class="line">                "&lt;h1&gt;目前计划大概会在每周后台预先扫描一次FTP全盘，定位所有文件的位置&lt;/h1&gt;"</span><br><span class="line">                "&lt;h1&gt;显示此界面，则表示最近一次的预扫时，文件不存在&lt;/h1&gt;"</span><br><span class="line">                "&lt;h1&gt;如果急用，则请使用自行查询的那个网页，让程序去找&lt;/h1&gt;".format(filename))</span><br><span class="line">            return res</span><br></pre></td></tr></tbody></table></figure><p></p>
-<p>最终，实现的效果，<br>文件不存在，会提示：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/flaskftpdemo03.gif" alt=""><br>文件存在，则直接调取到文件：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/flaskftpdemo04.gif" alt=""></p>
-<p>应该就这样子了，这个FTP的东西，暂时应该就搞到这个程度了吧。<br>是真的费脑子。<br>也有接触新的python三方库，有收获的。<br>🧐🧐🧐🧐🧐🧐🧐</p>
+            <h1 id="Zen-of-Python"><a href="#Zen-of-Python" class="headerlink" title="Zen of Python"></a>Zen of Python</h1><p>忽然想到自学python的时候，有这个东西了。<br>怕忘了，再记一下。<br>开始自学的时候，不懂编程，不懂语法逻辑，没太懂……后来自己玩的多了，搞了好多莫名其妙的程序后，慢慢感受到了一些禅意。</p>
+<p>CODE有时候很是挺美的～</p>
+<h2 id="Zen-of-Python（Python之禅）"><a href="#Zen-of-Python（Python之禅）" class="headerlink" title="Zen of Python（Python之禅）"></a>Zen of Python（Python之禅）</h2><p><strong>Beautiful is better than ugly.</strong><br>美丽优于丑陋（Python 以编写优美的代码为目标）<br><strong>Explicit is better than implicit.</strong><br>直白优于含蓄（优美的代码应当是明了的，命名规范，风格相似）<br><strong>Simple is better than complex.</strong><br>简单优于复杂（优美的代码应当是简洁的，不要有复杂的内部实现）<br><strong>Complex is better than complicated.</strong><br>复杂优于繁琐（如果复杂不可避免，那代码间也不能有难懂的关系，要保持接口简洁）<br><strong>Flat is better than nested.</strong><br>扁平优于嵌套（优美的代码应当是扁平的，不能有太多的嵌套）<br><strong>Sparse is better than dense.</strong><br>间隔优于紧凑（优美的代码有适当的间隔，不要奢望一行代码解决问题）<br><strong>Readability counts.</strong><br>可读性很重要（优美的代码是可读的 ）<br><strong>Special cases aren’t special enough to break the rules.</strong><br>即便假借特例的实用性之名，也不可违背这些规则（这些规则至高无上）<br><strong>Although practicality beats purity.</strong><br><strong>Errors should never pass silently.</strong><br><strong>Unless explicitly silenced.</strong><br>不要包容所有错误，除非你确定需要这样做（精准地捕获异常，不写 except:pass 风格的代码）<br><strong>In the face of ambiguity, refuse the temptation to guess.</strong><br><strong>There should be one–- and preferably only one –obvious way to do it.</strong><br><strong>Although that way may not be obvious at first unless you’re Dutch.</strong><br>当存在多种可能，不要尝试去猜测<br>而是尽量找一种，最好是唯一一种明显的解决方案（如果不确定，就用穷举法）<br>虽然这并不容易，因为你不是 Python 之父（这里的 Dutch 是指 Guido ）<br><strong>Now is better than never.</strong><br><strong>Although never is often better than <em>right</em> now.</strong><br>做也许好过不做，但不假思索就动手还不如不做（动手之前要细思量）<br><strong>If the implementation is hard to explain, it’s a bad idea.</strong><br><strong>If the implementation is easy to explain, it may be a good idea.</strong><br>如果你无法向人描述你的方案，那肯定不是一个好方案；反之亦然（方案测评标准）<br><strong>Namespaces are one honking great idea -– let’s do more of those!</strong><br>命名空间是一种绝妙的理念，我们应当多加利用（倡导与号召）</p>
 
         </div>
 
@@ -256,7 +245,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://tech.hahaalot.com/2022/08/21/API调取FTP遍历程序抓取文件/">http://tech.hahaalot.com/2022/08/21/API调取FTP遍历程序抓取文件/</a></span>
+                        <span><a href="http://tech.hahaalot.com/2022/08/30/zenofpython/">http://tech.hahaalot.com/2022/08/30/zenofpython/</a></span>
                     </p>
                 
                 
@@ -280,15 +269,7 @@
                 <span class="tag">
                     
                     
-                        <a href="/tags/Tech/"># Tech</a>
-                    
-                        <a href="/tags/python/"># python</a>
-                    
-                        <a href="/tags/FTP/"># FTP</a>
-                    
-                        <a href="/tags/API/"># API</a>
-                    
-                        <a href="/tags/Flask/"># Flask</a>
+                        <a href="/tags/随笔/"># 随笔</a>
                     
                         
                 </span>
@@ -301,10 +282,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2022/08/30/zenofpython/">Zen of Python</a>
             
-            
-            <a class="next" rel="next" href="/2022/08/19/API调用的方式触发程序的调用/">API调用的方式触发程序的调用</a>
+            <a class="next" rel="next" href="/2022/08/21/API调取FTP遍历程序抓取文件/">API调取FTP遍历程序抓取文件</a>
             
         </section>
 
