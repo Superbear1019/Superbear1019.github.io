@@ -1,23 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Aliyun的云函数测试发送定时消息给webhook机器人</title>
-    <url>/2022/06/24/Aliyun%E7%9A%84%E4%BA%91%E5%87%BD%E6%95%B0%E6%B5%8B%E8%AF%95%E5%8F%91%E9%80%81%E5%AE%9A%E6%97%B6%E6%B6%88%E6%81%AF%E7%BB%99webhook%E6%9C%BA%E5%99%A8%E4%BA%BA/</url>
-    <content><![CDATA[<h1 id="Aliyun的云函数测试发送定时消息给webhook机器人"><a href="#Aliyun的云函数测试发送定时消息给webhook机器人" class="headerlink" title="Aliyun的云函数测试发送定时消息给webhook机器人"></a>Aliyun的云函数测试发送定时消息给webhook机器人</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前呢，我做过这个：<br><a href="https://tech.hahaalot.com/2020/05/10/%E8%85%BE%E8%AE%AF%E4%BA%91TencentCloud%E7%9A%84Serverless%E4%BA%91%E5%87%BD%E6%95%B0SCF/">腾讯云TencentCloud的Serverless云函数SCF | Haha not only a lot</a><br><a href="https://tech.hahaalot.com/2020/04/29/WechatWork%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E7%9A%84webhook%E4%BD%BF%E7%94%A8/#">WechatWork企业微信的webhook使用 | Haha not only a lot</a><br>实现了用腾讯云每天定时给自己的企业微信推送个订阅消息。</p>
-<p>今天为啥要搞这个呢……<br>因为腾讯云的云函数，羊毛薅光了。腾讯云收费策略调整了，云函数每月基础收费12块，像我这种每天就发一个消息给自己的，一天4毛钱的支出简直是比巨款。<br>腾讯云调整的通知也没注意，直到我账户里预充的10元钱不到一个月被扣光了，所有腾讯云服务暂停了，我才知道……</p>
-<p>把欠款补了，云函数删掉了……查了圈，发现aliyun也搞了个云函数计算，而且收费标准是：免费限额+超额按量收费。这种方式对我就很友善了。</p>
-<p>于是，就只能做迁移了。</p>
-<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><p>阿里云的函数计算地址：<a href="https://fcnext.console.aliyun.com/overview" target="_blank" rel="noopener">阿里云登录 - 欢迎登录阿里云，安全稳定的云计算服务平台</a><br>然后具体的操作：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/alialiali01.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/alialiali02.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/alialiali03.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/alialiali04.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/alialiali05.png" alt=""></p>
-<p><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/alialiali06.png" alt=""><br>然后测试运行一下，看看是否有收到webhook机器人发过去的消息。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>其实操作还比较简单。<br>但是吧，给我的感觉：一是阿里云的整个界面就是比腾讯云丑，版面布局也很奇怪；二是整体的手册和指导，不是很清楚……<br>最开始玩腾讯云的SCF时，我也是啥都不知道的，但是对着网站的说明指导一步步去学去操作，就搞定了。<br>但是阿里云的吧，我是真的看的很懵，帮助文档读的不易懂，经常读着读着不知道说的是啥……就比如我到底是要新建什么东西去跑我的python代码，我都没弄清楚，还是瞎蒙着四处鼓捣，最后才弄出来的。</p>
-<p>但是吧，可能是由于我不是专业做这种云计算开发的工程师吧，所以不适应他们的帮助手册吧，可能专业的人会觉得阿里云的帮助文档写得很清楚吧……</p>
+    <title>SAP-AA固定资产修改残值率或折旧年限引起的计提折旧变化</title>
+    <url>/2022/06/14/AA%E5%9B%BA%E5%AE%9A%E8%B5%84%E4%BA%A7%E4%BF%AE%E6%94%B9%E6%AE%8B%E5%80%BC%E7%8E%87%E6%88%96%E6%8A%98%E6%97%A7%E5%B9%B4%E9%99%90%E5%BC%95%E8%B5%B7%E7%9A%84%E8%AE%A1%E6%8F%90%E6%8A%98%E6%97%A7%E5%8F%98%E5%8C%96/</url>
+    <content><![CDATA[<h1 id="AA固定资产修改残值率或折旧年限引起的计提折旧变化"><a href="#AA固定资产修改残值率或折旧年限引起的计提折旧变化" class="headerlink" title="AA固定资产修改残值率或折旧年限引起的计提折旧变化"></a>AA固定资产修改残值率或折旧年限引起的计提折旧变化</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>业务用户这边想了解下资产折旧计提的逻辑，然后我做了下相关的测试。<br>自己做一下记录。<br>主要场景就是测试一下，在使用资产折旧期间内，调整残值率和折旧年限，相应计提折旧规则的变化情况。</p>
+<h2 id="残值率调整"><a href="#残值率调整" class="headerlink" title="残值率调整"></a>残值率调整</h2><ul>
+<li><strong>折旧已完全计提完毕，但未做报废处理的资产</strong><br>该情况的资产，已过折旧年限，折旧完全计提完毕，只有残值。<br>原残值率为10%，测试将残值率调整为5%。</li>
+</ul>
+<p>调整方法，直接在资产主数据的帐面折旧视图，将残值率改为5%。<br>下图可以看到，折旧码对应的残值率为10%。<br>在两个残值率不一致时，优先取自定义的残值率5%。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt01.jpg" alt=""></p>
+<p>然后查看资产价值，发现计划折旧会增加一期。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt02.jpg" alt=""></p>
+<ul>
+<li><strong>折旧未计提完毕的资产</strong><br>该情况的资产，仍有折旧待计提。<br>原残值率为10%，测试将残值率调整为5%。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt03.jpg" alt=""></li>
+</ul>
+<h2 id="折旧年度调整"><a href="#折旧年度调整" class="headerlink" title="折旧年度调整"></a>折旧年度调整</h2><ul>
+<li><strong>资产剩余待提年限，大于缩短年限</strong><br>原折旧年限5年，测试缩短至4年。<br>该情况下资产剩余折旧年限，大于1年。</li>
+</ul>
+<p>调整方法，直接资产主数据修改使用年限。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt04.jpg" alt=""><br>调整后，重新查看资产价值。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt05.jpg" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt06.jpg" alt=""></p>
+<ul>
+<li><strong>资产剩余待提年限，不足缩短年限</strong><br>原折旧年限5年，测试缩短至4年。<br>该情况下资产剩余折旧年限，小于1年。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt07.jpg" alt=""></li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<li>无论如何调整，在使用直线折旧计算情况下，折旧都会按设定的年限及残值率计算计提金额。</li>
+<li>已折旧月份记录，不会变化。</li>
+<li>当前年度过去月份的金额差异，会再下一次计提时补齐。</li>
+<li>过去年度的差异，会在全部折旧月份结束后，新增一期折旧做计提。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>行业</category>
+      </categories>
+      <tags>
+        <tag>SAP</tag>
+        <tag>行业</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>API调用的方式触发程序的调用</title>
+    <url>/2022/08/19/API%E8%B0%83%E7%94%A8%E7%9A%84%E6%96%B9%E5%BC%8F%E8%A7%A6%E5%8F%91%E7%A8%8B%E5%BA%8F%E7%9A%84%E8%B0%83%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="API调用的方式触发程序的调用"><a href="#API调用的方式触发程序的调用" class="headerlink" title="API调用的方式触发程序的调用"></a>API调用的方式触发程序的调用</h1><h2 id="一个新的坑"><a href="#一个新的坑" class="headerlink" title="一个新的坑"></a>一个新的坑</h2><p>我之前不是写了个查询ftp文件的程序么，费死劲写完了。<br>但是现实是，你没办法让一个不会用python的人，电脑没装python环境的人，去用它。<br>当然也可以教他，但是吧，没啥太大的意义。毕竟他们的需要就是查个文件而已。<br>所以我想了想，怎么能让他们很方便的去查呢……<br>……<br>所以，就弄了个api接口出来……<br>通过get方法，给传参，传参就是要查的文件名字。这样用的人只需要打开浏览器，拼好一个url，直接访问就好了。<br>当然，这只解决了查的问题，文件还是要返回给他们的。<br>你不能让他们api调用了，一直等返回。文件如果找了一个小时，不可能网页转1个小时的。<br>……<br>所以，做第二个api接口出来……<br>Get方法，传参为之前去搜的文件。这次是去检查之前查询的结构，如果找到了，就把文件通过前端网页给出来；没找到提示文件不存在；没找完，提示还在找。<br>……<br>好像可以了呢😌<br>又给自己搞了个坑去研究了呢。</p>
+<h2 id="技术实现"><a href="#技术实现" class="headerlink" title="技术实现"></a>技术实现</h2><p>查了查，<code>Flask</code>框架可以实现轻量级的web功能，做简单的rest接口。挺适合的。<br>又不小心要研究下新东西了。 </p>
+<p>因为我又不是前端开发，具体的flask用法，我还真的没想去系统的学习，网上找了示例学习了下，大概知道api接口怎么定义的规则了。掌握需要的实用技巧就可以了。</p>
+<h2 id="样例示例"><a href="#样例示例" class="headerlink" title="样例示例"></a>样例示例</h2><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line"># 返回声明</span><br><span class="line">@app.route('/', methods=['GET'])</span><br><span class="line">def get_statement():</span><br><span class="line">    return Response(statement, mimetype='text/plain') </span><br><span class="line"></span><br><span class="line"># 调用查询程序去开始遍历ftp服务器</span><br><span class="line">@app.route('/invoicefilesearch/api/v1/files/&lt;string:files&gt;', methods=['GET'])</span><br><span class="line">def get_searchapp(files):</span><br><span class="line">    s = '本次查询的文件如下:\n' + files + '\n\n' + app_res + '\n' + statement    </span><br><span class="line">    response = Response(s, mimetype='text/plain')</span><br><span class="line"></span><br><span class="line">    @response.call_on_close</span><br><span class="line">    def on_close():</span><br><span class="line">        ksf_invoicefile_file_search_app_v1.main(files)</span><br><span class="line">    return response</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ == '__main__':</span><br><span class="line">    app.run(debug=False, threaded = False, processes=100)</span><br><span class="line">    # app.run(host='0.0.0.0', port=8070, debug=False, threaded=True)</span><br><span class="line">    # app.run()</span><br></pre></td></tr></tbody></table></figure>
+<p>其实还是挺简单的，<br>就是不同的api方法，定义不同的装饰器，然后启用后，通过装饰器定义的不同地址，进行web调用就好了。</p>
+<p><code>app.run(host='0.0.0.0', port=8070, debug=False, threaded=True)</code>这个启动的函数，参数部分，可以自定义host、port，是否多并发等。</p>
+<h2 id="一个问题"><a href="#一个问题" class="headerlink" title="一个问题"></a>一个问题</h2><p>正常情况下，一次api调用，是一个请求Request，返回一个响应Response。<br>响应给到调用的客户端后，这个api方法就结束了。</p>
+<p>那么问题就来了，如果按照常规的逻辑写法，<br>客户端调用api，传入request，然后程序开始执行。我是使用了之前写好的遍历FTP的程序，所以就是调用该支程序。<br>程序遍历FTP找文件，可能要找几个小时，找到后该程序结束。然后api方法返回response。<br>这一个过程下来，客户端一直等待很不现实。</p>
+<p>我们需要的其实就是，客户端一个request进来，触发遍历程序开始执行就好了。所以最好的设计是，request进来，触发遍历程序执行，就返回response出去。</p>
+<p>查了下资料，使用<code>response.call_on_close</code>函数就好了。<br>所以上面代码部分的逻辑，就是这个的用法。</p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>最后的效果：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/flaskftpdemo01.gif" alt=""><br>嘿嘿嘿，反正是我自己做的东西，我就加了点彩蛋进去～<br>搞个api好好玩～<br>🤪🤪🤪🤪🤪🤪🤪<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/flaskftpdemo02.gif" alt=""></p>
 ]]></content>
       <categories>
         <category>Tech</category>
       </categories>
       <tags>
-        <tag>cloud</tag>
-        <tag>serverless</tag>
+        <tag>Tech</tag>
+        <tag>python</tag>
+        <tag>FTP</tag>
+        <tag>API</tag>
+        <tag>Flask</tag>
       </tags>
   </entry>
   <entry>
@@ -50,32 +90,6 @@
       </tags>
   </entry>
   <entry>
-    <title>API调用的方式触发程序的调用</title>
-    <url>/2022/08/19/API%E8%B0%83%E7%94%A8%E7%9A%84%E6%96%B9%E5%BC%8F%E8%A7%A6%E5%8F%91%E7%A8%8B%E5%BA%8F%E7%9A%84%E8%B0%83%E7%94%A8/</url>
-    <content><![CDATA[<h1 id="API调用的方式触发程序的调用"><a href="#API调用的方式触发程序的调用" class="headerlink" title="API调用的方式触发程序的调用"></a>API调用的方式触发程序的调用</h1><h2 id="一个新的坑"><a href="#一个新的坑" class="headerlink" title="一个新的坑"></a>一个新的坑</h2><p>我之前不是写了个查询ftp文件的程序么，费死劲写完了。<br>但是现实是，你没办法让一个不会用python的人，电脑没装python环境的人，去用它。<br>当然也可以教他，但是吧，没啥太大的意义。毕竟他们的需要就是查个文件而已。<br>所以我想了想，怎么能让他们很方便的去查呢……<br>……<br>所以，就弄了个api接口出来……<br>通过get方法，给传参，传参就是要查的文件名字。这样用的人只需要打开浏览器，拼好一个url，直接访问就好了。<br>当然，这只解决了查的问题，文件还是要返回给他们的。<br>你不能让他们api调用了，一直等返回。文件如果找了一个小时，不可能网页转1个小时的。<br>……<br>所以，做第二个api接口出来……<br>Get方法，传参为之前去搜的文件。这次是去检查之前查询的结构，如果找到了，就把文件通过前端网页给出来；没找到提示文件不存在；没找完，提示还在找。<br>……<br>好像可以了呢😌<br>又给自己搞了个坑去研究了呢。</p>
-<h2 id="技术实现"><a href="#技术实现" class="headerlink" title="技术实现"></a>技术实现</h2><p>查了查，<code>Flask</code>框架可以实现轻量级的web功能，做简单的rest接口。挺适合的。<br>又不小心要研究下新东西了。 </p>
-<p>因为我又不是前端开发，具体的flask用法，我还真的没想去系统的学习，网上找了示例学习了下，大概知道api接口怎么定义的规则了。掌握需要的实用技巧就可以了。</p>
-<h2 id="样例示例"><a href="#样例示例" class="headerlink" title="样例示例"></a>样例示例</h2><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line"># 返回声明</span><br><span class="line">@app.route('/', methods=['GET'])</span><br><span class="line">def get_statement():</span><br><span class="line">    return Response(statement, mimetype='text/plain') </span><br><span class="line"></span><br><span class="line"># 调用查询程序去开始遍历ftp服务器</span><br><span class="line">@app.route('/invoicefilesearch/api/v1/files/&lt;string:files&gt;', methods=['GET'])</span><br><span class="line">def get_searchapp(files):</span><br><span class="line">    s = '本次查询的文件如下:\n' + files + '\n\n' + app_res + '\n' + statement    </span><br><span class="line">    response = Response(s, mimetype='text/plain')</span><br><span class="line"></span><br><span class="line">    @response.call_on_close</span><br><span class="line">    def on_close():</span><br><span class="line">        ksf_invoicefile_file_search_app_v1.main(files)</span><br><span class="line">    return response</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ == '__main__':</span><br><span class="line">    app.run(debug=False, threaded = False, processes=100)</span><br><span class="line">    # app.run(host='0.0.0.0', port=8070, debug=False, threaded=True)</span><br><span class="line">    # app.run()</span><br></pre></td></tr></tbody></table></figure>
-<p>其实还是挺简单的，<br>就是不同的api方法，定义不同的装饰器，然后启用后，通过装饰器定义的不同地址，进行web调用就好了。</p>
-<p><code>app.run(host='0.0.0.0', port=8070, debug=False, threaded=True)</code>这个启动的函数，参数部分，可以自定义host、port，是否多并发等。</p>
-<h2 id="一个问题"><a href="#一个问题" class="headerlink" title="一个问题"></a>一个问题</h2><p>正常情况下，一次api调用，是一个请求Request，返回一个响应Response。<br>响应给到调用的客户端后，这个api方法就结束了。</p>
-<p>那么问题就来了，如果按照常规的逻辑写法，<br>客户端调用api，传入request，然后程序开始执行。我是使用了之前写好的遍历FTP的程序，所以就是调用该支程序。<br>程序遍历FTP找文件，可能要找几个小时，找到后该程序结束。然后api方法返回response。<br>这一个过程下来，客户端一直等待很不现实。</p>
-<p>我们需要的其实就是，客户端一个request进来，触发遍历程序开始执行就好了。所以最好的设计是，request进来，触发遍历程序执行，就返回response出去。</p>
-<p>查了下资料，使用<code>response.call_on_close</code>函数就好了。<br>所以上面代码部分的逻辑，就是这个的用法。</p>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>最后的效果：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/flaskftpdemo01.gif" alt=""><br>嘿嘿嘿，反正是我自己做的东西，我就加了点彩蛋进去～<br>搞个api好好玩～<br>🤪🤪🤪🤪🤪🤪🤪<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/flaskftpdemo02.gif" alt=""></p>
-]]></content>
-      <categories>
-        <category>Tech</category>
-      </categories>
-      <tags>
-        <tag>Tech</tag>
-        <tag>python</tag>
-        <tag>FTP</tag>
-        <tag>API</tag>
-        <tag>Flask</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo搭建的自定义服务</title>
     <url>/2020/04/22/Hexo%E6%90%AD%E5%BB%BA%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A1/</url>
     <content><![CDATA[<h2 id="说在前："><a href="#说在前：" class="headerlink" title="说在前："></a>说在前：</h2><p>Hexo主题我选的是Chic，设计师的理念是“less is more”，<br>所以很多功能他是没有放进去的。我后来呢想了想也是有道理的，所以好多服务都没有加进去。<br>目前用了页面统计。别的都没有了。</p>
@@ -91,30 +105,64 @@
       </tags>
   </entry>
   <entry>
-    <title>SAP-AA固定资产修改残值率或折旧年限引起的计提折旧变化</title>
-    <url>/2022/06/14/AA%E5%9B%BA%E5%AE%9A%E8%B5%84%E4%BA%A7%E4%BF%AE%E6%94%B9%E6%AE%8B%E5%80%BC%E7%8E%87%E6%88%96%E6%8A%98%E6%97%A7%E5%B9%B4%E9%99%90%E5%BC%95%E8%B5%B7%E7%9A%84%E8%AE%A1%E6%8F%90%E6%8A%98%E6%97%A7%E5%8F%98%E5%8C%96/</url>
-    <content><![CDATA[<h1 id="AA固定资产修改残值率或折旧年限引起的计提折旧变化"><a href="#AA固定资产修改残值率或折旧年限引起的计提折旧变化" class="headerlink" title="AA固定资产修改残值率或折旧年限引起的计提折旧变化"></a>AA固定资产修改残值率或折旧年限引起的计提折旧变化</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>业务用户这边想了解下资产折旧计提的逻辑，然后我做了下相关的测试。<br>自己做一下记录。<br>主要场景就是测试一下，在使用资产折旧期间内，调整残值率和折旧年限，相应计提折旧规则的变化情况。</p>
-<h2 id="残值率调整"><a href="#残值率调整" class="headerlink" title="残值率调整"></a>残值率调整</h2><ul>
-<li><strong>折旧已完全计提完毕，但未做报废处理的资产</strong><br>该情况的资产，已过折旧年限，折旧完全计提完毕，只有残值。<br>原残值率为10%，测试将残值率调整为5%。</li>
-</ul>
-<p>调整方法，直接在资产主数据的帐面折旧视图，将残值率改为5%。<br>下图可以看到，折旧码对应的残值率为10%。<br>在两个残值率不一致时，优先取自定义的残值率5%。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt01.jpg" alt=""></p>
-<p>然后查看资产价值，发现计划折旧会增加一期。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt02.jpg" alt=""></p>
-<ul>
-<li><strong>折旧未计提完毕的资产</strong><br>该情况的资产，仍有折旧待计提。<br>原残值率为10%，测试将残值率调整为5%。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt03.jpg" alt=""></li>
-</ul>
-<h2 id="折旧年度调整"><a href="#折旧年度调整" class="headerlink" title="折旧年度调整"></a>折旧年度调整</h2><ul>
-<li><strong>资产剩余待提年限，大于缩短年限</strong><br>原折旧年限5年，测试缩短至4年。<br>该情况下资产剩余折旧年限，大于1年。</li>
-</ul>
-<p>调整方法，直接资产主数据修改使用年限。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt04.jpg" alt=""><br>调整后，重新查看资产价值。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt05.jpg" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt06.jpg" alt=""></p>
-<ul>
-<li><strong>资产剩余待提年限，不足缩短年限</strong><br>原折旧年限5年，测试缩短至4年。<br>该情况下资产剩余折旧年限，小于1年。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/aajt07.jpg" alt=""></li>
-</ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
-<li>无论如何调整，在使用直线折旧计算情况下，折旧都会按设定的年限及残值率计算计提金额。</li>
-<li>已折旧月份记录，不会变化。</li>
-<li>当前年度过去月份的金额差异，会再下一次计提时补齐。</li>
-<li>过去年度的差异，会在全部折旧月份结束后，新增一期折旧做计提。</li>
+    <title>Aliyun的云函数测试发送定时消息给webhook机器人</title>
+    <url>/2022/06/24/Aliyun%E7%9A%84%E4%BA%91%E5%87%BD%E6%95%B0%E6%B5%8B%E8%AF%95%E5%8F%91%E9%80%81%E5%AE%9A%E6%97%B6%E6%B6%88%E6%81%AF%E7%BB%99webhook%E6%9C%BA%E5%99%A8%E4%BA%BA/</url>
+    <content><![CDATA[<h1 id="Aliyun的云函数测试发送定时消息给webhook机器人"><a href="#Aliyun的云函数测试发送定时消息给webhook机器人" class="headerlink" title="Aliyun的云函数测试发送定时消息给webhook机器人"></a>Aliyun的云函数测试发送定时消息给webhook机器人</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>之前呢，我做过这个：<br><a href="https://tech.hahaalot.com/2020/05/10/%E8%85%BE%E8%AE%AF%E4%BA%91TencentCloud%E7%9A%84Serverless%E4%BA%91%E5%87%BD%E6%95%B0SCF/">腾讯云TencentCloud的Serverless云函数SCF | Haha not only a lot</a><br><a href="https://tech.hahaalot.com/2020/04/29/WechatWork%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E7%9A%84webhook%E4%BD%BF%E7%94%A8/#">WechatWork企业微信的webhook使用 | Haha not only a lot</a><br>实现了用腾讯云每天定时给自己的企业微信推送个订阅消息。</p>
+<p>今天为啥要搞这个呢……<br>因为腾讯云的云函数，羊毛薅光了。腾讯云收费策略调整了，云函数每月基础收费12块，像我这种每天就发一个消息给自己的，一天4毛钱的支出简直是比巨款。<br>腾讯云调整的通知也没注意，直到我账户里预充的10元钱不到一个月被扣光了，所有腾讯云服务暂停了，我才知道……</p>
+<p>把欠款补了，云函数删掉了……查了圈，发现aliyun也搞了个云函数计算，而且收费标准是：免费限额+超额按量收费。这种方式对我就很友善了。</p>
+<p>于是，就只能做迁移了。</p>
+<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><p>阿里云的函数计算地址：<a href="https://fcnext.console.aliyun.com/overview" target="_blank" rel="noopener">阿里云登录 - 欢迎登录阿里云，安全稳定的云计算服务平台</a><br>然后具体的操作：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/alialiali01.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/alialiali02.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/alialiali03.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/alialiali04.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/alialiali05.png" alt=""></p>
+<p><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/alialiali06.png" alt=""><br>然后测试运行一下，看看是否有收到webhook机器人发过去的消息。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>其实操作还比较简单。<br>但是吧，给我的感觉：一是阿里云的整个界面就是比腾讯云丑，版面布局也很奇怪；二是整体的手册和指导，不是很清楚……<br>最开始玩腾讯云的SCF时，我也是啥都不知道的，但是对着网站的说明指导一步步去学去操作，就搞定了。<br>但是阿里云的吧，我是真的看的很懵，帮助文档读的不易懂，经常读着读着不知道说的是啥……就比如我到底是要新建什么东西去跑我的python代码，我都没弄清楚，还是瞎蒙着四处鼓捣，最后才弄出来的。</p>
+<p>但是吧，可能是由于我不是专业做这种云计算开发的工程师吧，所以不适应他们的帮助手册吧，可能专业的人会觉得阿里云的帮助文档写得很清楚吧……</p>
+]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>cloud</tag>
+        <tag>serverless</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Blog搭建信息</title>
+    <url>/2020/04/21/Blog%E6%90%AD%E5%BB%BA%E4%BF%A1%E6%81%AF/</url>
+    <content><![CDATA[<h1 id="Blog搭建信息"><a href="#Blog搭建信息" class="headerlink" title="Blog搭建信息"></a>Blog搭建信息</h1><h2 id="代码托管平台：Coding"><a href="#代码托管平台：Coding" class="headerlink" title="代码托管平台：Coding"></a>代码托管平台：Coding</h2><p>喜欢小猴子的logo。<br>参考：<a href="https://coding.net/" target="_blank" rel="noopener">CODING - 一站式软件研发管理平台</a></p>
+<h2 id="blog框架：Hexo"><a href="#blog框架：Hexo" class="headerlink" title="blog框架：Hexo"></a>blog框架：Hexo</h2><p>A fast, simple &amp; powerful blog framework。<br>参考：<a href="https://hexo.io/" target="_blank" rel="noopener">hexo</a></p>
+<h2 id="主题：Chic"><a href="#主题：Chic" class="headerlink" title="主题：Chic"></a>主题：Chic</h2><p>选择的原因：极简设计，博客封面。<br>后来知道Chic是法语，同英语elegant。Elegant是我最喜欢的英文单词之一。<br>参考：<a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank" rel="noopener">Chic主题</a></p>
+<h2 id="对象存储：COS"><a href="#对象存储：COS" class="headerlink" title="对象存储：COS"></a>对象存储：COS</h2><p>主要是防盗链。费用么应该不多。</p>
+<h2 id="页面计数服务：busuanzi"><a href="#页面计数服务：busuanzi" class="headerlink" title="页面计数服务：busuanzi"></a>页面计数服务：busuanzi</h2><p>可能是配置最方便吧。<br>参考：<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">不蒜子 - 极简网页计数器</a></p>
+<h2 id="封面链接图标：iconfont"><a href="#封面链接图标：iconfont" class="headerlink" title="封面链接图标：iconfont"></a>封面链接图标：iconfont</h2><p>参考：<a href="https://www.iconfont.cn/home/index" target="_blank" rel="noopener">Iconfont-阿里巴巴矢量图标库</a></p>
+<h2 id="可能后续考虑要不要加的服务支持："><a href="#可能后续考虑要不要加的服务支持：" class="headerlink" title="可能后续考虑要不要加的服务支持："></a>可能后续考虑要不要加的服务支持：</h2><p>Live2d ——目前感觉不实用<br>jsdelivr ——CDN<br>valine ——暂时也没人看，也不需要评论服务。</p>
+]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SAP ECC的FI凭证项目GR/IR合并</title>
+    <url>/2022/01/24/SAPECC%E7%9A%84FI%E5%87%AD%E8%AF%81%E9%A1%B9%E7%9B%AEGRIR%E5%90%88%E5%B9%B6/</url>
+    <content><![CDATA[<h1 id="SAP-ECC的FI凭证项目GR-IR合并"><a href="#SAP-ECC的FI凭证项目GR-IR合并" class="headerlink" title="SAP ECC的FI凭证项目GR/IR合并"></a>SAP ECC的FI凭证项目GR/IR合并</h1><h2 id="背景："><a href="#背景：" class="headerlink" title="背景："></a>背景：</h2><p>SAP ECC生成FI凭证时，当凭证行项目超过999的时候，就会报错。<br>原因是FI凭证行项目table-BSEG的BUZEI字段长度3位，所以超过999就无法写表了。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/eccgrir00.png" alt=""></p>
+<p>但是从MM或SD模块自动生成的会计凭证可能会超过999行，所以就会报错。<br>一般场景来讲，可以从业务端要求他们订单或发票行项目限定住，这样就不用调整。<br>如果要调整的话，只能是将凭证行项目根据规则做合并汇总，减少行项目的数量。</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>这个SAP是有标准配置实现的，但是官方资料还是网上资料写的都不是很清楚呀！我为了测试这个功能，也花了很多时间呀。</p>
+<p>TCode：OBCY（配置项数据对应的底层Table——TTYPV）</p>
+<ol>
+<li>选择参考交易。<br>MM生成的一般选择MKPF。SD过去的一般是发票，选择RMRP</li>
+<li>维护视图。<br>两列，一列表名，因为是合并FI凭证行项目，所以选择BSEG。<br>字段名，维护BSEG存在的字段。<br>（填哪个字段，是要根据合并行项目的规则去找的，下一段会尽量写清楚）</li>
 </ol>
+<p>设置就完成了。很简单。<br>后面说一下具体的逻辑点。</p>
+<h2 id="逻辑点"><a href="#逻辑点" class="headerlink" title="逻辑点"></a>逻辑点</h2><ul>
+<li>选择的参考交易类型，怎么确定。<br>可以根据FI凭证抬头table——BKPF去找，看BKPF—AWTYP参考交易字段。<br>比如，通过MIGO采购入库创建的FI凭证，BKPF的 字段，值就是MKPF；MIRO发票校验的，就是RMRP。</li>
+<li>维护视图的字段，如何确定。<br>目前我测试下来的规则，OBCY维护了哪个字段，则生成FI Document时，就会把这个字段原有的值，清除。然后根据BSEG其他的列，相同列做金额汇总。<br>下图具体举例下：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/eccgrir1.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/eccgrir2.png" alt=""><br>应该画的还挺清楚的，我感觉。嘿嘿。</li>
+</ul>
+<h2 id="注意问题"><a href="#注意问题" class="headerlink" title="注意问题"></a>注意问题</h2><ul>
+<li>OBCY维护时，如果报错说字段不在TTYPV里，需要先行维护table——TTYPS。TTYPS是定义了TTYPV可以维护哪些字段。</li>
+<li>OBCY选取的字段，最好根据原有的凭证，去找出可以清除掉的字段，多观察找到规律后去选。<br>因为各个公司对于凭证行字段可能有自己的定义用法，盲目参考网上的去维护，要么发现不成功，要么可能把重要的字段给清除了。</li>
+</ul>
 ]]></content>
       <categories>
         <category>行业</category>
@@ -169,22 +217,18 @@
       </tags>
   </entry>
   <entry>
-    <title>Blog搭建信息</title>
-    <url>/2020/04/21/Blog%E6%90%AD%E5%BB%BA%E4%BF%A1%E6%81%AF/</url>
-    <content><![CDATA[<h1 id="Blog搭建信息"><a href="#Blog搭建信息" class="headerlink" title="Blog搭建信息"></a>Blog搭建信息</h1><h2 id="代码托管平台：Coding"><a href="#代码托管平台：Coding" class="headerlink" title="代码托管平台：Coding"></a>代码托管平台：Coding</h2><p>喜欢小猴子的logo。<br>参考：<a href="https://coding.net/" target="_blank" rel="noopener">CODING - 一站式软件研发管理平台</a></p>
-<h2 id="blog框架：Hexo"><a href="#blog框架：Hexo" class="headerlink" title="blog框架：Hexo"></a>blog框架：Hexo</h2><p>A fast, simple &amp; powerful blog framework。<br>参考：<a href="https://hexo.io/" target="_blank" rel="noopener">hexo</a></p>
-<h2 id="主题：Chic"><a href="#主题：Chic" class="headerlink" title="主题：Chic"></a>主题：Chic</h2><p>选择的原因：极简设计，博客封面。<br>后来知道Chic是法语，同英语elegant。Elegant是我最喜欢的英文单词之一。<br>参考：<a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank" rel="noopener">Chic主题</a></p>
-<h2 id="对象存储：COS"><a href="#对象存储：COS" class="headerlink" title="对象存储：COS"></a>对象存储：COS</h2><p>主要是防盗链。费用么应该不多。</p>
-<h2 id="页面计数服务：busuanzi"><a href="#页面计数服务：busuanzi" class="headerlink" title="页面计数服务：busuanzi"></a>页面计数服务：busuanzi</h2><p>可能是配置最方便吧。<br>参考：<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">不蒜子 - 极简网页计数器</a></p>
-<h2 id="封面链接图标：iconfont"><a href="#封面链接图标：iconfont" class="headerlink" title="封面链接图标：iconfont"></a>封面链接图标：iconfont</h2><p>参考：<a href="https://www.iconfont.cn/home/index" target="_blank" rel="noopener">Iconfont-阿里巴巴矢量图标库</a></p>
-<h2 id="可能后续考虑要不要加的服务支持："><a href="#可能后续考虑要不要加的服务支持：" class="headerlink" title="可能后续考虑要不要加的服务支持："></a>可能后续考虑要不要加的服务支持：</h2><p>Live2d ——目前感觉不实用<br>jsdelivr ——CDN<br>valine ——暂时也没人看，也不需要评论服务。</p>
+    <title>SAP FI凭证记账自定义汇率</title>
+    <url>/2022/05/20/SAPFI%E5%87%AD%E8%AF%81%E8%AE%B0%E8%B4%A6%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B1%87%E7%8E%87/</url>
+    <content><![CDATA[<h1 id="FI凭证记账自定义汇率，不使用系统汇率"><a href="#FI凭证记账自定义汇率，不使用系统汇率" class="headerlink" title="FI凭证记账自定义汇率，不使用系统汇率"></a>FI凭证记账自定义汇率，不使用系统汇率</h1><h2 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h2><p>记凭证时，如果涉及到外币记账，汇率会自动进行换算的，使用的是OB08维护的汇率。<br>但是如果不想使用系统的汇率，自定义一个汇率值怎么办呢？</p>
+<h2 id="Solution："><a href="#Solution：" class="headerlink" title="Solution："></a>Solution：</h2><p>记账时使用预制凭证。然后过账预制凭证。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidochl01.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidochl02.png" alt=""></p>
+<p>下面是SAP系统的提示帮助说明：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidochl03.png" alt=""></p>
 ]]></content>
       <categories>
-        <category>Tech</category>
+        <category>行业</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
-        <tag>blog</tag>
+        <tag>SAP</tag>
+        <tag>行业</tag>
       </tags>
   </entry>
   <entry>
@@ -211,31 +255,38 @@
         <category>Tech</category>
       </categories>
       <tags>
+        <tag>SAP</tag>
         <tag>Tech</tag>
         <tag>python</tag>
-        <tag>SAP</tag>
       </tags>
   </entry>
   <entry>
-    <title>SAP ECC的FI凭证项目GR/IR合并</title>
-    <url>/2022/01/24/SAPECC%E7%9A%84FI%E5%87%AD%E8%AF%81%E9%A1%B9%E7%9B%AEGRIR%E5%90%88%E5%B9%B6/</url>
-    <content><![CDATA[<h1 id="SAP-ECC的FI凭证项目GR-IR合并"><a href="#SAP-ECC的FI凭证项目GR-IR合并" class="headerlink" title="SAP ECC的FI凭证项目GR/IR合并"></a>SAP ECC的FI凭证项目GR/IR合并</h1><h2 id="背景："><a href="#背景：" class="headerlink" title="背景："></a>背景：</h2><p>SAP ECC生成FI凭证时，当凭证行项目超过999的时候，就会报错。<br>原因是FI凭证行项目table-BSEG的BUZEI字段长度3位，所以超过999就无法写表了。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/eccgrir00.png" alt=""></p>
-<p>但是从MM或SD模块自动生成的会计凭证可能会超过999行，所以就会报错。<br>一般场景来讲，可以从业务端要求他们订单或发票行项目限定住，这样就不用调整。<br>如果要调整的话，只能是将凭证行项目根据规则做合并汇总，减少行项目的数量。</p>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>这个SAP是有标准配置实现的，但是官方资料还是网上资料写的都不是很清楚呀！我为了测试这个功能，也花了很多时间呀。</p>
-<p>TCode：OBCY（配置项数据对应的底层Table——TTYPV）</p>
-<ol>
-<li>选择参考交易。<br>MM生成的一般选择MKPF。SD过去的一般是发票，选择RMRP</li>
-<li>维护视图。<br>两列，一列表名，因为是合并FI凭证行项目，所以选择BSEG。<br>字段名，维护BSEG存在的字段。<br>（填哪个字段，是要根据合并行项目的规则去找的，下一段会尽量写清楚）</li>
-</ol>
-<p>设置就完成了。很简单。<br>后面说一下具体的逻辑点。</p>
-<h2 id="逻辑点"><a href="#逻辑点" class="headerlink" title="逻辑点"></a>逻辑点</h2><ul>
-<li>选择的参考交易类型，怎么确定。<br>可以根据FI凭证抬头table——BKPF去找，看BKPF—AWTYP参考交易字段。<br>比如，通过MIGO采购入库创建的FI凭证，BKPF的 字段，值就是MKPF；MIRO发票校验的，就是RMRP。</li>
-<li>维护视图的字段，如何确定。<br>目前我测试下来的规则，OBCY维护了哪个字段，则生成FI Document时，就会把这个字段原有的值，清除。然后根据BSEG其他的列，相同列做金额汇总。<br>下图具体举例下：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/eccgrir1.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/eccgrir2.png" alt=""><br>应该画的还挺清楚的，我感觉。嘿嘿。</li>
-</ul>
-<h2 id="注意问题"><a href="#注意问题" class="headerlink" title="注意问题"></a>注意问题</h2><ul>
-<li>OBCY维护时，如果报错说字段不在TTYPV里，需要先行维护table——TTYPS。TTYPS是定义了TTYPV可以维护哪些字段。</li>
-<li>OBCY选取的字段，最好根据原有的凭证，去找出可以清除掉的字段，多观察找到规律后去选。<br>因为各个公司对于凭证行字段可能有自己的定义用法，盲目参考网上的去维护，要么发现不成功，要么可能把重要的字段给清除了。</li>
-</ul>
+    <title>写一个SAPGUI自助登陆的python脚本程序(4)——最终效果</title>
+    <url>/2022/07/24/SAPGUI%E8%87%AA%E5%8A%A9%E7%99%BB%E9%99%86%E7%9A%84python%E8%84%9A%E6%9C%AC4/</url>
+    <content><![CDATA[<h1 id="写一个SAPGUI自助登陆的python脚本程序-4-——最终效果"><a href="#写一个SAPGUI自助登陆的python脚本程序-4-——最终效果" class="headerlink" title="写一个SAPGUI自助登陆的python脚本程序(4)——最终效果"></a>写一个SAPGUI自助登陆的python脚本程序(4)——最终效果</h1><h2 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h2><p><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/sapguipy.gif" alt=""></p>
+<p>可以看到哈，我其实有做了一些修饰的。<br>把常用到的client先定义好，然后执行脚本时，选择要登陆的client序号，<br>就可以了。<br>如果输入的序号不对，那么就返回报错。</p>
+<p>然后账号和密码预先定义在程序里。<br>后续改密码的话，就把程序里的密码改掉。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这个程序呢，其实是我21年的时候就写好了的。🤪🤪<br>一直没有码写一段说明去讲讲逻辑，整个的过程，写这几篇文章，自己对着代码部分还捋了一遍逻辑。😳<br>写下来，留给自己看，毕竟记录了一部分成长。🧐🧐<br>如果有缘人看到了，能有一点启发和帮助，那可能就更好了。🥰</p>
+<p>当时真的花了好多心力去研究代码和逻辑，特别是抓窗口的逻辑，很多种情况要考虑，然后不断的测试，精简代码，<br>最后的成品，代码量其实很少的，120+行左右吧。但是真的是精炼了好多才出来的。</p>
+<p>后来呢，我真的是一直在用它，直到现在我每天也是会先打开powershell，时候准备去跑它。<br>因为我工作基本九成的操作是要在SAP里操作的，有了这个程序后，真的省掉了我超级超级超级多的时间，以往不停的输入账号密码，现在再也不需要了。<br>真的用起来溜极了……我甚至觉得比basis配置的sso登陆都丝滑。<br>而且每每同事看到我这么骚的登陆操作后，都有点惊讶。有种低调的高级感油然而生呀。</p>
+<p>玩python呢，纯粹就是自学自己搞着玩的，<br>但是慢慢发现通过自己的实践，在慢慢的给自己的工作和生活上带来一点一点的便捷和实用感，真的还是蛮有成就感的。🤠🤠🤠</p>
+<p>继续加油。⛽️⛽️</p>
+]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>SAP</tag>
+        <tag>Tech</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SAP的ReportPainter报表金额显示X异常的问题</title>
+    <url>/2022/04/09/SAP%E7%9A%84ReportPainter%E6%8A%A5%E8%A1%A8%E9%87%91%E9%A2%9D%E6%98%BE%E7%A4%BAX%E5%BC%82%E5%B8%B8/</url>
+    <content><![CDATA[<h1 id="SAP的ReportPainter报表金额显示X异常的问题"><a href="#SAP的ReportPainter报表金额显示X异常的问题" class="headerlink" title="SAP的ReportPainter报表金额显示X异常的问题"></a>SAP的ReportPainter报表金额显示X异常的问题</h1><h2 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h2><p>Report painter的报表，显示金额的地方，显示“X”。而不是实际金额。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/grrx.png" alt=""></p>
+<h2 id="Solution："><a href="#Solution：" class="headerlink" title="Solution："></a>Solution：</h2><p>查询了下，一般显示这种X的行，都是金额的汇总值，是多个项目的加总金额。<br>但是如果用来加总的分项项目，金额的计量单位不同，存在差异，就会导致无法做金额汇总。这样的情况下，这种汇总项的金额就无法显示，所以显示“X”。</p>
+<p>比如：一个集团的折旧费，有3家公司折旧费汇总。<br>A家是USD记账，B家是EUR记账，C家是HKD记账。各家单独报表显示都是OK的，但是如果看集团的报表，三家记账货币不一致，就导致集团的报表无法金额加总，故显示“X”。</p>
 ]]></content>
       <categories>
         <category>行业</category>
@@ -246,18 +297,32 @@
       </tags>
   </entry>
   <entry>
-    <title>SAP FI凭证记账自定义汇率</title>
-    <url>/2022/05/20/SAPFI%E5%87%AD%E8%AF%81%E8%AE%B0%E8%B4%A6%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B1%87%E7%8E%87/</url>
-    <content><![CDATA[<h1 id="FI凭证记账自定义汇率，不使用系统汇率"><a href="#FI凭证记账自定义汇率，不使用系统汇率" class="headerlink" title="FI凭证记账自定义汇率，不使用系统汇率"></a>FI凭证记账自定义汇率，不使用系统汇率</h1><h2 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h2><p>记凭证时，如果涉及到外币记账，汇率会自动进行换算的，使用的是OB08维护的汇率。<br>但是如果不想使用系统的汇率，自定义一个汇率值怎么办呢？</p>
-<h2 id="Solution："><a href="#Solution：" class="headerlink" title="Solution："></a>Solution：</h2><p>记账时使用预制凭证。然后过账预制凭证。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidochl01.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidochl02.png" alt=""></p>
-<p>下面是SAP系统的提示帮助说明：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidochl03.png" alt=""></p>
+    <title>写一个SAPGUI自助登陆的python脚本程序(1)——提出及设计</title>
+    <url>/2022/07/16/SAPGUI%E8%87%AA%E5%8A%A9%E7%99%BB%E9%99%86%E7%9A%84python%E8%84%9A%E6%9C%AC1/</url>
+    <content><![CDATA[<h1 id="写一个SAPGUI自助登陆的python脚本程序-1-——提出及设计"><a href="#写一个SAPGUI自助登陆的python脚本程序-1-——提出及设计" class="headerlink" title="写一个SAPGUI自助登陆的python脚本程序(1)——提出及设计"></a>写一个SAPGUI自助登陆的python脚本程序(1)——提出及设计</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我们集团总共有5套SAP ECC系统，然后每套呢还分别有生产环境、测试环境、开发环境各一套。<br>也就说，像我这种日常做模块管理的话，生产及测试环境要频繁的切换，经常要反复登录大概八九套的环境。</p>
+<p>SAP GUI登陆，然后不同的CLINET，账密要频繁的输入密码，而且本身后台密码策略也有要求，就你来回切换系统，很麻烦……<br>这个问题其实很困扰用户，所以后来basis做了单点的SSO登录，但是前提是你的客户端电脑要是加域才行。</p>
+<p>我呢，整天用着自己的本本，所以没加域。<br>于是想说做一个自助的登录脚本，方便一些。<br>查询了一圈资料，发现还是有一些方法设计的。就行动起来～</p>
+<h2 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h2><ul>
+<li>最初的思路是抓鼠标的x、y轴坐标，然后使用pyautogui去模拟键鼠的操作，执行鼠标单击、双击、回车、tab、输入文本、上下按键这些操作。<br>但是这样有个问题，就是GUI界面不能动位置，一旦gui窗口换了个位置，坐标定位就会有问题。脚本就会跑错……</li>
+<li>后来呢查询了一圈，发现windows下的程序界面，都会对应到进程服务，都会有一个windows的句柄。<br>那么呢通过抓SAPGUI的句柄，就抓到对应的界面，然后用win32gui库去模拟键盘操作执行。</li>
+<li>这里有个要注意的地方，就是并不是每个界面都能抓到句柄。可能和不同sap client的版本也有关系。<br>我实际最后做下来，有一些公司的测试client，是无法抓到的。我初步判断的是这些测试的client端版本有一些限制，所以抓不到。</li>
+</ul>
+<h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><p>大致实现的步骤：</p>
+<ul>
+<li>打开SAPGUI.exe；抓到登陆gui的句柄。</li>
+<li>在登陆gui里，搜索筛选器中输入登录的client，这里模糊搜索就够了。</li>
+<li>进入client的登陆界面，然后抓到这个的句柄，定位到登陆界面。</li>
+<li>输入账号密码，登陆。</li>
+</ul>
+<p>后面再详细的写一下每一步大概都做了什么。</p>
 ]]></content>
       <categories>
-        <category>行业</category>
+        <category>Tech</category>
       </categories>
       <tags>
         <tag>SAP</tag>
-        <tag>行业</tag>
+        <tag>Tech</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -285,74 +350,9 @@
         <category>Tech</category>
       </categories>
       <tags>
+        <tag>SAP</tag>
         <tag>Tech</tag>
         <tag>python</tag>
-        <tag>SAP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>写一个SAPGUI自助登陆的python脚本程序(4)——最终效果</title>
-    <url>/2022/07/24/SAPGUI%E8%87%AA%E5%8A%A9%E7%99%BB%E9%99%86%E7%9A%84python%E8%84%9A%E6%9C%AC4/</url>
-    <content><![CDATA[<h1 id="写一个SAPGUI自助登陆的python脚本程序-4-——最终效果"><a href="#写一个SAPGUI自助登陆的python脚本程序-4-——最终效果" class="headerlink" title="写一个SAPGUI自助登陆的python脚本程序(4)——最终效果"></a>写一个SAPGUI自助登陆的python脚本程序(4)——最终效果</h1><h2 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h2><p><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/sapguipy.gif" alt=""></p>
-<p>可以看到哈，我其实有做了一些修饰的。<br>把常用到的client先定义好，然后执行脚本时，选择要登陆的client序号，<br>就可以了。<br>如果输入的序号不对，那么就返回报错。</p>
-<p>然后账号和密码预先定义在程序里。<br>后续改密码的话，就把程序里的密码改掉。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这个程序呢，其实是我21年的时候就写好了的。🤪🤪<br>一直没有码写一段说明去讲讲逻辑，整个的过程，写这几篇文章，自己对着代码部分还捋了一遍逻辑。😳<br>写下来，留给自己看，毕竟记录了一部分成长。🧐🧐<br>如果有缘人看到了，能有一点启发和帮助，那可能就更好了。🥰</p>
-<p>当时真的花了好多心力去研究代码和逻辑，特别是抓窗口的逻辑，很多种情况要考虑，然后不断的测试，精简代码，<br>最后的成品，代码量其实很少的，120+行左右吧。但是真的是精炼了好多才出来的。</p>
-<p>后来呢，我真的是一直在用它，直到现在我每天也是会先打开powershell，时候准备去跑它。<br>因为我工作基本九成的操作是要在SAP里操作的，有了这个程序后，真的省掉了我超级超级超级多的时间，以往不停的输入账号密码，现在再也不需要了。<br>真的用起来溜极了……我甚至觉得比basis配置的sso登陆都丝滑。<br>而且每每同事看到我这么骚的登陆操作后，都有点惊讶。有种低调的高级感油然而生呀。</p>
-<p>玩python呢，纯粹就是自学自己搞着玩的，<br>但是慢慢发现通过自己的实践，在慢慢的给自己的工作和生活上带来一点一点的便捷和实用感，真的还是蛮有成就感的。🤠🤠🤠</p>
-<p>继续加油。⛽️⛽️</p>
-]]></content>
-      <categories>
-        <category>Tech</category>
-      </categories>
-      <tags>
-        <tag>Tech</tag>
-        <tag>python</tag>
-        <tag>SAP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>写一个SAPGUI自助登陆的python脚本程序(1)——提出及设计</title>
-    <url>/2022/07/16/SAPGUI%E8%87%AA%E5%8A%A9%E7%99%BB%E9%99%86%E7%9A%84python%E8%84%9A%E6%9C%AC1/</url>
-    <content><![CDATA[<h1 id="写一个SAPGUI自助登陆的python脚本程序-1-——提出及设计"><a href="#写一个SAPGUI自助登陆的python脚本程序-1-——提出及设计" class="headerlink" title="写一个SAPGUI自助登陆的python脚本程序(1)——提出及设计"></a>写一个SAPGUI自助登陆的python脚本程序(1)——提出及设计</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我们集团总共有5套SAP ECC系统，然后每套呢还分别有生产环境、测试环境、开发环境各一套。<br>也就说，像我这种日常做模块管理的话，生产及测试环境要频繁的切换，经常要反复登录大概八九套的环境。</p>
-<p>SAP GUI登陆，然后不同的CLINET，账密要频繁的输入密码，而且本身后台密码策略也有要求，就你来回切换系统，很麻烦……<br>这个问题其实很困扰用户，所以后来basis做了单点的SSO登录，但是前提是你的客户端电脑要是加域才行。</p>
-<p>我呢，整天用着自己的本本，所以没加域。<br>于是想说做一个自助的登录脚本，方便一些。<br>查询了一圈资料，发现还是有一些方法设计的。就行动起来～</p>
-<h2 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h2><ul>
-<li>最初的思路是抓鼠标的x、y轴坐标，然后使用pyautogui去模拟键鼠的操作，执行鼠标单击、双击、回车、tab、输入文本、上下按键这些操作。<br>但是这样有个问题，就是GUI界面不能动位置，一旦gui窗口换了个位置，坐标定位就会有问题。脚本就会跑错……</li>
-<li>后来呢查询了一圈，发现windows下的程序界面，都会对应到进程服务，都会有一个windows的句柄。<br>那么呢通过抓SAPGUI的句柄，就抓到对应的界面，然后用win32gui库去模拟键盘操作执行。</li>
-<li>这里有个要注意的地方，就是并不是每个界面都能抓到句柄。可能和不同sap client的版本也有关系。<br>我实际最后做下来，有一些公司的测试client，是无法抓到的。我初步判断的是这些测试的client端版本有一些限制，所以抓不到。</li>
-</ul>
-<h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><p>大致实现的步骤：</p>
-<ul>
-<li>打开SAPGUI.exe；抓到登陆gui的句柄。</li>
-<li>在登陆gui里，搜索筛选器中输入登录的client，这里模糊搜索就够了。</li>
-<li>进入client的登陆界面，然后抓到这个的句柄，定位到登陆界面。</li>
-<li>输入账号密码，登陆。</li>
-</ul>
-<p>后面再详细的写一下每一步大概都做了什么。</p>
-]]></content>
-      <categories>
-        <category>Tech</category>
-      </categories>
-      <tags>
-        <tag>Tech</tag>
-        <tag>python</tag>
-        <tag>SAP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SAP的ReportPainter报表金额显示X异常的问题</title>
-    <url>/2022/04/09/SAP%E7%9A%84ReportPainter%E6%8A%A5%E8%A1%A8%E9%87%91%E9%A2%9D%E6%98%BE%E7%A4%BAX%E5%BC%82%E5%B8%B8/</url>
-    <content><![CDATA[<h1 id="SAP的ReportPainter报表金额显示X异常的问题"><a href="#SAP的ReportPainter报表金额显示X异常的问题" class="headerlink" title="SAP的ReportPainter报表金额显示X异常的问题"></a>SAP的ReportPainter报表金额显示X异常的问题</h1><h2 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h2><p>Report painter的报表，显示金额的地方，显示“X”。而不是实际金额。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/grrx.png" alt=""></p>
-<h2 id="Solution："><a href="#Solution：" class="headerlink" title="Solution："></a>Solution：</h2><p>查询了下，一般显示这种X的行，都是金额的汇总值，是多个项目的加总金额。<br>但是如果用来加总的分项项目，金额的计量单位不同，存在差异，就会导致无法做金额汇总。这样的情况下，这种汇总项的金额就无法显示，所以显示“X”。</p>
-<p>比如：一个集团的折旧费，有3家公司折旧费汇总。<br>A家是USD记账，B家是EUR记账，C家是HKD记账。各家单独报表显示都是OK的，但是如果看集团的报表，三家记账货币不一致，就导致集团的报表无法金额加总，故显示“X”。</p>
-]]></content>
-      <categories>
-        <category>行业</category>
-      </categories>
-      <tags>
-        <tag>SAP</tag>
-        <tag>行业</tag>
       </tags>
   </entry>
   <entry>
@@ -361,21 +361,6 @@
     <content><![CDATA[<h2 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h2><p>SAP里设定某些后台作业在月底最后一天自动执行。</p>
 <h2 id="Solution："><a href="#Solution：" class="headerlink" title="Solution："></a>Solution：</h2><p>SM36建立后台作业，然后依次按照操作设置即可。挺简单的。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/backjob01.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/backjob02.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/backjob03.png" alt=""></p>
 <h2 id="补充信息："><a href="#补充信息：" class="headerlink" title="补充信息："></a>补充信息：</h2><p>工厂日历，填写在有效期里面的日历即可。<br>日历的设置，用SCAL事务码查看。</p>
-]]></content>
-      <categories>
-        <category>行业</category>
-      </categories>
-      <tags>
-        <tag>SAP</tag>
-        <tag>行业</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SAP会计凭证查询报表定义自定义视图</title>
-    <url>/2022/05/09/SAP%E4%BC%9A%E8%AE%A1%E5%87%AD%E8%AF%81%E6%9F%A5%E8%AF%A2%E6%8A%A5%E8%A1%A8%E5%AE%9A%E4%B9%89%E8%87%AA%E5%AE%9A%E4%B9%89%E8%A7%86%E5%9B%BE/</url>
-    <content><![CDATA[<h1 id="【SAP】会计凭证查询报表定义自定义视图"><a href="#【SAP】会计凭证查询报表定义自定义视图" class="headerlink" title="【SAP】会计凭证查询报表定义自定义视图"></a>【SAP】会计凭证查询报表定义自定义视图</h1><h2 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h2><p>经常会有这种情况，某个财会人员为了显示自己需要的数据，改了显示视图。<br>但是改掉后还设置成默认视图。导致其他人查报表时，发现格式变了……<br>甚至如果有人在视图里设置了筛选，其他人不清楚的话，直接看报表数据显示都会缺失。</p>
-<h2 id="Solution："><a href="#Solution：" class="headerlink" title="Solution："></a>Solution：</h2><p>建议的是，使用人员如果有自己的使用习惯，保存视图，保存成只适用自己账号的视图。这样不会影响其他人，其他人改了视图也不会影响自己。<br>（大前提是，从basis后台端对视图修改权限没有做限制。如果对权限做了限制，不让大家修改视图，硬管控也可以。）</p>
-<p>下面演示下大致的操作：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidocview01.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidocview02.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidocview03.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidocview04.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidocview05.png" alt=""></p>
 ]]></content>
       <categories>
         <category>行业</category>
@@ -422,53 +407,18 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2018/12/29/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></tbody></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></tbody></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></tbody></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Windows与MacOS上的定时JOB设置</title>
-    <url>/2020/05/06/Windows%E4%B8%8EMacOS%E4%B8%8A%E7%9A%84%E5%AE%9A%E6%97%B6JOB%E8%AE%BE%E7%BD%AE/</url>
-    <content><![CDATA[<h1 id="windows-amp-MacOS-的定时JOB设置"><a href="#windows-amp-MacOS-的定时JOB设置" class="headerlink" title="windows &amp; MacOS 的定时JOB设置"></a>windows &amp; MacOS 的定时JOB设置</h1><p>做了一些程序以后呢，爬取网站呀，获取监控呀，就需要设定定时作业。<br>定时作业部署在不关机的server上肯定谁最好的。但是正常人肯定不是随便就能搞到服务器的，服务器还是有成本的。</p>
-<p>那么就用自己的pc机器吧～<br>（更新：发现可以通过云平台的serverless服务执行定时脚本。<a href="http://tech.hahaalot.com/2020/05/10/腾讯云TencentCloud的Serverless云函数SCF/">腾讯云TencentCloud的Serverless云函数SCF</a>）</p>
-<h2 id="Windows-OS"><a href="#Windows-OS" class="headerlink" title="Windows OS"></a>Windows OS</h2><p>Windows，最普遍的操作系统。<br>本身自带一个程序【计划任务(Task Scheduler)】<br>我们使用它设定和执行定时任务。</p>
-<h3 id="Task-Scheduler（计划任务）"><a href="#Task-Scheduler（计划任务）" class="headerlink" title="Task Scheduler（计划任务）"></a>Task Scheduler（计划任务）</h3><p>搜索task scheduler就能找到，然后新建定时任务。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/task_schedule01.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/task_schedule02.png" alt=""></p>
-<h3 id="定时任务（方法一）"><a href="#定时任务（方法一）" class="headerlink" title="定时任务（方法一）"></a>定时任务（方法一）</h3><p>直接新建，然后设置【Trigger】，【Actions】选择要执行的程序。<br>注意，如果程序脚本中涉及到了读写文件的操作，文件地址一定要写全绝对路径。因为执行脚本的目录并不是程序所在的相对路径的。<br>（因为我的直接脚本都是python写的，所以我执行程序使用的python）<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/task_schedule03.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/task_schedule04.png" alt=""></p>
-<h3 id="定时任务（方法二）"><a href="#定时任务（方法二）" class="headerlink" title="定时任务（方法二）"></a>定时任务（方法二）</h3><p>除了直接执行程序，也可以选择写一个powershell脚本，执行脚本。然后在powershell脚本中调用程序脚本。<br><del>是有种“脱裤子放屁”的感觉哈。</del><br><del>除了能避免忽略文件绝对路径的问题，好像也没啥用途。</del> （也不是什么主要优点）<br>可能我本人，比较喜欢powershell脚本吧。    o(<em>￣︶￣</em>)o<br>Windows上如果是一般的脚本，建议还是通过powershell写。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/task_schedule05.png" alt=""></p>
-<h2 id="MacOS"><a href="#MacOS" class="headerlink" title="MacOS"></a>MacOS</h2><p>Mac使用自带的launchctl服务。</p>
-<h3 id="编写plist文件"><a href="#编写plist文件" class="headerlink" title="编写plist文件"></a>编写plist文件</h3><p>首先要编写plist文件，代码参考如下。<br>Plist文件，是launchctl服务执行使用的。对于其他脚本的执行，需将脚本名称写在plist文件里。<br></p><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span><br><span class="line">    &lt;!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN"</span><br><span class="line">        "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;</span><br><span class="line">    &lt;plist version="1.0"&gt;</span><br><span class="line">    &lt;dict&gt;</span><br><span class="line">        &lt;!-- Label唯一的标识 --&gt;</span><br><span class="line">        &lt;key&gt;Label&lt;/key&gt;</span><br><span class="line">        &lt;string&gt;lhd.backstage.program.plist&lt;/string&gt;</span><br><span class="line">        &lt;!-- 指定要运行的脚本 --&gt;</span><br><span class="line">        &lt;key&gt;ProgramArguments&lt;/key&gt;</span><br><span class="line">        &lt;array&gt;</span><br><span class="line">            &lt;string&gt;/Users/konta/Sky_App/backstage_program/back_run.sh&lt;/string&gt;</span><br><span class="line">        &lt;/array&gt;</span><br><span class="line">        &lt;!-- 指定要运行的时间 --&gt;</span><br><span class="line">        &lt;key&gt;StartCalendarInterval&lt;/key&gt;</span><br><span class="line">        &lt;dict&gt;</span><br><span class="line">            &lt;key&gt;Minute&lt;/key&gt;</span><br><span class="line">            &lt;integer&gt;07&lt;/integer&gt;</span><br><span class="line">            &lt;key&gt;Hour&lt;/key&gt;</span><br><span class="line">            &lt;integer&gt;17&lt;/integer&gt;</span><br><span class="line">        &lt;/dict&gt;</span><br><span class="line">        &lt;!-- 标准输出文件 --&gt;</span><br><span class="line">        &lt;key&gt;StandardOutPath&lt;/key&gt;</span><br><span class="line">        &lt;string&gt;/Users/konta/Sky_App/backstage_program/backstage_program.log&lt;/string&gt;</span><br><span class="line">        &lt;!-- 标准错误输出文件，错误日志 --&gt;</span><br><span class="line">        &lt;key&gt;StandardErrorPath&lt;/key&gt;</span><br><span class="line">        &lt;string&gt;/Users/konta/Sky_App/backstage_program/backstage_program.err&lt;/string&gt;</span><br><span class="line">    &lt;/dict&gt;</span><br><span class="line">    &lt;/plist&gt;</span><br></pre></td></tr></tbody></table></figure><p></p>
-<h3 id="编写sh脚本"><a href="#编写sh脚本" class="headerlink" title="编写sh脚本"></a>编写sh脚本</h3><p>plist文件中指定了脚本地址，我们需要创建这个sh脚本。<br>以如下代码为例，我直接是使用python执行py脚本。<br></p><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line"># 进入py程序所在目录</span><br><span class="line">cd /Users/konta/Sky_App/backstage_program &amp;&amp;</span><br><span class="line"># 执行python脚本（注意前面要指定python运行环境/usr/bin/python，根据自己的情况改变。我python3使用的是anaconda环境，所以不一样）</span><br><span class="line">/Users/konta/anaconda3/bin/python web_info.py</span><br></pre></td></tr></tbody></table></figure><p></p>
-<h3 id="plist文件部署位置"><a href="#plist文件部署位置" class="headerlink" title="plist文件部署位置"></a>plist文件部署位置</h3><p>plist可以放在如下位置：</p>
-<ul>
-<li>~/Library/LaunchAgents  由用户自己定义的任务项</li>
-<li>/Library/LaunchAgents  由管理员为用户定义的任务项</li>
-<li>/Library/LaunchDaemons  由管理员定义的守护进程任务项</li>
-<li>/System/Library/LaunchAgents  由Mac OS X为用户定义的任务项</li>
-<li>/System/Library/LaunchDaemons  由Mac OS X定义的守护进程任务项<br>我自己是放在了 【~/Library/LaunchAgents 】里面。<br>【 /Library/LaunchAgents】目录，由于Mac本身的安全策略，无法直接把文件放进去，需要先解除安全策略，我嫌麻烦就没用。<h3 id="lauchctl命令加载"><a href="#lauchctl命令加载" class="headerlink" title="lauchctl命令加载"></a>lauchctl命令加载</h3>只有加载了文件的任务，才能定时执行。terminal中输入：<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line"># 加载任务, -w会将plist文件中无效的key覆盖掉，建议加上。</span><br><span class="line">launchctl load -w lhd.backstage.program.plist</span><br></pre></td></tr></tbody></table></figure>
-</li>
-</ul>
-<p>以上，定时job就设置完成了。</p>
-<h3 id="常规launchctl命令"><a href="#常规launchctl命令" class="headerlink" title="常规launchctl命令"></a>常规launchctl命令</h3><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">launchctl load -w lhd.backstage.program.plist</span><br><span class="line"></span><br><span class="line"># 删除任务。如果plist文件有调整，需要先删除任务，再重新加载。</span><br><span class="line">launchctl unload -w lhd.backstage.program.plist</span><br><span class="line"></span><br><span class="line"># 立即执行任务。忽略设定的时间，立即执行。可以用来检查执行情况。</span><br><span class="line">launchctl start lhd.backstage.program.plist</span><br><span class="line"></span><br><span class="line"># 查看任务列表, 使用grep过滤</span><br><span class="line">launchctl list | grep 'lhd'</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>个人觉得，都挺方便的。</p>
-<p>只不过windows一如既往的可以通过可视化的配置界面进行设定，mac要一直通过在terminal码命令行设置。</p>
-<p>windows：task_scheduler ➡️ powershell脚本 ➡️ py程序<br>macOS：launchctl ➡️ sh脚本 ➡️ py程序<br>思路都是一样的，就是：使用当前操作系统下，原生支持度最高的语言，编写脚本，调用实际执行程序或脚本。</p>
-<p>以上。</p>
+    <title>SAP会计凭证查询报表定义自定义视图</title>
+    <url>/2022/05/09/SAP%E4%BC%9A%E8%AE%A1%E5%87%AD%E8%AF%81%E6%9F%A5%E8%AF%A2%E6%8A%A5%E8%A1%A8%E5%AE%9A%E4%B9%89%E8%87%AA%E5%AE%9A%E4%B9%89%E8%A7%86%E5%9B%BE/</url>
+    <content><![CDATA[<h1 id="【SAP】会计凭证查询报表定义自定义视图"><a href="#【SAP】会计凭证查询报表定义自定义视图" class="headerlink" title="【SAP】会计凭证查询报表定义自定义视图"></a>【SAP】会计凭证查询报表定义自定义视图</h1><h2 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h2><p>经常会有这种情况，某个财会人员为了显示自己需要的数据，改了显示视图。<br>但是改掉后还设置成默认视图。导致其他人查报表时，发现格式变了……<br>甚至如果有人在视图里设置了筛选，其他人不清楚的话，直接看报表数据显示都会缺失。</p>
+<h2 id="Solution："><a href="#Solution：" class="headerlink" title="Solution："></a>Solution：</h2><p>建议的是，使用人员如果有自己的使用习惯，保存视图，保存成只适用自己账号的视图。这样不会影响其他人，其他人改了视图也不会影响自己。<br>（大前提是，从basis后台端对视图修改权限没有做限制。如果对权限做了限制，不让大家修改视图，硬管控也可以。）</p>
+<p>下面演示下大致的操作：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidocview01.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidocview02.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidocview03.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidocview04.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q1/fidocview05.png" alt=""></p>
 ]]></content>
       <categories>
-        <category>Tech</category>
+        <category>行业</category>
       </categories>
       <tags>
-        <tag>Windows</tag>
-        <tag>MacOS</tag>
+        <tag>SAP</tag>
+        <tag>行业</tag>
       </tags>
   </entry>
   <entry>
@@ -521,8 +471,62 @@
         <category>Tech</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>SAP</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2018/12/29/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></tbody></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></tbody></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tbody><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></tbody></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>python的configparser配置解析库应用</title>
+    <url>/2022/01/10/python%E7%9A%84configparser%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%BA%93%E5%BA%94%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="【Tech】python的configparser配置解析库应用"><a href="#【Tech】python的configparser配置解析库应用" class="headerlink" title="【Tech】python的configparser配置解析库应用"></a>【Tech】python的configparser配置解析库应用</h1><p>使用configparser库，可以通过将连接配置预设在一个【<em>**</em>.cfg】的配置文件里。这样在程序使用时，只需要通过读取cfg的配置文件就可以了。</p>
+<p>比如，我设置一个sapnwrfc.cfg文件，里面设置3对连接信息：<br></p><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">[p7019s16]</span><br><span class="line">user = demo</span><br><span class="line">passwd = Welcome</span><br><span class="line">ashost =  10.117.19.101</span><br><span class="line">saprouter = /H/203.13.155.17/W/xjkb3d/H/172.19.138.120/H/</span><br><span class="line">sysnr = 00</span><br><span class="line">lang = EN</span><br><span class="line">client = 100</span><br><span class="line"></span><br><span class="line">[coevi51]</span><br><span class="line">user = demo</span><br><span class="line">passwd = welcome</span><br><span class="line">ashost = 10.68.110.51</span><br><span class="line">sysnr = 00</span><br><span class="line">client = 620</span><br><span class="line">lang = EN</span><br><span class="line"></span><br><span class="line">[coe_he_66]</span><br><span class="line">user = demo</span><br><span class="line">passwd = welcome</span><br><span class="line">ashost = 10.68.104.164</span><br><span class="line">sysnr = 00</span><br><span class="line">client = 620</span><br><span class="line">lang = EN</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>然后程序中直接调用即可：<br></p><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">from configparser import ConfigParser</span><br><span class="line"></span><br><span class="line">config = ConfigParser()</span><br><span class="line">config.read("sapnwrfc.cfg")   # 读取定义的sapnwrfc文件</span><br><span class="line">params_connection = config._sections["p7019s16"]   # 取p7019s16这一个连接块里的连接信息</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>还是比较简单的用法。</p>
+]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SAP霸道的内置函数RFC_READ_TABLE</title>
+    <url>/2022/12/20/rfcreadtable/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近很长一大段时间，自己在学习新的技术。<br>所以很久很久不更新了。想说学好了搞一个新项目搞搞。但是学习的时间成本，加上工作很忙，就比较慢吧。</p>
+<p>手头在做一个项目，有了一点我自己的需求：<br>每晚我们要对外抛一些凭证信息，是通过sap的定时后台作业实现。但是目前没有合适的监控，导致每天都要登陆系统去查log表。</p>
+<p>于是我就想是否有一个RFC函数，可以查询table，这样我通过调用函数就可以去看log表，以实现监控的效果。</p>
+<p>Google了一下，原来sap本身自带了函数<code>RFC_READ_TABLE</code>，可以实现我的需求。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/rfcreadtable01.png" alt=""></p>
+<h2 id="函数使用说明"><a href="#函数使用说明" class="headerlink" title="函数使用说明"></a>函数使用说明</h2><p>首先看一下这个函数的参数和表，<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/rfcreadtable02.png" alt=""></p>
+<h3 id="入参"><a href="#入参" class="headerlink" title="入参"></a>入参</h3><p><code>QUERY_TABLE</code>，输入要查询的table。这里要说明下，执行该函数的账号必须有该table的查看权限才可以，否则会报错未授权。<br><code>DELIMITER</code>输入分隔符号。输出的结果如果有多列，不同列的值之间就是这个符号做分割。<br><code>NO_DATA</code>输入“X”表示不需要输出table的值，只输出表结构。如果不清楚某个table有哪些列，就可以先选中它，获取下表结构。<br><code>ROWSKIPS</code>输出的结果要掠过多少行。比如某条件查询会查到100行，这个参数输入50，则输出结果从51行开始。<br><code>ROWCOUNT</code>输出多少行结果。比如某条件查询会查到100行，这个参数输入10，则输出只有10行结果。</p>
+<h3 id="表"><a href="#表" class="headerlink" title="表"></a>表</h3><p><code>OPTIONS</code>查询的条件。可以根据自己的需要编写查询的条件。<br>需要注意的是，这里是abap的写法，如果跨行，就当作正常的abap换行写就好。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/rfcreadtable03.png" alt=""><br><code>FIELDS</code>要输出结果包含table的哪些列。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/rfcreadtable04.png" alt=""><br><code>DATA</code>输出结果的表，所有期望结果输出都在这里。</p>
+<h3 id="执行结果"><a href="#执行结果" class="headerlink" title="执行结果"></a>执行结果</h3><p>按照我上面图例的条件，执行后结果就是这样子的。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/rfcreadtable05.png" alt=""></p>
+<p>总之这个函数还是很容易上手的。</p>
+<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>之所以我觉得它很霸道的原因是，有了它可以少掉很多额外的开发工作。如果我只是单纯的要从某些表里获取数据，我就可以直接使用它，而不是在要通过写程序或者单独写函数去抓。可以把更多精力放在处理获取的数据上。</p>
+<h2 id="我干了点啥"><a href="#我干了点啥" class="headerlink" title="我干了点啥"></a>我干了点啥</h2><p>我呢，用它干了点啥呢，就是可以一点程度上实现我的定时监控，并将监控结果发给我自己。<br>大体逻辑就是，定时调用这个rfc，然后抓取结果做一定加工后，调用企业微信的webhook，发送到我的企业微信上。<br>每个环节之前都搞过好多次，也都介绍过，所以就不单独说了。</p>
+<p>最后的 效果大概就是下面这个样子的，非常的nice。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/rfcreadtable06.png" alt=""></p>
+]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>SAP</tag>
+        <tag>Tech</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -539,28 +543,6 @@
       </categories>
       <tags>
         <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>人力资源离职情况的初步数据分析</title>
-    <url>/2020/09/11/%E4%BA%BA%E5%8A%9B%E8%B5%84%E6%BA%90%E7%A6%BB%E8%81%8C%E6%83%85%E5%86%B5%E7%9A%84%E5%88%9D%E6%AD%A5%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</url>
-    <content><![CDATA[<h1 id="【行业】人力资源离职情况的初步数据分析"><a href="#【行业】人力资源离职情况的初步数据分析" class="headerlink" title="【行业】人力资源离职情况的初步数据分析"></a>【行业】人力资源离职情况的初步数据分析</h1><p>做了一笔数据场景的爬取分析。<br>我们现在看一下大致数据反映出的数据图表，分析一下。</p>
-<h2 id="离职人数及分布"><a href="#离职人数及分布" class="headerlink" title="离职人数及分布"></a>离职人数及分布</h2><p>先看一下各省的离职人数，及分布：</p>
-<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_amount_province_bar.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe></p>
-<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_amount_province_map.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>可以看到，各省基本都有人员离职，说明公司的业务铺的很开，各省均有员工。<br>且人口大省，相对应的离职人员，也比较多，成正比。</p>
-<h2 id="离职原因"><a href="#离职原因" class="headerlink" title="离职原因"></a>离职原因</h2><p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_reason_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>离职原因上，1/3的情况是家庭因素。工作压力、薪资、劳动强度等原因，占比相对不高，但是也在前几之列。<br>所以大多数的离职，基本上可能还是家庭与工作无法平衡，这也一定程度反映现代社会的一个比较普遍的情况。</p>
-<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_reason_province_sankey.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe></p>
-<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_reason_area_sankey.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>从这两个流向图，可以看出来，工作5年以下的人数占了绝大部份，说明公司员工对公司的忠诚度和依赖度比较低。<br>华东华北，等发达地区，员工更易离职。</p>
-<h2 id="再入职意愿"><a href="#再入职意愿" class="headerlink" title="再入职意愿"></a>再入职意愿</h2><p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_reentry_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>离职员工再入职的意愿，近4/5选择了愿意再次入职。说明一定程度上，大家对于公司还是满意的状态，如果有机会会继续选择。<br>但是也不排除员工“好聚好散”的心里。</p>
-<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_areareentry_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>其中，东北地区，愿意的比例最高，也说明东北的工作满意度状态最好。<br>华中地区，不愿意比例较高，如果有需要，其实可以重点看一下。看一下员工的反馈情况，可能会发现一些信息。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>只是做了一些简单的分析，<br>毕竟数据的收集有限。如果数据样本足够大，其实分析的规律会更加贴近实际。<br>这里只是简单练个手，以后有机会做一做更深入的分析调研。</p>
-]]></content>
-      <categories>
-        <category>行业</category>
-      </categories>
-      <tags>
-        <tag>行业</tag>
-        <tag>hr</tag>
       </tags>
   </entry>
   <entry>
@@ -629,26 +611,96 @@
       </tags>
   </entry>
   <entry>
-    <title>python的configparser配置解析库应用</title>
-    <url>/2022/01/10/python%E7%9A%84configparser%E9%85%8D%E7%BD%AE%E8%A7%A3%E6%9E%90%E5%BA%93%E5%BA%94%E7%94%A8/</url>
-    <content><![CDATA[<h1 id="【Tech】python的configparser配置解析库应用"><a href="#【Tech】python的configparser配置解析库应用" class="headerlink" title="【Tech】python的configparser配置解析库应用"></a>【Tech】python的configparser配置解析库应用</h1><p>使用configparser库，可以通过将连接配置预设在一个【<em>**</em>.cfg】的配置文件里。这样在程序使用时，只需要通过读取cfg的配置文件就可以了。</p>
-<p>比如，我设置一个sapnwrfc.cfg文件，里面设置3对连接信息：<br></p><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">[p7019s16]</span><br><span class="line">user = demo</span><br><span class="line">passwd = Welcome</span><br><span class="line">ashost =  10.117.19.101</span><br><span class="line">saprouter = /H/203.13.155.17/W/xjkb3d/H/172.19.138.120/H/</span><br><span class="line">sysnr = 00</span><br><span class="line">lang = EN</span><br><span class="line">client = 100</span><br><span class="line"></span><br><span class="line">[coevi51]</span><br><span class="line">user = demo</span><br><span class="line">passwd = welcome</span><br><span class="line">ashost = 10.68.110.51</span><br><span class="line">sysnr = 00</span><br><span class="line">client = 620</span><br><span class="line">lang = EN</span><br><span class="line"></span><br><span class="line">[coe_he_66]</span><br><span class="line">user = demo</span><br><span class="line">passwd = welcome</span><br><span class="line">ashost = 10.68.104.164</span><br><span class="line">sysnr = 00</span><br><span class="line">client = 620</span><br><span class="line">lang = EN</span><br></pre></td></tr></tbody></table></figure><p></p>
-<p>然后程序中直接调用即可：<br></p><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">from configparser import ConfigParser</span><br><span class="line"></span><br><span class="line">config = ConfigParser()</span><br><span class="line">config.read("sapnwrfc.cfg")   # 读取定义的sapnwrfc文件</span><br><span class="line">params_connection = config._sections["p7019s16"]   # 取p7019s16这一个连接块里的连接信息</span><br></pre></td></tr></tbody></table></figure><p></p>
-<p>还是比较简单的用法。</p>
-]]></content>
-      <categories>
-        <category>Tech</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Zen of Python</title>
     <url>/2022/08/30/zenofpython/</url>
     <content><![CDATA[<h1 id="Zen-of-Python"><a href="#Zen-of-Python" class="headerlink" title="Zen of Python"></a>Zen of Python</h1><p>忽然想到自学python的时候，有这个东西了。<br>怕忘了，再记一下。<br>开始自学的时候，不懂编程，不懂语法逻辑，没太懂……后来自己玩的多了，搞了好多莫名其妙的程序后，慢慢感受到了一些禅意。</p>
 <p>CODE有时候很是挺美的～</p>
 <h2 id="Zen-of-Python（Python之禅）"><a href="#Zen-of-Python（Python之禅）" class="headerlink" title="Zen of Python（Python之禅）"></a>Zen of Python（Python之禅）</h2><p><strong>Beautiful is better than ugly.</strong><br>美丽优于丑陋（Python 以编写优美的代码为目标）<br><strong>Explicit is better than implicit.</strong><br>直白优于含蓄（优美的代码应当是明了的，命名规范，风格相似）<br><strong>Simple is better than complex.</strong><br>简单优于复杂（优美的代码应当是简洁的，不要有复杂的内部实现）<br><strong>Complex is better than complicated.</strong><br>复杂优于繁琐（如果复杂不可避免，那代码间也不能有难懂的关系，要保持接口简洁）<br><strong>Flat is better than nested.</strong><br>扁平优于嵌套（优美的代码应当是扁平的，不能有太多的嵌套）<br><strong>Sparse is better than dense.</strong><br>间隔优于紧凑（优美的代码有适当的间隔，不要奢望一行代码解决问题）<br><strong>Readability counts.</strong><br>可读性很重要（优美的代码是可读的 ）<br><strong>Special cases aren’t special enough to break the rules.</strong><br>即便假借特例的实用性之名，也不可违背这些规则（这些规则至高无上）<br><strong>Although practicality beats purity.</strong><br><strong>Errors should never pass silently.</strong><br><strong>Unless explicitly silenced.</strong><br>不要包容所有错误，除非你确定需要这样做（精准地捕获异常，不写 except:pass 风格的代码）<br><strong>In the face of ambiguity, refuse the temptation to guess.</strong><br><strong>There should be one–- and preferably only one –obvious way to do it.</strong><br><strong>Although that way may not be obvious at first unless you’re Dutch.</strong><br>当存在多种可能，不要尝试去猜测<br>而是尽量找一种，最好是唯一一种明显的解决方案（如果不确定，就用穷举法）<br>虽然这并不容易，因为你不是 Python 之父（这里的 Dutch 是指 Guido ）<br><strong>Now is better than never.</strong><br><strong>Although never is often better than <em>right</em> now.</strong><br>做也许好过不做，但不假思索就动手还不如不做（动手之前要细思量）<br><strong>If the implementation is hard to explain, it’s a bad idea.</strong><br><strong>If the implementation is easy to explain, it may be a good idea.</strong><br>如果你无法向人描述你的方案，那肯定不是一个好方案；反之亦然（方案测评标准）<br><strong>Namespaces are one honking great idea -– let’s do more of those!</strong><br>命名空间是一种绝妙的理念，我们应当多加利用（倡导与号召）</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[小实验]自制个双色球程序，助力走上人生巅峰吧</title>
+    <url>/2020/07/11/%E5%B0%8F%E5%AE%9E%E9%AA%8C-%E8%87%AA%E5%88%B6%E4%B8%AA%E5%8F%8C%E8%89%B2%E7%90%83%E7%A8%8B%E5%BA%8F%EF%BC%8C%E5%8A%A9%E5%8A%9B%E8%B5%B0%E4%B8%8A%E4%BA%BA%E7%94%9F%E5%B7%85%E5%B3%B0%E5%90%A7/</url>
+    <content><![CDATA[<h1 id="【Lib】-小实验-自制个双色球程序，助力走上人生巅峰吧"><a href="#【Lib】-小实验-自制个双色球程序，助力走上人生巅峰吧" class="headerlink" title="【Lib】[小实验]自制个双色球程序，助力走上人生巅峰吧"></a>【Lib】[小实验]自制个双色球程序，助力走上人生巅峰吧</h1><p>最近我在买双色球。<br>期待是有的，更多的是给自己攒RP，而且不是还有一部分发展福利事业么。</p>
+<p>本来就是随便买的，所以每次都是机选4注。<br>买了几次我发现，机选还挺简单的，没啥逻辑，那为啥我不自己搞个程序，自己机选呢？</p>
+<p>好的，说干就干。</p>
+<h2 id="程序逻辑"><a href="#程序逻辑" class="headerlink" title="程序逻辑"></a>程序逻辑</h2><ul>
+<li>使用random模块，对33个白球16个蓝球进行随机取值；</li>
+<li>白球取值过程，重复6次；需注意判断random出来的值，是否与前几次重复。</li>
+<li>6白球1蓝球一组，生成一注。生成17注。</li>
+<li>在17注中，在random出来4注，作为最终的机选。<br>（为啥先出来17，再选4呢？是因为好玩吧，lucky17里再lucky4。）</li>
+<li>发送给企业微信的webhook，然后企业微信生成消息。</li>
+</ul>
+<h2 id="程序实现机选"><a href="#程序实现机选" class="headerlink" title="程序实现机选"></a>程序实现机选</h2><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">import random, json, certifi, urllib3</span><br><span class="line"></span><br><span class="line">def blueball():</span><br><span class="line">    bball = random.randint(1,16)</span><br><span class="line">    return bball</span><br><span class="line"></span><br><span class="line">def redballs():</span><br><span class="line">    rballs = []</span><br><span class="line">    for i in range(6):</span><br><span class="line">        rball = random.randint(1,33)</span><br><span class="line">        while rball in rballs:</span><br><span class="line">            rball = random.randint(1,33)</span><br><span class="line">        rballs.append(rball)</span><br><span class="line">    rballs.sort()</span><br><span class="line">    return rballs</span><br><span class="line"></span><br><span class="line">def main():</span><br><span class="line">    altballs = []</span><br><span class="line">    for i in range(17):</span><br><span class="line">        balls = [redballs(), blueball()]</span><br><span class="line">        altballs.append(balls)</span><br><span class="line">    luckyfour = random.sample(altballs, 4)</span><br><span class="line"></span><br><span class="line">    # 发送给企业微信的webhook显示。</span><br><span class="line">    http = urllib3.PoolManager(cert_reqs='CERT_REQUIRED', ca_certs=certifi.where())</span><br><span class="line">    # 李有财 hook_addr</span><br><span class="line">    hook_addr = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=lalalalalalalalalala"    # my robot</span><br><span class="line">    # 传输webhook图文消息    </span><br><span class="line">    data = {</span><br><span class="line">    "msgtype": "markdown",</span><br><span class="line">    "markdown": {</span><br><span class="line">        "content": "**双色球**\n\</span><br><span class="line">        &gt;**第①注: &lt;font color=\"comment\"&gt;%s&lt;/font&gt;- &lt;font color=\"warning\"&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第②注: &lt;font color=\"comment\"&gt;%s&lt;/font&gt;- &lt;font color=\"warning\"&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第③注: &lt;font color=\"comment\"&gt;%s&lt;/font&gt;- &lt;font color=\"warning\"&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第④注: &lt;font color=\"comment\"&gt;%s&lt;/font&gt;- &lt;font color=\"warning\"&gt;%s&lt;/font&gt;**\n"</span><br><span class="line">        %(luckyfour[0][0], luckyfour[0][1], luckyfour[1][0], luckyfour[1][1],</span><br><span class="line">            luckyfour[2][0], luckyfour[2][1], luckyfour[3][0], luckyfour[3][1])</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    data = json.dumps(data).encode()</span><br><span class="line">    response_hook = http.request('POST', hook_addr, body=data)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ == "__main__":</span><br><span class="line">    main()</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="优化改善"><a href="#优化改善" class="headerlink" title="优化改善"></a>优化改善</h2><p>为了方便我每次对奖方便，在程序里爬取下上期的开奖结果。<br>爬取500彩票网的结果界面。<br></p><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">def last_result():</span><br><span class="line">    addr = 'http://kaijiang.500.com/shtml/ssq/'</span><br><span class="line">    http = urllib3.PoolManager(cert_reqs='CERT_REQUIRED', ca_certs=certifi.where())</span><br><span class="line">    response = http.request('GET', addr)</span><br><span class="line">    tree = html.fromstring(response.data)</span><br><span class="line">    r = tree.xpath('//div[@class="ball_box01"]//li[@class="ball_red"]//text()')</span><br><span class="line">    b = tree.xpath('//div[@class="ball_box01"]//li[@class="ball_blue"]//text()')</span><br><span class="line">    return r, b</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>同时在主函数里加上上期结果的发送：<br></p><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">def main():</span><br><span class="line">    ***</span><br><span class="line">    last_r, last_b = last_result()</span><br><span class="line">    ***</span><br><span class="line">    data = {</span><br><span class="line">    "msgtype": "markdown",</span><br><span class="line">    "markdown": {</span><br><span class="line">        "content": "**双色球**\n\</span><br><span class="line">        %s, %s\n\</span><br><span class="line">        &gt;**第①注: &lt;font color=\"comment\"&gt;%s&lt;/font&gt;- &lt;font color=\"warning\"&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第②注: &lt;font color=\"comment\"&gt;%s&lt;/font&gt;- &lt;font color=\"warning\"&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第③注: &lt;font color=\"comment\"&gt;%s&lt;/font&gt;- &lt;font color=\"warning\"&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第④注: &lt;font color=\"comment\"&gt;%s&lt;/font&gt;- &lt;font color=\"warning\"&gt;%s&lt;/font&gt;**\n"</span><br><span class="line">        %(last_r, last_b, luckyfour[0][0], luckyfour[0][1], luckyfour[1][0], luckyfour[1][1],</span><br><span class="line">            luckyfour[2][0], luckyfour[2][1], luckyfour[3][0], luckyfour[3][1])</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    ***</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h2><p><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0708/dcball01.jpg" alt=""><br>上期结果就没做太多的修饰了，觉得麻烦也没必要。</p>
+<p>最后在电脑上设置个定时job，每周一/三/五，发给我自己。</p>
+<p>以后去彩票站就下注lucky4好啦。<br>感觉自己好像就要走上人生巅峰了呢。哈哈哈哈哈～～<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0708/psyduck_happy.gif" alt=""></p>
+]]></content>
+      <categories>
+        <category>Lib</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>人力资源离职情况的初步数据分析</title>
+    <url>/2020/09/11/%E4%BA%BA%E5%8A%9B%E8%B5%84%E6%BA%90%E7%A6%BB%E8%81%8C%E6%83%85%E5%86%B5%E7%9A%84%E5%88%9D%E6%AD%A5%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</url>
+    <content><![CDATA[<h1 id="【行业】人力资源离职情况的初步数据分析"><a href="#【行业】人力资源离职情况的初步数据分析" class="headerlink" title="【行业】人力资源离职情况的初步数据分析"></a>【行业】人力资源离职情况的初步数据分析</h1><p>做了一笔数据场景的爬取分析。<br>我们现在看一下大致数据反映出的数据图表，分析一下。</p>
+<h2 id="离职人数及分布"><a href="#离职人数及分布" class="headerlink" title="离职人数及分布"></a>离职人数及分布</h2><p>先看一下各省的离职人数，及分布：</p>
+<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_amount_province_bar.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe></p>
+<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_amount_province_map.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>可以看到，各省基本都有人员离职，说明公司的业务铺的很开，各省均有员工。<br>且人口大省，相对应的离职人员，也比较多，成正比。</p>
+<h2 id="离职原因"><a href="#离职原因" class="headerlink" title="离职原因"></a>离职原因</h2><p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_reason_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>离职原因上，1/3的情况是家庭因素。工作压力、薪资、劳动强度等原因，占比相对不高，但是也在前几之列。<br>所以大多数的离职，基本上可能还是家庭与工作无法平衡，这也一定程度反映现代社会的一个比较普遍的情况。</p>
+<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_reason_province_sankey.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe></p>
+<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_reason_area_sankey.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>从这两个流向图，可以看出来，工作5年以下的人数占了绝大部份，说明公司员工对公司的忠诚度和依赖度比较低。<br>华东华北，等发达地区，员工更易离职。</p>
+<h2 id="再入职意愿"><a href="#再入职意愿" class="headerlink" title="再入职意愿"></a>再入职意愿</h2><p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_reentry_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>离职员工再入职的意愿，近4/5选择了愿意再次入职。说明一定程度上，大家对于公司还是满意的状态，如果有机会会继续选择。<br>但是也不排除员工“好聚好散”的心里。</p>
+<p><iframe src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/pyecharts/resign_ratio_areareentry_pie.html" width="1000px" height="500px" frameborder="0" scrolling="no"></iframe><br>其中，东北地区，愿意的比例最高，也说明东北的工作满意度状态最好。<br>华中地区，不愿意比例较高，如果有需要，其实可以重点看一下。看一下员工的反馈情况，可能会发现一些信息。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>只是做了一些简单的分析，<br>毕竟数据的收集有限。如果数据样本足够大，其实分析的规律会更加贴近实际。<br>这里只是简单练个手，以后有机会做一做更深入的分析调研。</p>
+]]></content>
+      <categories>
+        <category>行业</category>
+      </categories>
+      <tags>
+        <tag>行业</tag>
+        <tag>hr</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据分析可视化的简单探究（一）--数据抓取</title>
+    <url>/2020/09/07/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9A%84%E7%AE%80%E5%8D%95%E6%8E%A2%E7%A9%B61/</url>
+    <content><![CDATA[<p>上回写了自己搞了一个小小的项目学习测试。<br>然后其中用到了一些知识点，个人觉得还是挺有意义和用途的，接下来写几篇稿子记录一下。</p>
+<p><a href="https://tech.hahaalot.com/2020/09/06/数据分析可视化的简单探究/"><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario-gif.gif" width="10%" height="10%" alt="点击跳转" align="left"></a><br><br>(Click Mario)</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>数据分析第一步，就是要获取数据。<br>我这次爬的数据，是xml文本，然后通过对其中的标签进行判断，抓出需要的信息。</p>
+<h3 id="分析xml文本"><a href="#分析xml文本" class="headerlink" title="分析xml文本"></a>分析xml文本</h3><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br><span class="line">&lt;java version="" class=""&gt; </span><br><span class="line">  &lt;object class="java.util.HashMap"&gt; </span><br><span class="line">    &lt;void method="put"&gt; </span><br><span class="line">      &lt;string&gt;yy&lt;/string&gt;  </span><br><span class="line">      &lt;string&gt;PP&lt;/string&gt; </span><br><span class="line">    &lt;/void&gt;  </span><br><span class="line">    ……</span><br><span class="line">    …… </span><br><span class="line">    &lt;void method="put"&gt; </span><br><span class="line">      &lt;string&gt;name&lt;/string&gt;  </span><br><span class="line">      &lt;string&gt;李哈哈&lt;/string&gt; </span><br><span class="line">    &lt;/void&gt;  </span><br><span class="line">    &lt;void method="put"&gt; </span><br><span class="line">      &lt;string&gt;zhiweiname&lt;/string&gt;  </span><br><span class="line">      &lt;string&gt;学习课代表&lt;/string&gt; </span><br><span class="line">    &lt;/void&gt;  </span><br><span class="line">    ……</span><br><span class="line">    ……</span><br><span class="line">  &lt;/object&gt; </span><br><span class="line">&lt;/java&gt;</span><br></pre></td></tr></tbody></table></figure>
+<p>文本可以看出所有需要的信息，都是在void/string标签下的。<br>所以如果要抓姓名，就要先抓到void/string/text()，text值是“name”的位置，然后该位置的下一个string标签对应的位置，值就是姓名了。</p>
+<p>其他所需要的信息同理。</p>
+<h3 id="抓取值的函数"><a href="#抓取值的函数" class="headerlink" title="抓取值的函数"></a>抓取值的函数</h3><p>分析好后，写了这样一个函数：<br></p><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">def xml_info_parameter(data):</span><br><span class="line">    tree = html.fromstring(data.encode('utf-8'))</span><br><span class="line">    void = tree.xpath('//void[@method="put"]/string/text()')</span><br><span class="line">    # xpath抓取出来的值，抓取出原因/员工等信息。</span><br><span class="line">    # 根据xml分析，以姓名为例，标签均为string，定位到string标签内容为name的索引，索引+1找到string标签的值为姓名。</span><br><span class="line">    # 找出index</span><br><span class="line">    for index ,values in enumerate(void):</span><br><span class="line">    # 使用了enumerate()函数，抓取list中的重复数据所在的索引。</span><br><span class="line">        if values == 'yy':</span><br><span class="line">            index_reason = index</span><br><span class="line">        elif values == 'name':</span><br><span class="line">            index_name = index</span><br><span class="line">        elif values == 'zhiweiname':</span><br><span class="line">            index_zhiwei = index</span><br><span class="line">        elif values == 'year':</span><br><span class="line">            index_year = index</span><br><span class="line">        elif values == 'zcrz':</span><br><span class="line">            index_zcrz = index</span><br><span class="line">    values_reason = void[index_reason + 1]</span><br><span class="line">    values_name = void[index_name + 1]</span><br><span class="line">    values_zhiwei = void[index_zhiwei + 1]</span><br><span class="line">    values_year = void[index_year + 1]</span><br><span class="line">    values_zcrz = void[index_zcrz + 1]</span><br><span class="line">    return values_reason, values_name, values_zhiwei, values_year, values_zcrz</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>这样，所需要的信息就抓到了。<br>但是要注意下，如果有些值的位置是空的，那么函数抓出来的信息，有的时候会有误差。后面要对数据做一些清理的操作。</p>
+]]></content>
+      <categories>
+        <category>Lib</category>
+      </categories>
+      <tags>
+        <tag>cloud</tag>
+        <tag>Pandas</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>拜拜啦，2020</title>
+    <url>/2020/12/31/%E6%8B%9C%E6%8B%9C%E5%95%A6%EF%BC%8C2020/</url>
+    <content><![CDATA[<h1 id="拜拜啦，2020"><a href="#拜拜啦，2020" class="headerlink" title="拜拜啦，2020"></a>拜拜啦，2020</h1><p>没想到2020最后的几个月自己忙的不成样子……</p>
+<p>2020的最后一天，平静又平常。<br>嗯，不对，最后一天家里的水管被冻住了，好魔幻……<br>下了班，肯定毫无怀念的把台历扔进垃圾桶。</p>
+<p>做很多决定挺难的，今年应该是也做了一个很大很要决心的事情。<br>然后完成了一些很辛苦很难搞的工作。<br>2020，想过好多可能，但是经历这么多，后来才觉得，活在当下、懂得珍惜，弥足重要。<br>2021，不想啥期待了，一切都好吧。</p>
+<p>最后用学到的matplotlib库做了几个图片，还挺有意思的，nice<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_xkcd_year00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_textbox_yearwords00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_fillarea_work00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_pie_costs00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_radar_ability00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_gauge_goals00.jpg" alt=""></p>
 ]]></content>
       <categories>
         <category>随笔</category>
@@ -672,21 +724,6 @@
 <p>最后，还是用的hexo博客框架，本地generate静态文件后，deploy到GitHub上。<br>在平时工作很忙很忙的情况下，利用闲散时间分精力去搞这些真的挺懵的，断断续续搞了好多天。</p>
 <p>不过，讲真的，github真的，我每次发布的时候，都会失败几次，都是timeout……不知道咋搞呀，好难。</p>
 <p>希望GitHub好好听话，不要被封禁掉。<br>这样我就不要花时间再去搞这些基建工程了。<br>Peace &amp; Love.</p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>拜拜啦，2020</title>
-    <url>/2020/12/31/%E6%8B%9C%E6%8B%9C%E5%95%A6%EF%BC%8C2020/</url>
-    <content><![CDATA[<h1 id="拜拜啦，2020"><a href="#拜拜啦，2020" class="headerlink" title="拜拜啦，2020"></a>拜拜啦，2020</h1><p>没想到2020最后的几个月自己忙的不成样子……</p>
-<p>2020的最后一天，平静又平常。<br>嗯，不对，最后一天家里的水管被冻住了，好魔幻……<br>下了班，肯定毫无怀念的把台历扔进垃圾桶。</p>
-<p>做很多决定挺难的，今年应该是也做了一个很大很要决心的事情。<br>然后完成了一些很辛苦很难搞的工作。<br>2020，想过好多可能，但是经历这么多，后来才觉得，活在当下、懂得珍惜，弥足重要。<br>2021，不想啥期待了，一切都好吧。</p>
-<p>最后用学到的matplotlib库做了几个图片，还挺有意思的，nice<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_xkcd_year00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_textbox_yearwords00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_fillarea_work00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_pie_costs00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_radar_ability00.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/1231/plt_konta_gauge_goals00.jpg" alt=""></p>
 ]]></content>
       <categories>
         <category>随笔</category>
@@ -722,99 +759,6 @@
 <p>毕竟，在数据上，从数据获取到可视化模型建立；网页实现上，网页排版到视图插入且同步更新；架构上，图表文件实时更新到存储实时同步，每个环节上都需要设计和开发。<br>而且完完全全自己实现……</p>
 <p>真的是……花费了好多时间呀呀呀。</p>
 <p>希望自己在不断挖坑、填坑的过程中，能慢慢加油，学习掌握更多的知识吧。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario_PNG80.png" alt=""></p>
-]]></content>
-      <categories>
-        <category>Lib</category>
-      </categories>
-      <tags>
-        <tag>cloud</tag>
-        <tag>Pandas</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据分析可视化的简单探究（一）--数据抓取</title>
-    <url>/2020/09/07/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9A%84%E7%AE%80%E5%8D%95%E6%8E%A2%E7%A9%B61/</url>
-    <content><![CDATA[<p>上回写了自己搞了一个小小的项目学习测试。<br>然后其中用到了一些知识点，个人觉得还是挺有意义和用途的，接下来写几篇稿子记录一下。</p>
-<p><a href="https://tech.hahaalot.com/2020/09/06/数据分析可视化的简单探究/"><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario-gif.gif" width="10%" height="10%" alt="点击跳转" align="left"></a><br><br>(Click Mario)</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>数据分析第一步，就是要获取数据。<br>我这次爬的数据，是xml文本，然后通过对其中的标签进行判断，抓出需要的信息。</p>
-<h3 id="分析xml文本"><a href="#分析xml文本" class="headerlink" title="分析xml文本"></a>分析xml文本</h3><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br><span class="line">&lt;java version="" class=""&gt; </span><br><span class="line">  &lt;object class="java.util.HashMap"&gt; </span><br><span class="line">    &lt;void method="put"&gt; </span><br><span class="line">      &lt;string&gt;yy&lt;/string&gt;  </span><br><span class="line">      &lt;string&gt;PP&lt;/string&gt; </span><br><span class="line">    &lt;/void&gt;  </span><br><span class="line">    ……</span><br><span class="line">    …… </span><br><span class="line">    &lt;void method="put"&gt; </span><br><span class="line">      &lt;string&gt;name&lt;/string&gt;  </span><br><span class="line">      &lt;string&gt;李哈哈&lt;/string&gt; </span><br><span class="line">    &lt;/void&gt;  </span><br><span class="line">    &lt;void method="put"&gt; </span><br><span class="line">      &lt;string&gt;zhiweiname&lt;/string&gt;  </span><br><span class="line">      &lt;string&gt;学习课代表&lt;/string&gt; </span><br><span class="line">    &lt;/void&gt;  </span><br><span class="line">    ……</span><br><span class="line">    ……</span><br><span class="line">  &lt;/object&gt; </span><br><span class="line">&lt;/java&gt;</span><br></pre></td></tr></tbody></table></figure>
-<p>文本可以看出所有需要的信息，都是在void/string标签下的。<br>所以如果要抓姓名，就要先抓到void/string/text()，text值是“name”的位置，然后该位置的下一个string标签对应的位置，值就是姓名了。</p>
-<p>其他所需要的信息同理。</p>
-<h3 id="抓取值的函数"><a href="#抓取值的函数" class="headerlink" title="抓取值的函数"></a>抓取值的函数</h3><p>分析好后，写了这样一个函数：<br></p><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">def xml_info_parameter(data):</span><br><span class="line">    tree = html.fromstring(data.encode('utf-8'))</span><br><span class="line">    void = tree.xpath('//void[@method="put"]/string/text()')</span><br><span class="line">    # xpath抓取出来的值，抓取出原因/员工等信息。</span><br><span class="line">    # 根据xml分析，以姓名为例，标签均为string，定位到string标签内容为name的索引，索引+1找到string标签的值为姓名。</span><br><span class="line">    # 找出index</span><br><span class="line">    for index ,values in enumerate(void):</span><br><span class="line">    # 使用了enumerate()函数，抓取list中的重复数据所在的索引。</span><br><span class="line">        if values == 'yy':</span><br><span class="line">            index_reason = index</span><br><span class="line">        elif values == 'name':</span><br><span class="line">            index_name = index</span><br><span class="line">        elif values == 'zhiweiname':</span><br><span class="line">            index_zhiwei = index</span><br><span class="line">        elif values == 'year':</span><br><span class="line">            index_year = index</span><br><span class="line">        elif values == 'zcrz':</span><br><span class="line">            index_zcrz = index</span><br><span class="line">    values_reason = void[index_reason + 1]</span><br><span class="line">    values_name = void[index_name + 1]</span><br><span class="line">    values_zhiwei = void[index_zhiwei + 1]</span><br><span class="line">    values_year = void[index_year + 1]</span><br><span class="line">    values_zcrz = void[index_zcrz + 1]</span><br><span class="line">    return values_reason, values_name, values_zhiwei, values_year, values_zcrz</span><br></pre></td></tr></tbody></table></figure><p></p>
-<p>这样，所需要的信息就抓到了。<br>但是要注意下，如果有些值的位置是空的，那么函数抓出来的信息，有的时候会有误差。后面要对数据做一些清理的操作。</p>
-]]></content>
-      <categories>
-        <category>Lib</category>
-      </categories>
-      <tags>
-        <tag>cloud</tag>
-        <tag>Pandas</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[小实验]自制个双色球程序，助力走上人生巅峰吧</title>
-    <url>/2020/07/11/%E5%B0%8F%E5%AE%9E%E9%AA%8C-%E8%87%AA%E5%88%B6%E4%B8%AA%E5%8F%8C%E8%89%B2%E7%90%83%E7%A8%8B%E5%BA%8F%EF%BC%8C%E5%8A%A9%E5%8A%9B%E8%B5%B0%E4%B8%8A%E4%BA%BA%E7%94%9F%E5%B7%85%E5%B3%B0%E5%90%A7/</url>
-    <content><![CDATA[<h1 id="【Lib】-小实验-自制个双色球程序，助力走上人生巅峰吧"><a href="#【Lib】-小实验-自制个双色球程序，助力走上人生巅峰吧" class="headerlink" title="【Lib】[小实验]自制个双色球程序，助力走上人生巅峰吧"></a>【Lib】[小实验]自制个双色球程序，助力走上人生巅峰吧</h1><p>最近我在买双色球。<br>期待是有的，更多的是给自己攒RP，而且不是还有一部分发展福利事业么。</p>
-<p>本来就是随便买的，所以每次都是机选4注。<br>买了几次我发现，机选还挺简单的，没啥逻辑，那为啥我不自己搞个程序，自己机选呢？</p>
-<p>好的，说干就干。</p>
-<h2 id="程序逻辑"><a href="#程序逻辑" class="headerlink" title="程序逻辑"></a>程序逻辑</h2><ul>
-<li>使用random模块，对33个白球16个蓝球进行随机取值；</li>
-<li>白球取值过程，重复6次；需注意判断random出来的值，是否与前几次重复。</li>
-<li>6白球1蓝球一组，生成一注。生成17注。</li>
-<li>在17注中，在random出来4注，作为最终的机选。<br>（为啥先出来17，再选4呢？是因为好玩吧，lucky17里再lucky4。）</li>
-<li>发送给企业微信的webhook，然后企业微信生成消息。</li>
-</ul>
-<h2 id="程序实现机选"><a href="#程序实现机选" class="headerlink" title="程序实现机选"></a>程序实现机选</h2><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">import random, json, certifi, urllib3</span><br><span class="line"></span><br><span class="line">def blueball():</span><br><span class="line">    bball = random.randint(1,16)</span><br><span class="line">    return bball</span><br><span class="line"></span><br><span class="line">def redballs():</span><br><span class="line">    rballs = []</span><br><span class="line">    for i in range(6):</span><br><span class="line">        rball = random.randint(1,33)</span><br><span class="line">        while rball in rballs:</span><br><span class="line">            rball = random.randint(1,33)</span><br><span class="line">        rballs.append(rball)</span><br><span class="line">    rballs.sort()</span><br><span class="line">    return rballs</span><br><span class="line"></span><br><span class="line">def main():</span><br><span class="line">    altballs = []</span><br><span class="line">    for i in range(17):</span><br><span class="line">        balls = [redballs(), blueball()]</span><br><span class="line">        altballs.append(balls)</span><br><span class="line">    luckyfour = random.sample(altballs, 4)</span><br><span class="line"></span><br><span class="line">    # 发送给企业微信的webhook显示。</span><br><span class="line">    http = urllib3.PoolManager(cert_reqs='CERT_REQUIRED', ca_certs=certifi.where())</span><br><span class="line">    # 李有财 hook_addr</span><br><span class="line">    hook_addr = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=lalalalalalalalalala"    # my robot</span><br><span class="line">    # 传输webhook图文消息    </span><br><span class="line">    data = {</span><br><span class="line">    "msgtype": "markdown",</span><br><span class="line">    "markdown": {</span><br><span class="line">        "content": "**双色球**\n\</span><br><span class="line">        &gt;**第①注: &lt;font color=\"comment\"&gt;%s&lt;/font&gt;- &lt;font color=\"warning\"&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第②注: &lt;font color=\"comment\"&gt;%s&lt;/font&gt;- &lt;font color=\"warning\"&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第③注: &lt;font color=\"comment\"&gt;%s&lt;/font&gt;- &lt;font color=\"warning\"&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第④注: &lt;font color=\"comment\"&gt;%s&lt;/font&gt;- &lt;font color=\"warning\"&gt;%s&lt;/font&gt;**\n"</span><br><span class="line">        %(luckyfour[0][0], luckyfour[0][1], luckyfour[1][0], luckyfour[1][1],</span><br><span class="line">            luckyfour[2][0], luckyfour[2][1], luckyfour[3][0], luckyfour[3][1])</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    data = json.dumps(data).encode()</span><br><span class="line">    response_hook = http.request('POST', hook_addr, body=data)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ == "__main__":</span><br><span class="line">    main()</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="优化改善"><a href="#优化改善" class="headerlink" title="优化改善"></a>优化改善</h2><p>为了方便我每次对奖方便，在程序里爬取下上期的开奖结果。<br>爬取500彩票网的结果界面。<br></p><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">def last_result():</span><br><span class="line">    addr = 'http://kaijiang.500.com/shtml/ssq/'</span><br><span class="line">    http = urllib3.PoolManager(cert_reqs='CERT_REQUIRED', ca_certs=certifi.where())</span><br><span class="line">    response = http.request('GET', addr)</span><br><span class="line">    tree = html.fromstring(response.data)</span><br><span class="line">    r = tree.xpath('//div[@class="ball_box01"]//li[@class="ball_red"]//text()')</span><br><span class="line">    b = tree.xpath('//div[@class="ball_box01"]//li[@class="ball_blue"]//text()')</span><br><span class="line">    return r, b</span><br></pre></td></tr></tbody></table></figure><p></p>
-<p>同时在主函数里加上上期结果的发送：<br></p><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">def main():</span><br><span class="line">    ***</span><br><span class="line">    last_r, last_b = last_result()</span><br><span class="line">    ***</span><br><span class="line">    data = {</span><br><span class="line">    "msgtype": "markdown",</span><br><span class="line">    "markdown": {</span><br><span class="line">        "content": "**双色球**\n\</span><br><span class="line">        %s, %s\n\</span><br><span class="line">        &gt;**第①注: &lt;font color=\"comment\"&gt;%s&lt;/font&gt;- &lt;font color=\"warning\"&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第②注: &lt;font color=\"comment\"&gt;%s&lt;/font&gt;- &lt;font color=\"warning\"&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第③注: &lt;font color=\"comment\"&gt;%s&lt;/font&gt;- &lt;font color=\"warning\"&gt;%s&lt;/font&gt;**\n\</span><br><span class="line">        &gt;**第④注: &lt;font color=\"comment\"&gt;%s&lt;/font&gt;- &lt;font color=\"warning\"&gt;%s&lt;/font&gt;**\n"</span><br><span class="line">        %(last_r, last_b, luckyfour[0][0], luckyfour[0][1], luckyfour[1][0], luckyfour[1][1],</span><br><span class="line">            luckyfour[2][0], luckyfour[2][1], luckyfour[3][0], luckyfour[3][1])</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    ***</span><br></pre></td></tr></tbody></table></figure><p></p>
-<h2 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h2><p><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0708/dcball01.jpg" alt=""><br>上期结果就没做太多的修饰了，觉得麻烦也没必要。</p>
-<p>最后在电脑上设置个定时job，每周一/三/五，发给我自己。</p>
-<p>以后去彩票站就下注lucky4好啦。<br>感觉自己好像就要走上人生巅峰了呢。哈哈哈哈哈～～<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0708/psyduck_happy.gif" alt=""></p>
-]]></content>
-      <categories>
-        <category>Lib</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-        <tag>web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>直接使用SAPGUI进行数据库的表查询</title>
-    <url>/2022/07/09/%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8SAPGUI%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%A1%A8%E6%9F%A5%E8%AF%A2/</url>
-    <content><![CDATA[<h1 id="直接使用SAPGUI进行数据库的表查询"><a href="#直接使用SAPGUI进行数据库的表查询" class="headerlink" title="直接使用SAPGUI进行数据库的表查询"></a>直接使用SAPGUI进行数据库的表查询</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>因为一个莫名的需求，想统计一下SAP里，2021年度的所有会计科目在FI凭证中记账使用的次数。<br>😂😂😂😂😂😂😂</p>
-<p>大家都知道的是，凭证行项目明细是记在BSIS和BSAS里的，但是因为凭证量很巨大，哪怕直接在SE11里去查，估计也是无法完全导出的。<br>更何况其实只要count下科目记账的次数就好，SE11里直接按照某科目的条件去计算数量，科目很多的话一个一个科目去计算，很不现实，且GUI大概率会崩掉的。</p>
-<p>这个时候，如果，有一个直接查数据库的功能多好！<br>比如SQLServer的话，微软的SSMS去查，MySQL的话，mysql自己的workbench，就直接写个SQL，就好了。</p>
-<p>记得之前听basis同事说过，有一个TCode可以做SQL的查询，于是我就查了下资料，学习一下。</p>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>TCode：<code>DBACOCKPIT</code><br>事务码进入后，找到<code>SQL Command Editor</code>，标准的路径应该是在<code>Performance–&gt;Additional Functions–&gt;SQL Command Editor</code>，也可能自己公司配置的问题，地址有差异。</p>
-<p>进入后在<code>SQL Code</code>视图输入sql的语句就可以了。<br>（这个语句应该是根据当前SQL对应的DB来写的，比如数据库如果是SQLServer，那要用sqlserver的sql。不是ABAP里的数据表查询语法。）<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/gui01.png" alt=""><br>输入好后，执行execute，<br>就会在<code>Output</code>视图里，看到执行结果。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/gui02.png" alt=""></p>
-<p>可以看到哈，我就是做了个所有科目的记账数量的count。这种查法在sap gui里是不可能通过se11的表查询实现的。</p>
-<p>所以这个code一定程度上还是非常好用的。</p>
-<p>哦，对了，要补充一下，这个code可能要生产机上做授权才能使用。毕竟能查的东西太多了。</p>
-<p><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
-]]></content>
-      <categories>
-        <category>行业</category>
-      </categories>
-      <tags>
-        <tag>Tech</tag>
-        <tag>SAP</tag>
-        <tag>行业</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据分析可视化的简单探究（三）--建立模型</title>
-    <url>/2020/09/09/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9A%84%E7%AE%80%E5%8D%95%E6%8E%A2%E7%A9%B63/</url>
-    <content><![CDATA[<p><a href="https://tech.hahaalot.com/2020/09/06/数据分析可视化的简单探究/"><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario-gif.gif" width="10%" height="10%" alt="点击跳转" align="left"></a><br><br>(Click Mario)</p>
-<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>第三步，建立显示的图表模型。<br>我使用的是pyecharts库，通过它的chart模型，生成需要的图表。</p>
-<h3 id="PyEcharts-amp-ECharts"><a href="#PyEcharts-amp-ECharts" class="headerlink" title="PyEcharts &amp; ECharts"></a>PyEcharts &amp; ECharts</h3><p>ECharts是一个由百度开发的纯 Javascript 的图表库，pyecharts是某三位大佬将ECharts移植到Python项目中的产物。</p>
-<p>因为我自己在学python，所以基本实现就是用pyecharts。pyecharts模块，chartst还很全的第三方库。<br>但是其中每个chart的使用，还是要学习下的。官网提供了比较详细可靠的代码示例。按照例子自己做一些测试验证，还是最后能搞出来比较good-looking的图表的。</p>
-<p>官网参考：<br><a href="https://echarts.apache.org/zh/index.html" target="_blank" rel="noopener">Apache ECharts (incubating)</a><br><a href="https://gallery.pyecharts.org/#/README" target="_blank" rel="noopener">pyecharts-galley</a></p>
-<h2 id="使用模型"><a href="#使用模型" class="headerlink" title="使用模型"></a>使用模型</h2><h3 id="Sankey桑基图"><a href="#Sankey桑基图" class="headerlink" title="Sankey桑基图"></a>Sankey桑基图</h3><p>展示关系流向，目前比较流行的一个图表。<br></p><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">def sankey_custom(nodes, links) -&gt; Sankey:</span><br><span class="line">    now = datetime.datetime.now()</span><br><span class="line">    s_date = str(now.strftime('%Y-%m-%d'))</span><br><span class="line">    chart_title = '原因分析' + ' ' + s_date</span><br><span class="line">    # 绘制Sankey。如果想要垂直显示，只需要在add函数里面加一个orient="vertical"就好。</span><br><span class="line">    s = (</span><br><span class="line">        Sankey()</span><br><span class="line">        .add('原因',   # 图例名称</span><br><span class="line">            nodes,  # 传入节点数据</span><br><span class="line">            links,  # 传入边和流量数据</span><br><span class="line">            # 设置透明度、弯曲度、颜色</span><br><span class="line">            linestyle_opt = opts.LineStyleOpts(opacity=0.3, curve=0.5, color="source"),</span><br><span class="line">            # 标签显示位置</span><br><span class="line">            label_opts = opts.LabelOpts(position="right"),</span><br><span class="line">            # 节点之前的距离</span><br><span class="line">            node_gap = 10,</span><br><span class="line">            )</span><br><span class="line">            .set_global_opts(title_opts=opts.TitleOpts(title=chart_title))</span><br><span class="line">        )</span><br><span class="line">    return s</span><br></pre></td></tr></tbody></table></figure><p></p>
-<h3 id="Map地图"><a href="#Map地图" class="headerlink" title="Map地图"></a>Map地图</h3><p>显示地图区域数据的数据密度<br></p><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">def chinamap_custom(provinces, value, max_value) -&gt; Map:</span><br><span class="line">    now = datetime.datetime.now()</span><br><span class="line">    s_date = str(now.strftime('%Y-%m-%d'))</span><br><span class="line">    chart_title = '人数分布' + ' ' + s_date</span><br><span class="line">    # 绘制China的Map图。</span><br><span class="line">    m = (</span><br><span class="line">        Map()</span><br><span class="line">        .add("人数", [list(z) for z in zip(provinces, value)], "china")</span><br><span class="line">        .set_global_opts(</span><br><span class="line">            title_opts=opts.TitleOpts(title=chart_title),</span><br><span class="line">            # visualmap_opts=opts.VisualMapOpts(max_ = int(max_value + 1), is_piecewise=True),</span><br><span class="line">            visualmap_opts=opts.VisualMapOpts(max_ = int(max_value + 1)),</span><br><span class="line">            )</span><br><span class="line">        #.render("map_visualmap_piecewise001.html")</span><br><span class="line">        )</span><br><span class="line">    return m</span><br></pre></td></tr></tbody></table></figure><p></p>
-<h3 id="Bar条形图"><a href="#Bar条形图" class="headerlink" title="Bar条形图"></a>Bar条形图</h3><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">def bar_custom(list_provinces, list_value) -&gt; Bar:</span><br><span class="line">    now = datetime.datetime.now()</span><br><span class="line">    s_date = str(now.strftime('%Y-%m-%d'))</span><br><span class="line">    chart_title = '离人数分布' + ' ' + s_date</span><br><span class="line">    # 绘制bar图，自定义柱状图颜色。</span><br><span class="line">    b = (</span><br><span class="line">        Bar()</span><br><span class="line">        .add_xaxis(list_provinces)</span><br><span class="line">        .add_yaxis(</span><br><span class="line">            "离职人员", </span><br><span class="line">            list_value,</span><br><span class="line">            itemstyle_opts=opts.ItemStyleOpts(color='green'),</span><br><span class="line">            )</span><br><span class="line">        .set_global_opts(</span><br><span class="line">            title_opts=opts.TitleOpts(title=chart_title),</span><br><span class="line">            yaxis_opts=opts.AxisOpts(name="人数"),</span><br><span class="line">            xaxis_opts=opts.AxisOpts(name="省份", axislabel_opts=opts.LabelOpts(rotate=-50)),</span><br><span class="line">        )</span><br><span class="line">    )</span><br><span class="line">    return b</span><br></pre></td></tr></tbody></table></figure>
-<h3 id="Pie饼图"><a href="#Pie饼图" class="headerlink" title="Pie饼图"></a>Pie饼图</h3><p>我使用了好几个样式的饼图。下面放一段富文本格式的饼图，效果比较美观。<br></p><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">def pie_custom_richtext(list_reason, list_value) -&gt; Pie:</span><br><span class="line">    now = datetime.datetime.now()</span><br><span class="line">    s_date = str(now.strftime('%Y-%m-%d'))</span><br><span class="line">    chart_title = '原因比例' + ' ' + s_date</span><br><span class="line">    # 绘制pie图。富文本自定义样式。</span><br><span class="line">    p = (</span><br><span class="line">        Pie()</span><br><span class="line">        .add(</span><br><span class="line">            "",</span><br><span class="line">            [list(z) for z in zip(list_reason, list_value)],</span><br><span class="line">            radius=["40%", "60%"],</span><br><span class="line">            label_opts=opts.LabelOpts(</span><br><span class="line">                position="outside",</span><br><span class="line">                formatter="{hr|}\n {b|{b}: }{c}  {per|{d}%}  ",</span><br><span class="line">                background_color="#eee",</span><br><span class="line">                border_color="#aaa",</span><br><span class="line">                border_width=1,</span><br><span class="line">                border_radius=4,</span><br><span class="line">                rich={</span><br><span class="line">                    "a": {"color": "#999", "lineHeight": 22, "align": "center"},</span><br><span class="line">                    "abg": {</span><br><span class="line">                        "backgroundColor": "#e3e3e3",</span><br><span class="line">                        "width": "100%",</span><br><span class="line">                        "align": "right",</span><br><span class="line">                        "height": 22,</span><br><span class="line">                        "borderRadius": [4, 4, 0, 0],</span><br><span class="line">                    },</span><br><span class="line">                    "hr": {</span><br><span class="line">                        "borderColor": "#aaa",</span><br><span class="line">                        "width": "100%",</span><br><span class="line">                        "borderWidth": 0.5,</span><br><span class="line">                        "height": 0,</span><br><span class="line">                    },</span><br><span class="line">                    "b": {"fontSize": 11, "lineHeight": 33},  # 标签</span><br><span class="line">                    "per": {</span><br><span class="line">                        "color": "#eee",</span><br><span class="line">                        "backgroundColor": "#334455",</span><br><span class="line">                        "padding": [2, 4],</span><br><span class="line">                        "borderRadius": 2,</span><br><span class="line">                    },</span><br><span class="line">                },</span><br><span class="line">            ),</span><br><span class="line">        )</span><br><span class="line">        .set_global_opts(</span><br><span class="line">            title_opts=opts.TitleOpts(title=chart_title),</span><br><span class="line">            legend_opts=opts.LegendOpts(is_show=True, type_="scroll", pos_left="85%", orient="vertical"),</span><br><span class="line">            )</span><br><span class="line">    )</span><br><span class="line">    return p</span><br></pre></td></tr></tbody></table></figure><p></p>
-<p>以上。</p>
 ]]></content>
       <categories>
         <category>Lib</category>
@@ -870,6 +814,87 @@
       </tags>
   </entry>
   <entry>
+    <title>直接使用SAPGUI进行数据库的表查询</title>
+    <url>/2022/07/09/%E7%9B%B4%E6%8E%A5%E4%BD%BF%E7%94%A8SAPGUI%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%A1%A8%E6%9F%A5%E8%AF%A2/</url>
+    <content><![CDATA[<h1 id="直接使用SAPGUI进行数据库的表查询"><a href="#直接使用SAPGUI进行数据库的表查询" class="headerlink" title="直接使用SAPGUI进行数据库的表查询"></a>直接使用SAPGUI进行数据库的表查询</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>因为一个莫名的需求，想统计一下SAP里，2021年度的所有会计科目在FI凭证中记账使用的次数。<br>😂😂😂😂😂😂😂</p>
+<p>大家都知道的是，凭证行项目明细是记在BSIS和BSAS里的，但是因为凭证量很巨大，哪怕直接在SE11里去查，估计也是无法完全导出的。<br>更何况其实只要count下科目记账的次数就好，SE11里直接按照某科目的条件去计算数量，科目很多的话一个一个科目去计算，很不现实，且GUI大概率会崩掉的。</p>
+<p>这个时候，如果，有一个直接查数据库的功能多好！<br>比如SQLServer的话，微软的SSMS去查，MySQL的话，mysql自己的workbench，就直接写个SQL，就好了。</p>
+<p>记得之前听basis同事说过，有一个TCode可以做SQL的查询，于是我就查了下资料，学习一下。</p>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>TCode：<code>DBACOCKPIT</code><br>事务码进入后，找到<code>SQL Command Editor</code>，标准的路径应该是在<code>Performance–&gt;Additional Functions–&gt;SQL Command Editor</code>，也可能自己公司配置的问题，地址有差异。</p>
+<p>进入后在<code>SQL Code</code>视图输入sql的语句就可以了。<br>（这个语句应该是根据当前SQL对应的DB来写的，比如数据库如果是SQLServer，那要用sqlserver的sql。不是ABAP里的数据表查询语法。）<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/gui01.png" alt=""><br>输入好后，执行execute，<br>就会在<code>Output</code>视图里，看到执行结果。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/gui02.png" alt=""></p>
+<p>可以看到哈，我就是做了个所有科目的记账数量的count。这种查法在sap gui里是不可能通过se11的表查询实现的。</p>
+<p>所以这个code一定程度上还是非常好用的。</p>
+<p>哦，对了，要补充一下，这个code可能要生产机上做授权才能使用。毕竟能查的东西太多了。</p>
+<p><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span><span class="github-emoji" style="display:inline;vertical-align:middle"><span>😆</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f606.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
+]]></content>
+      <categories>
+        <category>行业</category>
+      </categories>
+      <tags>
+        <tag>SAP</tag>
+        <tag>行业</tag>
+        <tag>Tech</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据分析可视化的简单探究（三）--建立模型</title>
+    <url>/2020/09/09/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8F%AF%E8%A7%86%E5%8C%96%E7%9A%84%E7%AE%80%E5%8D%95%E6%8E%A2%E7%A9%B63/</url>
+    <content><![CDATA[<p><a href="https://tech.hahaalot.com/2020/09/06/数据分析可视化的简单探究/"><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario-gif.gif" width="10%" height="10%" alt="点击跳转" align="left"></a><br><br>(Click Mario)</p>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>第三步，建立显示的图表模型。<br>我使用的是pyecharts库，通过它的chart模型，生成需要的图表。</p>
+<h3 id="PyEcharts-amp-ECharts"><a href="#PyEcharts-amp-ECharts" class="headerlink" title="PyEcharts &amp; ECharts"></a>PyEcharts &amp; ECharts</h3><p>ECharts是一个由百度开发的纯 Javascript 的图表库，pyecharts是某三位大佬将ECharts移植到Python项目中的产物。</p>
+<p>因为我自己在学python，所以基本实现就是用pyecharts。pyecharts模块，chartst还很全的第三方库。<br>但是其中每个chart的使用，还是要学习下的。官网提供了比较详细可靠的代码示例。按照例子自己做一些测试验证，还是最后能搞出来比较good-looking的图表的。</p>
+<p>官网参考：<br><a href="https://echarts.apache.org/zh/index.html" target="_blank" rel="noopener">Apache ECharts (incubating)</a><br><a href="https://gallery.pyecharts.org/#/README" target="_blank" rel="noopener">pyecharts-galley</a></p>
+<h2 id="使用模型"><a href="#使用模型" class="headerlink" title="使用模型"></a>使用模型</h2><h3 id="Sankey桑基图"><a href="#Sankey桑基图" class="headerlink" title="Sankey桑基图"></a>Sankey桑基图</h3><p>展示关系流向，目前比较流行的一个图表。<br></p><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">def sankey_custom(nodes, links) -&gt; Sankey:</span><br><span class="line">    now = datetime.datetime.now()</span><br><span class="line">    s_date = str(now.strftime('%Y-%m-%d'))</span><br><span class="line">    chart_title = '原因分析' + ' ' + s_date</span><br><span class="line">    # 绘制Sankey。如果想要垂直显示，只需要在add函数里面加一个orient="vertical"就好。</span><br><span class="line">    s = (</span><br><span class="line">        Sankey()</span><br><span class="line">        .add('原因',   # 图例名称</span><br><span class="line">            nodes,  # 传入节点数据</span><br><span class="line">            links,  # 传入边和流量数据</span><br><span class="line">            # 设置透明度、弯曲度、颜色</span><br><span class="line">            linestyle_opt = opts.LineStyleOpts(opacity=0.3, curve=0.5, color="source"),</span><br><span class="line">            # 标签显示位置</span><br><span class="line">            label_opts = opts.LabelOpts(position="right"),</span><br><span class="line">            # 节点之前的距离</span><br><span class="line">            node_gap = 10,</span><br><span class="line">            )</span><br><span class="line">            .set_global_opts(title_opts=opts.TitleOpts(title=chart_title))</span><br><span class="line">        )</span><br><span class="line">    return s</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h3 id="Map地图"><a href="#Map地图" class="headerlink" title="Map地图"></a>Map地图</h3><p>显示地图区域数据的数据密度<br></p><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">def chinamap_custom(provinces, value, max_value) -&gt; Map:</span><br><span class="line">    now = datetime.datetime.now()</span><br><span class="line">    s_date = str(now.strftime('%Y-%m-%d'))</span><br><span class="line">    chart_title = '人数分布' + ' ' + s_date</span><br><span class="line">    # 绘制China的Map图。</span><br><span class="line">    m = (</span><br><span class="line">        Map()</span><br><span class="line">        .add("人数", [list(z) for z in zip(provinces, value)], "china")</span><br><span class="line">        .set_global_opts(</span><br><span class="line">            title_opts=opts.TitleOpts(title=chart_title),</span><br><span class="line">            # visualmap_opts=opts.VisualMapOpts(max_ = int(max_value + 1), is_piecewise=True),</span><br><span class="line">            visualmap_opts=opts.VisualMapOpts(max_ = int(max_value + 1)),</span><br><span class="line">            )</span><br><span class="line">        #.render("map_visualmap_piecewise001.html")</span><br><span class="line">        )</span><br><span class="line">    return m</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h3 id="Bar条形图"><a href="#Bar条形图" class="headerlink" title="Bar条形图"></a>Bar条形图</h3><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">def bar_custom(list_provinces, list_value) -&gt; Bar:</span><br><span class="line">    now = datetime.datetime.now()</span><br><span class="line">    s_date = str(now.strftime('%Y-%m-%d'))</span><br><span class="line">    chart_title = '离人数分布' + ' ' + s_date</span><br><span class="line">    # 绘制bar图，自定义柱状图颜色。</span><br><span class="line">    b = (</span><br><span class="line">        Bar()</span><br><span class="line">        .add_xaxis(list_provinces)</span><br><span class="line">        .add_yaxis(</span><br><span class="line">            "离职人员", </span><br><span class="line">            list_value,</span><br><span class="line">            itemstyle_opts=opts.ItemStyleOpts(color='green'),</span><br><span class="line">            )</span><br><span class="line">        .set_global_opts(</span><br><span class="line">            title_opts=opts.TitleOpts(title=chart_title),</span><br><span class="line">            yaxis_opts=opts.AxisOpts(name="人数"),</span><br><span class="line">            xaxis_opts=opts.AxisOpts(name="省份", axislabel_opts=opts.LabelOpts(rotate=-50)),</span><br><span class="line">        )</span><br><span class="line">    )</span><br><span class="line">    return b</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="Pie饼图"><a href="#Pie饼图" class="headerlink" title="Pie饼图"></a>Pie饼图</h3><p>我使用了好几个样式的饼图。下面放一段富文本格式的饼图，效果比较美观。<br></p><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">def pie_custom_richtext(list_reason, list_value) -&gt; Pie:</span><br><span class="line">    now = datetime.datetime.now()</span><br><span class="line">    s_date = str(now.strftime('%Y-%m-%d'))</span><br><span class="line">    chart_title = '原因比例' + ' ' + s_date</span><br><span class="line">    # 绘制pie图。富文本自定义样式。</span><br><span class="line">    p = (</span><br><span class="line">        Pie()</span><br><span class="line">        .add(</span><br><span class="line">            "",</span><br><span class="line">            [list(z) for z in zip(list_reason, list_value)],</span><br><span class="line">            radius=["40%", "60%"],</span><br><span class="line">            label_opts=opts.LabelOpts(</span><br><span class="line">                position="outside",</span><br><span class="line">                formatter="{hr|}\n {b|{b}: }{c}  {per|{d}%}  ",</span><br><span class="line">                background_color="#eee",</span><br><span class="line">                border_color="#aaa",</span><br><span class="line">                border_width=1,</span><br><span class="line">                border_radius=4,</span><br><span class="line">                rich={</span><br><span class="line">                    "a": {"color": "#999", "lineHeight": 22, "align": "center"},</span><br><span class="line">                    "abg": {</span><br><span class="line">                        "backgroundColor": "#e3e3e3",</span><br><span class="line">                        "width": "100%",</span><br><span class="line">                        "align": "right",</span><br><span class="line">                        "height": 22,</span><br><span class="line">                        "borderRadius": [4, 4, 0, 0],</span><br><span class="line">                    },</span><br><span class="line">                    "hr": {</span><br><span class="line">                        "borderColor": "#aaa",</span><br><span class="line">                        "width": "100%",</span><br><span class="line">                        "borderWidth": 0.5,</span><br><span class="line">                        "height": 0,</span><br><span class="line">                    },</span><br><span class="line">                    "b": {"fontSize": 11, "lineHeight": 33},  # 标签</span><br><span class="line">                    "per": {</span><br><span class="line">                        "color": "#eee",</span><br><span class="line">                        "backgroundColor": "#334455",</span><br><span class="line">                        "padding": [2, 4],</span><br><span class="line">                        "borderRadius": 2,</span><br><span class="line">                    },</span><br><span class="line">                },</span><br><span class="line">            ),</span><br><span class="line">        )</span><br><span class="line">        .set_global_opts(</span><br><span class="line">            title_opts=opts.TitleOpts(title=chart_title),</span><br><span class="line">            legend_opts=opts.LegendOpts(is_show=True, type_="scroll", pos_left="85%", orient="vertical"),</span><br><span class="line">            )</span><br><span class="line">    )</span><br><span class="line">    return p</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>以上。</p>
+]]></content>
+      <categories>
+        <category>Lib</category>
+      </categories>
+      <tags>
+        <tag>cloud</tag>
+        <tag>Pandas</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows与MacOS上的定时JOB设置</title>
+    <url>/2020/05/06/Windows%E4%B8%8EMacOS%E4%B8%8A%E7%9A%84%E5%AE%9A%E6%97%B6JOB%E8%AE%BE%E7%BD%AE/</url>
+    <content><![CDATA[<h1 id="windows-amp-MacOS-的定时JOB设置"><a href="#windows-amp-MacOS-的定时JOB设置" class="headerlink" title="windows &amp; MacOS 的定时JOB设置"></a>windows &amp; MacOS 的定时JOB设置</h1><p>做了一些程序以后呢，爬取网站呀，获取监控呀，就需要设定定时作业。<br>定时作业部署在不关机的server上肯定谁最好的。但是正常人肯定不是随便就能搞到服务器的，服务器还是有成本的。</p>
+<p>那么就用自己的pc机器吧～<br>（更新：发现可以通过云平台的serverless服务执行定时脚本。<a href="http://tech.hahaalot.com/2020/05/10/腾讯云TencentCloud的Serverless云函数SCF/">腾讯云TencentCloud的Serverless云函数SCF</a>）</p>
+<h2 id="Windows-OS"><a href="#Windows-OS" class="headerlink" title="Windows OS"></a>Windows OS</h2><p>Windows，最普遍的操作系统。<br>本身自带一个程序【计划任务(Task Scheduler)】<br>我们使用它设定和执行定时任务。</p>
+<h3 id="Task-Scheduler（计划任务）"><a href="#Task-Scheduler（计划任务）" class="headerlink" title="Task Scheduler（计划任务）"></a>Task Scheduler（计划任务）</h3><p>搜索task scheduler就能找到，然后新建定时任务。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/task_schedule01.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/task_schedule02.png" alt=""></p>
+<h3 id="定时任务（方法一）"><a href="#定时任务（方法一）" class="headerlink" title="定时任务（方法一）"></a>定时任务（方法一）</h3><p>直接新建，然后设置【Trigger】，【Actions】选择要执行的程序。<br>注意，如果程序脚本中涉及到了读写文件的操作，文件地址一定要写全绝对路径。因为执行脚本的目录并不是程序所在的相对路径的。<br>（因为我的直接脚本都是python写的，所以我执行程序使用的python）<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/task_schedule03.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/task_schedule04.png" alt=""></p>
+<h3 id="定时任务（方法二）"><a href="#定时任务（方法二）" class="headerlink" title="定时任务（方法二）"></a>定时任务（方法二）</h3><p>除了直接执行程序，也可以选择写一个powershell脚本，执行脚本。然后在powershell脚本中调用程序脚本。<br><del>是有种“脱裤子放屁”的感觉哈。</del><br><del>除了能避免忽略文件绝对路径的问题，好像也没啥用途。</del> （也不是什么主要优点）<br>可能我本人，比较喜欢powershell脚本吧。    o(<em>￣︶￣</em>)o<br>Windows上如果是一般的脚本，建议还是通过powershell写。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/task_schedule05.png" alt=""></p>
+<h2 id="MacOS"><a href="#MacOS" class="headerlink" title="MacOS"></a>MacOS</h2><p>Mac使用自带的launchctl服务。</p>
+<h3 id="编写plist文件"><a href="#编写plist文件" class="headerlink" title="编写plist文件"></a>编写plist文件</h3><p>首先要编写plist文件，代码参考如下。<br>Plist文件，是launchctl服务执行使用的。对于其他脚本的执行，需将脚本名称写在plist文件里。<br></p><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span><br><span class="line">    &lt;!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN"</span><br><span class="line">        "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;</span><br><span class="line">    &lt;plist version="1.0"&gt;</span><br><span class="line">    &lt;dict&gt;</span><br><span class="line">        &lt;!-- Label唯一的标识 --&gt;</span><br><span class="line">        &lt;key&gt;Label&lt;/key&gt;</span><br><span class="line">        &lt;string&gt;lhd.backstage.program.plist&lt;/string&gt;</span><br><span class="line">        &lt;!-- 指定要运行的脚本 --&gt;</span><br><span class="line">        &lt;key&gt;ProgramArguments&lt;/key&gt;</span><br><span class="line">        &lt;array&gt;</span><br><span class="line">            &lt;string&gt;/Users/konta/Sky_App/backstage_program/back_run.sh&lt;/string&gt;</span><br><span class="line">        &lt;/array&gt;</span><br><span class="line">        &lt;!-- 指定要运行的时间 --&gt;</span><br><span class="line">        &lt;key&gt;StartCalendarInterval&lt;/key&gt;</span><br><span class="line">        &lt;dict&gt;</span><br><span class="line">            &lt;key&gt;Minute&lt;/key&gt;</span><br><span class="line">            &lt;integer&gt;07&lt;/integer&gt;</span><br><span class="line">            &lt;key&gt;Hour&lt;/key&gt;</span><br><span class="line">            &lt;integer&gt;17&lt;/integer&gt;</span><br><span class="line">        &lt;/dict&gt;</span><br><span class="line">        &lt;!-- 标准输出文件 --&gt;</span><br><span class="line">        &lt;key&gt;StandardOutPath&lt;/key&gt;</span><br><span class="line">        &lt;string&gt;/Users/konta/Sky_App/backstage_program/backstage_program.log&lt;/string&gt;</span><br><span class="line">        &lt;!-- 标准错误输出文件，错误日志 --&gt;</span><br><span class="line">        &lt;key&gt;StandardErrorPath&lt;/key&gt;</span><br><span class="line">        &lt;string&gt;/Users/konta/Sky_App/backstage_program/backstage_program.err&lt;/string&gt;</span><br><span class="line">    &lt;/dict&gt;</span><br><span class="line">    &lt;/plist&gt;</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h3 id="编写sh脚本"><a href="#编写sh脚本" class="headerlink" title="编写sh脚本"></a>编写sh脚本</h3><p>plist文件中指定了脚本地址，我们需要创建这个sh脚本。<br>以如下代码为例，我直接是使用python执行py脚本。<br></p><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line"># 进入py程序所在目录</span><br><span class="line">cd /Users/konta/Sky_App/backstage_program &amp;&amp;</span><br><span class="line"># 执行python脚本（注意前面要指定python运行环境/usr/bin/python，根据自己的情况改变。我python3使用的是anaconda环境，所以不一样）</span><br><span class="line">/Users/konta/anaconda3/bin/python web_info.py</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h3 id="plist文件部署位置"><a href="#plist文件部署位置" class="headerlink" title="plist文件部署位置"></a>plist文件部署位置</h3><p>plist可以放在如下位置：</p>
+<ul>
+<li>~/Library/LaunchAgents  由用户自己定义的任务项</li>
+<li>/Library/LaunchAgents  由管理员为用户定义的任务项</li>
+<li>/Library/LaunchDaemons  由管理员定义的守护进程任务项</li>
+<li>/System/Library/LaunchAgents  由Mac OS X为用户定义的任务项</li>
+<li>/System/Library/LaunchDaemons  由Mac OS X定义的守护进程任务项<br>我自己是放在了 【~/Library/LaunchAgents 】里面。<br>【 /Library/LaunchAgents】目录，由于Mac本身的安全策略，无法直接把文件放进去，需要先解除安全策略，我嫌麻烦就没用。<h3 id="lauchctl命令加载"><a href="#lauchctl命令加载" class="headerlink" title="lauchctl命令加载"></a>lauchctl命令加载</h3>只有加载了文件的任务，才能定时执行。terminal中输入：<figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line"># 加载任务, -w会将plist文件中无效的key覆盖掉，建议加上。</span><br><span class="line">launchctl load -w lhd.backstage.program.plist</span><br></pre></td></tr></tbody></table></figure>
+</li>
+</ul>
+<p>以上，定时job就设置完成了。</p>
+<h3 id="常规launchctl命令"><a href="#常规launchctl命令" class="headerlink" title="常规launchctl命令"></a>常规launchctl命令</h3><figure class="highlight plain"><table><tbody><tr><td class="code"><pre><span class="line">launchctl load -w lhd.backstage.program.plist</span><br><span class="line"></span><br><span class="line"># 删除任务。如果plist文件有调整，需要先删除任务，再重新加载。</span><br><span class="line">launchctl unload -w lhd.backstage.program.plist</span><br><span class="line"></span><br><span class="line"># 立即执行任务。忽略设定的时间，立即执行。可以用来检查执行情况。</span><br><span class="line">launchctl start lhd.backstage.program.plist</span><br><span class="line"></span><br><span class="line"># 查看任务列表, 使用grep过滤</span><br><span class="line">launchctl list | grep 'lhd'</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>个人觉得，都挺方便的。</p>
+<p>只不过windows一如既往的可以通过可视化的配置界面进行设定，mac要一直通过在terminal码命令行设置。</p>
+<p>windows：task_scheduler ➡️ powershell脚本 ➡️ py程序<br>macOS：launchctl ➡️ sh脚本 ➡️ py程序<br>思路都是一样的，就是：使用当前操作系统下，原生支持度最高的语言，编写脚本，调用实际执行程序或脚本。</p>
+<p>以上。</p>
+]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>MacOS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>网站访问情况的简单监控</title>
     <url>/2020/04/27/%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E6%83%85%E5%86%B5%E7%9A%84%E7%AE%80%E5%8D%95%E7%9B%91%E6%8E%A7/</url>
     <content><![CDATA[<h1 id="网站访问情况的简单监控"><a href="#网站访问情况的简单监控" class="headerlink" title="网站访问情况的简单监控"></a>网站访问情况的简单监控</h1><h2 id="我呢，想做这样一个事情："><a href="#我呢，想做这样一个事情：" class="headerlink" title="我呢，想做这样一个事情："></a>我呢，想做这样一个事情：</h2><p>通过爬取blog封面最下方的记数，将每天访问网站的信息抓取出来。然后调用WechatWork的webhook，将每天的访问数发给自己。<br>这样就能粗略了解，网站的访问情况。</p>
@@ -884,27 +909,6 @@
       <tags>
         <tag>python</tag>
         <tag>crawler</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>腾讯云TencentCloud的Serverless云函数SCF</title>
-    <url>/2020/05/10/%E8%85%BE%E8%AE%AF%E4%BA%91TencentCloud%E7%9A%84Serverless%E4%BA%91%E5%87%BD%E6%95%B0SCF/</url>
-    <content><![CDATA[<h1 id="腾讯云TencentCloud的Serverless云函数SCF"><a href="#腾讯云TencentCloud的Serverless云函数SCF" class="headerlink" title="腾讯云TencentCloud的Serverless云函数SCF"></a>腾讯云TencentCloud的Serverless云函数SCF</h1><h2 id="SCF"><a href="#SCF" class="headerlink" title="SCF"></a>SCF</h2><p>偶然的机会，发现了腾讯云的SCF（Serverless Cloud Function）。感觉发现了个宝贝。还蛮有意思的。</p>
-<h3 id="serverless"><a href="#serverless" class="headerlink" title="serverless"></a>serverless</h3><p>做过后台管理，对server很敏感。最近两年经常在各种地方看到过“serverless”这个词。<br>顾名思义，就是抛除服务器的概念。<br>可是具体的服务一直没接触过。这次测试SCF，也算对serverless有了一点实践性的接触。<br>以后有机会看看要不要深入写一下。</p>
-<h3 id="TencentCloud的SCF"><a href="#TencentCloud的SCF" class="headerlink" title="TencentCloud的SCF"></a>TencentCloud的SCF</h3><p>之所以接触到了TencentCloud，可能是整个站点的基架都是腾讯云的各服务支撑的，自然而然的就用了SCF。<br>SCF提供了一定的<a href="https://cloud.tencent.com/document/product/583/12282" target="_blank" rel="noopener">免费额度</a>，我草草算了下，每天偶尔跑两次在额度范围内是绰绰有余的。<br>日常研究测试下，简直等同于白嫖呀。</p>
-<h2 id="SCF配置"><a href="#SCF配置" class="headerlink" title="SCF配置"></a>SCF配置</h2><h3 id="设置函数"><a href="#设置函数" class="headerlink" title="设置函数"></a>设置函数</h3><p>进入控制台-云函数，然后新建。<br>我使用了空白模版，然后因为我的脚本是python，所以语言python3.6。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf01.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf02.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf03.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf04.png" alt=""><br>完成后，就可以把自己的脚本代码复制进来，保存。</p>
-<p>需要注意的是，<strong>当前的执行方法是【index.main_handler】，所以想让你的脚本跑起来，方法名要调整。</strong><br>我直接把我自定义的方法放在了index.main_handler()里面。 <del>可能是因为我太懒了。</del><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf05.png" alt=""></p>
-<h3 id="设置触发器"><a href="#设置触发器" class="headerlink" title="设置触发器"></a>设置触发器</h3><p><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf06.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf07.png" alt=""></p>
-<h2 id="更多使用方法，可以参考官方文档。"><a href="#更多使用方法，可以参考官方文档。" class="headerlink" title="更多使用方法，可以参考官方文档。"></a>更多使用方法，可以参考官方文档。</h2><p>官方文档，写的真的是详细。<br>我，都能看懂～</p>
-<p>这样就设置完成了。<br>然后就等着看是否跑起来脚本代码了。</p>
-<p>嘿嘿嘿～<br><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1236019916,2423407424&amp;fm=26&amp;gp=0.jpg" alt=""></p>
-]]></content>
-      <categories>
-        <category>Tech</category>
-      </categories>
-      <tags>
-        <tag>cloud</tag>
-        <tag>serverless</tag>
       </tags>
   </entry>
   <entry>
@@ -927,36 +931,6 @@
         <tag>Tech</tag>
         <tag>python</tag>
         <tag>FTP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>随笔 工作上的蛋疼一则</title>
-    <url>/2020/04/30/%E9%9A%8F%E7%AC%94-%E5%B7%A5%E4%BD%9C%E4%B8%8A%E7%9A%84%E8%9B%8B%E7%96%BC%E4%B8%80%E5%88%99/</url>
-    <content><![CDATA[<p>#随笔 工作上的蛋疼一则<br><strong><em>今天呢，发生了件很恶心的事情。</em></strong></p>
-<p>一切的始点吧，可能都从我们公司换了AO系统开始。<br>原本负责AO系统管理的组主管，说实话，已经很恶心人了。<br>加上他负责，引进了一个新的AO平台，结果新平台也很恶心人。</p>
-<p>就这样，恶心double了。<br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b300_500&amp;sec=1588242288120&amp;di=7bcf0c2892f9302f11304d3651f9a5c7&amp;imgtype=0&amp;src=http%3A%2F%2Fwx1.sinaimg.cn%2Fbmiddle%2F006Cmetyly1fgp29f7h4qj309v09vmxq.jpg" alt=""></p>
-<h2 id="Round-0"><a href="#Round-0" class="headerlink" title="Round 0"></a>Round 0</h2><p>按理讲，ERP功能，其实可以和AO不那么的紧密。但是公司化的信息建设中呢，所有的流程都要求在AO里走，所以涉及到的业务系统都要在AO上做对接。<br>那么问题就来了：AO有没有人和你对接呀；AO和你对接要收多少钱呀；你对接用到的数据，AO支不支持呀；动到AO框架下的数据，怎么处理呀……</p>
-<p>一句话就是： <strong>人家AO想不想做，怎么做，要看人家的心情。</strong><br><img src="http://img5.imgtn.bdimg.com/it/u=1650942334,1124734285&amp;fm=26&amp;gp=0.jpg" alt=""></p>
-<p>如果OA负责人是通情达理的，你还好沟通。碰上的是一个平时就恶心人的负责人，怎么办？</p>
-<h2 id="Round-ONE"><a href="#Round-ONE" class="headerlink" title="Round ONE"></a>Round ONE</h2><p>你说我们考核系统需要AO上做审批，一个流程一个表单、双方各一个接口对接，挺好做吧？<br>人家哗的给你报了300个人天，人天单价8000元。你做不？<br>人家说资源有限，报价合理。你咋办？</p>
-<p><strong>跪着也要人家帮忙做呀！肉疼？忍着。</strong><br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b300_500&amp;sec=1588242042772&amp;di=e2feed7b53e74e82462ce7c224b14705&amp;imgtype=0&amp;src=http%3A%2F%2Fimgfs.oppo.cn%2Fuploads%2Fthread%2Fattachment%2F2016%2F10%2F29%2F14777488392552.jpg" alt=""><br>不要说自己评估认为不合理。人家就一句，人家系统的架构和开发，你凭什么觉得自己可以指手画脚。你当拉出来个前端开发，就可以在人家平台上设计流程画表单啦？</p>
-<p>好的，动用一切可利用的高阶资源。上层给压力，同级说好话，终于给你砍掉了100个人天，单价打了个半折。<br>你心里清楚，还是TMD贵死了，就知道吸我们血。面子上，还得满面春风让人家做起来。</p>
-<h2 id="Round-TWO"><a href="#Round-TWO" class="headerlink" title="Round TWO"></a>Round TWO</h2><p><strong>做吧做吧，做呀做呀，作呀作呀。</strong></p>
-<p>突然AO管理员一天找到你，说你们的系统改了人家的数据，影响了AO别的表单和流程。<br>你心想，哎，给人家添麻烦了。赶紧去查。<br>查查发现不对呀，这用到的数据AO本来就有，这就是拿来用用呀。<br>再查查……啊，原来AO本来对接这数据的时候，逻辑就有问题，会出现数据被冲掉的情况，正巧你和人家对接的时候赶上了。</p>
-<p>你缕了逻辑，告诉人家，是这个问题，告诉人家怎么改逻辑就可以了。<br>人家说，你们系统要出钱，否则人家不改。<br>WTF？你们AO本来做的就有问题，碰巧被我们赶上了，还要我出钱？<br>人家说了，人家之前都没问题。就是和你对接，才出来的问题。</p>
-<p>气不气，气不气？</p>
-<h2 id="Round-THE-END"><a href="#Round-THE-END" class="headerlink" title="Round THE END"></a>Round THE END</h2><p>人家咬定是你们系统调整引起的。负责人也给下级指令人家不修复不改不动逻辑。<br>然后出问题还会继续赖上你～<br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1588242417670&amp;di=fca400b24d2a18516e98ff51cdb32504&amp;imgtype=0&amp;src=http%3A%2F%2Fimg.tukexw.com%2Fimg%2Fe5faf2a4cb9b29f1.jpg" alt=""></p>
-<h2 id="Continue"><a href="#Continue" class="headerlink" title="Continue"></a>Continue</h2><p>我是真心的被恶心到了。过程远比我吐槽的，更让人生气。</p>
-<p>其实工作上的摩擦非常的正常，可是我觉得工作上要有职责的担当和姿态。<br>自己的工作职责，该担的能担起来；该坚持的能坚持；该做的不推诿。</p>
-<p><strong>这是对自己工作的责任和自尊心，也是对协作同事的支持和尊重。</strong></p>
-<p>希望这种人自重。<br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1588242527229&amp;di=5bf0f62081b9d2a63f6eb735a85258b0&amp;imgtype=0&amp;src=http%3A%2F%2Fimg.jpjww.com%2Fimg%2Fe0f6f3cf394cd64d.jpg" alt=""></p>
-<p>（吐槽是真的，历史事件碍于工作操守有改动，数据不代表真实数字。）</p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -987,6 +961,57 @@
         <tag>Tech</tag>
         <tag>python</tag>
         <tag>FTP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>腾讯云TencentCloud的Serverless云函数SCF</title>
+    <url>/2020/05/10/%E8%85%BE%E8%AE%AF%E4%BA%91TencentCloud%E7%9A%84Serverless%E4%BA%91%E5%87%BD%E6%95%B0SCF/</url>
+    <content><![CDATA[<h1 id="腾讯云TencentCloud的Serverless云函数SCF"><a href="#腾讯云TencentCloud的Serverless云函数SCF" class="headerlink" title="腾讯云TencentCloud的Serverless云函数SCF"></a>腾讯云TencentCloud的Serverless云函数SCF</h1><h2 id="SCF"><a href="#SCF" class="headerlink" title="SCF"></a>SCF</h2><p>偶然的机会，发现了腾讯云的SCF（Serverless Cloud Function）。感觉发现了个宝贝。还蛮有意思的。</p>
+<h3 id="serverless"><a href="#serverless" class="headerlink" title="serverless"></a>serverless</h3><p>做过后台管理，对server很敏感。最近两年经常在各种地方看到过“serverless”这个词。<br>顾名思义，就是抛除服务器的概念。<br>可是具体的服务一直没接触过。这次测试SCF，也算对serverless有了一点实践性的接触。<br>以后有机会看看要不要深入写一下。</p>
+<h3 id="TencentCloud的SCF"><a href="#TencentCloud的SCF" class="headerlink" title="TencentCloud的SCF"></a>TencentCloud的SCF</h3><p>之所以接触到了TencentCloud，可能是整个站点的基架都是腾讯云的各服务支撑的，自然而然的就用了SCF。<br>SCF提供了一定的<a href="https://cloud.tencent.com/document/product/583/12282" target="_blank" rel="noopener">免费额度</a>，我草草算了下，每天偶尔跑两次在额度范围内是绰绰有余的。<br>日常研究测试下，简直等同于白嫖呀。</p>
+<h2 id="SCF配置"><a href="#SCF配置" class="headerlink" title="SCF配置"></a>SCF配置</h2><h3 id="设置函数"><a href="#设置函数" class="headerlink" title="设置函数"></a>设置函数</h3><p>进入控制台-云函数，然后新建。<br>我使用了空白模版，然后因为我的脚本是python，所以语言python3.6。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf01.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf02.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf03.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf04.png" alt=""><br>完成后，就可以把自己的脚本代码复制进来，保存。</p>
+<p>需要注意的是，<strong>当前的执行方法是【index.main_handler】，所以想让你的脚本跑起来，方法名要调整。</strong><br>我直接把我自定义的方法放在了index.main_handler()里面。 <del>可能是因为我太懒了。</del><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf05.png" alt=""></p>
+<h3 id="设置触发器"><a href="#设置触发器" class="headerlink" title="设置触发器"></a>设置触发器</h3><p><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf06.png" alt=""><br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2020/0405/scf07.png" alt=""></p>
+<h2 id="更多使用方法，可以参考官方文档。"><a href="#更多使用方法，可以参考官方文档。" class="headerlink" title="更多使用方法，可以参考官方文档。"></a>更多使用方法，可以参考官方文档。</h2><p>官方文档，写的真的是详细。<br>我，都能看懂～</p>
+<p>这样就设置完成了。<br>然后就等着看是否跑起来脚本代码了。</p>
+<p>嘿嘿嘿～<br><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1236019916,2423407424&amp;fm=26&amp;gp=0.jpg" alt=""></p>
+]]></content>
+      <categories>
+        <category>Tech</category>
+      </categories>
+      <tags>
+        <tag>cloud</tag>
+        <tag>serverless</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>随笔 工作上的蛋疼一则</title>
+    <url>/2020/04/30/%E9%9A%8F%E7%AC%94-%E5%B7%A5%E4%BD%9C%E4%B8%8A%E7%9A%84%E8%9B%8B%E7%96%BC%E4%B8%80%E5%88%99/</url>
+    <content><![CDATA[<p>#随笔 工作上的蛋疼一则<br><strong><em>今天呢，发生了件很恶心的事情。</em></strong></p>
+<p>一切的始点吧，可能都从我们公司换了AO系统开始。<br>原本负责AO系统管理的组主管，说实话，已经很恶心人了。<br>加上他负责，引进了一个新的AO平台，结果新平台也很恶心人。</p>
+<p>就这样，恶心double了。<br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b300_500&amp;sec=1588242288120&amp;di=7bcf0c2892f9302f11304d3651f9a5c7&amp;imgtype=0&amp;src=http%3A%2F%2Fwx1.sinaimg.cn%2Fbmiddle%2F006Cmetyly1fgp29f7h4qj309v09vmxq.jpg" alt=""></p>
+<h2 id="Round-0"><a href="#Round-0" class="headerlink" title="Round 0"></a>Round 0</h2><p>按理讲，ERP功能，其实可以和AO不那么的紧密。但是公司化的信息建设中呢，所有的流程都要求在AO里走，所以涉及到的业务系统都要在AO上做对接。<br>那么问题就来了：AO有没有人和你对接呀；AO和你对接要收多少钱呀；你对接用到的数据，AO支不支持呀；动到AO框架下的数据，怎么处理呀……</p>
+<p>一句话就是： <strong>人家AO想不想做，怎么做，要看人家的心情。</strong><br><img src="http://img5.imgtn.bdimg.com/it/u=1650942334,1124734285&amp;fm=26&amp;gp=0.jpg" alt=""></p>
+<p>如果OA负责人是通情达理的，你还好沟通。碰上的是一个平时就恶心人的负责人，怎么办？</p>
+<h2 id="Round-ONE"><a href="#Round-ONE" class="headerlink" title="Round ONE"></a>Round ONE</h2><p>你说我们考核系统需要AO上做审批，一个流程一个表单、双方各一个接口对接，挺好做吧？<br>人家哗的给你报了300个人天，人天单价8000元。你做不？<br>人家说资源有限，报价合理。你咋办？</p>
+<p><strong>跪着也要人家帮忙做呀！肉疼？忍着。</strong><br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b300_500&amp;sec=1588242042772&amp;di=e2feed7b53e74e82462ce7c224b14705&amp;imgtype=0&amp;src=http%3A%2F%2Fimgfs.oppo.cn%2Fuploads%2Fthread%2Fattachment%2F2016%2F10%2F29%2F14777488392552.jpg" alt=""><br>不要说自己评估认为不合理。人家就一句，人家系统的架构和开发，你凭什么觉得自己可以指手画脚。你当拉出来个前端开发，就可以在人家平台上设计流程画表单啦？</p>
+<p>好的，动用一切可利用的高阶资源。上层给压力，同级说好话，终于给你砍掉了100个人天，单价打了个半折。<br>你心里清楚，还是TMD贵死了，就知道吸我们血。面子上，还得满面春风让人家做起来。</p>
+<h2 id="Round-TWO"><a href="#Round-TWO" class="headerlink" title="Round TWO"></a>Round TWO</h2><p><strong>做吧做吧，做呀做呀，作呀作呀。</strong></p>
+<p>突然AO管理员一天找到你，说你们的系统改了人家的数据，影响了AO别的表单和流程。<br>你心想，哎，给人家添麻烦了。赶紧去查。<br>查查发现不对呀，这用到的数据AO本来就有，这就是拿来用用呀。<br>再查查……啊，原来AO本来对接这数据的时候，逻辑就有问题，会出现数据被冲掉的情况，正巧你和人家对接的时候赶上了。</p>
+<p>你缕了逻辑，告诉人家，是这个问题，告诉人家怎么改逻辑就可以了。<br>人家说，你们系统要出钱，否则人家不改。<br>WTF？你们AO本来做的就有问题，碰巧被我们赶上了，还要我出钱？<br>人家说了，人家之前都没问题。就是和你对接，才出来的问题。</p>
+<p>气不气，气不气？</p>
+<h2 id="Round-THE-END"><a href="#Round-THE-END" class="headerlink" title="Round THE END"></a>Round THE END</h2><p>人家咬定是你们系统调整引起的。负责人也给下级指令人家不修复不改不动逻辑。<br>然后出问题还会继续赖上你～<br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1588242417670&amp;di=fca400b24d2a18516e98ff51cdb32504&amp;imgtype=0&amp;src=http%3A%2F%2Fimg.tukexw.com%2Fimg%2Fe5faf2a4cb9b29f1.jpg" alt=""></p>
+<h2 id="Continue"><a href="#Continue" class="headerlink" title="Continue"></a>Continue</h2><p>我是真心的被恶心到了。过程远比我吐槽的，更让人生气。</p>
+<p>其实工作上的摩擦非常的正常，可是我觉得工作上要有职责的担当和姿态。<br>自己的工作职责，该担的能担起来；该坚持的能坚持；该做的不推诿。</p>
+<p><strong>这是对自己工作的责任和自尊心，也是对协作同事的支持和尊重。</strong></p>
+<p>希望这种人自重。<br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1588242527229&amp;di=5bf0f62081b9d2a63f6eb735a85258b0&amp;imgtype=0&amp;src=http%3A%2F%2Fimg.jpjww.com%2Fimg%2Fe0f6f3cf394cd64d.jpg" alt=""></p>
+<p>（吐槽是真的，历史事件碍于工作操守有改动，数据不代表真实数字。）</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
       </tags>
   </entry>
 </search>
