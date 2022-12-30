@@ -13,7 +13,7 @@
 
 
 
-<title>SAP霸道的内置函数RFC_READ_TABLE | Haha not only a lot</title>
+<title>Exchange服务调用实现邮件自动发送 | Haha not only a lot</title>
 
 
 
@@ -200,7 +200,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">SAP霸道的内置函数RFC_READ_TABLE</h1>
+            <h1 class="post-title">Exchange服务调用实现邮件自动发送</h1>
             
                 <div class="post-meta">
                     
@@ -209,7 +209,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">十二月 20, 2022&nbsp;&nbsp;22:27:42</a>
+                        Date: <a href="#">十二月 30, 2022&nbsp;&nbsp;21:20:26</a>
                         </span>
                     
                     
@@ -225,18 +225,18 @@
         </header>
 
         <div class="post-content">
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近很长一大段时间，自己在学习新的技术。<br>所以很久很久不更新了。想说学好了搞一个新项目搞搞。但是学习的时间成本，加上工作很忙，就比较慢吧。</p>
-<p>手头在做一个项目，有了一点我自己的需求：<br>每晚我们要对外抛一些凭证信息，是通过sap的定时后台作业实现。但是目前没有合适的监控，导致每天都要登陆系统去查log表。</p>
-<p>于是我就想是否有一个RFC函数，可以查询table，这样我通过调用函数就可以去看log表，以实现监控的效果。</p>
-<p>Google了一下，原来sap本身自带了函数<code>RFC_READ_TABLE</code>，可以实现我的需求。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/rfcreadtable01.png" alt=""></p>
-<h2 id="函数使用说明"><a href="#函数使用说明" class="headerlink" title="函数使用说明"></a>函数使用说明</h2><p>首先看一下这个函数的参数和表，<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/rfcreadtable02.png" alt=""></p>
-<h3 id="入参"><a href="#入参" class="headerlink" title="入参"></a>入参</h3><p><code>QUERY_TABLE</code>，输入要查询的table。这里要说明下，执行该函数的账号必须有该table的查看权限才可以，否则会报错未授权。<br><code>DELIMITER</code>输入分隔符号。输出的结果如果有多列，不同列的值之间就是这个符号做分割。<br><code>NO_DATA</code>输入“X”表示不需要输出table的值，只输出表结构。如果不清楚某个table有哪些列，就可以先选中它，获取下表结构。<br><code>ROWSKIPS</code>输出的结果要掠过多少行。比如某条件查询会查到100行，这个参数输入50，则输出结果从51行开始。<br><code>ROWCOUNT</code>输出多少行结果。比如某条件查询会查到100行，这个参数输入10，则输出只有10行结果。</p>
-<h3 id="表"><a href="#表" class="headerlink" title="表"></a>表</h3><p><code>OPTIONS</code>查询的条件。可以根据自己的需要编写查询的条件。<br>需要注意的是，这里是abap的写法，如果跨行，就当作正常的abap换行写就好。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/rfcreadtable03.png" alt=""><br><code>FIELDS</code>要输出结果包含table的哪些列。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/rfcreadtable04.png" alt=""><br><code>DATA</code>输出结果的表，所有期望结果输出都在这里。</p>
-<h3 id="执行结果"><a href="#执行结果" class="headerlink" title="执行结果"></a>执行结果</h3><p>按照我上面图例的条件，执行后结果就是这样子的。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/rfcreadtable05.png" alt=""></p>
-<p>总之这个函数还是很容易上手的。</p>
-<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>之所以我觉得它很霸道的原因是，有了它可以少掉很多额外的开发工作。如果我只是单纯的要从某些表里获取数据，我就可以直接使用它，而不是在要通过写程序或者单独写函数去抓。可以把更多精力放在处理获取的数据上。</p>
-<h2 id="我干了点啥"><a href="#我干了点啥" class="headerlink" title="我干了点啥"></a>我干了点啥</h2><p>我呢，用它干了点啥呢，就是可以一点程度上实现我的定时监控，并将监控结果发给我自己。<br>大体逻辑就是，定时调用这个rfc，然后抓取结果做一定加工后，调用企业微信的webhook，发送到我的企业微信上。<br>每个环节之前都搞过好多次，也都介绍过，所以就不单独说了。</p>
-<p>最后的 效果大概就是下面这个样子的，非常的nice。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/rfcreadtable06.png" alt=""></p>
+            <p>Exchange服务调用实现邮件自动发送</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我上篇搞了个自动抓取sap日志表的操作，然后通过webhook发给企业微信。<br><a href="https://tech.hahaalot.com/2022/12/20/rfcreadtable/">SAP霸道的内置函数RFC_READ_TABLE | Haha not only a lot</a><br>但是实际有些问题：</p>
+<ul>
+<li>脚本执行的环境是我自己电脑，那我电脑关机的情况下，作业就无法执行了。</li>
+<li>使用外部server，无法连接到公司的sap系统。</li>
+<li>使用内部server，无法访问internet，无法触发消息发送。</li>
+</ul>
+<p>因为作业是抓取当天的日志，所以如果差了一天，可能就会漏掉监控……<br>实际也确实发生过了……</p>
+<p>今天偶尔想了下，是否有邮件发送的方式，一搜，还真的有。<br>使用内部邮箱的话，将监控信息发给自己。同时也因为都是公司内部应用，可以将脚本放在内部server上，这样上面的问题就都解决了。</p>
+<p>非常nice～🤪🤪🤪🤪🤪🤪</p>
+<h2 id="技术实现"><a href="#技术实现" class="headerlink" title="技术实现"></a>技术实现</h2><p>使用<code>exchangelib</code>三方库。<br>这个库整体用起来非常的简单。但是安装的时候会发现它需要安装很多依赖库。同时不同的功能需要import不同的模块进来。<br>整体不难用。<br>大致发送邮件的代码如下，即可：<br></p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">from exchangelib import Credentials, Account, Message, Mailbox</span><br><span class="line"></span><br><span class="line"># 邮件标题</span><br><span class="line">subject = "测试"</span><br><span class="line"># 邮件正文</span><br><span class="line">text = """</span><br><span class="line">测试!</span><br><span class="line">"""</span><br><span class="line">def send():</span><br><span class="line">    user = params_connection['user']</span><br><span class="line">    passwd = params_connection['passwd']</span><br><span class="line">    from_addr = params_connection['from']</span><br><span class="line"></span><br><span class="line">    credentials = Credentials(user, passwd)</span><br><span class="line">    account = Account(from_addr, credentials=credentials, autodiscover=True)</span><br><span class="line"></span><br><span class="line">    m = Message(</span><br><span class="line">            account = account,        # 之前申明的账户</span><br><span class="line">            subject = subject,</span><br><span class="line">            body = text,</span><br><span class="line">            to_recipients = [</span><br><span class="line">                Mailbox(email_address = '802@macn'),</span><br><span class="line">                # Mailbox(email_address = '695@ma.cn'),</span><br><span class="line">                ],</span><br><span class="line">            cc_recipients=['carl@c', 'denic@e'],</span><br><span class="line">            bcc_recipients=[Mailbox(email_address='erik@m'),]</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">    m.send()</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="我干了点啥"><a href="#我干了点啥" class="headerlink" title="我干了点啥"></a>我干了点啥</h2><p>抓取的东西还是之前的东西，<br>做了一定程度调整，然后就可以用邮件发送了。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2022/Q3/rfcreadtable11.png" alt=""><br>这样每天定时发送到自己邮箱，就可以了。</p>
 
         </div>
 
@@ -258,7 +258,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://tech.hahaalot.com/2022/12/20/rfcreadtable/">http://tech.hahaalot.com/2022/12/20/rfcreadtable/</a></span>
+                        <span><a href="http://tech.hahaalot.com/2022/12/30/Exchange服务调用实现邮件自动发送/">http://tech.hahaalot.com/2022/12/30/Exchange服务调用实现邮件自动发送/</a></span>
                     </p>
                 
                 
@@ -282,8 +282,6 @@
                 <span class="tag">
                     
                     
-                        <a href="/tags/SAP/"># SAP</a>
-                    
                         <a href="/tags/Tech/"># Tech</a>
                     
                         <a href="/tags/python/"># python</a>
@@ -299,10 +297,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2022/12/30/Exchange服务调用实现邮件自动发送/">Exchange服务调用实现邮件自动发送</a>
             
-            
-            <a class="next" rel="next" href="/2022/08/30/zenofpython/">Zen of Python</a>
+            <a class="next" rel="next" href="/2022/12/20/rfcreadtable/">SAP霸道的内置函数RFC_READ_TABLE</a>
             
         </section>
 
