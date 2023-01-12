@@ -13,7 +13,7 @@
 
 
 
-<title>数据分析可视化的简单探究（一）--数据抓取 | Haha not only a lot</title>
+<title>python做unicode的编码和解码 | Haha not only a lot</title>
 
 
 
@@ -200,7 +200,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">数据分析可视化的简单探究（一）--数据抓取</h1>
+            <h1 class="post-title">python做unicode的编码和解码</h1>
             
                 <div class="post-meta">
                     
@@ -209,14 +209,14 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">九月 7, 2020&nbsp;&nbsp;20:05:27</a>
+                        Date: <a href="#">一月 13, 2023&nbsp;&nbsp;21:42:03</a>
                         </span>
                     
                     
                         <span class="post-category">
                     Category:
                             
-                                <a href="/categories/Lib/">Lib</a>
+                                <a href="/categories/Tech/">Tech</a>
                             
                         </span>
                     
@@ -225,14 +225,15 @@
         </header>
 
         <div class="post-content">
-            <p>上回写了自己搞了一个小小的项目学习测试。<br>然后其中用到了一些知识点，个人觉得还是挺有意义和用途的，接下来写几篇稿子记录一下。</p>
-<p><a href="https://tech.hahaalot.com/2020/09/06/数据分析可视化的简单探究/"><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/png_source/mario-gif.gif" width="10%" height="10%" alt="点击跳转" align="left"></a><br><br>(Click Mario)</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>数据分析第一步，就是要获取数据。<br>我这次爬的数据，是xml文本，然后通过对其中的标签进行判断，抓出需要的信息。</p>
-<h3 id="分析xml文本"><a href="#分析xml文本" class="headerlink" title="分析xml文本"></a>分析xml文本</h3><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span><br><span class="line">&lt;java version="" class=""&gt; </span><br><span class="line">  &lt;object class="java.util.HashMap"&gt; </span><br><span class="line">    &lt;void method="put"&gt; </span><br><span class="line">      &lt;string&gt;yy&lt;/string&gt;  </span><br><span class="line">      &lt;string&gt;PP&lt;/string&gt; </span><br><span class="line">    &lt;/void&gt;  </span><br><span class="line">    ……</span><br><span class="line">    …… </span><br><span class="line">    &lt;void method="put"&gt; </span><br><span class="line">      &lt;string&gt;name&lt;/string&gt;  </span><br><span class="line">      &lt;string&gt;李哈哈&lt;/string&gt; </span><br><span class="line">    &lt;/void&gt;  </span><br><span class="line">    &lt;void method="put"&gt; </span><br><span class="line">      &lt;string&gt;zhiweiname&lt;/string&gt;  </span><br><span class="line">      &lt;string&gt;学习课代表&lt;/string&gt; </span><br><span class="line">    &lt;/void&gt;  </span><br><span class="line">    ……</span><br><span class="line">    ……</span><br><span class="line">  &lt;/object&gt; </span><br><span class="line">&lt;/java&gt;</span><br></pre></td></tr></tbody></table></figure>
-<p>文本可以看出所有需要的信息，都是在void/string标签下的。<br>所以如果要抓姓名，就要先抓到void/string/text()，text值是“name”的位置，然后该位置的下一个string标签对应的位置，值就是姓名了。</p>
-<p>其他所需要的信息同理。</p>
-<h3 id="抓取值的函数"><a href="#抓取值的函数" class="headerlink" title="抓取值的函数"></a>抓取值的函数</h3><p>分析好后，写了这样一个函数：<br></p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">def xml_info_parameter(data):</span><br><span class="line">    tree = html.fromstring(data.encode('utf-8'))</span><br><span class="line">    void = tree.xpath('//void[@method="put"]/string/text()')</span><br><span class="line">    # xpath抓取出来的值，抓取出原因/员工等信息。</span><br><span class="line">    # 根据xml分析，以姓名为例，标签均为string，定位到string标签内容为name的索引，索引+1找到string标签的值为姓名。</span><br><span class="line">    # 找出index</span><br><span class="line">    for index ,values in enumerate(void):</span><br><span class="line">    # 使用了enumerate()函数，抓取list中的重复数据所在的索引。</span><br><span class="line">        if values == 'yy':</span><br><span class="line">            index_reason = index</span><br><span class="line">        elif values == 'name':</span><br><span class="line">            index_name = index</span><br><span class="line">        elif values == 'zhiweiname':</span><br><span class="line">            index_zhiwei = index</span><br><span class="line">        elif values == 'year':</span><br><span class="line">            index_year = index</span><br><span class="line">        elif values == 'zcrz':</span><br><span class="line">            index_zcrz = index</span><br><span class="line">    values_reason = void[index_reason + 1]</span><br><span class="line">    values_name = void[index_name + 1]</span><br><span class="line">    values_zhiwei = void[index_zhiwei + 1]</span><br><span class="line">    values_year = void[index_year + 1]</span><br><span class="line">    values_zcrz = void[index_zcrz + 1]</span><br><span class="line">    return values_reason, values_name, values_zhiwei, values_year, values_zcrz</span><br></pre></td></tr></tbody></table></figure><p></p>
-<p>这样，所需要的信息就抓到了。<br>但是要注意下，如果有些值的位置是空的，那么函数抓出来的信息，有的时候会有误差。后面要对数据做一些清理的操作。</p>
+            <h1 id="python做unicode的编码和解码"><a href="#python做unicode的编码和解码" class="headerlink" title="python做unicode的编码和解码"></a>python做unicode的编码和解码</h1><p>最近呢我经常陷入一种不知道该写点什么的窘况，可是不写写手痒，而且不定期码点啥会手生。<br>所以我想看看有没有好玩有趣的小项目练练手。同时为了给我师弟搞点练习做入手用。<br>于是我就搞了个几本入门的python练习书。都是一些简单的实战例子。</p>
+<p>虽然都是比较基础的，但是自己扫着看，还是发现了好多有意思，而且自己不知道的知识。<br>学一学，还是挺有收获的。</p>
+<h2 id="字符和unicode编码"><a href="#字符和unicode编码" class="headerlink" title="字符和unicode编码"></a>字符和unicode编码</h2><p>通过python的内置函数<code>chr()</code>和<code>ord()</code>就可以实现字符和unicode编码的转换。<br><code>chr()</code>可以通过unicode码定位到对应的字符信息；<br><code>ord()</code>用来定位字符对应的unicode的编码位置。<br>还是挺简单的，而且挺有意思。</p>
+<h2 id="简单的转换小程序"><a href="#简单的转换小程序" class="headerlink" title="简单的转换小程序"></a>简单的转换小程序</h2><p>写了个转换的小程序。<br>输入条件，可以选择：</p>
+<pre><code>* 字符转unicode码
+* unicode码转字符
+* 退出程序
+</code></pre><p><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2023/Q1/unicode001.png" alt=""><br>当输入 “E”时，输入要做转换的文本内容，然后会转换出完整的unicode码。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2023/Q1/unicode002.png" alt=""><br>输入 “D”时，要求输入unicode码的信息，会转换出解码后的真实文本内容。<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2023/Q1/unicode003.png" alt=""></p>
+<h3 id="啦啦啦"><a href="#啦啦啦" class="headerlink" title="啦啦啦"></a>啦啦啦</h3><p>25105, 24378, 21733, 26368, 24069, 27668, 26368, 24069, 27668, 21862, 65292, 24378, 21733, 26368, 24069, 65292, 24378, 21733, 26368, 26834, 65281<br>25105, 24378, 21733, 26368, 24069, 27668, 26368, 24069, 27668, 21862, 65292, 24378, 21733, 26368, 24069, 65292, 24378, 21733, 26368, 26834, 65281</p>
 
         </div>
 
@@ -254,7 +255,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://tech.hahaalot.com/2020/09/07/数据分析可视化的简单探究1/">http://tech.hahaalot.com/2020/09/07/数据分析可视化的简单探究1/</a></span>
+                        <span><a href="http://tech.hahaalot.com/2023/01/13/python-unicode-switch/">http://tech.hahaalot.com/2023/01/13/python-unicode-switch/</a></span>
                     </p>
                 
                 
@@ -278,9 +279,11 @@
                 <span class="tag">
                     
                     
-                        <a href="/tags/Pandas/"># Pandas</a>
+                        <a href="/tags/Tech/"># Tech</a>
                     
-                        <a href="/tags/cloud/"># cloud</a>
+                        <a href="/tags/python/"># python</a>
+                    
+                        <a href="/tags/code/"># code</a>
                     
                         
                 </span>
@@ -293,10 +296,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2020/09/08/数据分析可视化的简单探究2/">数据分析可视化的简单探究（二）--数据清洗</a>
             
-            
-            <a class="next" rel="next" href="/2020/09/06/数据分析可视化的简单探究/">数据分析可视化的简单探究（零）</a>
+            <a class="next" rel="next" href="/2023/01/06/Seven-segment-display/">7段显示(Seven-segment display)&16段显示</a>
             
         </section>
 
