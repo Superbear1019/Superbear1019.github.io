@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Konta">
+
+
+    <meta name="subtitle" content="Superbear Tech Blog">
+
+
+
+
+<title>常用的SAP ABAP BAPI | Haha not only a lot</title>
+
+
+
+    <link rel="icon" href="/favicon_haha.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Superbear&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">文章</a>
+                
+                    <a class="menu-item" href="/categories/Tech">Tech</a>
+                
+                    <a class="menu-item" href="/categories/Lib">实验</a>
+                
+                    <a class="menu-item" href="/categories/行业">行业</a>
+                
+                    <a class="menu-item" href="/categories/随笔">生活</a>
+                
+                    <a class="menu-item" href="/categories/随笔">随笔</a>
+                
+                    <a class="menu-item" href="/tag">标签</a>
+                
+                    <a class="menu-item" href="/photos">图片墙</a>
+                
+                    <a class="menu-item" href="https://support.qq.com/product/153140">留言吐槽</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Superbear&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">文章</a>
+                
+                    <a class="menu-item" href="/categories/Tech">Tech</a>
+                
+                    <a class="menu-item" href="/categories/Lib">实验</a>
+                
+                    <a class="menu-item" href="/categories/行业">行业</a>
+                
+                    <a class="menu-item" href="/categories/随笔">生活</a>
+                
+                    <a class="menu-item" href="/categories/随笔">随笔</a>
+                
+                    <a class="menu-item" href="/tag">标签</a>
+                
+                    <a class="menu-item" href="/photos">图片墙</a>
+                
+                    <a class="menu-item" href="https://support.qq.com/product/153140">留言吐槽</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">常用的SAP ABAP BAPI</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Konta</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">三月 10, 2023&nbsp;&nbsp;21:03:00</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/行业/">行业</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h1 id="常用的SAP-ABAP-BAPI"><a href="#常用的SAP-ABAP-BAPI" class="headerlink" title="常用的SAP ABAP BAPI"></a>常用的SAP ABAP BAPI</h1><h2 id="总帐会计"><a href="#总帐会计" class="headerlink" title="总帐会计"></a>总帐会计</h2><p>  (比较简单全部测试通过,关帐时使用)<br>    Line item of document for ledger with summary table GL<br>  F: BAPI_GLX_GETDOCITEMS<br>    Closing balance of G/L account for chosen year<br>  F: BAPI_GL_GETGLACCBALANCE<br>    Closing balance of G/L account for current year<br>  F: BAPI_GL_GETGLACCCURRENTBALANCE<br>    Posting period balances for each G/L account<br>  F: BAPI_GL_GETGLACCPERIODBALANCES</p>
+<h2 id="应付帐款"><a href="#应付帐款" class="headerlink" title="应付帐款"></a>应付帐款</h2><p>  (比较简单全部测试通过,按照公司代码,供应商代码和起至时间来查询)<br>    读取已清算科目行项目<br>  F: BAPI_AP_ACC_GETBALANCEDITEMS<br>    读取当前余额<br>  F: BAPI_AP_ACC_GETCURRENTBALANCE<br>    读取关键日期余额<br>  F: BAPI_AP_ACC_GETKEYDATEBALANCE<br>    读取未清科目项<br>  F: BAPI_AP_ACC_GETOPENITEMS<br>    读取科目余额<br>  F: BAPI_AP_ACC_GETPERIODBALANCES<br>    读取科目过帐<br>  F: BAPI_AP_ACC_GETSTATEMENT</p>
+<h2 id="应收帐款"><a href="#应收帐款" class="headerlink" title="应收帐款"></a>应收帐款</h2><p>  (比较简单,传入值,没有要求输入内表类型的,按照公司代码,供应商代码和起至时间来查询)<br>    确定主数据<br>  F: BAPI_CR_ACC_GETDETAIL<br>    确定最高催款级别<br>  F: BAPI_CR_ACC_GETHIGHESTDUNNINGL<br>    确定最旧的未清项目<br>  F: BAPI_CR_ACC_GETOLDESTOPENITEM<br>    确定 OI 结构<br>  F: BAPI_CR_ACC_GETOPENITEMSSTRUCT<br>    确定贷方帐户的信用状态<br>  F: BAPI_CREDIT_ACCOUNT_GET_STATUS<br>    BAPI: 取余额项目: 客户<br>  F: BAPI_AR_ACC_GETBALANCEDITEMS<br>    BAPI: 取实际余额: 客户<br>  F: BAPI_AR_ACC_GETCURRENTBALANCE<br>    BAPI: 取关键日期余额: 客户<br>  F: BAPI_AR_ACC_GETKEYDATEBALANCE<br>    BAPI: 取未清项: 客户<br>  F: BAPI_AR_ACC_GETOPENITEMS<br>    BAPI: 取余额: 客户<br>  F: BAPI_AR_ACC_GETPERIODBALANCES<br>    BAPI: 取科目报表: 客户<br>  F: BAPI_AR_ACC_GETSTATEMENT<br>    读取客户销售范围<br>  F: BAPI_CUSTOMER_GETSALESAREAS</p>
+<h2 id="银行会计"><a href="#银行会计" class="headerlink" title="银行会计:"></a>银行会计:</h2><pre><code>取消支付请求
+</code></pre><p>  F: BAPI_PAYMENTREQUEST_CANCEL<br>    支付请求的创建<br>  F: BAPI_PAYMENTREQUEST_CREATE<br>    列出支付请求<br>  F: BAPI_PAYMENTREQUEST_GETLIST<br>    支付请求状态的确定<br>  F: BAPI_PAYMENTREQUEST_GETSTATUS<br>    过帐预制凭证请求<br>  F: BAPI_PAYMENTREQUEST_POST<br>    批准支付的支付请求<br>  F: BAPI_PAYMENTREQUEST_RELEASE<br>    开始支付的支付请求<br>  F: BAPI_PAYMENTREQ_STARTPAYMENT</p>
+<h2 id="资产会计核算"><a href="#资产会计核算" class="headerlink" title="资产会计核算"></a>资产会计核算</h2><pre><code>更改资产
+</code></pre><p>  F: BAPI_FIXEDASSET_CHANGE<br>    创建资产<br>  F: BAPI_FIXEDASSET_CREATE<br>    使用值创建资产 (初始历史遗留数据传输)<br>  F: BAPI_FIXEDASSET_OVRTAKE_CREATE<br>    资产的明细信息<br>  F: BAPI_FIXEDASSET_GETDETAIL<br>    选定资产的信息<br>  F: BAPI_FIXEDASSET_GETLIST<br>    检查资本记帐<br>  F: BAPI_ASSET_POSTCAP_CHECK<br>    记帐资本总额<br>  F: BAPI_ASSET_POSTCAP_POST<br>    检查资产报废<br>  F: BAPI_ASSET_RETIREMENT_CHECK<br>    记帐资产报废<br>  F: BAPI_ASSET_RETIREMENT_POST<br>    检查资产购置<br>  F: BAPI_ASSET_ACQUISITION_CHECK<br>    记帐资产购置<br>  F: BAPI_ASSET_ACQUISITION_POST</p>
+<h2 id="特殊用途分类帐"><a href="#特殊用途分类帐" class="headerlink" title="特殊用途分类帐:"></a>特殊用途分类帐:</h2><pre><code>特殊目的分类帐: 选择科目的总计记录
+</code></pre><p>  F: BAPI_SL_GETTOTALRECORDS</p>
+<h2 id="总帐科目"><a href="#总帐科目" class="headerlink" title="总帐科目"></a>总帐科目</h2><pre><code>检查总帐科目是否存在
+</code></pre><p>  F: BAPI_GL_ACC_EXISTENCECHECK<br>    总帐科目明细<br>  F: BAPI_GL_ACC_GETDETAIL<br>    每个公司代码总帐科目的清单<br>  F: BAPI_GL_ACC_GETLIST</p>
+<h2 id="会计核算—会计接口"><a href="#会计核算—会计接口" class="headerlink" title="会计核算—会计接口"></a>会计核算—会计接口</h2><pre><code>会计核算：冲销凭证
+</code></pre><p>  F: BAPI_ACC_ACT_POSTINGS_REVERSE<br>    会计：核算冲销<br>  F: BAPI_ACC_DOCUMENT_REV_CHECK<br>    会计: 过帐凭证<br>  F: BAPI_ACC_DOCUMENT_POST<br>    会计:过帐冲销<br>  F: BAPI_ACC_DOCUMENT_REV_POST<br>    会计：总帐科目记帐<br>  F: BAPI_ACC_GL_POSTING_CHECK<br>    会计: 检查一般总分类帐科目过帐的冲销<br>  F: BAPI_ACC_GL_POSTING_REV_CHECK<br>    会计：总帐科目记帐<br>  F: BAPI_ACC_GL_POSTING_POST<br>    会计核算: 过帐一般总帐过帐冲销<br>  F: BAPI_ACC_GL_POSTING_REV_POST</p>
+<h2 id="会计销售订单"><a href="#会计销售订单" class="headerlink" title="会计销售订单"></a>会计销售订单</h2><pre><code>会计：检查销售订单
+</code></pre><p>  F:  BAPI_ACC_SALES_ORDER_CHECK<br>    会计：记帐销售订单<br>  F: BAPI_ACC_SALES_ORDER_POST<br>    会计核算：冲销凭证<br>  F: BAPI_ACC_ACT_POSTINGS_REVERSE<br>    会计: 过帐票据凭证冲销 (OAG: LOAD RECEIVABLE)<br>  F: BAPI_ACC_BILLING_REV_POST<br>    会计: 检查货物移动 (OAG: POST JOURNAL)<br>  F: BAPI_ACC_GOODS_MOVEMENT_CHECK</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>Konta</span>
+                    </p>
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>Discuss:</span>
+                        <span><a href="https://support.qq.com/products/153140">吐槽及留言</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="http://tech.hahaalot.com/2023/03/10/commonly-used-bapi4fi/">http://tech.hahaalot.com/2023/03/10/commonly-used-bapi4fi/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2020 <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>YOLO!</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/SAP/"># SAP</a>
+                    
+                        <a href="/tags/行业/"># 行业</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2023/02/20/aneasychatgpt/">一个简单的chatgpt程序</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span id="busuanzi_container_site_pv">
+        总访问量<span id="busuanzi_value_site_pv"></span>次
+        </span> | 
+        <span id="busuanzi_container_site_uv">
+        访客数<span id="busuanzi_value_site_uv"></span>人
+        </span> | 
+        <span id="busuanzi_container_page_pv">
+        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        </span><br>
+        <span>© Konta | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    </div>
+</body>
+</html>
