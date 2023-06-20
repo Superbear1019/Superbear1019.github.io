@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Konta">
+
+
+    <meta name="subtitle" content="Superbear Tech Blog">
+
+
+
+
+<title>一个简单的chatgpt程序 | Haha not only a lot</title>
+
+
+
+    <link rel="icon" href="/favicon_haha.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Superbear&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">文章</a>
+                
+                    <a class="menu-item" href="/categories/Tech">Tech</a>
+                
+                    <a class="menu-item" href="/categories/Lib">实验</a>
+                
+                    <a class="menu-item" href="/categories/行业">行业</a>
+                
+                    <a class="menu-item" href="/categories/随笔">生活</a>
+                
+                    <a class="menu-item" href="/categories/随笔">随笔</a>
+                
+                    <a class="menu-item" href="/tag">标签</a>
+                
+                    <a class="menu-item" href="/photos">图片墙</a>
+                
+                    <a class="menu-item" href="https://support.qq.com/product/153140">留言吐槽</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Superbear&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">文章</a>
+                
+                    <a class="menu-item" href="/categories/Tech">Tech</a>
+                
+                    <a class="menu-item" href="/categories/Lib">实验</a>
+                
+                    <a class="menu-item" href="/categories/行业">行业</a>
+                
+                    <a class="menu-item" href="/categories/随笔">生活</a>
+                
+                    <a class="menu-item" href="/categories/随笔">随笔</a>
+                
+                    <a class="menu-item" href="/tag">标签</a>
+                
+                    <a class="menu-item" href="/photos">图片墙</a>
+                
+                    <a class="menu-item" href="https://support.qq.com/product/153140">留言吐槽</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">一个简单的chatgpt程序</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Konta</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">二月 20, 2023&nbsp;&nbsp;18:44:05</a>
+                        </span>
+                    
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/Lib/">Lib</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h1 id="一个简单的chatgpt程序"><a href="#一个简单的chatgpt程序" class="headerlink" title="一个简单的chatgpt程序"></a>一个简单的chatgpt程序</h1><p>chatgpt突然火的很火了，我也简单玩了玩。<br>由于地区限制的原因，国内要用的话必须要使用科学上网。<br>同时注册OpenAI账号，也需要使用国外的手机号。<br>注册的方式网上有好多教程，所以没什么特别要说的。</p>
+<p>但是我之前就在想，既然OpenAI提供了API，那是否通过API方式使用chatgpt，可以突破地区限制呢？<br>也是一并验证下我的这个想法，所以我搞了个账号，申请OpenAI API试了试。</p>
+<p>嗯，我忽然想到，我可以让ChatGPT给我写一段介绍呀……</p>
+<h2 id="ChatGPT写的如何使用OpenAI-API"><a href="#ChatGPT写的如何使用OpenAI-API" class="headerlink" title="ChatGPT写的如何使用OpenAI API"></a>ChatGPT写的如何使用OpenAI API</h2><h3 id="引言："><a href="#引言：" class="headerlink" title="引言："></a>引言：</h3><p>OpenAI API是一种强大的工具，可用于处理自然语言处理（NLP）任务。本文将向您介绍如何使用OpenAI API进行NLP，并提供一个简单的使用示例代码。</p>
+<h3 id="步骤1：获取OpenAI-API凭证"><a href="#步骤1：获取OpenAI-API凭证" class="headerlink" title="步骤1：获取OpenAI API凭证"></a>步骤1：获取OpenAI API凭证</h3><p>要使用OpenAI API，您需要获得API凭证。您可以在OpenAI官方网站上注册账户并获取凭证。一旦您获得了凭证，您将可以通过API访问OpenAI的功能。</p>
+<h3 id="步骤2：安装OpenAI-Python包"><a href="#步骤2：安装OpenAI-Python包" class="headerlink" title="步骤2：安装OpenAI Python包"></a>步骤2：安装OpenAI Python包</h3><p>在使用OpenAI API之前，您需要安装OpenAI Python包。您可以使用pip命令进行安装：<br></p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install openai</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h3 id="步骤3：导入OpenAI库并设置凭证"><a href="#步骤3：导入OpenAI库并设置凭证" class="headerlink" title="步骤3：导入OpenAI库并设置凭证"></a>步骤3：导入OpenAI库并设置凭证</h3><p>在您的Python代码中，首先导入OpenAI库并设置您的凭证。您可以使用以下代码示例：<br></p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> openai</span><br><span class="line"></span><br><span class="line">openai.api_key = <span class="string">'YOUR_API_KEY'</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>确保将<code>YOUR_API_KEY</code>替换为您获得的API凭证。</p>
+<h3 id="步骤4：使用OpenAI-API进行自然语言处理"><a href="#步骤4：使用OpenAI-API进行自然语言处理" class="headerlink" title="步骤4：使用OpenAI API进行自然语言处理"></a>步骤4：使用OpenAI API进行自然语言处理</h3><p>一旦您设置了凭证，就可以使用OpenAI API进行自然语言处理了。最常用的功能是生成文本。以下是一个简单的代码示例，展示如何使用OpenAI API生成文本：<br></p><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">response = openai.Completion.create(</span><br><span class="line">  engine=<span class="string">'text-davinci-003'</span>,</span><br><span class="line">  prompt=<span class="string">'Once upon a time'</span>,</span><br><span class="line">  max_tokens=<span class="number">100</span></span><br><span class="line">)</span><br><span class="line">generated_text = response.choices[<span class="number">0</span>].text.strip()</span><br><span class="line">print(generated_text)</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>在上面的示例中，我们使用了<code>text-davinci-003</code>引擎进行文本生成。您可以根据您的需求选择不同的引擎。<code>prompt</code>参数指定了生成文本的起始文本。<code>max_tokens</code>参数限制了生成文本的最大长度。生成的文本将存储在<code>generated_text</code>变量中，并进行打印输出。</p>
+<h3 id="结论："><a href="#结论：" class="headerlink" title="结论："></a>结论：</h3><p>本文介绍了使用OpenAI API进行自然语言处理的简单指南。通过遵循上述步骤，您可以开始使用OpenAI API进行各种NLP任务，并利用强大的自然语言处理功能。记得根据您的具体需求，灵活选择API引擎和参数。祝您在使用OpenAI API时取得成功！</p>
+<h2 id="下面是我写的"><a href="#下面是我写的" class="headerlink" title="下面是我写的"></a>下面是我写的</h2><p>这个chatgpt写的没问题哈，<br>基本方法写的很精炼，而且确实是对的，按照写的去做，是OK的。</p>
+<p>然后根据官方的demo，在生成请求的prompt里，要给不同的参数赋值，这里我开始就没懂这些参数的具体用法，后来偶然看到一些文章，大概了解了下，常用的参数及说明如下：</p>
+<h3 id="常用prompt参数"><a href="#常用prompt参数" class="headerlink" title="常用prompt参数"></a>常用prompt参数</h3><p><code>Engine</code> - 确定用于执行的语言模型（Davinci、Curie、Babbage、Ada）<br><code>Temperature</code> - 控制 GPT-3 的响应是否具有创造力，范围从 0 到 1。温度值越低意味着返回的结果是最正确却无多大变化的文本。<br>温度值较高意味着模型会去评估可能适合上下文的响应，生成的文本也会更加多样化，但也可能会导致更多的无关信息生成。<br><code>Maximum Length(tokens)</code> - 限制响应返回的文本长度。<br><code>Stop sequences</code> - 指定返回语句停止。<br><code>Top Probability</code> - 决定随机性的范围，取 0 到 1 之间的值。<br>限定模型返回 Top Probability 质量的语句结果，较低的值会返回较为准确的答案，同时会限制返回值的多样性。较高的值能帮助我们获得更多见解，但同时结果准确率会有所降低。<br><code>Frequency penalty</code> - 模型基于返回语句中的词语出现频次而设置的惩罚系数，在 -2.0 到 2.0 之间取值，增加 Frequency Penalty 可以调整模型使其返回更加新颖的词语，减少同一词语在不同回答中出现的次数。<br><code>Presence penalty</code> - 模型基于返回语句中的词语在前文中出现的次数而设置的惩罚系数，在 -2.0 到 2.0 之间取值，增加 Presence Penalty 可以调整模型使其减少重复生成前文中出现过的词语。 </p>
+<h3 id="简单的调用sample"><a href="#简单的调用sample" class="headerlink" title="简单的调用sample"></a>简单的调用sample</h3><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">def openai_api(question):</span><br><span class="line">    openai.api_key = os.getenv("OPENAI_API_KEY")</span><br><span class="line">    response = openai.Completion.create(</span><br><span class="line">        model="text-davinci-003",</span><br><span class="line">        prompt=question,</span><br><span class="line">        temperature=0.1,</span><br><span class="line">        max_tokens=1024,</span><br><span class="line">        stop=None,</span><br><span class="line">        n=1,</span><br><span class="line">        top_p=1</span><br><span class="line">        #frequency_penalty=0.0,</span><br><span class="line">        #presence_penalty=0.0,</span><br><span class="line">        #stop=["\n"]</span><br><span class="line">    )</span><br><span class="line">    #print(response)</span><br><span class="line">    print("ANSWER:")</span><br><span class="line">    print(response["choices"][0]["text"])</span><br></pre></td></tr></tbody></table></figure>
+<p>写了个简单的sample。<br>其中<code>api_key</code>我直接放在了电脑的环境变量里，这样更安全一些。所以要使用<code>os.getenv</code>方法获取key值。</p>
+<h3 id="测试效果"><a href="#测试效果" class="headerlink" title="测试效果"></a>测试效果</h3><p>测试效果如图：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2023/Q1/chatgptsample01.png" alt=""><br>然后我还验证了下，确实如我想的一样，使用API方式，就不会有地区使用的限制了。<br>但是这个ChatGPT哈，确实是答案值得商榷。看把我家乡写的，都是错的……</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>Konta</span>
+                    </p>
+                
+                
+                
+                    <p class="copyright-item">
+                        <span>Discuss:</span>
+                        <span><a href="https://support.qq.com/products/153140">吐槽及留言</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="http://tech.hahaalot.com/2023/02/20/aneasychatgpt/">http://tech.hahaalot.com/2023/02/20/aneasychatgpt/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2020 <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>YOLO!</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/chatgpt/"># chatgpt</a>
+                    
+                        
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2023/01/13/python-unicode-switch/">python做unicode的编码和解码</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span id="busuanzi_container_site_pv">
+        总访问量<span id="busuanzi_value_site_pv"></span>次
+        </span> | 
+        <span id="busuanzi_container_site_uv">
+        访客数<span id="busuanzi_value_site_uv"></span>人
+        </span> | 
+        <span id="busuanzi_container_page_pv">
+        本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        </span><br>
+        <span>© Konta | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    </div>
+</body>
+</html>
