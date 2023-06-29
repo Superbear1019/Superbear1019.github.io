@@ -13,7 +13,7 @@
 
 
 
-<title>写一个SAPGUI自助登陆的python脚本程序(1)——提出及设计 | Haha not only a lot</title>
+<title>绘制heart-shaped心形曲线 | Haha not only a lot</title>
 
 
 
@@ -200,7 +200,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">写一个SAPGUI自助登陆的python脚本程序(1)——提出及设计</h1>
+            <h1 class="post-title">绘制heart-shaped心形曲线</h1>
             
                 <div class="post-meta">
                     
@@ -209,14 +209,14 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">七月 16, 2022&nbsp;&nbsp;14:11:16</a>
+                        Date: <a href="#">五月 10, 2023&nbsp;&nbsp;21:30:00</a>
                         </span>
                     
                     
                         <span class="post-category">
                     Category:
                             
-                                <a href="/categories/Tech/">Tech</a>
+                                <a href="/categories/Lib/">Lib</a>
                             
                         </span>
                     
@@ -225,22 +225,16 @@
         </header>
 
         <div class="post-content">
-            <h1 id="写一个SAPGUI自助登陆的python脚本程序-1-——提出及设计"><a href="#写一个SAPGUI自助登陆的python脚本程序-1-——提出及设计" class="headerlink" title="写一个SAPGUI自助登陆的python脚本程序(1)——提出及设计"></a>写一个SAPGUI自助登陆的python脚本程序(1)——提出及设计</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我们集团总共有5套SAP ECC系统，然后每套呢还分别有生产环境、测试环境、开发环境各一套。<br>也就说，像我这种日常做模块管理的话，生产及测试环境要频繁的切换，经常要反复登录大概八九套的环境。</p>
-<p>SAP GUI登陆，然后不同的CLINET，账密要频繁的输入密码，而且本身后台密码策略也有要求，就你来回切换系统，很麻烦……<br>这个问题其实很困扰用户，所以后来basis做了单点的SSO登录，但是前提是你的客户端电脑要是加域才行。</p>
-<p>我呢，整天用着自己的本本，所以没加域。<br>于是想说做一个自助的登录脚本，方便一些。<br>查询了一圈资料，发现还是有一些方法设计的。就行动起来～</p>
-<h2 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h2><ul>
-<li>最初的思路是抓鼠标的x、y轴坐标，然后使用pyautogui去模拟键鼠的操作，执行鼠标单击、双击、回车、tab、输入文本、上下按键这些操作。<br>但是这样有个问题，就是GUI界面不能动位置，一旦gui窗口换了个位置，坐标定位就会有问题。脚本就会跑错……</li>
-<li>后来呢查询了一圈，发现windows下的程序界面，都会对应到进程服务，都会有一个windows的句柄。<br>那么呢通过抓SAPGUI的句柄，就抓到对应的界面，然后用win32gui库去模拟键盘操作执行。</li>
-<li>这里有个要注意的地方，就是并不是每个界面都能抓到句柄。可能和不同sap client的版本也有关系。<br>我实际最后做下来，有一些公司的测试client，是无法抓到的。我初步判断的是这些测试的client端版本有一些限制，所以抓不到。</li>
-</ul>
-<h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><p>大致实现的步骤：</p>
-<ul>
-<li>打开SAPGUI.exe；抓到登陆gui的句柄。</li>
-<li>在登陆gui里，搜索筛选器中输入登录的client，这里模糊搜索就够了。</li>
-<li>进入client的登陆界面，然后抓到这个的句柄，定位到登陆界面。</li>
-<li>输入账号密码，登陆。</li>
-</ul>
-<p>后面再详细的写一下每一步大概都做了什么。</p>
+            <h1 id="绘制heart-shaped心形曲线"><a href="#绘制heart-shaped心形曲线" class="headerlink" title="绘制heart-shaped心形曲线"></a>绘制heart-shaped心形曲线</h1><p>上网突然查到某水饮的广告，原来讲述的是一个很凄美的爱情传输——笛卡尔和瑞典公主的爱情故事。<br>可终于弄懂那个很含蓄的广告了。</p>
+<p>然后发现了笛卡尔心形曲线这个好玩的东西。就上网查了查，还是有很多好玩的介绍和示例的。</p>
+<p>数学这门科学，我觉得还是很深奥的，但是我确实是还给老师了都。<br>所以函数曲线这些算法，是真的不行了。<br>只能是参考网上的资料学习一下。</p>
+<h2 id="Cardioid-心脏线"><a href="#Cardioid-心脏线" class="headerlink" title="Cardioid-心脏线"></a>Cardioid-心脏线</h2><p><strong>心脏线</strong>，又称心形线，是有一个尖点的外摆线。也就是说，一个圆沿着另一个半径相同的圆滚动时，圆上一点的轨迹就是心脏线。（参考<a href="https://en.wikipedia.org/wiki/Cardioid" target="_blank" rel="noopener">Cardioid - Wikipedia</a>）<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2023/Q1/Cardiod_animation.gif" alt=""></p>
+<h2 id="笛卡尔心形公式"><a href="#笛卡尔心形公式" class="headerlink" title="笛卡尔心形公式"></a>笛卡尔心形公式</h2><p>笛卡尔心形公式：<strong>r=a(1-sinθ)</strong><br>通过python代码实现：<br></p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line"></span><br><span class="line">def plot_cardioid(a):</span><br><span class="line">    theta = np.linspace(0, 2 * np.pi, 1000)</span><br><span class="line">    r = a * (1 - np.sin(theta))</span><br><span class="line">    x = r * np.cos(theta)</span><br><span class="line">    y = r * np.sin(theta)</span><br><span class="line"></span><br><span class="line">    plt.figure(figsize=(8, 8))</span><br><span class="line">    plt.plot(x, y)</span><br><span class="line">    plt.axis('equal')</span><br><span class="line">    plt.title(f'Cardioid: r = {a}(1 - sinθ)')</span><br><span class="line">    plt.xlabel('x')</span><br><span class="line">    plt.ylabel('y')</span><br><span class="line">    plt.grid(True)</span><br><span class="line">    plt.show()</span><br><span class="line"># 绘制r=a(1-sinθ)曲线，其中a=1</span><br><span class="line">plot_cardioid(1)</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>呈现效果：<br><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2023/Q1/CardiodFigure_1.png" alt=""></p>
+<h2 id="更接近心形的曲线"><a href="#更接近心形的曲线" class="headerlink" title="更接近心形的曲线"></a>更接近心形的曲线</h2><p>找了些更接近心形的曲线，挺好看挺好看：<br></p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line"></span><br><span class="line">def plot_heart_curve():</span><br><span class="line">    x = np.linspace(-2, 2, 500)</span><br><span class="line">    y = np.linspace(-2, 2, 500)</span><br><span class="line">    X, Y = np.meshgrid(x, y)</span><br><span class="line">    Z = (X**2 + Y**2 - 1)**3 - X**2 * Y**3</span><br><span class="line"></span><br><span class="line">    plt.figure(figsize=(8, 8))</span><br><span class="line">    plt.contour(X, Y, Z, [0], colors='red')</span><br><span class="line">    plt.axis('equal')</span><br><span class="line">    plt.title('Heart Curve: (x^2 + y^2 - 1)^3 - x^2y^3 = 0')</span><br><span class="line">    plt.xlabel('x')</span><br><span class="line">    plt.ylabel('y')</span><br><span class="line">    plt.grid(True)</span><br><span class="line">    plt.show()</span><br><span class="line"></span><br><span class="line"># 绘制函数曲线 (x^2+y^2-1)^3-x^2y^3=0</span><br><span class="line">plot_heart_curve()</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2023/Q1/CardiodFigure_2.png" alt=""></p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line"></span><br><span class="line">t = np.linspace(0, 2 * np.pi, 1000)</span><br><span class="line">a = 16 * np.sin(t)**3</span><br><span class="line">b = 13 * np.cos(t) - 5 * np.cos(2*t) - 2 * np.cos(3*t) - np.cos(4*t)</span><br><span class="line">x = a</span><br><span class="line">y = b</span><br><span class="line"></span><br><span class="line">plt.figure(figsize=(8, 8))</span><br><span class="line">plt.plot(x, y)</span><br><span class="line">plt.axis('equal')</span><br><span class="line">plt.title('Closest Heart-Shaped Curve')</span><br><span class="line">plt.xlabel('x')</span><br><span class="line">plt.ylabel('y')</span><br><span class="line">plt.grid(True)</span><br><span class="line">plt.show()</span><br></pre></td></tr></tbody></table></figure>
+<p><img src="https://techblog-1256524523.cos.ap-shanghai.myqcloud.com/TechBlog/2023/Q1/CardiodFigure_3.png" alt=""></p>
 
         </div>
 
@@ -262,7 +256,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://tech.hahaalot.com/2022/07/16/SAPGUI自助登陆的python脚本1/">http://tech.hahaalot.com/2022/07/16/SAPGUI自助登陆的python脚本1/</a></span>
+                        <span><a href="http://tech.hahaalot.com/2023/05/10/cardioid-curve/">http://tech.hahaalot.com/2023/05/10/cardioid-curve/</a></span>
                     </p>
                 
                 
@@ -290,7 +284,7 @@
                     
                         <a href="/tags/python/"># python</a>
                     
-                        <a href="/tags/SAP/"># SAP</a>
+                        <a href="/tags/fun/"># fun</a>
                     
                         
                 </span>
@@ -303,10 +297,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2022/07/19/seeyousometimes/">【随笔】嗯～半年后希望看到你～</a>
             
-            
-            <a class="next" rel="next" href="/2022/07/09/直接使用SAPGUI进行数据库的表查询/">直接使用SAPGUI进行数据库的表查询</a>
+            <a class="next" rel="next" href="/2023/05/06/abaplearning-001/">ABAP Learning-消息类型MessageType</a>
             
         </section>
 
